@@ -13,3 +13,7 @@ dist
 .idea
 
 .vercel
+
+# Just in case
+.env
+**/*.env

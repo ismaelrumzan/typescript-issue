@@ -1,0 +1,36 @@
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2.75rem;
+}
+
+.menu {
+  .title {
+    font-family: var(--font-text);
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1rem;
+
+    li {
+      a {
+        display: block;
+        margin: 0.65rem 0;
+        color: inherit;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

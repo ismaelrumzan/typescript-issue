@@ -1,0 +1,47 @@
+$bp: 1023px;
+
+.toggle {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  margin-right: -1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  @media (max-width: $bp) {
+    display: flex;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 40%;
+    border-radius: var(--border-radius-max);
+    background-color: var(--dark-3);
+    transition: transform 0.25s ease;
+
+    &:nth-child(1) {
+      transform: rotate(0) translate3d(0, 4px, 0);
+    }
+    &:nth-child(2) {
+      transform: rotate(0) translate3d(0, -4px, 0);
+    }
+  }
+
+  &.open {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate3d(0, 0, 0);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg) translate3d(0, 0, 0);
+      }
+    }
+  }
+}

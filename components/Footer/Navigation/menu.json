@@ -1,0 +1,168 @@
+[
+  {
+    "title": "Front Office",
+    "children": [
+      {
+        "title": "Zimmerplan",
+        "link": "/roomplan"
+      },
+      {
+        "title": "Reservierung",
+        "link": "/reservation"
+      },
+      {
+        "title": "Gäste",
+        "link": "/guests"
+      },
+      {
+        "title": "E-Mail",
+        "link": "/mails"
+      },
+      {
+        "title": "Messenger",
+        "link": "/messenger"
+      },
+      {
+        "title": "Zutritt",
+        "link": "/permissions"
+      },
+      {
+        "title": "Zahlungen",
+        "link": "/payments"
+      }
+    ]
+  },
+  {
+    "title": "Back Office",
+    "children": [
+      {
+        "title": "Finanzen",
+        "link": "/finance"
+      },
+      {
+        "title": "Lieferanten",
+        "link": "/suppliers"
+      },
+      {
+        "title": "Bewerber",
+        "link": "/contenders"
+      },
+      {
+        "title": "Post",
+        "link": "/post"
+      }
+    ]
+  },
+  {
+    "title": "Vermarktung",
+    "children": [
+      {
+        "title": "Analytics",
+        "link": "/analytics"
+      },
+      {
+        "title": "Mystery Check",
+        "link": "/mystery-check"
+      },
+      {
+        "title": "Bonusprogramme",
+        "link": "/bonus-programs"
+      },
+      {
+        "title": "Gutscheine",
+        "link": "/vouchers"
+      },
+      {
+        "title": "Umfragen",
+        "link": "/surveys"
+      },
+      {
+        "title": "Newsletter",
+        "link": "/newsletter"
+      },
+      {
+        "title": "Kampagnen",
+        "link": "/campaigns"
+      }
+    ]
+  },
+  {
+    "title": "Operations",
+    "children": [
+      {
+        "title": "Assistenten",
+        "link": "/assistants"
+      },
+      {
+        "title": "Prozesse",
+        "link": "/processes"
+      },
+      {
+        "title": "Workflows",
+        "link": "/workflows"
+      },
+      {
+        "title": "Cockpits",
+        "link": "/cockpits"
+      }
+    ]
+  },
+  {
+    "title": "Marktplatz",
+    "children": [
+      {
+        "title": "Apps",
+        "link": "/apps"
+      },
+      {
+        "title": "Produkte",
+        "link": "/products"
+      },
+      {
+        "title": "Partner",
+        "link": "/partners"
+      },
+      {
+        "title": "Entwickler",
+        "link": "/developers"
+      },
+      {
+        "title": "Förderungen",
+        "link": "/promotions"
+      }
+    ]
+  },
+  {
+    "title": "Unternehmen",
+    "children": [
+      {
+        "title": "Über uns",
+        "link": "/about"
+      },
+      {
+        "title": "Karriere",
+        "link": "/jobs"
+      },
+      {
+        "title": "FAQ",
+        "link": "/faqs"
+      },
+      {
+        "title": "Demo",
+        "link": "/demo"
+      },
+      {
+        "title": "Webinare",
+        "link": "/webinars"
+      },
+      {
+        "title": "Roadmap",
+        "link": "/roadmap"
+      },
+      {
+        "title": "Presse",
+        "link": "/press"
+      }
+    ]
+  }
+]

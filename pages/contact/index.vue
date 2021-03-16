@@ -1,8 +1,8 @@
 <template>
   <div>
     <Hero
-      title='Wir sind "Hier könnte unser Firmenname stehen, falls Wir mal einen finden würden"'
-      description="An dieser Stelle würden wir uns ganz bestimmt sehr gut selbst präsentieren, aber das lässt zunächst noch auf sich warten, da wir anscheinend andere Dinge priorisieren."
+      title="Wir sind da, um Ihnen zu helfen"
+      description="Du hast Fragen? Dann nehme jetzt Kontakt mit uns auf"
       alignment="center"
       :cta="ctasHero"
     />
@@ -15,22 +15,22 @@ import Hero from "@/blocks/Hero";
 
 export default Vue.extend({
   components: {
-    Hero
+    Hero,
   },
   data() {
     return {
       ctasHero: [
         {
           title: "Jetzt starten",
-          href: "/about"
+          href: "/about",
         },
         {
           title: "Unsere Pläne",
           type: "secondary",
-          href: "/pricing"
-        }
-      ]
+          href: "/pricing",
+        },
+      ],
     };
-  }
+  },
 });
 </script>

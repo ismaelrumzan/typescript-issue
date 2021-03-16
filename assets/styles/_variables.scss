@@ -1,0 +1,46 @@
+$font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-text: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$header-height: 100px;
+$header-height-mobile: 80px;
+$header-height-scrolled: 80px;
+$header-height-mobile-scrolled: 70px;
+
+$max-width: 80rem;
+$horizontal-padding: 3rem;
+$horizontal-padding-small: 5%;
+
+$border-radius-tiny: 2px;
+$border-radius-small: 4px;
+$border-radius-medium: 6px;
+$border-radius-large: 12px;
+$border-radius-max: 999px;
+$border-radius-round: 50%;
+
+:root {
+  --font-heading: #{$font-heading};
+  --font-text: #{$font-text};
+
+  --header-height: #{$header-height};
+  --header-height-scrolled: #{$header-height-scrolled};
+  --max-width: #{$max-width};
+  --horizontal-padding: #{$horizontal-padding};
+
+  --border-radius-tiny: #{$border-radius-tiny};
+  --border-radius-small: #{$border-radius-small};
+  --border-radius-medium: #{$border-radius-medium};
+  --border-radius-large: #{$border-radius-large};
+  --border-radius-max: #{$border-radius-max};
+  --border-radius-round: #{$border-radius-round};
+
+  @media (max-width: 768px) {
+    --horizontal-padding: #{$horizontal-padding-small};
+  }
+
+  @media (max-width: 600px) {
+    --header-height: #{$header-height-mobile};
+    --header-height-scrolled: #{$header-height-mobile-scrolled};
+  }
+}

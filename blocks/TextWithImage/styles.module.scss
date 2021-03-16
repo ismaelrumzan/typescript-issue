@@ -1,0 +1,128 @@
+$bp-1: 1023px;
+
+.container {
+  padding: 5rem var(--horizontal-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  gap: 0 3rem;
+
+  @media (max-width: $bp-1) {
+    grid-template-columns: 1fr !important;
+    gap: 3rem 0;
+    padding: 3rem var(--horizontal-padding);
+  }
+
+  /* Content (Text + CTAs) */
+  .content {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $bp-1) {
+      order: -1;
+      padding: 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    .badge {
+      margin-bottom: 1rem;
+      span {
+        display: inline-flex;
+        padding: 0.35rem 1rem;
+        color: var(--main-color);
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        background-color: var(--main-color-light-6);
+        border-radius: var(--border-radius-medium);
+      }
+    }
+
+    .title {
+      @media (max-width: $bp-1) {
+        max-width: 55rem;
+      }
+    }
+
+    .description {
+      font-size: 1.25rem;
+      line-height: 1.7;
+
+      @media (max-width: $bp-1) {
+        max-width: 40rem;
+      }
+      @media (max-width: 500px) {
+        font-size: 1.15rem;
+      }
+    }
+
+    .buttons {
+      list-style: none;
+      display: flex;
+      margin-top: 2rem;
+
+      @media (max-width: $bp-1) {
+        justify-content: center;
+      }
+
+      .button {
+        &:not(:last-child) {
+          margin-right: 1.25rem;
+        }
+      }
+    }
+  }
+
+  /* Illustration */
+  .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-4);
+    min-height: 250px;
+
+    @media (max-width: $bp-1) {
+      justify-self: center;
+      width: 100%;
+      max-width: 55rem;
+    }
+
+    &::before {
+      content: "Illustration Placeholder";
+      position: absolute;
+      color: var(--light-8);
+    }
+  }
+
+  /* Alignment: RIGHT */
+  &.right {
+    grid-template-columns: 1fr 35%;
+
+    .illustration {
+      order: -1;
+    }
+  }
+
+  /* Alignment: CENTER */
+  &.center {
+    grid-template-columns: 1fr;
+    gap: 3rem 0;
+
+    .content {
+      padding: 0;
+      align-items: center;
+      text-align: center;
+
+      .title {
+        max-width: 65rem;
+      }
+
+      .description {
+        max-width: 50rem;
+      }
+    }
+  }
+}

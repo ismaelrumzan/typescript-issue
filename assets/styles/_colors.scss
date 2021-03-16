@@ -1,0 +1,88 @@
+/* Theme */
+$main-color: #e51b23;
+
+$main-color-light: lighten($main-color, 5);
+$main-color-light-2: lighten($main-color, 10);
+$main-color-light-3: lighten($main-color, 15);
+$main-color-light-4: lighten($main-color, 20);
+$main-color-light-5: lighten($main-color, 30);
+$main-color-light-6: lighten($main-color, 45);
+
+$main-color-dark: darken($main-color, 5);
+$main-color-dark-2: darken($main-color, 10);
+$main-color-dark-3: darken($main-color, 15);
+$main-color-dark-4: darken($main-color, 20);
+$main-color-dark-5: darken($main-color, 30);
+$main-color-dark-6: darken($main-color, 45);
+
+/* Background */
+$background-color: #fff;
+
+/* Accents */
+$dark: #000;
+$dark-2: #111;
+$dark-3: #333;
+$dark-4: #444;
+$dark-5: #666;
+$dark-6: #888;
+
+$light: #fff;
+$light-2: #fafafa;
+$light-3: #f7f7f7;
+$light-4: #f1f1f1;
+$light-5: #eaeaea;
+$light-6: #e2e2e2;
+$light-7: #d7d7d7;
+$light-8: #ccc;
+$light-9: #aaa;
+
+/* Shadows */
+$shadow-small: 0 0 12px rgba(0, 0, 0, 0.075);
+$shadow-medium: 0 0 24px rgba(0, 0, 0, 0.1);
+$shadow-large: 0 0 64px -10px rgba(0, 0, 0, 0.15);
+
+/* Allocation to CSS variables */
+:root {
+  /* Theme */
+  --main-color: #{$main-color};
+
+  --main-color-light: #{$main-color-light};
+  --main-color-light-2: #{$main-color-light-2};
+  --main-color-light-3: #{$main-color-light-3};
+  --main-color-light-4: #{$main-color-light-4};
+  --main-color-light-5: #{$main-color-light-5};
+  --main-color-light-6: #{$main-color-light-6};
+
+  --main-color-dark: #{$main-color-dark};
+  --main-color-dark-2: #{$main-color-dark-2};
+  --main-color-dark-3: #{$main-color-dark-3};
+  --main-color-dark-4: #{$main-color-dark-4};
+  --main-color-dark-5: #{$main-color-dark-5};
+  --main-color-dark-6: #{$main-color-dark-6};
+
+  /* Background */
+  --background-color: #{$background-color};
+
+  /* Accents */
+  --dark: #{$dark};
+  --dark-2: #{$dark-2};
+  --dark-3: #{$dark-3};
+  --dark-4: #{$dark-4};
+  --dark-5: #{$dark-5};
+  --dark-6: #{$dark-6};
+
+  --light: #{$light};
+  --light-2: #{$light-2};
+  --light-3: #{$light-3};
+  --light-4: #{$light-4};
+  --light-5: #{$light-5};
+  --light-6: #{$light-6};
+  --light-7: #{$light-7};
+  --light-8: #{$light-8};
+  --light-9: #{$light-9};
+
+  /* Shadows */
+  --shadow-small: #{$shadow-small};
+  --shadow-medium: #{$shadow-medium};
+  --shadow-large: #{$shadow-large};
+}

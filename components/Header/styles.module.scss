@@ -1,0 +1,132 @@
+$bp: 1023px;
+
+.header {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  height: var(--header-height);
+}
+
+.outerContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  background-color: var(--light);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  transition: height 0.1s linear, border-color 0s;
+}
+
+.scrolled {
+  .outerContainer {
+    background-color: var(--light);
+    border-color: var(--light-5);
+    height: var(--header-height-scrolled);
+    transition: height 0.2s linear, border-color 0s 0s;
+  }
+}
+
+.open {
+  .outerContainer {
+    border-color: transparent;
+    transition: height 0.2s linear, border-color 0s 0s;
+  }
+}
+
+.innerContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 var(--horizontal-padding);
+  max-width: var(--max-width);
+  height: 100%;
+}
+
+.navigation {
+  @media (max-width: $bp) {
+    z-index: -1;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 4rem;
+    background-color: var(--light);
+
+    transform: translate3d(0, -100%, 0);
+    margin-top: var(--header-height);
+    opacity: 0;
+    transition: margin-top 0.2s linear, transform 0.175s ease, opacity 0s 0.175s;
+
+    &.open {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      transition: margin-top 0.2s linear, transform 0.325s ease, opacity 0s 0s;
+    }
+  }
+}
+
+.scrolled {
+  .navigation {
+    @media (max-width: $bp) {
+      margin-top: var(--header-height-scrolled);
+    }
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transform-origin: center;
+
+  transform: scale(1) translate3d(0, 0, 0);
+  opacity: 1;
+  transition: transform 0.25s ease, opacity 0.25s;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(0.975) translate3d(0, 0, 0);
+      opacity: 0.75;
+    }
+  }
+
+  .logo {
+    display: flex;
+    width: 10rem;
+    height: 100%;
+
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.button {
+  height: 40px !important;
+
+  @media (max-width: $bp) {
+    display: none !important;
+    order: -1;
+    color: var(--main-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &:hover {
+      color: var(--main-color);
+      background-color: transparent;
+      border: none;
+      opacity: 0.75;
+    }
+  }
+}

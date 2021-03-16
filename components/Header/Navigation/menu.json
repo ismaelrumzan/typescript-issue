@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Lösungen",
+    "link": "/solutions",
+    "isSubmenu": true,
+    "children": [
+      {
+        "title": "Front Office",
+        "link": "/frontoffice"
+      },
+      {
+        "title": "Back Office",
+        "link": "/backoffice"
+      },
+      {
+        "title": "Vermarktung",
+        "link": "/marketing"
+      },
+      {
+        "title": "Operations",
+        "link": "/operations"
+      },
+      {
+        "title": "Marktplatz",
+        "link": "/market"
+      }
+    ]
+  },
+  {
+    "title": "Ressourcen",
+    "link": "/ressources",
+    "isSubmenu": true,
+    "children": [
+      {
+        "title": "Newsroom",
+        "link": "/newsroom"
+      },
+      {
+        "title": "AGBs",
+        "link": "/terms"
+      },
+      {
+        "title": "Impressum",
+        "link": "/legal"
+      },
+      {
+        "title": "Datenschutz",
+        "link": "/privacy"
+      }
+    ]
+  },
+  {
+    "title": "Unternehmen",
+    "link": "/about",
+    "isSubmenu": false
+  },
+  {
+    "title": "Preisgestaltung",
+    "link": "/pricing",
+    "isSubmenu": false
+  }
+]

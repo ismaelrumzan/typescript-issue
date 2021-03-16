@@ -1,0 +1,30 @@
+.footer {
+  margin-top: auto;
+  background-color: var(--light-2);
+  padding: 4rem 0 2.5rem;
+}
+
+.content {
+  padding: 0 var(--horizontal-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.additional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 12rem;
+    object-fit: contain;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .copyright {
+    color: var(--dark-5);
+  }
+}
