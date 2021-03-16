@@ -61,7 +61,7 @@ const config: NuxtConfig = {
     // '~assets/fontawesome/css/all.css',
     // '~assets/fontawesome/css/all.css',
     // '~assets/styles/calendar-widget.scss',
-    '~assets/styles/main.scss'
+    '@/assets/styles/main.scss',
   ],
   // serverMiddleware: ['~/api/index.js'],
   /*
@@ -92,7 +92,7 @@ const config: NuxtConfig = {
         themeColor: '#3367D6'
       }
     ],
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
     '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
     'nuxt-imagemin',
@@ -103,17 +103,18 @@ const config: NuxtConfig = {
         gifsicle: { optimizationLevel: 2 }
       }
     ],
-    'nuxt-purgecss',
+    // 'nuxt-purgecss',
     'nuxt-maintenance-mode',
     '@nuxtjs/robots',
     'nuxt-i18n',
     'vue-scrollto/nuxt',
-    'vue-social-sharing/nuxt'
+    'vue-social-sharing/nuxt',
+    '@nuxtjs/style-resources'
   ],
-  bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false // Or `bvCSS: false`
-  },
+  // bootstrapVue: {
+  //   bootstrapCSS: false, // Or `css: false`
+  //   bootstrapVueCSS: false // Or `bvCSS: false`
+  // },
   i18n: {},
   robots: {
     UserAgent: '*',
@@ -160,18 +161,18 @@ const config: NuxtConfig = {
   plugins: [
     '~/plugins/isTouch',
     '~/plugins/Userback.client',
-    '~/plugins/vue-fragment',
+    // '~/plugins/vue-fragment',
   ],
-  purgeCSS: {
-    whitelist: [
-      'aos-init',
-      'aos-animate',
-      'data-aos-delay',
-      'data-aos-duration',
-      'fade-up',
-      'zoom-in'
-    ]
-  },
+  // purgeCSS: {
+  //   whitelist: [
+  //     'aos-init',
+  //     'aos-animate',
+  //     'data-aos-delay',
+  //     'data-aos-duration',
+  //     'fade-up',
+  //     'zoom-in'
+  //   ]
+  // },
   /*
    ** Build configuration
    */
