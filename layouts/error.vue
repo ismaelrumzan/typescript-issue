@@ -14,7 +14,6 @@ import Vue from "vue";
 import Hero from "@/blocks/Hero";
 
 export default Vue.extend({
-  scrollToTop: true,
   components: {
     Hero
   },
@@ -27,6 +26,11 @@ export default Vue.extend({
         }
       ]
     };
+  },
+  beforeMount() {
+    window.scrollTo({
+      top: 0
+    });
   }
 });
 </script>
