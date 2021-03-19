@@ -68,6 +68,7 @@ const config: NuxtConfig = {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxt/content',
     // '@nuxtjs/prismic',
     '@nuxtjs/gtm',
     [

@@ -12,6 +12,7 @@
     "lint": "eslint --max-warnings 0 --ext .ts,.vue ."
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/prismic": "^1.2.4",

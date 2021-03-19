@@ -9,6 +9,7 @@ $header-height-scrolled: 80px;
 $header-height-mobile-scrolled: 70px;
 
 $max-width: 80rem;
+$article-max-width: 60rem;
 $horizontal-padding: 3rem;
 $horizontal-padding-small: 5%;
 
@@ -26,6 +27,7 @@ $border-radius-round: 50%;
   --header-height: #{$header-height};
   --header-height-scrolled: #{$header-height-scrolled};
   --max-width: #{$max-width};
+  --article-max-width: #{$article-max-width};
   --horizontal-padding: #{$horizontal-padding};
 
   --border-radius-tiny: #{$border-radius-tiny};
