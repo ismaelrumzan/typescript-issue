@@ -12,6 +12,7 @@
             :title="button.title"
             :type="button.type"
             :href="button.href"
+            :externalHref="button.externalHref"
           />
         </li>
       </ul>
@@ -29,34 +30,34 @@ type Alignment = "left" | "right" | "center";
 
 export default Vue.extend({
   components: {
-    Button,
+    Button
   },
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left",
+      default: "left"
     },
     badge: {
-      type: String,
+      type: String
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
-      type: String,
+      type: String
     },
     illustration: {
-      type: String,
+      type: String
     },
     cta: {
-      type: Array,
-    },
+      type: Array
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
-  },
+  }
 });
 </script>

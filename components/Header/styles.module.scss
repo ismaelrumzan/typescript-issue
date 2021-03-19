@@ -62,7 +62,7 @@ $bp: 1023px;
     transform: translate3d(0, -100%, 0);
     margin-top: var(--header-height);
     opacity: 0;
-    transition: margin-top 0.2s linear, transform 0.175s ease, opacity 0s 0.175s;
+    transition: margin-top 0.2s linear, transform 0.325s ease, opacity 0s 0.325s;
 
     &.open {
       transform: translate3d(0, 0, 0);

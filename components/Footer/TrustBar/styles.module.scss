@@ -1,0 +1,42 @@
+$bp: 768px;
+
+.trustbarWrapper {
+  background-color: var(--light);
+  border-top: 1px solid var(--light-5);
+  border-bottom: 1px solid var(--light-5);
+}
+
+.trustbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem var(--horizontal-padding);
+
+  @media (max-width: $bp) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  svg {
+    height: 1.5rem;
+    width: auto;
+    margin-right: 0.625rem;
+
+    g {
+      fill: var(--main-color);
+    }
+  }
+}

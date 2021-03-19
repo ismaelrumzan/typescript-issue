@@ -7,9 +7,8 @@
     :aria-labelledby="name"
     role="presentation"
   >
-    <title :id="name" lang="en">{{ name }} Icon</title>
     <g :fill="color">
-      <slot />
+      <component :is="loadIcon" />
     </g>
   </svg>
 </template>
@@ -21,24 +20,34 @@ export default Vue.extend({
   props: {
     name: {
       type: String,
-      default: "box",
+      default: "Default"
+    },
+    icon: {
+      type: String,
+      required: true,
+      default: "Check"
     },
     width: {
       type: [Number, String],
-      default: 18,
+      default: 18
     },
     height: {
       type: [Number, String],
-      default: 18,
+      default: 18
     },
     color: {
       type: String,
-      default: "currentColor",
+      default: "currentColor"
     },
     viewBox: {
       type: String,
-      default: "0 0 18 18",
-    },
+      default: "0 0 18 18"
+    }
   },
+  computed: {
+    loadIcon() {
+      return () => import(`@/assets/icons/${this.icon}.vue`);
+    }
+  }
 });
 </script>

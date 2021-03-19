@@ -16,18 +16,33 @@
         <NuxtLink v-else to="" @click.native="toggleActive">
           {{ menuItem.title }}
           <Icon
+            icon="ChevDown"
             name="Dropdown"
             :class="styles.chevDown"
             viewBox="0 0 451.847 451.847"
-          >
-            <ChevDown />
-          </Icon>
+          />
         </NuxtLink>
-        <div :class="styles.submenuContainer">
-          <ul v-if="menuItem.isSubmenu" :class="styles.submenu">
+        <div v-if="menuItem.isSubmenu" :class="styles.submenuContainer">
+          <ul :class="[styles.submenu, styles[menuItem.submenuType]]">
             <li v-for="(menuItemChild, i) in menuItem.children" :key="i">
-              <NuxtLink :to="menuItemChild.link" @click.native="resetMenu">
-                {{ menuItemChild.title }}
+              <NuxtLink
+                :to="menuItemChild.link"
+                @click.native="resetMenu"
+                :class="styles.link"
+              >
+                <span :class="styles.linkIcon">
+                  <IconWrapper>
+                    <Icon :icon="menuItemChild.icon" viewBox="0 0 512 512" />
+                  </IconWrapper>
+                </span>
+                <span :class="styles.linkText">
+                  <span :class="styles.linkTitle">{{
+                    menuItemChild.title
+                  }}</span>
+                  <span :class="styles.linkDescription">{{
+                    menuItemChild.description
+                  }}</span>
+                </span>
               </NuxtLink>
             </li>
           </ul>
@@ -41,31 +56,33 @@
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
 import { MutationType } from "@/store";
+import IconWrapper from "@/components/IconWrapper";
 import Icon from "@/components/Icon";
-import ChevDown from "@/assets/icons/ChevDown.vue";
 import menuItems from "./menu.json";
 
 interface SubmenuItem {
   title: string;
   link: string;
+  description?: string;
 }
 
 interface MenuItem {
   title: string;
   link: string;
   isSubmenu: boolean;
+  submenuType?: boolean;
   children?: SubmenuItem[];
 }
 
 export default Vue.extend({
   components: {
-    Icon,
-    ChevDown,
+    IconWrapper,
+    Icon
   },
   data() {
     return {
       styles,
-      menuItems: menuItems as MenuItem[],
+      menuItems: menuItems as MenuItem[]
     };
   },
   methods: {
@@ -82,7 +99,7 @@ export default Vue.extend({
     },
     resetMenu() {
       this.$store.commit(MutationType.SET_OPEN_MENU, false);
-    },
-  },
+    }
+  }
 });
 </script>

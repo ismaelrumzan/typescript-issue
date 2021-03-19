@@ -27,7 +27,7 @@ export default Vue.extend({
       ]
     };
   },
-  beforeMount() {
+  mounted() {
     window.scrollTo({
       top: 0
     });

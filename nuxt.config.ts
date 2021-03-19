@@ -161,7 +161,7 @@ const config: NuxtConfig = {
   plugins: [
     '~/plugins/isTouch',
     '~/plugins/Userback.client',
-    // '~/plugins/vue-fragment',
+    '~/plugins/vue-fragment',
   ],
   // purgeCSS: {
   //   whitelist: [

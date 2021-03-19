@@ -1,19 +1,22 @@
+@use 'sass:color';
+
 /* Theme */
 $main-color: #e51b23;
 
-$main-color-light: lighten($main-color, 5);
-$main-color-light-2: lighten($main-color, 10);
-$main-color-light-3: lighten($main-color, 15);
-$main-color-light-4: lighten($main-color, 20);
-$main-color-light-5: lighten($main-color, 30);
-$main-color-light-6: lighten($main-color, 45);
+$main-color-light: color.scale($main-color, $lightness: 10%);
+$main-color-light-2: color.scale($main-color, $lightness: 20%);
+$main-color-light-3: color.scale($main-color, $lightness: 30%);
+$main-color-light-4: color.scale($main-color, $lightness: 40%);
+$main-color-light-5: color.scale($main-color, $lightness: 60%);
+$main-color-light-6: color.scale($main-color, $lightness: 91%);
+$main-color-light-7: color.scale($main-color, $lightness: 97%);
 
-$main-color-dark: darken($main-color, 5);
-$main-color-dark-2: darken($main-color, 10);
-$main-color-dark-3: darken($main-color, 15);
-$main-color-dark-4: darken($main-color, 20);
-$main-color-dark-5: darken($main-color, 30);
-$main-color-dark-6: darken($main-color, 45);
+$main-color-dark: color.scale($main-color, $lightness: -5%);
+$main-color-dark-2: color.scale($main-color, $lightness: -10%);
+$main-color-dark-3: color.scale($main-color, $lightness: -20%);
+$main-color-dark-4: color.scale($main-color, $lightness: -40%);
+$main-color-dark-5: color.scale($main-color, $lightness: -60%);
+$main-color-dark-6: color.scale($main-color, $lightness: -80%);
 
 /* Background */
 $background-color: #fff;
@@ -39,7 +42,7 @@ $light-9: #aaa;
 /* Shadows */
 $shadow-small: 0 0 12px rgba(0, 0, 0, 0.075);
 $shadow-medium: 0 0 24px rgba(0, 0, 0, 0.1);
-$shadow-large: 0 0 64px -10px rgba(0, 0, 0, 0.15);
+$shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
 
 /* Allocation to CSS variables */
 :root {
@@ -52,6 +55,7 @@ $shadow-large: 0 0 64px -10px rgba(0, 0, 0, 0.15);
   --main-color-light-4: #{$main-color-light-4};
   --main-color-light-5: #{$main-color-light-5};
   --main-color-light-6: #{$main-color-light-6};
+  --main-color-light-7: #{$main-color-light-7};
 
   --main-color-dark: #{$main-color-dark};
   --main-color-dark-2: #{$main-color-dark-2};

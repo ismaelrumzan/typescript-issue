@@ -3,49 +3,62 @@
     "title": "Lösungen",
     "link": "/solutions",
     "isSubmenu": true,
+    "submenuType": "col-2",
     "children": [
       {
         "title": "Front Office",
-        "link": "/frontoffice"
+        "link": "/frontoffice",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "FrontOffice"
       },
       {
         "title": "Back Office",
-        "link": "/backoffice"
+        "link": "/backoffice",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "BackOffice"
       },
       {
         "title": "Vermarktung",
-        "link": "/marketing"
+        "link": "/marketing",
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Operations",
-        "link": "/operations"
+        "link": "/operations",
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Marktplatz",
-        "link": "/market"
+        "link": "/market",
+        "description": "Lorem ipsum dolor sit amet"
       }
     ]
   },
   {
-    "title": "Ressourcen",
-    "link": "/ressources",
+    "title": "Partner",
+    "link": "/partner",
     "isSubmenu": true,
+    "submenuType": "col-3",
     "children": [
       {
         "title": "Newsroom",
-        "link": "/newsroom"
+        "link": "/newsroom",
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "AGBs",
-        "link": "/terms"
+        "link": "/terms",
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Impressum",
-        "link": "/legal"
+        "link": "/legal",
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Datenschutz",
-        "link": "/privacy"
+        "link": "/privacy",
+        "description": "Lorem ipsum dolor sit amet"
       }
     ]
   },
@@ -55,8 +68,30 @@
     "isSubmenu": false
   },
   {
-    "title": "Preisgestaltung",
-    "link": "/pricing",
-    "isSubmenu": false
+    "title": "Ressourcen",
+    "link": "/ressources",
+    "isSubmenu": true,
+    "children": [
+      {
+        "title": "Newsroom",
+        "link": "/newsroom",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "AGBs",
+        "link": "/terms",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Impressum",
+        "link": "/legal",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Datenschutz",
+        "link": "/privacy",
+        "description": "Lorem ipsum dolor sit amet"
+      }
+    ]
   }
 ]

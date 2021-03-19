@@ -1,6 +1,13 @@
 <template>
+  <a
+    v-if="externalHref"
+    :class="[styles.cta, styles[type], styles[variant]]"
+    :href="externalHref"
+  >
+    <span :class="styles.text">{{ title }}</span>
+  </a>
   <NuxtLink
-    v-if="href"
+    v-else-if="href"
     :class="[styles.cta, styles[type], styles[variant]]"
     :to="href"
   >
@@ -26,43 +33,46 @@ export default Vue.extend({
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     href: {
-      type: String,
+      type: String
+    },
+    externalHref: {
+      type: String
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     type: {
       type: String as PropType<Type>,
-      default: "primary",
+      default: "primary"
     },
     variant: {
       type: String as PropType<Variant>,
-      default: "none",
+      default: "none"
     },
     prefix: {
-      default: null,
+      default: null
     },
     suffix: {
-      default: null,
-    },
+      default: null
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
   },
   methods: {
     onClick() {
       this.$emit("click");
-    },
-  },
+    }
+  }
 });
 </script>

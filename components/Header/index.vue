@@ -3,7 +3,7 @@
     :class="[
       styles.header,
       { [styles.scrolled]: scrolled },
-      { [styles.open]: open },
+      { [styles.open]: open }
     ]"
   >
     <div :class="styles.outerContainer">
@@ -21,7 +21,11 @@
         <div :class="[styles.navigation, { [styles.open]: open }]">
           <Navigation />
         </div>
-        <Button title="Kontakt" href="/contact" :class="styles.button" />
+        <Button
+          title="Login"
+          externalHref="https://app.digital-hotel.net/login"
+          :class="styles.button"
+        />
       </div>
     </div>
   </header>
@@ -41,26 +45,20 @@ export default Vue.extend({
   components: {
     Navigation,
     Button,
-    Toggle,
+    Toggle
   },
 
   data() {
     return {
       styles,
       Logo,
-      scrolled: false,
-      cta: [
-        {
-          title: "Kontakt",
-          href: "/contact",
-        },
-      ],
+      scrolled: false
     };
   },
   computed: {
     open() {
       return (this.$store.state as RootState).menuOpen;
-    },
+    }
   },
   methods: {
     /* Attached to listener – Checks scroll position */
@@ -81,10 +79,10 @@ export default Vue.extend({
       if (this.$route.name === "index") {
         window.scrollTo({
           top: 0,
-          behavior: "smooth",
+          behavior: "smooth"
         });
       }
-    },
+    }
   },
   mounted() {
     /* Check scroll position at mount and add throttled listener */
@@ -98,6 +96,6 @@ export default Vue.extend({
   destroyed() {
     /* Remove listener */
     window.removeEventListener("scroll", this.handleScroll);
-  },
+  }
 });
 </script>
