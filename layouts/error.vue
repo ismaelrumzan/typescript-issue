@@ -1,9 +1,10 @@
 <template>
   <div>
     <Hero
-      title="Oops..."
-      description="Die Seite scheint nicht zu existieren"
+      title="404"
+      description="Oops... die Seite scheint nicht zu existieren"
       alignment="center"
+      illustration="404"
       :cta="ctas"
     />
   </div>

@@ -17,7 +17,7 @@
       </ul>
     </div>
     <div :class="styles.illustration">
-      <Lottie :options="lottieOptions" v-on:animCreated="handleAnimation" />
+      <Illustration :name="illustration" />
     </div>
   </section>
 </template>
@@ -26,51 +26,41 @@
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 import Button from "@/components/Button";
-import Lottie from "vue-lottie/src/lottie.vue";
-import animationData from "@/assets/illustrations/example.json";
+import Illustration from "@/components/Illustration";
 
 type Alignment = "left" | "right" | "center";
 
 export default Vue.extend({
   components: {
     Button,
-    Lottie,
+    Illustration
   },
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left",
+      default: "left"
     },
     badge: {
-      type: String,
+      type: String
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
-      type: String,
+      type: String
     },
     illustration: {
-      type: String,
+      type: String
     },
     cta: {
-      type: Array,
-    },
+      type: Array
+    }
   },
   data() {
     return {
-      styles,
-      anim: null,
-      lottieOptions: {
-        animationData: animationData,
-      },
+      styles
     };
-  },
-  methods: {
-    handleAnimation: function (anim: any) {
-      this.anim = anim;
-    },
-  },
+  }
 });
 </script>

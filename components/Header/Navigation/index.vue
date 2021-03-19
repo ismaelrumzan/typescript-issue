@@ -16,8 +16,7 @@
         <NuxtLink v-else to="" @click.native="toggleActive">
           {{ menuItem.title }}
           <Icon
-            icon="ChevDown"
-            name="Dropdown"
+            name="ChevDown"
             :class="styles.chevDown"
             viewBox="0 0 451.847 451.847"
           />
@@ -32,7 +31,7 @@
               >
                 <span :class="styles.linkIcon">
                   <IconWrapper>
-                    <Icon :icon="menuItemChild.icon" viewBox="0 0 512 512" />
+                    <Icon :name="menuItemChild.icon" viewBox="0 0 512 512" />
                   </IconWrapper>
                 </span>
                 <span :class="styles.linkText">

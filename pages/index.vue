@@ -4,6 +4,7 @@
       title="Schalte Dein Unternehmen auf Autopilot"
       description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
       alignment="left"
+      illustration="example"
       :cta="ctasHero"
     />
     <TextWithImage

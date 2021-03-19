@@ -20,10 +20,6 @@ export default Vue.extend({
   props: {
     name: {
       type: String,
-      default: "Default"
-    },
-    icon: {
-      type: String,
       required: true,
       default: "Check"
     },
@@ -46,7 +42,7 @@ export default Vue.extend({
   },
   computed: {
     loadIcon() {
-      return () => import(`@/assets/icons/${this.icon}.vue`);
+      return () => import(`@/assets/icons/${this.name}.vue`);
     }
   }
 });
