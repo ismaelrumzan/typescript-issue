@@ -1,11 +1,43 @@
 .article {
 }
 
-.header {
+.headerContainer {
   text-align: center;
   border-bottom: 1px solid var(--light-5);
   border-top: 1px solid var(--light-5);
+}
+
+.header {
+  position: relative;
+  max-width: var(--article-max-width);
+  margin: 0 auto;
   padding: 4rem var(--horizontal-padding);
+
+  .back {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: var(--horizontal-padding);
+    top: 1rem;
+    color: inherit;
+    font-size: 0.875rem;
+    opacity: 0.65;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      transform-origin: center;
+      transform: rotate(90deg);
+      margin-right: 0.25rem;
+      margin-bottom: 1px;
+    }
+  }
 
   .title {
     font-family: var(--font-text);
@@ -24,7 +56,7 @@
 .content {
   max-width: var(--article-max-width);
   margin: 0 auto;
-  padding: 3rem var(--horizontal-padding);
+  padding: 3rem var(--horizontal-padding) 5rem;
   width: 100%;
   line-height: 2.075;
 

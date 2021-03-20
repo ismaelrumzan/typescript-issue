@@ -1,6 +1,6 @@
 ---
-title: Test Post 1
-description: Desc of Test Post 1
+title: Test Post 2
+description: Desc of Test Post 2
 # img: test.jpg
 # alt: test
 ---

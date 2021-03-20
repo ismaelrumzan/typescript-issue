@@ -41,8 +41,8 @@
     "submenuType": "col-3",
     "children": [
       {
-        "title": "Newsroom",
-        "link": "/newsroom",
+        "title": "Blog",
+        "link": "/blog",
         "description": "Lorem ipsum dolor sit amet"
       },
       {

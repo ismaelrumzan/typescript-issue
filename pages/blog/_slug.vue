@@ -8,11 +8,17 @@
       </ul>
     </nav> -->
     <article>
-      <div :class="styles.header">
-        <h1 :class="styles.title">{{ article.title }}</h1>
-        <!-- <span :class="styles.desc">{{ article.description }}</span> -->
-        <span :class="styles.date">{{ formatDate(article.createdAt) }}</span>
-        <!-- <img :src="article.img" :alt="article.alt" /> -->
+      <div :class="styles.headerContainer">
+        <div :class="styles.header">
+          <NuxtLink to="/blog" :class="styles.back">
+            <Icon name="ChevDown" viewBox="0 0 451.847 451.847" />
+            Zurück zum Blog
+          </NuxtLink>
+          <h1 :class="styles.title">{{ article.title }}</h1>
+          <!-- <span :class="styles.desc">{{ article.description }}</span> -->
+          <span :class="styles.date">{{ formatDate(article.createdAt) }}</span>
+          <!-- <img :src="article.img" :alt="article.alt" /> -->
+        </div>
       </div>
       <div :class="styles.content">
         <nuxt-content :document="article" />
@@ -23,9 +29,13 @@
 
 <script lang="ts">
 import Vue from "vue";
-import styles from "./styles.module.scss?module";
+import styles from "./_slug.module.scss?module";
+import Icon from "@/components/Icon";
 
 export default Vue.extend({
+  components: {
+    Icon
+  },
   data() {
     return {
       styles

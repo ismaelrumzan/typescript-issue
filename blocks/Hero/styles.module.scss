@@ -1,4 +1,4 @@
-$bp-1: 1023px;
+$bp-1: 1086px;
 
 .container {
   padding: 0rem var(--horizontal-padding) 6rem;
@@ -59,17 +59,33 @@ $bp-1: 1023px;
     }
 
     .buttons {
+      $button-bp: 500px;
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       margin-top: 2rem;
 
       @media (max-width: $bp-1) {
         justify-content: center;
       }
+      @media (max-width: $button-bp) {
+        flex-direction: column;
+        width: 100%;
+      }
 
       .button {
         &:not(:last-child) {
           margin-right: 1.25rem;
+          @media (max-width: $button-bp) {
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
+
+        a {
+          @media (max-width: $button-bp) {
+            width: 90%;
+          }
         }
       }
     }

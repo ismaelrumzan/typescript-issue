@@ -11,6 +11,7 @@ $bp: 812px;
 
 .help {
   display: flex;
+  align-items: center;
   overflow: hidden;
   border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-medium);
@@ -32,7 +33,8 @@ $bp: 812px;
   padding: 4rem 8rem 4rem 4rem;
 
   @media (max-width: $bp) {
-    padding: 3.5rem 2.5rem 4rem 2.5rem;
+    order: 1;
+    padding: 4.5rem 2.5rem 3.5rem 2.5rem;
   }
 
   & > * {
@@ -55,15 +57,34 @@ $bp: 812px;
     background-color: var(--main-color-light);
 
     @media (max-width: $bp) {
+      transform-origin: top right;
       transform: skew(0, -3deg);
     }
   }
 }
 
-.buttonContainer {
+.buttons {
+  margin: 1.75rem 0;
+
+  .button {
+    background-color: var(--main-color-light-3);
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--main-color-light-4);
+      }
+    }
+  }
+}
+
+.illustration {
   flex: 1 0 45%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  height: 20rem;
+
+  & > div {
+    transform-origin: center;
+    transform: translate3d(0, -7%, 0) scale(1.5);
+  }
 }
