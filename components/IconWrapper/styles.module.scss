@@ -3,14 +3,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color-light-6);
+  background-color: var(--main-color-light-7);
   border-radius: var(--border-radius-medium);
 
   svg {
     position: absolute;
-    width: auto !important;
-    height: 50% !important;
-    object-fit: contain;
+    transform-origin: center;
+    transform: scale(0.55) translate3d(0, 0, 0);
   }
 
   svg,

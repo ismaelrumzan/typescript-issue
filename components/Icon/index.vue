@@ -1,14 +1,12 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    :width="width"
-    :height="height"
     :viewBox="viewBox"
     :aria-labelledby="name"
     role="presentation"
   >
     <g :fill="color">
-      <component :is="loadIcon" />
+      <component :is="loadIcon" ref="iconPath" @ready="setViewBox" />
     </g>
   </svg>
 </template>
@@ -25,24 +23,32 @@ export default Vue.extend({
     },
     width: {
       type: [Number, String],
-      default: 18
+      default: 32
     },
     height: {
       type: [Number, String],
-      default: 18
+      default: 32
     },
     color: {
       type: String,
       default: "currentColor"
-    },
-    viewBox: {
-      type: String,
-      default: "0 0 18 18"
     }
   },
   computed: {
     loadIcon() {
-      return () => import(`@/assets/icons/${this.name}.vue`);
+      const component = import(`@/assets/icons/${(this as any).name}.vue`);
+      return () => component;
+    }
+  },
+  data() {
+    return {
+      viewBox: `0 0 ${(this as any)?.width || 32} ${(this as any)?.height ||
+        32}`
+    };
+  },
+  methods: {
+    setViewBox(e: string) {
+      this.viewBox = e;
     }
   }
 });

@@ -15,36 +15,67 @@
         </NuxtLink>
         <NuxtLink v-else to="" @click.native="toggleActive">
           {{ menuItem.title }}
-          <Icon
-            name="ChevDown"
-            :class="styles.chevDown"
-            viewBox="0 0 451.847 451.847"
-          />
+          <Icon name="ChevDown" :class="styles.chevDown" />
         </NuxtLink>
         <div v-if="menuItem.isSubmenu" :class="styles.submenuContainer">
-          <ul :class="[styles.submenu, styles[menuItem.submenuType]]">
-            <li v-for="(menuItemChild, i) in menuItem.children" :key="i">
-              <NuxtLink
-                :to="menuItemChild.link"
-                @click.native="resetMenu"
-                :class="styles.link"
+          <div :class="styles.submenuWrapper">
+            <ul :class="[styles.submenu, styles[menuItem.submenuType]]">
+              <li
+                v-for="(menuItemChild, i) in menuItem.children"
+                :key="i"
+                :class="styles[`${menuItemChild.type}Container`]"
               >
-                <span :class="styles.linkIcon">
-                  <IconWrapper>
-                    <Icon :name="menuItemChild.icon" viewBox="0 0 512 512" />
-                  </IconWrapper>
+                <Button
+                  v-if="menuItemChild.type === 'button'"
+                  type="tertiary"
+                  :title="menuItemChild.title"
+                  :href="menuItemChild.link"
+                  :class="styles.button"
+                />
+                <NuxtLink
+                  v-else
+                  :to="menuItemChild.link"
+                  @click.native="resetMenu"
+                  :class="styles.link"
+                >
+                  <span :class="styles.linkIcon">
+                    <IconWrapper width="52" height="52">
+                      <Icon :name="menuItemChild.icon" viewBox="0 0 512 512" />
+                    </IconWrapper>
+                  </span>
+                  <span :class="styles.linkText">
+                    <span :class="styles.linkTitle">{{
+                      menuItemChild.title
+                    }}</span>
+                    <span :class="styles.linkDescription">{{
+                      menuItemChild.description
+                    }}</span>
+                  </span>
+                </NuxtLink>
+              </li>
+            </ul>
+            <ul
+              v-if="menuItem.hasSidemenu"
+              :class="[styles.sidemenu, styles[menuItem.sidemenuPosition]]"
+            >
+              <li>
+                <span :class="styles.sidemenuTitle">
+                  {{ menuItem.sidemenuTitle }}
                 </span>
-                <span :class="styles.linkText">
-                  <span :class="styles.linkTitle">{{
-                    menuItemChild.title
-                  }}</span>
-                  <span :class="styles.linkDescription">{{
-                    menuItemChild.description
-                  }}</span>
-                </span>
-              </NuxtLink>
-            </li>
-          </ul>
+              </li>
+              <li v-for="(sidemenuItemChild, i) in menuItem.sidemenu" :key="i">
+                <NuxtLink
+                  :to="sidemenuItemChild.link"
+                  @click.native="resetMenu"
+                  :class="styles.sidemenuLink"
+                >
+                  <span :class="styles.sidemenuLinkTitle">
+                    {{ sidemenuItemChild.title }}
+                  </span>
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </li>
     </ul>
@@ -54,15 +85,20 @@
 <script lang="ts">
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
-import { MutationType } from "@/store";
-import IconWrapper from "@/components/IconWrapper";
-import Icon from "@/components/Icon";
 import menuItems from "./menu.json";
+import { MutationType } from "@/store";
+import Button from "@/components/Button";
+import Icon from "@/components/Icon";
+import IconWrapper from "@/components/IconWrapper";
+
+type SidemenuPosition = "left" | "right" | "bottom";
 
 interface SubmenuItem {
   title: string;
   link: string;
   description?: string;
+  type?: string;
+  icon?: string;
 }
 
 interface MenuItem {
@@ -70,13 +106,17 @@ interface MenuItem {
   link: string;
   isSubmenu: boolean;
   submenuType?: boolean;
+  hasSidemenu?: boolean;
+  sidemenuTitle?: string;
+  sidemenuPosition?: SidemenuPosition;
   children?: SubmenuItem[];
 }
 
 export default Vue.extend({
   components: {
-    IconWrapper,
-    Icon
+    Button,
+    Icon,
+    IconWrapper
   },
   data() {
     return {

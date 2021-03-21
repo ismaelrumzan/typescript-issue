@@ -15,3 +15,17 @@
     />
   </g>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  data() {
+    return {
+      viewBox: "0 0 566.965 566.965"
+    };
+  },
+  mounted() {
+    this.$emit("ready", this.viewBox);
+  }
+});
+</script>

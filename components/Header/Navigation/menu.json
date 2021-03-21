@@ -4,6 +4,9 @@
     "link": "/solutions",
     "isSubmenu": true,
     "submenuType": "col-2",
+    "hasSidemenu": true,
+    "sidemenuTitle": "Use Cases",
+    "sidemenuPosition": "right",
     "children": [
       {
         "title": "Front Office",
@@ -28,8 +31,37 @@
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Marktplatz",
-        "link": "/market",
+        "type": "button",
+        "title": "Alle Lösungen",
+        "link": "/operations"
+      }
+    ],
+    "sidemenu": [
+      {
+        "title": "Marketing",
+        "link": "/teams/",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "FrontOffice"
+      },
+      {
+        "title": "Sales",
+        "link": "/teams/",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "BackOffice"
+      },
+      {
+        "title": "Management",
+        "link": "/teams/",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Finance",
+        "link": "/teams/",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Operations",
+        "link": "/teams/",
         "description": "Lorem ipsum dolor sit amet"
       }
     ]
@@ -59,6 +91,11 @@
         "title": "Datenschutz",
         "link": "/privacy",
         "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Marktplatz",
+        "link": "/market",
+        "description": "Lorem ipsum dolor sit amet"
       }
     ]
   },
@@ -80,7 +117,7 @@
       {
         "title": "AGBs",
         "link": "/terms",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum"
       },
       {
         "title": "Impressum",

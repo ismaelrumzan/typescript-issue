@@ -26,7 +26,14 @@
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 
-type Type = "primary" | "secondary" | "success" | "error" | "warning" | "alert";
+type Type =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "success"
+  | "error"
+  | "warning"
+  | "alert";
 type Variant = "none" | "shadow";
 
 export default Vue.extend({

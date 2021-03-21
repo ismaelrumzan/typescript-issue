@@ -11,7 +11,7 @@
       <div :class="styles.headerContainer">
         <div :class="styles.header">
           <NuxtLink to="/blog" :class="styles.back">
-            <Icon name="ChevDown" viewBox="0 0 451.847 451.847" />
+            <Icon name="ChevDown" />
             Zurück zum Blog
           </NuxtLink>
           <h1 :class="styles.title">{{ article.title }}</h1>

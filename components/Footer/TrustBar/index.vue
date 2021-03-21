@@ -2,15 +2,15 @@
   <div :class="styles.trustbarWrapper">
     <div :class="styles.trustbar">
       <div :class="styles.item">
-        <Icon name="Security" viewBox="0 0 512 512" />
+        <Icon name="Security" />
         <span>Fokus auf Sicherheit</span>
       </div>
       <div :class="styles.item">
-        <Icon name="Demo" viewBox="0 0 24 24" />
+        <Icon name="Demo" />
         <span>Kostenlose Testphase</span>
       </div>
       <div :class="styles.item">
-        <Icon name="Check" viewBox="0 0 512 512" />
+        <Icon name="Check" />
         <span>99.99% Uptime</span>
       </div>
     </div>
