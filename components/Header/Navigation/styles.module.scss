@@ -42,9 +42,17 @@ $submenu-rotation-x: -20deg;
       opacity: 1;
       padding: 1rem 0;
       transition: opacity 0.2s;
-      @media (hover: hover) {
-        &:hover {
-          opacity: 0.5;
+    }
+
+    &.hovered {
+      & > a {
+        opacity: 0.5;
+      }
+      @media (max-width: $bp) {
+        @media (hover: none) {
+          & > a {
+            opacity: 1;
+          }
         }
       }
     }
@@ -84,7 +92,7 @@ $submenu-rotation-x: -20deg;
     height: 12px;
     width: 12px;
     transform: rotate(0deg) translate3d(0, 0, 0);
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 
     @media (max-width: $bp) {
       margin-left: auto;
@@ -328,6 +336,14 @@ $submenu-rotation-x: -20deg;
       g {
         fill: var(--main-color);
       }
+    }
+  }
+}
+
+.hovered {
+  @media (min-width: $bp-min) {
+    .chevDown {
+      transform: rotate(180deg) translate3d(0, 0, 0);
     }
   }
 }
