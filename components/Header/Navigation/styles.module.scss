@@ -1,5 +1,6 @@
 $bp: 1023px;
 $bp-min: $bp + 1px;
+$bp-menu-tablet: 1150px;
 $submenu-translation-y: -0.85rem;
 $submenu-translation-x: 4rem;
 $submenu-translation-x-last: 8rem;
@@ -30,7 +31,11 @@ $submenu-rotation-x: -20deg;
   & > li {
     width: 100%;
     &:not(:last-child) {
-      margin-right: 2.5rem;
+      margin-right: 2.25rem;
+
+      @media (max-width: $bp-menu-tablet) {
+        margin-right: 1.5rem;
+      }
 
       @media (max-width: $bp) {
         margin-right: 0;

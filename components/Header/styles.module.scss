@@ -42,9 +42,13 @@ $bp: 1023px;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 var(--horizontal-padding);
-  max-width: var(--max-width);
+  padding: 0 1.5rem;
+  max-width: calc(var(--max-width) - 3rem);
   height: 100%;
+
+  @media (max-width: $bp) {
+    padding: 0 var(--horizontal-padding);
+  }
 }
 
 .navigation {

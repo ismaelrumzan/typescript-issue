@@ -118,6 +118,11 @@
     ]
   },
   {
+    "title": "Marktplatz",
+    "link": "/market",
+    "isSubmenu": false
+  },
+  {
     "title": "Unternehmen",
     "link": "/about",
     "isSubmenu": false
