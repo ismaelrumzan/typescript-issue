@@ -5,11 +5,14 @@
         v-for="(menuItem, i) in menuItems"
         :key="i"
         :class="{ [styles.isSubmenu]: menuItem.isSubmenu }"
+        ref="submenuItem"
+        @mouseenter="open(menuItem.isSubmenu, $event)"
+        @mouseleave="close"
       >
         <NuxtLink
           v-if="!menuItem.isSubmenu"
           :to="menuItem.link"
-          @click.native="resetMenu"
+          @click.native="closeMenu"
         >
           {{ menuItem.title }}
         </NuxtLink>
@@ -31,11 +34,12 @@
                   :title="menuItemChild.title"
                   :href="menuItemChild.link"
                   :class="styles.button"
+                  @click.native="closeMenu"
                 />
                 <NuxtLink
                   v-else
                   :to="menuItemChild.link"
-                  @click.native="resetMenu"
+                  @click.native="closeMenu"
                   :class="styles.link"
                 >
                   <span :class="styles.linkIcon">
@@ -66,7 +70,7 @@
               <li v-for="(sidemenuItemChild, i) in menuItem.sidemenu" :key="i">
                 <NuxtLink
                   :to="sidemenuItemChild.link"
-                  @click.native="resetMenu"
+                  @click.native="closeMenu"
                   :class="styles.sidemenuLink"
                 >
                   <span :class="styles.sidemenuLinkTitle">
@@ -136,7 +140,20 @@ export default Vue.extend({
         content.style.maxHeight = content.scrollHeight + "px";
       }
     },
-    resetMenu() {
+    open(isSubmenu: boolean, e: any) {
+      if (isSubmenu) {
+        e.target.classList.add(styles["hovered"]);
+      }
+    },
+    close(e: any) {
+      e.target.classList.remove(styles["hovered"]);
+    },
+    closeMenu(e: any) {
+      /* optimizable */
+      e.target
+        .closest("#navigation > ul > li")
+        .classList.remove(styles["hovered"]);
+
       this.$store.commit(MutationType.SET_OPEN_MENU, false);
     }
   }

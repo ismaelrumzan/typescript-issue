@@ -129,16 +129,10 @@
     "submenuType": "col-3",
     "children": [
       {
-        "title": "Hilfe",
-        "link": "/help",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "Help"
-      },
-      {
-        "title": "On-Demand Demo",
-        "link": "/demo",
+        "title": "Onboarding",
+        "link": "/onboarding",
         "description": "Lorem ipsum",
-        "icon": "Demo"
+        "icon": "Shuttle"
       },
       {
         "title": "Blog",
@@ -147,37 +141,28 @@
         "icon": "Blog"
       },
       {
+        "title": "Videos",
+        "link": "/videos",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Video"
+      },
+      {
         "title": "Dokumentation",
         "link": "/docs",
         "description": "Lorem ipsum dolor sit amet",
-        "icon": "Question"
-      },
-      {
-        "title": "Onboarding",
-        "link": "/onboarding",
-        "description": "Lorem ipsum",
-        "icon": "Shuttle"
-      },
-      {
-        "title": "Hierarchie",
-        "link": "/hierarchy",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "Hierarchy"
-      },
-      {
-        "title": "Videos",
-        "link": "/videos",
-        "description": "Lorem ipsum dolor sit amet"
+        "icon": "Document"
       },
       {
         "title": "Consulting",
         "link": "/consulting",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Help"
       },
       {
-        "title": "Coaching",
-        "link": "/coaching",
-        "description": "Lorem ipsum"
+        "title": "Hilfe",
+        "link": "/help",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Question"
       }
     ]
   }
