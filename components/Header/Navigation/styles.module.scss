@@ -1,4 +1,8 @@
 $bp: 1023px;
+$submenu-translation-y: -0.85rem;
+$submenu-translation-x: 4rem;
+$submenu-translation-x-last: 8rem;
+$submenu-rotation-x: -20deg;
 
 .navigation {
   display: flex;
@@ -65,7 +69,7 @@ $bp: 1023px;
   }
 }
 
-/* Submenu Hover */
+/* Menu Item Hover */
 .isSubmenu {
   & > a {
     cursor: default;
@@ -78,7 +82,7 @@ $bp: 1023px;
         & + div {
           opacity: 1;
           pointer-events: auto;
-          transform: translate3d(-50%, 0, 0) rotateX(0deg);
+          transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0) rotateX(0deg);
           @media (max-width: $bp) {
             transform: translate3d(0, 0, 0) rotateX(0deg);
           }
@@ -91,6 +95,7 @@ $bp: 1023px;
     margin-left: 0.5rem;
     height: 12px;
     width: 12px;
+    transform: rotate(0deg) translate3d(0, 0, 0);
     transition: transform 0.2s ease;
 
     @media (max-width: $bp) {
@@ -107,16 +112,15 @@ $bp: 1023px;
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate3d(-50%, 0, 0) rotateX(-20deg);
-  margin-top: -0.85rem;
-  margin-left: 4rem;
+  transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0)
+    rotateX(#{$submenu-rotation-x});
 
   transition: opacity 0.5s, transform 0.5s ease, max-height 0.35s ease;
 
   &:hover {
     opacity: 1;
     pointer-events: auto;
-    transform: translate3d(-50%, 0, 0) rotateX(0deg);
+    transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0) rotateX(0deg);
 
     @media (max-width: $bp) {
       transform: translate3d(0, 0, 0) rotateX(0deg);
@@ -127,13 +131,64 @@ $bp: 1023px;
     position: relative;
     top: inherit;
     left: inherit;
-    margin-top: inherit;
-    margin-left: 0;
+    right: inherit;
     transform: translate3d(0, 0, 0) rotateX(0deg);
     opacity: 1;
     pointer-events: auto;
     max-height: 0;
     overflow: hidden;
+  }
+}
+
+/* Last Menu Item */
+.menu {
+  & > li:last-child {
+    .submenuContainer {
+      left: inherit;
+      right: 0;
+      transform: translate3d(#{$submenu-translation-x-last}, #{$submenu-translation-y}, 0)
+        rotateX(#{$submenu-rotation-x});
+
+      &:hover {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate3d(#{$submenu-translation-x-last}, #{$submenu-translation-y}, 0) rotateX(0deg);
+
+        @media (max-width: $bp) {
+          transform: translate3d(0, 0, 0) rotateX(0deg);
+        }
+      }
+
+      @media (max-width: $bp) {
+        right: inherit;
+        transform: translate3d(0, 0, 0) rotateX(0deg);
+      }
+    }
+
+    &.isSubmenu {
+      & > a {
+        @media (hover: hover) {
+          &:hover {
+            & + div {
+              opacity: 1;
+              pointer-events: auto;
+              transform: translate3d(#{$submenu-translation-x-last}, #{$submenu-translation-y}, 0) rotateX(0deg);
+              @media (max-width: $bp) {
+                transform: translate3d(0, 0, 0) rotateX(0deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .submenuWrapper {
+      &::before {
+        left: inherit;
+        right: 0;
+        transform: translate3d(calc(-#{$submenu-translation-x-last} - 3.5rem), 0, 0);
+      }
+    }
   }
 }
 
@@ -160,7 +215,7 @@ $bp: 1023px;
     position: absolute;
     bottom: 100%;
     left: 50%;
-    transform: translateX(calc(-50% - 4.5rem));
+    transform: translate3d(calc(-50% - #{$submenu-translation-x} - 0.5rem), 0, 0);
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -193,6 +248,7 @@ $bp: 1023px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
+    align-items: center;
     & > li {
       min-width: 15rem;
     }
@@ -206,6 +262,7 @@ $bp: 1023px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
+    align-items: center;
     & > li {
       min-width: 15rem;
     }
@@ -218,11 +275,11 @@ $bp: 1023px;
 
 /* Submenu Button */
 .buttonContainer {
-  padding: 0.5rem 1rem 0.25rem;
+  padding: 1.125rem 1rem 0.25rem;
   grid-column: 1 / -1;
 
   @media (max-width: $bp) {
-    padding: 1.5rem 0.5rem 0;
+    padding: 1.5rem 0 0;
   }
 
   .button {
@@ -231,7 +288,7 @@ $bp: 1023px;
     font-size: 0.7rem;
     height: 36px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     justify-content: center;
 
@@ -290,9 +347,9 @@ $bp: 1023px;
 }
 
 .open {
-  @media (max-width: $bp) {
-    .chevDown {
-      transform: rotate(180deg);
+  .chevDown {
+    @media (max-width: $bp) {
+      transform: rotate(180deg) translate3d(0, 0, 0);
       g {
         fill: var(--main-color);
       }
@@ -306,16 +363,19 @@ $bp: 1023px;
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--light-2);
-  padding: 2.25rem 4rem 2.25rem 2.25rem;
+  min-width: 12rem;
+  padding: 2.25rem 3rem 2.25rem 2.25rem;
 
   @media (max-width: $bp) {
-    padding: 0 0 0 0.5rem;
+    padding: 0 0 0 1.5rem;
     margin: 2rem 0;
     background-color: transparent;
   }
 
   &.right {
     border-left: 1px solid var(--light-4);
+    border-top-right-radius: var(--border-radius-medium);
+    border-bottom-right-radius: var(--border-radius-medium);
   }
 
   li {
@@ -329,9 +389,10 @@ $bp: 1023px;
       display: block;
       font-size: 0.8rem;
       font-weight: 600;
-      opacity: 0.35;
+      opacity: 0.3;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .sidemenuLink {

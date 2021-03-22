@@ -6,7 +6,7 @@
     role="presentation"
   >
     <g :fill="color">
-      <component :is="loadIcon" ref="iconPath" @ready="setViewBox" />
+      <component :is="loadIcon" @ready="setViewBox" />
     </g>
   </svg>
 </template>
@@ -36,14 +36,13 @@ export default Vue.extend({
   },
   computed: {
     loadIcon() {
-      const component = import(`@/assets/icons/${(this as any).name}.vue`);
+      const component = import(`@/assets/icons/${this.name}.vue`);
       return () => component;
     }
   },
   data() {
     return {
-      viewBox: `0 0 ${(this as any)?.width || 32} ${(this as any)?.height ||
-        32}`
+      viewBox: `0 0 ${this.width} ${this.height}`
     };
   },
   methods: {

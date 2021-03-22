@@ -23,12 +23,14 @@
       {
         "title": "Vermarktung",
         "link": "/marketing",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Marketing"
       },
       {
         "title": "Operations",
         "link": "/operations",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Operations"
       },
       {
         "type": "button",
@@ -40,14 +42,12 @@
       {
         "title": "Marketing",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "FrontOffice"
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Sales",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "BackOffice"
+        "description": "Lorem ipsum dolor sit amet"
       },
       {
         "title": "Management",
@@ -68,33 +68,51 @@
   },
   {
     "title": "Partner",
-    "link": "/partner",
+    "link": "/partners",
     "isSubmenu": true,
-    "submenuType": "col-3",
+    "submenuType": "col-2",
+    "hasSidemenu": true,
+    "sidemenuTitle": "Use Cases",
+    "sidemenuPosition": "right",
     "children": [
       {
-        "title": "Blog",
-        "link": "/blog",
+        "title": "Technologie",
+        "link": "/partners/technology",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "PartnerTechnology"
+      },
+      {
+        "title": "Vertrieb",
+        "link": "/partners/sales",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "PartnerSales"
+      },
+      {
+        "title": "Service",
+        "link": "/partners/service",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "PartnerService"
+      }
+    ],
+    "sidemenu": [
+      {
+        "title": "Marketing",
+        "link": "/teams/",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "AGBs",
-        "link": "/terms",
+        "title": "Sales",
+        "link": "/teams/",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Impressum",
-        "link": "/legal",
+        "title": "Lorem",
+        "link": "/teams/",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Datenschutz",
-        "link": "/privacy",
-        "description": "Lorem ipsum dolor sit amet"
-      },
-      {
-        "title": "Marktplatz",
-        "link": "/market",
+        "title": "Ipsum",
+        "link": "/teams/",
         "description": "Lorem ipsum dolor sit amet"
       }
     ]
@@ -108,26 +126,58 @@
     "title": "Ressourcen",
     "link": "/ressources",
     "isSubmenu": true,
+    "submenuType": "col-3",
     "children": [
       {
-        "title": "Newsroom",
-        "link": "/newsroom",
+        "title": "Hilfe",
+        "link": "/help",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Help"
+      },
+      {
+        "title": "On-Demand Demo",
+        "link": "/demo",
+        "description": "Lorem ipsum",
+        "icon": "Demo"
+      },
+      {
+        "title": "Blog",
+        "link": "/blog",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Blog"
+      },
+      {
+        "title": "Dokumentation",
+        "link": "/docs",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Question"
+      },
+      {
+        "title": "Onboarding",
+        "link": "/onboarding",
+        "description": "Lorem ipsum",
+        "icon": "Shuttle"
+      },
+      {
+        "title": "Hierarchie",
+        "link": "/hierarchy",
+        "description": "Lorem ipsum dolor sit amet",
+        "icon": "Hierarchy"
+      },
+      {
+        "title": "Videos",
+        "link": "/videos",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "AGBs",
-        "link": "/terms",
+        "title": "Consulting",
+        "link": "/consulting",
+        "description": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Coaching",
+        "link": "/coaching",
         "description": "Lorem ipsum"
-      },
-      {
-        "title": "Impressum",
-        "link": "/legal",
-        "description": "Lorem ipsum dolor sit amet"
-      },
-      {
-        "title": "Datenschutz",
-        "link": "/privacy",
-        "description": "Lorem ipsum dolor sit amet"
       }
     ]
   }
