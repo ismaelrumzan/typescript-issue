@@ -42,6 +42,11 @@ $submenu-rotation-x: -20deg;
       opacity: 1;
       padding: 1rem 0;
       transition: opacity 0.2s;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
 
     &.hovered {
