@@ -50,14 +50,14 @@
 
 .tertiary {
   color: var(--main-color);
-  background-color: var(--main-color-light-7);
-  border-color: var(--main-color-light-7);
+  background-color: var(--main-color-light-8);
+  border-color: var(--main-color-light-8);
 
   @media (hover: hover) {
     &:hover {
       color: var(--main-color);
-      background-color: var(--main-color-light-6);
-      border-color: var(--main-color-light-6);
+      background-color: var(--main-color-light-7);
+      border-color: var(--main-color-light-7);
     }
   }
 }

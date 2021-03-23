@@ -8,9 +8,10 @@ $main-color-light-2: color.scale($main-color, $lightness: 20%);
 $main-color-light-3: color.scale($main-color, $lightness: 30%);
 $main-color-light-4: color.scale($main-color, $lightness: 40%);
 $main-color-light-5: color.scale($main-color, $lightness: 60%);
-$main-color-light-6: color.scale($main-color, $lightness: 85%);
-$main-color-light-7: color.scale($main-color, $lightness: 91%);
-$main-color-light-8: color.scale($main-color, $lightness: 97%);
+$main-color-light-6: color.scale($main-color, $lightness: 80%);
+$main-color-light-7: color.scale($main-color, $lightness: 86%);
+$main-color-light-8: color.scale($main-color, $lightness: 92%);
+$main-color-light-9: color.scale($main-color, $lightness: 97%);
 
 $main-color-dark: color.scale($main-color, $lightness: -5%);
 $main-color-dark-2: color.scale($main-color, $lightness: -10%);
@@ -18,6 +19,8 @@ $main-color-dark-3: color.scale($main-color, $lightness: -20%);
 $main-color-dark-4: color.scale($main-color, $lightness: -40%);
 $main-color-dark-5: color.scale($main-color, $lightness: -60%);
 $main-color-dark-6: color.scale($main-color, $lightness: -80%);
+
+$badge-color: $main-color;
 
 /* Background */
 $background-color: #fff;
@@ -58,6 +61,7 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
   --main-color-light-6: #{$main-color-light-6};
   --main-color-light-7: #{$main-color-light-7};
   --main-color-light-8: #{$main-color-light-8};
+  --main-color-light-9: #{$main-color-light-9};
 
   --main-color-dark: #{$main-color-dark};
   --main-color-dark-2: #{$main-color-dark-2};
@@ -65,6 +69,8 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
   --main-color-dark-4: #{$main-color-dark-4};
   --main-color-dark-5: #{$main-color-dark-5};
   --main-color-dark-6: #{$main-color-dark-6};
+
+  --badge-color: #{$badge-color};
 
   /* Background */
   --background-color: #{$background-color};
@@ -91,4 +97,56 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
   --shadow-small: #{$shadow-small};
   --shadow-medium: #{$shadow-medium};
   --shadow-large: #{$shadow-large};
+}
+
+/* Dark Theme */
+$background-color-dark: #000;
+
+$dark-dark: #fff;
+$dark-2-dark: #fafafa;
+$dark-3-dark: #eaeaea;
+$dark-4-dark: #ddd;
+$dark-5-dark: #ccc;
+$dark-6-dark: #aaa;
+
+$light-dark: #000;
+$light-2-dark: #101010;
+$light-3-dark: #151515;
+$light-4-dark: #202020;
+$light-5-dark: #252525;
+$light-6-dark: #303030;
+$light-7-dark: #444;
+$light-8-dark: #555;
+$light-9-dark: #777;
+
+$shadow-small-dark: 0 0 12px rgba(255, 255, 255, 0.075);
+$shadow-medium-dark: 0 0 24px rgba(255, 255, 255, 0.1);
+$shadow-large-dark: 0 0 64px rgba(255, 255, 255, 0.15);
+
+[data-theme="dark"] {
+  /* Background */
+  --background-color: #{$background-color-dark};
+
+  /* Accents */
+  --dark: #{$dark-dark};
+  --dark-2: #{$dark-2-dark};
+  --dark-3: #{$dark-3-dark};
+  --dark-4: #{$dark-4-dark};
+  --dark-5: #{$dark-5-dark};
+  --dark-6: #{$dark-6-dark};
+
+  --light: #{$light-dark};
+  --light-2: #{$light-2-dark};
+  --light-3: #{$light-3-dark};
+  --light-4: #{$light-4-dark};
+  --light-5: #{$light-5-dark};
+  --light-6: #{$light-6-dark};
+  --light-7: #{$light-7-dark};
+  --light-8: #{$light-8-dark};
+  --light-9: #{$light-9-dark};
+
+  /* Shadows */
+  --shadow-small: #{$shadow-small-dark};
+  --shadow-medium: #{$shadow-medium-dark};
+  --shadow-large: #{$shadow-large-dark};
 }

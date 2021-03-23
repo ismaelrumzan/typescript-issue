@@ -16,7 +16,11 @@
         >
           {{ menuItem.title }}
         </NuxtLink>
-        <NuxtLink v-else to="" @click.native="toggleActive">
+        <NuxtLink
+          v-else
+          to=""
+          @click.native="toggleActive(menuItem.isSubmenu, $event)"
+        >
           {{ menuItem.title }}
           <Icon name="ChevDown" :class="styles.chevDown" />
         </NuxtLink>
@@ -129,15 +133,17 @@ export default Vue.extend({
     };
   },
   methods: {
-    toggleActive(e: any) {
-      e.preventDefault();
-      e.target.parentNode.classList.toggle(styles["open"]);
+    toggleActive(isSubmenu: boolean, e: any) {
+      if (isSubmenu) {
+        e.preventDefault();
+        e.target.parentNode.classList.toggle(styles["open"]);
 
-      const content = e.target.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
+        const content = e.target.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
       }
     },
     open(isSubmenu: boolean, e: any) {

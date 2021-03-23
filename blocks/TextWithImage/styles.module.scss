@@ -1,9 +1,7 @@
 $bp-1: 1023px;
 
 .container {
-  padding: 5rem var(--horizontal-padding);
-  max-width: var(--max-width);
-  margin: 0 auto;
+  padding: 5rem 0;
   display: grid;
   grid-template-columns: 35% 1fr;
   gap: 0 3rem;
@@ -11,7 +9,7 @@ $bp-1: 1023px;
   @media (max-width: $bp-1) {
     grid-template-columns: 1fr !important;
     gap: 3rem 0;
-    padding: 3rem var(--horizontal-padding);
+    padding: 3rem 0;
   }
 
   /* Content (Text + CTAs) */
@@ -32,11 +30,11 @@ $bp-1: 1023px;
       span {
         display: inline-flex;
         padding: 0.35rem 1rem;
-        color: var(--main-color);
+        color: var(--badge-color);
         font-weight: 700;
         font-size: 0.95rem;
         text-transform: uppercase;
-        background-color: var(--main-color-light-7);
+        background-color: var(--main-color-light-8);
         border-radius: var(--border-radius-medium);
       }
     }

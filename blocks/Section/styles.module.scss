@@ -1,0 +1,162 @@
+@import "/assets/styles/colors";
+
+$skew-angle: 5deg;
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--vertical-padding) 0;
+
+  &.noPadding {
+    padding: 0;
+  }
+
+  .content {
+    z-index: 1;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--horizontal-padding);
+  }
+}
+
+/* COLORS */
+.main {
+  background-color: var(--main-color-light);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--main-color-light);
+    }
+  }
+  .content {
+    --dark: #fff;
+    --main-color: #{$main-color-light-3};
+    --main-color-light: #{$main-color-light-2};
+    --main-color-light-2: #{$main-color-light-4};
+    --main-color-light-3: #{$main-color-light-5};
+    --main-color-light-4: #{$main-color-light-7};
+    --main-color-light-5: #{$main-color};
+    --main-color-light-7: #{$main-color-dark};
+    --main-color-light-8: #{$main-color-light-3};
+    --badge-color: #fff;
+    color: var(--dark);
+  }
+}
+
+.light {
+  background-color: var(--main-color-light-8);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--main-color-light-8);
+    }
+  }
+  .content {
+    --main-color-light-8: #{$main-color-light-6};
+  }
+}
+
+.dark {
+  background-color: var(--main-color-dark-4);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--main-color-dark-4);
+    }
+  }
+  .content {
+    --dark: #fff;
+    --main-color: #{$main-color-dark-3};
+    --main-color-light: #{$main-color-dark};
+    --main-color-light-2: #{$main-color-dark-2};
+    --main-color-light-3: #{$main-color-dark};
+    --main-color-light-4: #{$main-color};
+    --main-color-light-5: #{$main-color-light-2};
+    --main-color-light-7: #{$main-color-light-3};
+    --main-color-light-8: #{$main-color-dark-3};
+    --badge-color: #fff;
+    color: var(--dark);
+  }
+}
+
+.grey {
+  background-color: var(--light-2);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--light-2);
+    }
+  }
+}
+
+/* SKEWS */
+.skewContainer {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .skew {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.isSkewed {
+  z-index: 1;
+  & + .section {
+    /* Needs to be calculated */
+    // margin-top: calc(-1 * var(--vertical-padding));
+  }
+
+  &.positive {
+    .skew {
+      transform: skewY(#{$skew-angle});
+    }
+  }
+  &.negative {
+    .skew {
+      transform: skewY(-#{$skew-angle});
+    }
+  }
+  &.positiveTop {
+    overflow: hidden;
+    padding: var(--vertical-padding-skew) 0 var(--vertical-padding);
+    // margin-top: calc(-1 * var(--vertical-padding-skew) / 2);
+    .skew {
+      transform-origin: top left;
+      transform: skewY(#{$skew-angle});
+    }
+  }
+  &.negativeTop {
+    overflow: hidden;
+    padding: var(--vertical-padding-skew) 0 var(--vertical-padding);
+    // margin-top: calc(-1 * var(--vertical-padding-skew) / 2);
+    .skew {
+      transform-origin: top right;
+      transform: skewY(-#{$skew-angle});
+    }
+  }
+  &.positiveBottom {
+    overflow: hidden;
+    padding: var(--vertical-padding) 0 var(--vertical-padding-skew);
+    // margin-bottom: calc(-1 * var(--vertical-padding-skew) / 2);
+    .skew {
+      transform-origin: bottom right;
+      transform: skewY(#{$skew-angle});
+    }
+  }
+  &.negativeBottom {
+    overflow: hidden;
+    padding: var(--vertical-padding) 0 var(--vertical-padding-skew);
+    // margin-bottom: calc(-1 * var(--vertical-padding-skew) / 2);
+    .skew {
+      transform-origin: bottom left;
+      transform: skewY(-#{$skew-angle});
+    }
+  }
+}

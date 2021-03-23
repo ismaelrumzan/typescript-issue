@@ -1,5 +1,5 @@
 <template>
-  <section :class="styles.helpSection">
+  <div :class="styles.helpSection">
     <div :class="styles.helpContainer">
       <div :class="styles.help">
         <div :class="styles.textContainer">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">

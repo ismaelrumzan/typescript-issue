@@ -2,9 +2,9 @@ $bp: 1023px;
 $bp-min: $bp + 1px;
 $bp-menu-tablet: 1150px;
 $submenu-translation-y: -0.85rem;
-$submenu-translation-x: 4rem;
+$submenu-translation-x: 7.25rem;
 $submenu-translation-x-last: 8rem;
-$submenu-rotation-x: -20deg;
+$submenu-rotation-x: -30deg;
 
 .navigation {
   display: flex;
@@ -34,7 +34,7 @@ $submenu-rotation-x: -20deg;
       margin-right: 2.25rem;
 
       @media (max-width: $bp-menu-tablet) {
-        margin-right: 1.5rem;
+        margin-right: 1.25rem;
       }
 
       @media (max-width: $bp) {
@@ -118,6 +118,8 @@ $submenu-rotation-x: -20deg;
   position: absolute;
   top: 100%;
   left: 50%;
+  transform-origin: center;
+  will-change: transform;
   transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0)
     rotateX(#{$submenu-rotation-x});
 

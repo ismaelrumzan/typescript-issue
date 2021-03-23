@@ -1,5 +1,5 @@
 <template>
-  <section :class="[styles.container, styles[alignment]]">
+  <div :class="[styles.container, styles[alignment]]">
     <div :class="styles.content">
       <div v-if="badge" :class="styles.badge">
         <span>{{ badge }}</span>
@@ -18,7 +18,7 @@
       </ul>
     </div>
     <div :class="styles.illustration"></div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">

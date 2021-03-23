@@ -21,11 +21,19 @@
         <div :class="[styles.navigation, { [styles.open]: open }]">
           <Navigation />
         </div>
-        <Button
-          title="Login"
-          externalHref="https://app.digital-hotel.net/login"
-          :class="styles.button"
-        />
+        <div :class="styles.buttons">
+          <Button
+            title="Login"
+            type="secondary"
+            externalHref="https://app.digital-hotel.net/login"
+            :class="[styles.button, styles.loginButton]"
+          />
+          <Button
+            title="Sign Up"
+            externalHref="https://app.digital-hotel.net/register"
+            :class="styles.button"
+          />
+        </div>
       </div>
     </div>
   </header>

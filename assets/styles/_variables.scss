@@ -10,8 +10,13 @@ $header-height-mobile-scrolled: 70px;
 
 $max-width: 80rem;
 $article-max-width: 60rem;
+
 $horizontal-padding: 3rem;
 $horizontal-padding-small: 5%;
+$vertical-padding: 4rem;
+$vertical-padding-small: 2rem;
+$vertical-padding-skew: 8%;
+$vertical-padding-skew-small: 15%;
 
 $border-radius-tiny: 2px;
 $border-radius-small: 4px;
@@ -26,9 +31,13 @@ $border-radius-round: 50%;
 
   --header-height: #{$header-height};
   --header-height-scrolled: #{$header-height-scrolled};
+
   --max-width: #{$max-width};
   --article-max-width: #{$article-max-width};
+
   --horizontal-padding: #{$horizontal-padding};
+  --vertical-padding: #{$vertical-padding};
+  --vertical-padding-skew: #{$vertical-padding-skew};
 
   --border-radius-tiny: #{$border-radius-tiny};
   --border-radius-small: #{$border-radius-small};
@@ -39,6 +48,10 @@ $border-radius-round: 50%;
 
   @media (max-width: 768px) {
     --horizontal-padding: #{$horizontal-padding-small};
+    --vertical-padding: #{$vertical-padding-small};
+  }
+  @media (max-width: 1024px) {
+    --vertical-padding-skew: #{$vertical-padding-skew-small};
   }
 
   @media (max-width: 600px) {

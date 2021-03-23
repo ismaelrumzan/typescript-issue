@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <Hero
-      title="Schalte Dein Unternehmen auf Autopilot"
+      title="Hero-Text zu dem Bereich Consulting"
       description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
       alignment="left"
       illustration="example"
@@ -12,31 +12,6 @@
         badge="Digital Hub"
         title="Schalte Dein Unternehmen auf Autopilot"
         description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="right"
-        :cta="ctaFirst"
-      />
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="left"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section skew="positive">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="right"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section color="light">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
         alignment="center"
         :cta="ctaFirst"
       />
@@ -50,16 +25,7 @@
         :cta="ctaFirst"
       />
     </Section>
-    <Section color="dark" skew="negative">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section>
+    <Section noPadding>
       <HelpBanner />
     </Section>
   </div>
