@@ -4,15 +4,23 @@
     "children": [
       {
         "title": "Zimmerplan",
-        "link": "/roomplan"
+        "link": "/frontoffice/roomplan"
       },
       {
         "title": "Reservierung",
-        "link": "/reservation"
+        "link": "/frontoffice/reservation"
       },
       {
         "title": "Gäste",
-        "link": "/guests"
+        "link": "/frontoffice/guests"
+      },
+      {
+        "title": "Fundsachen",
+        "link": "/frontoffice/lost-property"
+      },
+      {
+        "title": "Feedback",
+        "link": "/frontoffice/feedback"
       },
       {
         "title": "E-Mail",
@@ -20,15 +28,19 @@
       },
       {
         "title": "Messenger",
-        "link": "/messenger"
+        "link": "/frontoffice/messenger"
+      },
+      {
+        "title": "Telefon",
+        "link": "/frontoffice/phone"
       },
       {
         "title": "Zutritt",
-        "link": "/permissions"
+        "link": "/frontoffice/permissions"
       },
       {
         "title": "Zahlungen",
-        "link": "/payments"
+        "link": "/frontoffice/payments"
       }
     ]
   },
@@ -37,19 +49,35 @@
     "children": [
       {
         "title": "Finanzen",
-        "link": "/finance"
+        "link": "/backoffice/finance"
       },
       {
         "title": "Lieferanten",
-        "link": "/suppliers"
+        "link": "/backoffice/suppliers"
+      },
+      {
+        "title": "Warenwirtschaft",
+        "link": "/backoffice/erp"
+      },
+      {
+        "title": "Energiemanagement",
+        "link": "/backoffice/energy"
+      },
+      {
+        "title": "Housekeeping",
+        "link": "/backoffice/housekeeping"
+      },
+      {
+        "title": "Mitarbeiter",
+        "link": "/backoffice/staff"
       },
       {
         "title": "Bewerber",
-        "link": "/contenders"
+        "link": "/backoffice/applicants"
       },
       {
         "title": "Post",
-        "link": "/post"
+        "link": "/backoffice/post"
       }
     ]
   },
@@ -57,32 +85,40 @@
     "title": "Vermarktung",
     "children": [
       {
-        "title": "Analytics",
-        "link": "/analytics"
+        "title": "Website Analytics",
+        "link": "/marketing/website-analytics"
       },
       {
-        "title": "Mystery Check",
-        "link": "/mystery-check"
+        "title": "Kanal Analytics",
+        "link": "/marketing/channel-analytics"
       },
       {
-        "title": "Bonusprogramme",
-        "link": "/bonus-programs"
+        "title": "Buchungsseite",
+        "link": "/marketing/booking-page"
       },
       {
-        "title": "Gutscheine",
-        "link": "/vouchers"
+        "title": "Content Management",
+        "link": "/marketing/content-management"
+      },
+      {
+        "title": "Bonusprogramm",
+        "link": "/marketing/bonus-program"
+      },
+      {
+        "title": "Geschenke",
+        "link": "/marketing/gifts"
       },
       {
         "title": "Umfragen",
-        "link": "/surveys"
+        "link": "/marketing/surveys"
       },
       {
         "title": "Newsletter",
-        "link": "/newsletter"
+        "link": "/marketing/newsletter"
       },
       {
         "title": "Kampagnen",
-        "link": "/campaigns"
+        "link": "/marketing/campaigns"
       }
     ]
   },
@@ -90,20 +126,36 @@
     "title": "Operations",
     "children": [
       {
-        "title": "Assistenten",
-        "link": "/assistants"
-      },
-      {
-        "title": "Prozesse",
-        "link": "/processes"
+        "title": "Abläufe & Assistenten",
+        "link": "/operations/processes-and-assistants"
       },
       {
         "title": "Workflows",
-        "link": "/workflows"
+        "link": "/operations/workflows"
       },
       {
         "title": "Cockpits",
-        "link": "/cockpits"
+        "link": "/operations/cockpits"
+      },
+      {
+        "title": "Ressourcen-Verwaltung",
+        "link": "/operations/ressource-management"
+      },
+      {
+        "title": "Lokale Geräte",
+        "link": "/operations/local-devices"
+      },
+      {
+        "title": "Sicherheit & Datenschutz",
+        "link": "/operations/security-and-privacy"
+      },
+      {
+        "title": "Beauftragter",
+        "link": "/operations/appointee"
+      },
+      {
+        "title": "Datenübermittlung",
+        "link": "/operations/data-transmission"
       }
     ]
   },

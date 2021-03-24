@@ -8,6 +8,7 @@
       { [styles.isSkewed]: skew },
       { [styles.noPadding]: noPadding }
     ]"
+    :data-theme="color"
   >
     <div :class="styles.content">
       <slot />

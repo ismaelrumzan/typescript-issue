@@ -25,12 +25,16 @@
           <Button
             title="Login"
             type="secondary"
-            externalHref="https://app.digital-hotel.net/login"
+            :externalHref="
+              `${isDev ? $config.devAppURL : $config.appURL}/login`
+            "
             :class="[styles.button, styles.loginButton]"
           />
           <Button
             title="Sign Up"
-            externalHref="https://app.digital-hotel.net/register"
+            :externalHref="
+              `${isDev ? $config.devAppURL : $config.appURL}/register`
+            "
             :class="styles.button"
           />
         </div>
@@ -60,7 +64,8 @@ export default Vue.extend({
     return {
       styles,
       Logo,
-      scrolled: false
+      scrolled: false,
+      isDev: false
     };
   },
   computed: {
@@ -93,6 +98,11 @@ export default Vue.extend({
     }
   },
   mounted() {
+    /* Currently checking locally, needs to be moved later on */
+    this.isDev = Boolean(
+      window.location.hostname.split(".")[0] === "dev" || "localhost"
+    );
+
     /* Check scroll position at mount and add throttled listener */
     let scrollTop =
       window.scrollY ||

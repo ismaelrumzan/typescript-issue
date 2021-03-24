@@ -36,7 +36,7 @@ export default Vue.extend({
   },
   computed: {
     loadIcon() {
-      const component = import(`@/assets/icons/${this.name}.vue`);
+      const component = import(`@/assets/icons/${this.name}`);
       return () => component;
     }
   },

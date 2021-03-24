@@ -12,6 +12,14 @@ export default Vue.extend({
       type: String,
       required: true,
       default: "example"
+    },
+    loop: {
+      type: Boolean,
+      default: true
+    },
+    autoplay: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -21,21 +29,17 @@ export default Vue.extend({
         height: "100%",
         overflow: "hidden",
         margin: "0 auto"
-      },
-      options: {
-        loop: true,
-        autoplay: true
       }
     };
   },
-  async mounted() {
+  mounted() {
     import(`@/assets/illustrations/${this.name}.json`)
       .then(module => {
         (lottie as any).loadAnimation({
           container: this.$refs.illustration,
           renderer: "svg",
-          loop: this.options.loop,
-          autoplay: this.options.autoplay,
+          loop: this.loop,
+          autoplay: this.autoplay,
           animationData: module.default
         });
       })
@@ -46,8 +50,8 @@ export default Vue.extend({
           (lottie as any).loadAnimation({
             container: this.$refs.illustration,
             renderer: "svg",
-            loop: this.options.loop,
-            autoplay: this.options.autoplay,
+            loop: this.loop,
+            autoplay: this.autoplay,
             animationData: module.default
           });
         });

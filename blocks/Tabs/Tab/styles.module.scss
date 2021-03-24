@@ -1,0 +1,33 @@
+.tab {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.active {
+  pointer-events: auto;
+  animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+[data-alignment="center"] {
+  .tab {
+    position: relative;
+  }
+}

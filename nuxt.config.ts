@@ -1,6 +1,17 @@
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
+  /**
+   * Runtime Config
+   * @description Injects env variables, falls back to production values.
+   * @implements isDev
+   */
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'https://www.digital-hotel.net',
+    devBaseURL: process.env.DEV_BASE_URL || 'https://dev.digital-hotel.net',
+    appURL: process.env.APP_URL || 'https://app.digital-hotel.net',
+    devAppURL: process.env.DEV_APP_URL || 'https://dev.app.digital-hotel.net',
+  },
   /*
    ** Headers of the page
    */

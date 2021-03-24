@@ -1,10 +1,21 @@
 import type { Context } from '@nuxt/types'
 import type { GetterTree, ActionTree, MutationTree } from 'vuex'
+import config from '@/nuxt.config'
+
+/**
+ * Check Environment
+ * @description As all non-production deploys are handled as preview deployments by Vercel we currently dirty check the development stage
+*/
+// const isDev = window.location.hostname.split('.')[0] === 'dev' || 'localhost'
+
 
 export const state = () => ({
+  // developmentMode: isDev,
+  // baseURL: isDev ? (config.publicRuntimeConfig as any).devBaseURL : (config.publicRuntimeConfig as any).baseURL,
+  // appURL: isDev ? (config.publicRuntimeConfig as any).devAppURL : (config.publicRuntimeConfig as any).appURL,
   description: "I'm defined as an initial state",
   cookieAccepted: false,
-  menuOpen: false
+  menuOpen: false,
 })
 
 export type RootState = ReturnType<typeof state>

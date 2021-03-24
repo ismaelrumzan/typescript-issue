@@ -15,22 +15,22 @@ import Hero from "@/blocks/Hero";
 
 export default Vue.extend({
   components: {
-    Hero,
+    Hero
   },
   data() {
     return {
       ctasHero: [
         {
           title: "Jetzt starten",
-          href: "/about",
+          href: "/about"
         },
         {
           title: "Unsere Pläne",
           type: "secondary",
-          href: "/pricing",
-        },
-      ],
+          href: "/pricing"
+        }
+      ]
     };
-  },
+  }
 });
 </script>

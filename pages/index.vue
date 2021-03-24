@@ -23,14 +23,121 @@
         :cta="ctaFirst"
       />
     </Section>
-    <Section skew="positive">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
+    <Section>
+      <TextWithDescription
+        badge="Front Office"
+        title="Vereinfache die Abläufe Deiner Rezeption"
         description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="right"
-        :cta="ctaFirst"
+        alignment="center"
       />
+      <Tabs alignment="left">
+        <Tab
+          title="Zimmerplan"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Messenger"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Analytics"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Kampagnen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Zahlungen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+      </Tabs>
+      <TextWithDescription
+        badge="Back Office"
+        title="Vereinfache das Management Deines Hotels"
+        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+        alignment="center"
+      />
+      <Tabs alignment="right">
+        <Tab
+          title="Zimmerplan"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Messenger"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Analytics"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Kampagnen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Zahlungen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+      </Tabs>
+      <TextWithDescription
+        badge="Operations"
+        title="Vereinfache das Management Deines Hotels"
+        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+        alignment="center"
+      />
+      <Tabs alignment="center">
+        <Tab
+          title="Zimmerplan"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Messenger"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Analytics"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+        <Tab
+          title="Kampagnen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Zahlungen"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+        >
+          <Illustration name="404" />
+        </Tab>
+      </Tabs>
     </Section>
     <Section color="light">
       <TextWithImage
@@ -70,14 +177,22 @@ import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
 import TextWithImage from "@/blocks/TextWithImage";
+import TextWithDescription from "@/blocks/TextWithDescription";
 import HelpBanner from "@/blocks/HelpBanner";
+import Tabs from "@/blocks/Tabs";
+import Tab from "@/blocks/Tabs/Tab";
+import Illustration from "@/components/Illustration";
 
 export default Vue.extend({
   components: {
     Section,
     Hero,
     TextWithImage,
-    HelpBanner
+    TextWithDescription,
+    HelpBanner,
+    Tabs,
+    Tab,
+    Illustration
   },
   data() {
     return {
