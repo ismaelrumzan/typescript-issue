@@ -99,9 +99,8 @@ export default Vue.extend({
   },
   mounted() {
     /* Currently checking locally, needs to be moved later on */
-    this.isDev = Boolean(
-      window.location.hostname.split(".")[0] === "dev" || "localhost"
-    );
+    const hostname = window.location.hostname.split(".")[0];
+    this.isDev = Boolean(hostname === "dev" || hostname === "localhost");
 
     /* Check scroll position at mount and add throttled listener */
     let scrollTop =
