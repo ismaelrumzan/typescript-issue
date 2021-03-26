@@ -17,7 +17,9 @@
         </li>
       </ul>
     </div>
-    <div :class="styles.illustration"></div>
+    <div :class="styles.illustration">
+      <Illustration :name="illustration" />
+    </div>
   </div>
 </template>
 
@@ -25,12 +27,14 @@
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 import Button from "@/components/Button";
+import Illustration from "@/components/Illustration";
 
 type Alignment = "left" | "right" | "center";
 
 export default Vue.extend({
   components: {
-    Button
+    Button,
+    Illustration
   },
   props: {
     alignment: {

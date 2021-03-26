@@ -8,16 +8,23 @@ $skew-angle: 5deg;
   flex-direction: column;
   padding: var(--vertical-padding) 0;
 
-  &.noPadding {
-    padding: 0;
-  }
-
   .content {
     z-index: 1;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--horizontal-padding);
+  }
+
+  &.noPadding {
+    padding: 0;
+  }
+
+  &.fullWidth {
+    .content {
+      padding: 0;
+      max-width: inherit;
+    }
   }
 }
 

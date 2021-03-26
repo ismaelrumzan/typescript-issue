@@ -6,7 +6,8 @@
       styles[variant],
       styles[skew],
       { [styles.isSkewed]: skew },
-      { [styles.noPadding]: noPadding }
+      { [styles.noPadding]: noPadding },
+      { [styles.fullWidth]: fullWidth }
     ]"
     :data-theme="color"
   >
@@ -47,6 +48,9 @@ export default Vue.extend({
       type: String as PropType<SkewOption>
     },
     noPadding: {
+      type: Boolean
+    },
+    fullWidth: {
       type: Boolean
     }
   },

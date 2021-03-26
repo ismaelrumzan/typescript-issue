@@ -38,7 +38,6 @@ export default Vue.extend({
       .sortBy("createdAt", "desc")
       .fetch();
 
-    console.log(articles);
     return {
       articles
     };

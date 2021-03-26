@@ -9,6 +9,7 @@
   padding: 6rem 0;
 
   .items {
+    position: relative;
     border-left: 1px solid var(--light-5);
     display: flex;
     flex-direction: column;
@@ -23,12 +24,16 @@
       padding: 0.75rem 2rem 0.75rem;
       border-radius: var(--border-radius-medium);
       background-color: transparent;
-      opacity: 0.25;
-      transition: opacity 0.3s, padding 0.3s ease, background-color 0.2s;
+      opacity: 0.35;
+      transition: opacity 0.3s, padding 0.3s ease, background-color 0.15s;
+
+      & > * {
+        pointer-events: none;
+      }
 
       @media (hover: hover) {
         &:hover {
-          opacity: 0.5;
+          opacity: 0.75;
         }
       }
       &:not(:last-child) {
@@ -39,6 +44,12 @@
         background-color: var(--light);
         padding: 1.45rem 2rem 1.75rem;
         box-shadow: var(--shadow-small);
+      }
+
+      .index {
+        display: inline-block;
+        color: var(--main-color);
+        margin-right: 0.25rem;
       }
 
       .title {
@@ -80,8 +91,13 @@
 
 .content {
   position: relative;
-  height: 100%;
+  width: 100%;
+  min-height: 100%;
   overflow: hidden;
+
+  .mobileTextContainer {
+    display: none;
+  }
 }
 
 /* Alignment: LEFT */
@@ -103,6 +119,7 @@
 
   .header {
     padding: 0;
+    overflow: hidden;
   }
 
   .items {
@@ -110,17 +127,26 @@
     justify-content: space-between;
     align-items: flex-end;
     border-left: none;
+    overflow-y: hidden;
+    overflow-x: auto;
     border-bottom: 1px solid var(--light-5);
+    -ms-overflow-style: none;
+    scrollbar-width: 0px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     li {
-      padding: 1rem 2rem;
+      padding: 1rem 2rem 0.75rem;
       max-width: 20rem;
       &.active {
-        padding: 1rem 3rem;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 1rem 2rem 0.75rem;
       }
       &:not(:last-child) {
         margin-bottom: 0;
-        margin-right: 1rem;
       }
       .description {
         display: none !important;
@@ -128,17 +154,93 @@
       .indicator {
         top: inherit;
         bottom: 0;
-        height: 6px;
+        height: 8px;
         width: 100%;
         margin-left: 0;
-        margin-bottom: -3px;
+        transform: translateY(4px);
       }
     }
   }
 
   .content {
+    min-height: inherit;
     width: 100%;
-    max-height: 30rem;
+  }
+}
+
+.left,
+.right {
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .header {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .items {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-left: none;
+      overflow-y: hidden;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--light-5);
+      -ms-overflow-style: none;
+      scrollbar-width: 0px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        padding: 1rem 2rem 0.75rem;
+        max-width: 20rem;
+        &.active {
+          box-shadow: none;
+          background-color: transparent;
+          padding: 1rem 2rem 0.75rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+        .description {
+          display: none !important;
+        }
+        .indicator {
+          top: inherit;
+          bottom: 0;
+          height: 8px;
+          width: 100%;
+          margin-left: 0;
+          transform: translateY(4px);
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-height: inherit;
+      width: 100%;
+      order: 1;
+
+      & > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+
+      .mobileTextContainer {
+        display: block;
+
+        .mobileDescription {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -146,11 +248,21 @@
 [data-theme="main"],
 [data-theme="dark"] {
   .items {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .center {
+    .items {
+      border-left: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  .index {
+    color: rgba(255, 255, 255, 0.65) !important;
   }
 
   .active {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
 
     .indicator {

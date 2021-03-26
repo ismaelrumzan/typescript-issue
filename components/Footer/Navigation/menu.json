@@ -7,8 +7,8 @@
         "link": "/frontoffice/roomplan"
       },
       {
-        "title": "Reservierung",
-        "link": "/frontoffice/reservation"
+        "title": "Reservierungen",
+        "link": "/frontoffice/reservations"
       },
       {
         "title": "Gäste",
@@ -24,7 +24,7 @@
       },
       {
         "title": "E-Mail",
-        "link": "/mails"
+        "link": "/frontoffice/emails"
       },
       {
         "title": "Messenger",
@@ -73,11 +73,11 @@
       },
       {
         "title": "Bewerber",
-        "link": "/backoffice/applicants"
+        "link": "/backoffice/applications"
       },
       {
         "title": "Post",
-        "link": "/backoffice/post"
+        "link": "/backoffice/mails"
       }
     ]
   },
@@ -150,8 +150,8 @@
         "link": "/operations/security-and-privacy"
       },
       {
-        "title": "Beauftragter",
-        "link": "/operations/appointee"
+        "title": "Beauftragte",
+        "link": "/operations/appointees"
       },
       {
         "title": "Datenübermittlung",
@@ -164,23 +164,23 @@
     "children": [
       {
         "title": "Apps",
-        "link": "/apps"
+        "link": "/marketplace/apps"
       },
       {
         "title": "Produkte",
-        "link": "/products"
+        "link": "/marketplace/products"
       },
       {
         "title": "Partner",
-        "link": "/partners"
+        "link": "/marketplace/partners"
       },
       {
         "title": "Entwickler",
-        "link": "/developers"
+        "link": "/marketplace/developers"
       },
       {
         "title": "Förderungen",
-        "link": "/promotions"
+        "link": "/marketplace/promotions"
       }
     ]
   },
@@ -197,7 +197,7 @@
       },
       {
         "title": "FAQ",
-        "link": "/faqs"
+        "link": "/faq"
       },
       {
         "title": "Demo",

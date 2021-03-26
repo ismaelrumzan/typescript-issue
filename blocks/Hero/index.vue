@@ -16,7 +16,7 @@
         </li>
       </ul>
     </div>
-    <div :class="styles.illustration">
+    <div v-if="illustration" :class="styles.illustration">
       <Illustration :name="illustration" />
     </div>
   </section>

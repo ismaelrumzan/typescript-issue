@@ -1,19 +1,11 @@
 import type { Context } from '@nuxt/types'
 import type { GetterTree, ActionTree, MutationTree } from 'vuex'
-import config from '@/nuxt.config'
-
-/**
- * Check Environment
- * @description As all non-production deploys are handled as preview deployments by Vercel we currently dirty check the development stage
-*/
-// const isDev = window.location.hostname.split('.')[0] === 'dev' || 'localhost'
-
+// import config from '@/nuxt.config'
 
 export const state = () => ({
-  // developmentMode: isDev,
+  // developmentMode: false,
   // baseURL: isDev ? (config.publicRuntimeConfig as any).devBaseURL : (config.publicRuntimeConfig as any).baseURL,
   // appURL: isDev ? (config.publicRuntimeConfig as any).devAppURL : (config.publicRuntimeConfig as any).appURL,
-  description: "I'm defined as an initial state",
   cookieAccepted: false,
   menuOpen: false,
 })
@@ -21,7 +13,7 @@ export const state = () => ({
 export type RootState = ReturnType<typeof state>
 
 export const getters: GetterTree<RootState, RootState> = {
-  reversedName: (state): string => state.description.split('').reverse().join('')
+  // reversedName: (state): string => state.description.split('').reverse().join('')
 }
 
 export const MutationType = {
@@ -32,9 +24,6 @@ export const MutationType = {
 }
 
 export const mutations: MutationTree<RootState> = {
-  [MutationType.CHANGE_DESCRIPTION]: (state, newDescription: string) => {
-    state.description = newDescription
-  },
   [MutationType.ACCEPT_COOKIE]: (state, response: boolean) => {
     state.cookieAccepted = response
   },
@@ -57,9 +46,6 @@ export const mutations: MutationTree<RootState> = {
 }
 
 export const actions: ActionTree<RootState, RootState> = {
-  nuxtServerInit({ commit }, _context: Context) {
-    commit(MutationType.CHANGE_DESCRIPTION, "I'm defined by server side")
-  },
   cookieAccepted({ commit }, _context: Context) {
     commit(MutationType.ACCEPT_COOKIE, _context)
   },

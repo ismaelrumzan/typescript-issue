@@ -23,6 +23,15 @@
         :cta="ctaFirst"
       />
     </Section>
+    <Section fullWidth>
+      <TextWithDescription
+        badge="Solutions"
+        title="Diese Lösungen bietet Dir Digital Hotel"
+        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+        alignment="center"
+      />
+      <Slider />
+    </Section>
     <Section>
       <TextWithDescription
         badge="Front Office"
@@ -36,18 +45,6 @@
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
         >
           <Illustration name="example" />
-        </Tab>
-        <Tab
-          title="Messenger"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-        <Tab
-          title="Analytics"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
         </Tab>
         <Tab
           title="Kampagnen"
@@ -87,18 +84,6 @@
         >
           <Illustration name="404" />
         </Tab>
-        <Tab
-          title="Kampagnen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="example" />
-        </Tab>
-        <Tab
-          title="Zahlungen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
       </Tabs>
       <TextWithDescription
         badge="Operations"
@@ -111,60 +96,39 @@
           title="Zimmerplan"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
         >
-          <Illustration name="example" />
+          <TextWithImage
+            badge="Digital Hub"
+            title="Schalte Dein Unternehmen auf Autopilot"
+            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+            alignment="left"
+            illustration="example"
+            :cta="ctaFirst"
+          />
         </Tab>
-        <Tab
-          title="Messenger"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-        <Tab
-          title="Analytics"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-        <Tab
-          title="Kampagnen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="example" />
+        <Tab title="Messenger">
+          <TextWithImage
+            badge="Digital Hub"
+            title="Schalte Dein Unternehmen auf Autopilot"
+            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+            alignment="right"
+            illustration="example"
+            :cta="ctaFirst"
+          />
         </Tab>
         <Tab
           title="Zahlungen"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
         >
-          <Illustration name="404" />
+          <TextWithImage
+            badge="Digital Hub"
+            title="Schalte Dein Unternehmen auf Autopilot"
+            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+            alignment="right"
+            illustration="404"
+            :cta="ctaFirst"
+          />
         </Tab>
       </Tabs>
-    </Section>
-    <Section color="light">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section>
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="left"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section color="dark" skew="negative">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-        :cta="ctaFirst"
-      />
     </Section>
     <Section>
       <HelpBanner />
@@ -183,6 +147,8 @@ import Tabs from "@/blocks/Tabs";
 import Tab from "@/blocks/Tabs/Tab";
 import Illustration from "@/components/Illustration";
 
+import Slider from "@/components/Slider";
+
 export default Vue.extend({
   components: {
     Section,
@@ -192,7 +158,8 @@ export default Vue.extend({
     HelpBanner,
     Tabs,
     Tab,
-    Illustration
+    Illustration,
+    Slider
   },
   data() {
     return {

@@ -30,13 +30,7 @@
             "
             :class="[styles.button, styles.loginButton]"
           />
-          <Button
-            title="Sign Up"
-            :externalHref="
-              `${isDev ? $config.devAppURL : $config.appURL}/register`
-            "
-            :class="styles.button"
-          />
+          <Button title="Sign Up" href="/apply" :class="styles.button" />
         </div>
       </div>
     </div>
@@ -98,9 +92,7 @@ export default Vue.extend({
     }
   },
   mounted() {
-    /* Currently checking locally, needs to be moved later on */
-    const hostname = window.location.hostname.split(".")[0];
-    this.isDev = Boolean(hostname === "dev" || hostname === "localhost");
+    this.isDev = (this as any).$isDev;
 
     /* Check scroll position at mount and add throttled listener */
     let scrollTop =

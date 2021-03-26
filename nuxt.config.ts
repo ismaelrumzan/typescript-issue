@@ -63,15 +63,12 @@ const config: NuxtConfig = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#0c64c1' },
+  loading: { color: '#e51b23' },
 
   /*
    ** Global CSS
    */
   css: [
-    // '~assets/fontawesome/css/all.css',
-    // '~assets/fontawesome/css/all.css',
-    // '~assets/styles/calendar-widget.scss',
     '@/assets/styles/main.scss',
   ],
   // serverMiddleware: ['~/api/index.js'],
@@ -104,7 +101,6 @@ const config: NuxtConfig = {
         themeColor: '#3367D6'
       }
     ],
-    // 'bootstrap-vue/nuxt',
     '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
     'nuxt-imagemin',
@@ -115,7 +111,6 @@ const config: NuxtConfig = {
         gifsicle: { optimizationLevel: 2 }
       }
     ],
-    // 'nuxt-purgecss',
     'nuxt-maintenance-mode',
     '@nuxtjs/robots',
     'nuxt-i18n',
@@ -123,10 +118,6 @@ const config: NuxtConfig = {
     'vue-social-sharing/nuxt',
     '@nuxtjs/style-resources'
   ],
-  // bootstrapVue: {
-  //   bootstrapCSS: false, // Or `css: false`
-  //   bootstrapVueCSS: false // Or `bvCSS: false`
-  // },
   i18n: {},
   robots: {
     UserAgent: '*',
@@ -171,20 +162,12 @@ const config: NuxtConfig = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/isTouch',
+    '~/plugins/isDev.client',
+    '~/plugins/isTouch.client',
     '~/plugins/Userback.client',
     '~/plugins/vue-fragment',
+    '~/plugins/swiper.client',
   ],
-  // purgeCSS: {
-  //   whitelist: [
-  //     'aos-init',
-  //     'aos-animate',
-  //     'data-aos-delay',
-  //     'data-aos-duration',
-  //     'fade-up',
-  //     'zoom-in'
-  //   ]
-  // },
   /*
    ** Build configuration
    */
@@ -193,19 +176,37 @@ const config: NuxtConfig = {
     babel: { compact: true }
   },
 
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/pwa'],
+  /**
+   * Images
+   */
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
+    },
+  },
+
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/pwa',
+    '@nuxt/image'
+  ],
 
   // Netlify reads a 404.html, Nuxt will load as an SPA
   generate: {
     fallback: '404.html'
   },
 
-  env: {},
-
   server: {
     port: 3000,
     host: '0.0.0.0'
   },
+
   resolve: {
     extensions: ['.ts', '.vue', '.js']
   }
