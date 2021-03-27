@@ -30,7 +30,12 @@
             "
             :class="[styles.button, styles.loginButton]"
           />
-          <Button title="Sign Up" href="/apply" :class="styles.button" />
+          <Button
+            title="Sign Up"
+            href="/apply"
+            :class="styles.button"
+            @click.native="closeMenu"
+          />
         </div>
       </div>
     </div>
@@ -40,7 +45,7 @@
 <script lang="ts">
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
-import { RootState } from "@/store";
+import { MutationType, RootState } from "@/store";
 import Navigation from "@/components/Header/Navigation";
 import Button from "@/components/Button";
 import Toggle from "@/components/Header/Toggle";
@@ -89,6 +94,9 @@ export default Vue.extend({
           behavior: "smooth"
         });
       }
+    },
+    closeMenu() {
+      this.$store.commit(MutationType.SET_OPEN_MENU, false);
     }
   },
   mounted() {

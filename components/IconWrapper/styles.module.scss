@@ -17,3 +17,13 @@
     fill: var(--main-color);
   }
 }
+
+[data-theme="main"],
+[data-theme="dark"] {
+  .wrapper {
+    svg,
+    g {
+      fill: #fff;
+    }
+  }
+}

@@ -30,8 +30,7 @@ export default Vue.extend({
       default: 32
     },
     color: {
-      type: String,
-      default: "currentColor"
+      type: String
     }
   },
   computed: {

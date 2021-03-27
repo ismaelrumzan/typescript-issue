@@ -102,7 +102,7 @@ export default Vue.extend({
         behavior: "smooth"
       });
     },
-    modifiedIndex(i: number): string | number {
+    modifyIndex(i: number): string | number {
       i++;
       if (i.toString().length === 1) {
         return `0${i}`;
