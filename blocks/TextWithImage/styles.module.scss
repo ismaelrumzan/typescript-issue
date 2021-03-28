@@ -114,11 +114,112 @@ $bp-1: 1023px;
     }
   }
 
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $bp-1) {
+      margin-top: 2.5rem;
+    }
+
+    img {
+      z-index: 1;
+      width: 90%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .background {
+      .fancy {
+        position: absolute;
+        pointer-events: none;
+
+        &:nth-child(1) {
+          top: -5rem;
+          left: -3rem;
+          width: 15rem;
+          height: 15rem;
+          padding: 1.5rem;
+          border: 1px solid var(--main-color-light-3);
+          border-radius: var(--border-radius-round);
+
+          .inner {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: var(--main-color-light-3);
+            border-radius: var(--border-radius-round);
+          }
+
+          @media (max-width: 767px) {
+            width: 10rem;
+            height: 10rem;
+            padding: 1rem;
+            top: -2rem;
+            left: -2rem;
+          }
+        }
+        &:nth-child(2) {
+          bottom: -5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 25rem;
+          height: 25rem;
+          padding: 2rem;
+          border: 1px solid var(--main-color-light-4);
+          border-radius: var(--border-radius-round);
+
+          .inner {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: var(--main-color-light-6);
+            border-radius: var(--border-radius-round);
+          }
+
+          @media (max-width: 767px) {
+            width: 15rem;
+            height: 15rem;
+            padding: 1.5rem;
+            transform: translateX(0);
+            left: inherit;
+            right: -2rem;
+            bottom: -3rem;
+          }
+        }
+        &:nth-child(3) {
+          right: -5rem;
+          top: -5rem;
+          width: 20rem;
+          height: 20rem;
+          padding: 1.5rem;
+          border: 1px solid var(--main-color-light-2);
+          border-radius: var(--border-radius-round);
+
+          .inner {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: var(--main-color-light-2);
+            border-radius: var(--border-radius-round);
+          }
+
+          @media (max-width: 767px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   /* Alignment: RIGHT */
   &.right {
     grid-template-columns: 1fr 35%;
 
-    .illustration {
+    .illustration,
+    .image {
       order: -1;
     }
   }

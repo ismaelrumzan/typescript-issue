@@ -7,6 +7,7 @@ $skew-angle: 5deg;
   display: flex;
   flex-direction: column;
   padding: var(--vertical-padding) 0;
+  overflow-x: hidden;
 
   .content {
     z-index: 1;

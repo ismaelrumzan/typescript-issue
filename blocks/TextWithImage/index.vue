@@ -17,8 +17,22 @@
         </li>
       </ul>
     </div>
-    <div :class="styles.illustration">
+    <div v-if="illustration" :class="styles.illustration">
       <Illustration :name="illustration" />
+    </div>
+    <div v-if="image" :class="styles.image">
+      <NuxtImg :key="image" :src="`/images/${image}`" />
+      <div :class="styles.background">
+        <div :class="styles.fancy">
+          <span :class="styles.inner"></span>
+        </div>
+        <div :class="styles.fancy">
+          <span :class="styles.inner"></span>
+        </div>
+        <div :class="styles.fancy">
+          <span :class="styles.inner"></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -52,6 +66,9 @@ export default Vue.extend({
       type: String
     },
     illustration: {
+      type: String
+    },
+    image: {
       type: String
     },
     cta: {

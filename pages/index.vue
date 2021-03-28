@@ -205,44 +205,14 @@
         description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
         alignment="center"
       />
-      <Tabs alignment="center">
-        <Tab
-          title="Zimmerplan"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <TextWithImage
-            badge="Digital Hub"
-            title="Schalte Dein Unternehmen auf Autopilot"
-            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-            alignment="left"
-            illustration="example"
-            :cta="ctaFirst"
-          />
-        </Tab>
-        <Tab title="Messenger">
-          <TextWithImage
-            badge="Digital Hub"
-            title="Schalte Dein Unternehmen auf Autopilot"
-            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-            alignment="right"
-            illustration="example"
-            :cta="ctaFirst"
-          />
-        </Tab>
-        <Tab
-          title="Zahlungen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <TextWithImage
-            badge="Digital Hub"
-            title="Schalte Dein Unternehmen auf Autopilot"
-            description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-            alignment="right"
-            illustration="404"
-            :cta="ctaFirst"
-          />
-        </Tab>
-      </Tabs>
+    </Section>
+    <Section>
+      <TextWithImage
+        badge="Operations"
+        title="Vereinfache das Management Deines Hotels"
+        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+        image="test.png"
+      />
     </Section>
     <Section>
       <HelpBanner />
