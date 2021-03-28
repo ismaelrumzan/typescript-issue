@@ -14,7 +14,7 @@
           @click.native="handleRoute"
         >
           <div :class="styles.logo">
-            <img :src="Logo" />
+            <NuxtImg src="/images/logo-dark.png" />
           </div>
         </NuxtLink>
         <Toggle />
@@ -49,7 +49,6 @@ import { MutationType, RootState } from "@/store";
 import Navigation from "@/components/Header/Navigation";
 import Button from "@/components/Button";
 import Toggle from "@/components/Header/Toggle";
-import Logo from "@/assets/images/logo-dark.png";
 import _ from "lodash";
 
 export default Vue.extend({
@@ -62,7 +61,6 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      Logo,
       scrolled: false,
       isDev: false
     };

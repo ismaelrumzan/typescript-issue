@@ -7,7 +7,7 @@
       <div :class="styles.additional">
         <NuxtLink to="/">
           <div :class="styles.logo">
-            <img :src="Logo" />
+            <NuxtImg src="/images/logo-dark.png" />
           </div>
         </NuxtLink>
         <span :class="styles.copyright">
@@ -23,7 +23,6 @@ import Vue from "vue";
 import styles from "./styles.module.scss?module";
 import TrustBar from "@/components/Footer/TrustBar";
 import Navigation from "@/components/Footer/Navigation";
-import Logo from "@/assets/images/logo-dark.png";
 
 export default Vue.extend({
   components: {
@@ -32,8 +31,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      styles,
-      Logo
+      styles
     };
   },
   computed: {
