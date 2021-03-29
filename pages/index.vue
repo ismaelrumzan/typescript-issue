@@ -1,7 +1,8 @@
 <template>
   <div id="content">
     <Hero
-      title="Schalte Dein Unternehmen auf Autopilot"
+      title="Schalte Dein Unternehmen auf"
+      typewriter="Autopilot, Fortschritt, Zukunft"
       description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
       alignment="left"
       illustration="example"
@@ -212,6 +213,7 @@
         title="Vereinfache das Management Deines Hotels"
         description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
         image="test.png"
+        :cta="ctaFirst"
       />
     </Section>
     <Section>

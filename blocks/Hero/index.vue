@@ -11,7 +11,14 @@
       <div v-if="badge" :class="styles.badge">
         <span>{{ badge }}</span>
       </div>
-      <h1 :class="styles.title">{{ title }}</h1>
+      <h1 :class="styles.title">
+        {{ title }}
+        <TypeWriter
+          v-if="typewriter"
+          :words="typewriter"
+          :class="styles.typewriter"
+        />
+      </h1>
       <span :class="styles.description">{{ description }}</span>
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
@@ -35,6 +42,7 @@ import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
+import TypeWriter from "@/components/TypeWriter";
 
 type HorizontalAlignment = "left" | "right" | "center";
 type VerticalAlignment = "top" | "bottom" | "middle";
@@ -43,7 +51,8 @@ type IllustrationWidth = "narrow" | "normal" | "wide";
 export default Vue.extend({
   components: {
     Button,
-    Illustration
+    Illustration,
+    TypeWriter
   },
   props: {
     alignment: {
@@ -73,6 +82,9 @@ export default Vue.extend({
     },
     cta: {
       type: Array
+    },
+    typewriter: {
+      type: String
     }
   },
   data() {
