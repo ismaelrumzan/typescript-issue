@@ -1,18 +1,36 @@
 <template>
-  <div :class="[styles.grid, styles[columnClass]]">
+  <div
+    :class="[
+      styles.grid,
+      styles[columnClass],
+      styles[paddingClass],
+      styles[gapClass]
+    ]"
+  >
     <slot />
   </div>
 </template>
 
 <script lang='ts'>
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
+
+type PaddingOption = "small" | "medium" | "large" | "none";
+type GapOption = "small" | "medium" | "large" | "none";
 
 export default Vue.extend({
   props: {
     columns: {
       type: [Number, String],
       default: 3
+    },
+    padding: {
+      type: String as PropType<PaddingOption>,
+      default: "medium"
+    },
+    gap: {
+      type: String as PropType<GapOption>,
+      default: "large"
     }
   },
   data() {
@@ -24,6 +42,12 @@ export default Vue.extend({
     columnClass(): string {
       const val = parseInt(`${this.columns}`);
       return `col-${val}`;
+    },
+    paddingClass(): string {
+      return `pad-${this.padding}`;
+    },
+    gapClass(): string {
+      return `gap-${this.gap}`;
     }
   }
 });

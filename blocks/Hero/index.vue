@@ -1,5 +1,12 @@
 <template>
-  <section :class="[styles.hero, styles[alignment]]">
+  <section
+    :class="[
+      styles.hero,
+      styles[alignment],
+      styles[verticalAlign],
+      styles[illustrationWidth]
+    ]"
+  >
     <div :class="styles.content">
       <div v-if="badge" :class="styles.badge">
         <span>{{ badge }}</span>
@@ -19,6 +26,7 @@
     <div v-if="illustration" :class="styles.illustration">
       <Illustration :name="illustration" />
     </div>
+    <slot />
   </section>
 </template>
 
@@ -28,7 +36,9 @@ import styles from "./styles.module.scss?module";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
 
-type Alignment = "left" | "right" | "center";
+type HorizontalAlignment = "left" | "right" | "center";
+type VerticalAlignment = "top" | "bottom" | "middle";
+type IllustrationWidth = "narrow" | "normal" | "wide";
 
 export default Vue.extend({
   components: {
@@ -37,8 +47,12 @@ export default Vue.extend({
   },
   props: {
     alignment: {
-      type: String as PropType<Alignment>,
+      type: String as PropType<HorizontalAlignment>,
       default: "left"
+    },
+    verticalAlign: {
+      type: String as PropType<VerticalAlignment>,
+      default: "middle"
     },
     badge: {
       type: String
@@ -52,6 +66,10 @@ export default Vue.extend({
     },
     illustration: {
       type: String
+    },
+    illustrationWidth: {
+      type: String as PropType<IllustrationWidth>,
+      default: "normal"
     },
     cta: {
       type: Array

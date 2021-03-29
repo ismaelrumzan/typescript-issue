@@ -1,0 +1,41 @@
+.box {
+  padding: 1.25rem 2rem;
+  font-weight: 500;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-box-grey);
+  text-align: center;
+  width: 100%;
+  color: #fff;
+
+  a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.info {
+  background-color: var(--light-3);
+  color: var(--dark-4);
+  a {
+    color: var(--dark-4);
+    border-bottom: 1px solid var(--dark-4);
+  }
+}
+.warning {
+  background-color: var(--color-yellow);
+}
+.error {
+  background-color: var(--color-red);
+}
+.success {
+  background-color: var(--color-green);
+}

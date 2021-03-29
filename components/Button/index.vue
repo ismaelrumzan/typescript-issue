@@ -15,16 +15,27 @@
   </NuxtLink>
   <button
     v-else
-    :class="[styles.cta, styles[type], styles[variant]]"
+    :disabled="loading || disabled"
+    :type="type === 'submit' && 'submit'"
+    :class="[
+      styles.cta,
+      styles[type],
+      styles[variant],
+      loading && styles.loading
+    ]"
     @click="onClick"
   >
     <span :class="styles.text">{{ title }}</span>
+    <div v-if="loading" :class="styles.loader">
+      <Loader />
+    </div>
   </button>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
+import Loader from "@/components/Loader";
 
 type Type =
   | "primary"
@@ -37,6 +48,9 @@ type Type =
 type Variant = "none" | "shadow";
 
 export default Vue.extend({
+  components: {
+    Loader
+  },
   props: {
     title: {
       type: String,

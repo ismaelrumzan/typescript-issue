@@ -119,6 +119,7 @@ $bp-1: 1023px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     @media (max-width: $bp-1) {
       margin-top: 2.5rem;
@@ -164,7 +165,7 @@ $bp-1: 1023px;
         &:nth-child(2) {
           bottom: -5rem;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translateX(-52%);
           width: 25rem;
           height: 25rem;
           padding: 2rem;

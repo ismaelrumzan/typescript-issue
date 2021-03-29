@@ -1,5 +1,7 @@
 .cta {
+  position: relative;
   cursor: pointer;
+  overflow: hidden;
   appearance: none;
   text-decoration: none;
   font-family: inherit;
@@ -26,6 +28,12 @@
       border-color: var(--main-color-light-3);
     }
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--main-color-light-4);
+    border-color: var(--main-color-light-4);
+  }
 }
 
 .text {
@@ -34,6 +42,28 @@
   text-overflow: ellipsis;
 }
 
+.loading {
+  .text {
+    opacity: 0;
+  }
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  span {
+    background-color: #fff !important;
+  }
+}
+
+/* Types */
 .secondary {
   color: var(--dark-4);
   background-color: var(--light);
@@ -45,6 +75,20 @@
       background-color: var(--light);
       border-color: var(--main-color-light);
     }
+  }
+
+  &.loading {
+    border-color: var(--main-color-light-4);
+  }
+  .loader {
+    span {
+      background-color: var(--main-color-light-2) !important;
+    }
+  }
+
+  &:disabled {
+    background-color: var(--light);
+    border-color: var(--main-color-light-4);
   }
 }
 
@@ -59,5 +103,16 @@
       background-color: var(--main-color-light-7);
       border-color: var(--main-color-light-7);
     }
+  }
+
+  .loader {
+    span {
+      background-color: var(--main-color-light) !important;
+    }
+  }
+
+  &:disabled {
+    background-color: var(--main-color-light-7);
+    border-color: var(--main-color-light-7);
   }
 }

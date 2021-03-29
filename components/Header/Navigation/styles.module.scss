@@ -101,7 +101,7 @@ $submenu-rotation-x: -30deg;
     margin-left: 0.5rem;
     height: 12px;
     width: 12px;
-    transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: scaleY(1) translate3d(0, 0, 0);
     transition: transform 0.3s ease;
 
     @media (max-width: $bp) {
@@ -306,7 +306,7 @@ $submenu-rotation-x: -30deg;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  line-height: 1.3;
+  line-height: 1.35;
   padding: 1rem;
   border-radius: var(--border-radius-medium);
   width: 100%;
@@ -337,7 +337,7 @@ $submenu-rotation-x: -30deg;
   .linkDescription {
     display: block;
     opacity: 0.5;
-    font-size: 0.8rem;
+    font-size: 0.775rem;
   }
 }
 
@@ -355,7 +355,7 @@ $submenu-rotation-x: -30deg;
 .hovered {
   @media (min-width: $bp-min) {
     .chevDown {
-      transform: rotate(180deg) translate3d(0, 0, 0);
+      transform: scaleY(-1) translate3d(0, 0, 0);
     }
   }
 }

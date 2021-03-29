@@ -13,6 +13,11 @@ declare module '@/blocks/*' {
   export default Vue
 }
 
+declare module '@/forms/*' {
+  import Vue from 'vue'
+  export default Vue
+}
+
 declare module '@/assets/icons/*' {
   import Vue from 'vue'
   export default Vue

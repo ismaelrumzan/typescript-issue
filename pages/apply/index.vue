@@ -1,10 +1,14 @@
 <template>
   <div id="content">
     <Hero
-      title="Werde eines der ersten Hotels, welches sich von der Masse abhebt"
+      badge="Bewerbung"
+      title="Starte jetzt Deinen Weg zum letzten Login"
       description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-      alignment="center"
-    />
+      verticalAlign="top"
+      illustrationWidth="wide"
+    >
+      <ApplicationForm />
+    </Hero>
     <Section noPadding>
       <HelpBanner />
     </Section>
@@ -17,13 +21,15 @@ import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
 import TextWithDescription from "@/blocks/TextWithDescription";
 import HelpBanner from "@/blocks/HelpBanner";
+import ApplicationForm from "@/forms/Application";
 
 export default Vue.extend({
   components: {
     Section,
     Hero,
     TextWithDescription,
-    HelpBanner
+    HelpBanner,
+    ApplicationForm
   }
 });
 </script>

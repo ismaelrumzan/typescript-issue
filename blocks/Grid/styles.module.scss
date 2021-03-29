@@ -1,9 +1,11 @@
 .grid {
   display: grid;
-  gap: 4rem;
-  padding: 3rem 0;
 }
 
+/* Column */
+.col-1 {
+  grid-template-columns: 1fr;
+}
 .col-2 {
   grid-template-columns: repeat(2, 1fr);
   @media (max-width: 1023px) {
@@ -21,4 +23,32 @@
   @media (max-width: 1023px) {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Padding */
+.pad-none {
+  padding: 0;
+}
+.pad-small {
+  padding: 1rem 0;
+}
+.pad-medium {
+  padding: 3rem 0;
+}
+.pad-large {
+  padding: 5rem 0;
+}
+
+/* Gap */
+.gap-none {
+  gap: 0;
+}
+.gap-small {
+  gap: 1rem;
+}
+.gap-medium {
+  gap: 2.5rem;
+}
+.gap-large {
+  gap: 4rem;
 }

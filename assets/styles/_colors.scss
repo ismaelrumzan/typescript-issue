@@ -11,7 +11,7 @@ $main-color-light-5: color.scale($main-color, $lightness: 60%);
 $main-color-light-6: color.scale($main-color, $lightness: 80%);
 $main-color-light-7: color.scale($main-color, $lightness: 86%);
 $main-color-light-8: color.scale($main-color, $lightness: 92%);
-$main-color-light-9: color.scale($main-color, $lightness: 97%);
+$main-color-light-9: color.scale($main-color, $lightness: 96%);
 
 $main-color-dark: color.scale($main-color, $lightness: -5%);
 $main-color-dark-2: color.scale($main-color, $lightness: -10%);
@@ -21,6 +21,12 @@ $main-color-dark-5: color.scale($main-color, $lightness: -60%);
 $main-color-dark-6: color.scale($main-color, $lightness: -80%);
 
 $badge-color: $main-color;
+
+/* Signals */
+$color-darkred: #a5081e;
+$color-red: #e21822;
+$color-yellow: #da9e45;
+$color-green: #4eb769;
 
 /* Background */
 $background-color: #fff;
@@ -71,6 +77,12 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
   --main-color-dark-6: #{$main-color-dark-6};
 
   --badge-color: #{$badge-color};
+
+  /* Signals */
+  --color-darkred: #{$color-darkred};
+  --color-red: #{$color-red};
+  --color-yellow: #{$color-yellow};
+  --color-green: #{$color-green};
 
   /* Background */
   --background-color: #{$background-color};

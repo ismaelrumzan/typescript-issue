@@ -40,6 +40,27 @@
                   :class="styles.button"
                   @click.native="closeMenu"
                 />
+                <a
+                  v-else-if="menuItemChild.externalLink"
+                  :href="menuItemChild.externalLink"
+                  target="_blank"
+                  rel="noopener"
+                  :class="styles.link"
+                >
+                  <span :class="styles.linkIcon">
+                    <IconWrapper width="52" height="52">
+                      <Icon :name="menuItemChild.icon" viewBox="0 0 512 512" />
+                    </IconWrapper>
+                  </span>
+                  <span :class="styles.linkText">
+                    <span :class="styles.linkTitle">{{
+                      menuItemChild.title
+                    }}</span>
+                    <span :class="styles.linkDescription">{{
+                      menuItemChild.description
+                    }}</span>
+                  </span>
+                </a>
                 <NuxtLink
                   v-else
                   :to="menuItemChild.link"
