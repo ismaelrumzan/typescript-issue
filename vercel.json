@@ -1,14 +1,21 @@
 {
   "version": 2,
-  "builds": [
+  "env": {
+    "ON_VERCEL": "true",
+    "DB_CONNECTION": "Connect"
+  },
+  "routes": [
     {
-      "src": "nuxt.config.ts",
-      "use": "@nuxtjs/now-builder",
-      "config": {
-        "serverFiles": [
-          "server/**"
-        ]
-      }
+      "src": "/api/(.*)",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/api",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "$1"
     }
   ]
 }

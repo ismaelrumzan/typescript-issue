@@ -1,6 +1,7 @@
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
+  target: 'static',
   /**
    * Runtime Config
    * @description Injects env variables, falls back to production values.
@@ -180,19 +181,14 @@ const config: NuxtConfig = {
    * Images
    */
   image: {
-    provider: 'ipx',
-    ipx: {},
-    // screens: {
-    //   xs: 320,
-    //   sm: 640,
-    //   md: 768,
-    //   lg: 1024,
-    //   xl: 1280,
-    //   xxl: 1536,
-    //   '2xl': 1536
-    // },
-    serverMiddleware: {
-      '/_ipx': '~/server/ipx.js'
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536
     },
   },
 
