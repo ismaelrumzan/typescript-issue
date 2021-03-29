@@ -4,10 +4,24 @@ $skew-angle: 5deg;
 
 .section {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: var(--vertical-padding) 0;
-  overflow-x: hidden;
+
+  &.isSkewed {
+    padding: var(--vertical-padding) 0;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--vertical-padding) 0;
+    overflow-x: hidden;
+  }
+
+  &.isSkewed {
+    .container {
+      padding: 0;
+    }
+  }
 
   .content {
     z-index: 1;

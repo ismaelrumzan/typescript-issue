@@ -11,8 +11,10 @@
     ]"
     :data-theme="color"
   >
-    <div :class="styles.content">
-      <slot />
+    <div :class="styles.container">
+      <div :class="styles.content">
+        <slot />
+      </div>
     </div>
     <div v-if="skew" :class="styles.skewContainer">
       <span :class="styles.skew"></span>

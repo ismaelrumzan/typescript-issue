@@ -180,6 +180,8 @@ const config: NuxtConfig = {
    * Images
    */
   image: {
+    provider: 'ipx',
+    ipx: {},
     screens: {
       xs: 320,
       sm: 640,
@@ -188,6 +190,9 @@ const config: NuxtConfig = {
       xl: 1280,
       xxl: 1536,
       '2xl': 1536
+    },
+    serverMiddleware: {
+      '/_ipx': '~/api/ipx.ts'
     },
   },
 
