@@ -182,17 +182,17 @@ const config: NuxtConfig = {
   image: {
     provider: 'ipx',
     ipx: {},
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-      '2xl': 1536
-    },
+    // screens: {
+    //   xs: 320,
+    //   sm: 640,
+    //   md: 768,
+    //   lg: 1024,
+    //   xl: 1280,
+    //   xxl: 1536,
+    //   '2xl': 1536
+    // },
     serverMiddleware: {
-      '/_ipx': '~/api/ipx.ts'
+      '/_ipx': '~/server/ipx.js'
     },
   },
 
