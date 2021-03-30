@@ -36,10 +36,13 @@ export default Vue.extend({
       isWaitingNextWord: false
     };
   },
+  created() {
+    this.displayText = this.wordList[0].split("");
+  },
   mounted() {
     setTimeout(() => {
       this.start();
-    }, 2000);
+    }, 1000);
   },
   computed: {
     wordList() {
@@ -49,7 +52,7 @@ export default Vue.extend({
   methods: {
     start() {
       if (this.words && this.words.length > 0) {
-        this.currentWord = this.wordList[this.wordIdx].split("");
+        // this.currentWord = this.wordList[this.wordIdx].split("");
         this.timeoutSpeed = this.speed;
         this.animate = setTimeout(this.type, this.timeoutSpeed);
       }

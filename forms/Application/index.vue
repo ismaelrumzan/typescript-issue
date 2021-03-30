@@ -70,6 +70,20 @@
       </label>
     </Grid>
 
+    <!-- Honepot -->
+    <Grid columns="1" padding="small" :class="styles.password">
+      <label>
+        <span>Password</span>
+        <input
+          v-model="password"
+          type="text"
+          name="password"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </label>
+    </Grid>
+
     <Grid columns="1" padding="small">
       <Button :loading="loading" type="submit" title="Bewerbung senden" />
     </Grid>
@@ -77,6 +91,12 @@
     <Grid v-if="sent" columns="1" padding="small">
       <Box type="success">
         Deine Bewerbung wurde erfolgreich gesendet
+      </Box>
+    </Grid>
+
+    <Grid v-if="errors.length > 0" columns="1" padding="small">
+      <Box type="error" v-for="(error, i) in errors" :key="i">
+        {{ error }}
       </Box>
     </Grid>
 
@@ -109,21 +129,22 @@ export default Vue.extend({
       sendingError: false,
       styles,
       errors: [],
-      firstName: null,
-      lastName: null,
-      email: null,
-      organization: null,
-      message: null
+      firstName: "",
+      lastName: "",
+      email: "",
+      organization: "",
+      message: "",
+      password: null
     };
   },
   methods: {
     sendEmail(e: any) {
       emailjs
         .sendForm(
-          "service_jnsgi6m",
-          "template_uvui9b2",
+          "default_service",
+          "template_z2h7xj9",
           e.target,
-          "user_yiEcbjBXlOnHUlJaaA9o8"
+          "user_dD3sqT5ZcegDVQThVlwr2"
         )
         .then(
           result => {
@@ -142,23 +163,20 @@ export default Vue.extend({
       this.sent = false;
       this.sendingError = false;
       this.loading = true;
-      // if (this.name && this.age) {
-      //   return true;
-      // }
 
       this.errors = [];
 
-      // if (!this.name) {
-      //   this.errors.push('Name required.');
-      // }
-      // if (!this.age) {
-      //   this.errors.push('Age required.');
-      // }
+      if (this.password) {
+        (this as any).errors.push(
+          "You have filled out an invisible input field which makes us think that you are a bot. Please reload the site and and make sure to not use any third-party services to fill out the form for you."
+        );
+      }
 
       if (this.errors.length > 0) {
         this.loading = false;
         return false;
       }
+
       this.sendEmail(e);
     }
   }
