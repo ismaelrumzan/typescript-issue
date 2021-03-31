@@ -13,6 +13,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Hero from "@/blocks/Hero";
+import { MutationType, StorageKeys } from "@/store";
 
 export default Vue.extend({
   components: {
@@ -29,6 +30,11 @@ export default Vue.extend({
     };
   },
   mounted() {
+    const theme = localStorage.getItem(StorageKeys.THEME);
+    if (theme) {
+      this.$store.commit(MutationType.SET_THEME, theme);
+      document.documentElement.dataset.mode = theme;
+    }
     window.scrollTo({
       top: 0
     });

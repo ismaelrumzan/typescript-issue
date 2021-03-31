@@ -38,6 +38,13 @@ $bp: 900px;
     }
   }
 
+  .options {
+    display: flex;
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
   .copyright {
     color: var(--dark-5);
     line-height: 1.3;

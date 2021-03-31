@@ -1,6 +1,6 @@
 [
   {
-    "title": "Lösungen",
+    "title": "solutions",
     "link": "/solutions",
     "isSubmenu": true,
     "submenuType": "col-2",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "title": "Partner",
+    "title": "partners",
     "link": "/partners",
     "isSubmenu": true,
     "submenuType": "col-2",
@@ -118,17 +118,17 @@
     ]
   },
   {
-    "title": "Marktplatz",
+    "title": "marketplace",
     "link": "/marketplace",
     "isSubmenu": false
   },
   {
-    "title": "Unternehmen",
+    "title": "company",
     "link": "/about",
     "isSubmenu": false
   },
   {
-    "title": "Ressourcen",
+    "title": "ressources",
     "link": "/ressources",
     "isSubmenu": true,
     "submenuType": "col-3",

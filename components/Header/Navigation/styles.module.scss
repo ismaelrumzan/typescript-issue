@@ -104,6 +104,8 @@ $submenu-rotation-x: -30deg;
     transform: scaleY(1) translate3d(0, 0, 0);
     transition: transform 0.3s ease;
 
+    fill: var(--dark);
+
     @media (max-width: $bp) {
       margin-left: auto;
     }

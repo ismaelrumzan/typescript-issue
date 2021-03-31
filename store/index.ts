@@ -2,12 +2,17 @@ import type { Context } from '@nuxt/types'
 import type { GetterTree, ActionTree, MutationTree } from 'vuex'
 // import config from '@/nuxt.config'
 
+export const StorageKeys = {
+  THEME: 'theme'
+}
+
 export const state = () => ({
   // developmentMode: false,
   // baseURL: isDev ? (config.publicRuntimeConfig as any).devBaseURL : (config.publicRuntimeConfig as any).baseURL,
   // appURL: isDev ? (config.publicRuntimeConfig as any).devAppURL : (config.publicRuntimeConfig as any).appURL,
   cookieAccepted: false,
   menuOpen: false,
+  theme: 'light'
 })
 
 export type RootState = ReturnType<typeof state>
@@ -21,6 +26,7 @@ export const MutationType = {
   ACCEPT_COOKIE: 'acceptCookie',
   TOGGLE_MENU: 'toggleMenu',
   SET_OPEN_MENU: 'setOpenMenu',
+  SET_THEME: 'setTheme',
 }
 
 export const mutations: MutationTree<RootState> = {
@@ -42,6 +48,11 @@ export const mutations: MutationTree<RootState> = {
       document.body.classList.remove('blocked')
     }
     state.menuOpen = payload
+  },
+  [MutationType.SET_THEME]: (state, payload: string) => {
+    document.documentElement.dataset.mode = payload
+    localStorage.setItem(StorageKeys.THEME, payload)
+    state.theme = payload
   }
 }
 
@@ -54,5 +65,8 @@ export const actions: ActionTree<RootState, RootState> = {
   },
   openMenu({ commit }) {
     commit(MutationType.SET_OPEN_MENU)
+  },
+  setTheme({ commit }) {
+    commit(MutationType.SET_THEME)
   }
 }

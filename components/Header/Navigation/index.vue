@@ -11,17 +11,17 @@
       >
         <NuxtLink
           v-if="!menuItem.isSubmenu"
-          :to="menuItem.link"
+          :to="localePath(menuItem.link)"
           @click.native="closeMenu"
         >
-          {{ menuItem.title }}
+          {{ $t(menuItem.title) }}
         </NuxtLink>
         <NuxtLink
           v-else
           to=""
           @click.native="toggleActive(menuItem.isSubmenu, $event)"
         >
-          {{ menuItem.title }}
+          {{ $t(menuItem.title) }}
           <Icon name="ChevDown" :class="styles.chevDown" />
         </NuxtLink>
         <div v-if="menuItem.isSubmenu" :class="styles.submenuContainer">
@@ -63,7 +63,7 @@
                 </a>
                 <NuxtLink
                   v-else
-                  :to="menuItemChild.link"
+                  :to="localePath(menuItemChild.link)"
                   @click.native="closeMenu"
                   :class="styles.link"
                 >
@@ -94,7 +94,7 @@
               </li>
               <li v-for="(sidemenuItemChild, i) in menuItem.sidemenu" :key="i">
                 <NuxtLink
-                  :to="sidemenuItemChild.link"
+                  :to="localePath(sidemenuItemChild.link)"
                   @click.native="closeMenu"
                   :class="styles.sidemenuLink"
                 >

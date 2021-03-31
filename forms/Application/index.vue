@@ -33,10 +33,12 @@
         <span>E-Mail</span>
         <input
           v-model="email"
+          type="email"
           id="email"
           name="email"
           autocomplete="email"
           maxlength="200"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
         />
       </label>

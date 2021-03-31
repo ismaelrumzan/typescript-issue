@@ -117,9 +117,30 @@ const config: NuxtConfig = {
     'nuxt-i18n',
     'vue-scrollto/nuxt',
     'vue-social-sharing/nuxt',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
   ],
-  i18n: {},
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en-US.ts'
+      },
+      {
+        code: 'de',
+        name: 'Deutsch',
+        file: 'de-DE.ts'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'de'
+    }
+  },
+
   robots: {
     UserAgent: '*',
     Disallow: '/'

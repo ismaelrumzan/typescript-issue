@@ -9,7 +9,7 @@
     <div :class="styles.outerContainer">
       <div :class="styles.innerContainer">
         <NuxtLink
-          to="/"
+          :to="localePath('/')"
           :class="styles.logoContainer"
           @click.native="handleRoute"
         >
