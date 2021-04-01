@@ -8,9 +8,7 @@
     ]"
   >
     <div :class="styles.content">
-      <div v-if="badge" :class="styles.badge">
-        <span>{{ badge }}</span>
-      </div>
+      <Badge v-if="badge" :text="badge" />
       <h1 :class="styles.title">
         {{ title }}
         <TypeWriter
@@ -40,6 +38,7 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
+import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
 import TypeWriter from "@/components/TypeWriter";
@@ -47,9 +46,11 @@ import TypeWriter from "@/components/TypeWriter";
 type HorizontalAlignment = "left" | "right" | "center";
 type VerticalAlignment = "top" | "bottom" | "middle";
 type IllustrationWidth = "narrow" | "normal" | "wide";
+type RenderMode = "svg" | "canvas";
 
 export default Vue.extend({
   components: {
+    Badge,
     Button,
     Illustration,
     TypeWriter
@@ -79,6 +80,9 @@ export default Vue.extend({
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
       default: "normal"
+    },
+    renderer: {
+      type: String as PropType<RenderMode>
     },
     cta: {
       type: Array

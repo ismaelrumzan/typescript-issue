@@ -50,3 +50,17 @@ a {
     }
   }
 }
+
+button,
+a {
+  &:focus {
+    outline-color: var(--main-color-light);
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: 100%;
+}

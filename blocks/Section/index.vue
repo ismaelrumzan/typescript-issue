@@ -9,7 +9,7 @@
       { [styles.noPadding]: noPadding },
       { [styles.fullWidth]: fullWidth }
     ]"
-    :data-theme="color"
+    :data-section-theme="color"
   >
     <div :class="styles.container">
       <div :class="styles.content">

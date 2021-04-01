@@ -1,7 +1,6 @@
 $bp-1: 1023px;
 
 .container {
-  padding: 3rem 0;
   display: grid;
   align-items: center;
   grid-template-columns: 35% 1fr;
@@ -11,6 +10,31 @@ $bp-1: 1023px;
     grid-template-columns: 1fr !important;
     gap: 3rem 0;
     padding: 3rem 0;
+  }
+
+  &.pad-small {
+    padding: 1rem 0;
+    @media (max-width: $bp-1) {
+      padding: 1rem 0;
+    }
+  }
+  &.pad-medium {
+    padding: 3rem 0;
+    @media (max-width: $bp-1) {
+      padding: 3rem 0;
+    }
+  }
+  &.pad-large {
+    padding: 5rem 0;
+    @media (max-width: $bp-1) {
+      padding: 5rem 0;
+    }
+  }
+  &.pad-none {
+    padding: 0;
+    @media (max-width: $bp-1) {
+      padding: 0;
+    }
   }
 
   /* Content (Text + CTAs) */
@@ -24,20 +48,6 @@ $bp-1: 1023px;
       padding: 0;
       align-items: center;
       text-align: center;
-    }
-
-    .badge {
-      margin-bottom: 1rem;
-      span {
-        display: inline-flex;
-        padding: 0.35rem 1rem;
-        color: var(--badge-color);
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        background-color: var(--main-color-light-8);
-        border-radius: var(--border-radius-medium);
-      }
     }
 
     .title {
@@ -166,15 +176,15 @@ $bp-1: 1023px;
           }
 
           @media (max-width: 767px) {
-            width: 10rem;
-            height: 10rem;
+            width: 10rem !important;
+            height: 10rem !important;
             padding: 1rem;
-            top: -2rem;
-            left: -2rem;
+            top: -2rem !important;
+            left: -2rem !important;
           }
         }
         &:nth-child(2) {
-          bottom: -5rem;
+          bottom: -3.5rem;
           width: 25rem;
           height: 25rem;
           padding: 2rem;
@@ -232,6 +242,32 @@ $bp-1: 1023px;
     .illustration,
     .image {
       order: -1;
+    }
+
+    .image {
+      .background {
+        .fancy {
+          &:nth-child(1) {
+            top: -4.5rem;
+            left: -4.5rem;
+            width: 20rem;
+            height: 20rem;
+            .inner {
+              background-color: var(--main-color-light-2);
+            }
+          }
+
+          &:nth-child(3) {
+            right: -2.5rem;
+            top: -4rem;
+            width: 15rem;
+            height: 15rem;
+            .inner {
+              background-color: var(--main-color-light-3);
+            }
+          }
+        }
+      }
     }
   }
 

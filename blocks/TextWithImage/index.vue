@@ -1,9 +1,7 @@
 <template>
-  <div :class="[styles.container, styles[alignment]]">
+  <div :class="[styles.container, styles[alignment], styles[paddingClass]]">
     <div :class="styles.content">
-      <div v-if="badge" :class="styles.badge">
-        <span>{{ badge }}</span>
-      </div>
+      <Badge v-if="badge" :text="badge" />
       <h2 :class="styles.title">{{ title }}</h2>
       <span :class="styles.description">{{ description }}</span>
       <ul v-if="cta" :class="styles.buttons">
@@ -18,7 +16,7 @@
       </ul>
     </div>
     <div v-if="illustration" :class="styles.illustration">
-      <Illustration :name="illustration" />
+      <Illustration :name="illustration" :renderer="renderer" />
     </div>
     <div v-if="image" :class="styles.image">
       <NuxtImg :key="image" :src="`/images/${image}`" />
@@ -40,13 +38,17 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
+import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
 
 type Alignment = "left" | "right" | "center";
+type PaddingOption = "small" | "medium" | "large" | "none";
+type RenderMode = "svg" | "canvas";
 
 export default Vue.extend({
   components: {
+    Badge,
     Button,
     Illustration
   },
@@ -54,6 +56,10 @@ export default Vue.extend({
     alignment: {
       type: String as PropType<Alignment>,
       default: "left"
+    },
+    padding: {
+      type: String as PropType<PaddingOption>,
+      default: "medium"
     },
     badge: {
       type: String
@@ -68,6 +74,9 @@ export default Vue.extend({
     illustration: {
       type: String
     },
+    renderer: {
+      type: String as PropType<RenderMode>
+    },
     image: {
       type: String
     },
@@ -79,6 +88,11 @@ export default Vue.extend({
     return {
       styles
     };
+  },
+  computed: {
+    paddingClass(): string {
+      return `pad-${this.padding}`;
+    }
   }
 });
 </script>

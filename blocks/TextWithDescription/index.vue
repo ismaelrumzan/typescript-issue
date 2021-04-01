@@ -1,9 +1,7 @@
 <template>
   <div :class="[styles.container, styles[alignment]]">
     <div :class="styles.content">
-      <div v-if="badge" :class="styles.badge">
-        <span>{{ badge }}</span>
-      </div>
+      <Badge v-if="badge" :text="badge" />
       <h2 :class="styles.title">{{ title }}</h2>
       <span :class="styles.description">{{ description }}</span>
       <ul v-if="cta" :class="styles.buttons">
@@ -23,12 +21,14 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
+import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 
 type Alignment = "left" | "right" | "center";
 
 export default Vue.extend({
   components: {
+    Badge,
     Button
   },
   props: {

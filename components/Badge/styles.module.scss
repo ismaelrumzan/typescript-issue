@@ -1,0 +1,22 @@
+.badge {
+  margin-bottom: 1rem;
+  span {
+    display: inline-flex;
+    padding: 0.35rem 1rem;
+    color: var(--badge-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    background-color: var(--main-color-light-8);
+    border-radius: var(--border-radius-medium);
+  }
+}
+
+[data-theme="dark"] {
+  .badge {
+    span {
+      color: #fff;
+      background-color: var(--main-color-light);
+    }
+  }
+}

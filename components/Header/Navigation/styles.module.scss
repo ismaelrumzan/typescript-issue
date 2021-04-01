@@ -417,3 +417,11 @@ $submenu-rotation-x: -30deg;
     }
   }
 }
+
+/* Submenu Color Corrections */
+[data-theme="dark"] .submenuWrapper {
+  --light: var(--light-2);
+  @media (max-width: $bp) {
+    --light: var(--light);
+  }
+}

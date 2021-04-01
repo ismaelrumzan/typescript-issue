@@ -1,48 +1,62 @@
 <template>
   <client-only>
-    <Swiper ref="slider" :options="swiperOptions" :class="styles.carousel">
-      <SwiperSlide
-        v-for="(slide, i) in slides"
-        :key="i"
-        :style="`width: ${Math.floor(Math.random() * 20) + 15}rem`"
-      >
-        <span :class="styles.index">{{ modifyIndex(i) }}</span>
-        <VNode :node="slide" />
-      </SwiperSlide>
-      <!-- <div
-        :class="['swiper-pagination', styles.pagination]"
-        slot="pagination"
-      ></div> -->
-    </Swiper>
+    <div :class="[styles.container, styles[alignment]]">
+      <div :class="styles.header">
+        <Badge v-if="badge" :text="badge" />
+        <div v-if="title" :class="styles.headerText">
+          <h2 :class="styles.title">{{ title }}</h2>
+          <p v-if="description" :class="styles.description">
+            {{ description }}
+          </p>
+        </div>
+        <div :class="styles.navigation">
+          <button @click="goToPrevSlide"><Icon name="LongArrowLeft" /></button>
+          <button @click="goToNextSlide"><Icon name="LongArrowRight" /></button>
+        </div>
+      </div>
+      <Swiper ref="slider" :options="swiperOptions" :class="styles.carousel">
+        <SwiperSlide v-for="(slide, i) in slides" :key="i">
+          <span :class="styles.index">{{ modifyIndex(i) }}</span>
+          <VNode :node="slide" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </client-only>
 </template>
 
 <script lang='ts'>
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
-import {
-  Swiper as SwiperClass,
-  SwiperOptions,
-  Pagination,
-  Mousewheel
-} from "swiper/core";
+import Badge from "@/components/Badge";
+import Icon from "@/components/Icon";
+import { Swiper as SwiperClass, SwiperOptions, Mousewheel } from "swiper/core";
 import { directive } from "vue-awesome-swiper";
 import getAwesomeSwiper from "vue-awesome-swiper/dist/exporter";
 import "swiper/swiper-bundle.css";
-SwiperClass.use([Pagination, Mousewheel]);
+SwiperClass.use([Mousewheel]);
 const { Swiper, SwiperSlide } = getAwesomeSwiper(SwiperClass);
+
+type Alignment = "left" | "right" | "center";
 
 export default Vue.extend({
   props: {
+    badge: {
+      type: String
+    },
     title: {
       type: String
-      // required: true
     },
     description: {
       type: String
+    },
+    alignment: {
+      type: String as PropType<Alignment>,
+      default: "center"
     }
   },
   components: {
+    Badge,
+    Icon,
     Swiper,
     SwiperSlide,
     VNode: {
@@ -61,10 +75,10 @@ export default Vue.extend({
         autoHeight: true,
         loop: true,
         slidesPerView: 1.35,
-        freeMode: true,
-        mousewheel: true,
+        mousewheel: {
+          forceToAxis: true
+        },
         centeredSlides: true,
-        freeModeSticky: true,
         slideToClickedSlide: true,
         spaceBetween: 15,
         slideClass: styles.slide,
@@ -80,15 +94,6 @@ export default Vue.extend({
           1500: {
             slidesPerView: 4.5
           }
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          bulletClass: [styles.bullet, "swiper-pagination-bullet"].join(" "),
-          bulletActiveClass: [
-            styles.bulletActive,
-            "swiper-pagination-bullet-active"
-          ].join(" "),
-          clickable: true
         }
       } as SwiperOptions
     };
@@ -105,6 +110,12 @@ export default Vue.extend({
         return `0${i}`;
       }
       return i;
+    },
+    goToNextSlide() {
+      (this as any).$refs.slider.$swiper.slideNext();
+    },
+    goToPrevSlide() {
+      (this as any).$refs.slider.$swiper.slidePrev();
     }
   }
 });

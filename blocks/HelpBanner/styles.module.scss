@@ -87,3 +87,7 @@ $bp: 812px;
     transform: translate3d(0, -7%, 0) scale(1.5);
   }
 }
+
+[data-theme="dark"] .help {
+  background-color: var(--light-2);
+}

@@ -35,7 +35,7 @@
                 <Button
                   v-if="menuItemChild.type === 'button'"
                   type="tertiary"
-                  :title="menuItemChild.title"
+                  :title="$t(menuItemChild.title)"
                   :href="menuItemChild.link"
                   :class="styles.button"
                   @click.native="closeMenu"
@@ -54,7 +54,7 @@
                   </span>
                   <span :class="styles.linkText">
                     <span :class="styles.linkTitle">{{
-                      menuItemChild.title
+                      $t(menuItemChild.title)
                     }}</span>
                     <span :class="styles.linkDescription">{{
                       menuItemChild.description
@@ -74,7 +74,7 @@
                   </span>
                   <span :class="styles.linkText">
                     <span :class="styles.linkTitle">{{
-                      menuItemChild.title
+                      $t(menuItemChild.title)
                     }}</span>
                     <span :class="styles.linkDescription">{{
                       menuItemChild.description
@@ -89,7 +89,7 @@
             >
               <li>
                 <span :class="styles.sidemenuTitle">
-                  {{ menuItem.sidemenuTitle }}
+                  {{ $t(menuItem.sidemenuTitle) }}
                 </span>
               </li>
               <li v-for="(sidemenuItemChild, i) in menuItem.sidemenu" :key="i">
@@ -99,7 +99,7 @@
                   :class="styles.sidemenuLink"
                 >
                   <span :class="styles.sidemenuLinkTitle">
-                    {{ sidemenuItemChild.title }}
+                    {{ $t(sidemenuItemChild.title) }}
                   </span>
                 </NuxtLink>
               </li>

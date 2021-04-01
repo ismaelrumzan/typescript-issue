@@ -1,218 +1,218 @@
 [
   {
-    "title": "Front Office",
+    "title": "pages.frontoffice",
     "children": [
       {
-        "title": "Zimmerplan",
+        "title": "pages.roomplan",
         "link": "/frontoffice/roomplan"
       },
       {
-        "title": "Reservierungen",
+        "title": "pages.reservations",
         "link": "/frontoffice/reservations"
       },
       {
-        "title": "Gäste",
+        "title": "pages.guests",
         "link": "/frontoffice/guests"
       },
       {
-        "title": "Fundsachen",
+        "title": "pages.lost_property",
         "link": "/frontoffice/lost-property"
       },
       {
-        "title": "Feedback",
+        "title": "pages.feedback",
         "link": "/frontoffice/feedback"
       },
       {
-        "title": "E-Mail",
+        "title": "pages.emails",
         "link": "/frontoffice/emails"
       },
       {
-        "title": "Messenger",
+        "title": "pages.messenger",
         "link": "/frontoffice/messenger"
       },
       {
-        "title": "Telefon",
+        "title": "pages.phone",
         "link": "/frontoffice/phone"
       },
       {
-        "title": "Zutritt",
+        "title": "pages.permissions",
         "link": "/frontoffice/permissions"
       },
       {
-        "title": "Zahlungen",
+        "title": "pages.payments",
         "link": "/frontoffice/payments"
       }
     ]
   },
   {
-    "title": "Back Office",
+    "title": "pages.backoffice",
     "children": [
       {
-        "title": "Finanzen",
+        "title": "pages.finance",
         "link": "/backoffice/finance"
       },
       {
-        "title": "Lieferanten",
+        "title": "pages.suppliers",
         "link": "/backoffice/suppliers"
       },
       {
-        "title": "Warenwirtschaft",
+        "title": "pages.erp",
         "link": "/backoffice/erp"
       },
       {
-        "title": "Energiemanagement",
+        "title": "pages.energy_management",
         "link": "/backoffice/energy"
       },
       {
-        "title": "Housekeeping",
+        "title": "pages.housekeeping",
         "link": "/backoffice/housekeeping"
       },
       {
-        "title": "Mitarbeiter",
+        "title": "pages.staff",
         "link": "/backoffice/staff"
       },
       {
-        "title": "Bewerber",
+        "title": "pages.applications",
         "link": "/backoffice/applications"
       },
       {
-        "title": "Post",
-        "link": "/backoffice/mails"
+        "title": "pages.mail",
+        "link": "/backoffice/mail"
       }
     ]
   },
   {
-    "title": "Vermarktung",
+    "title": "pages.marketing",
     "children": [
       {
-        "title": "Website Analytics",
+        "title": "pages.website_analytics",
         "link": "/marketing/website-analytics"
       },
       {
-        "title": "Kanal Analytics",
+        "title": "pages.channel_analytics",
         "link": "/marketing/channel-analytics"
       },
       {
-        "title": "Buchungsseite",
+        "title": "pages.booking_page",
         "link": "/marketing/booking-page"
       },
       {
-        "title": "Content Management",
+        "title": "pages.content_management",
         "link": "/marketing/content-management"
       },
       {
-        "title": "Bonusprogramm",
+        "title": "pages.bonus_program",
         "link": "/marketing/bonus-program"
       },
       {
-        "title": "Geschenke",
+        "title": "pages.gifts",
         "link": "/marketing/gifts"
       },
       {
-        "title": "Umfragen",
+        "title": "pages.surveys",
         "link": "/marketing/surveys"
       },
       {
-        "title": "Newsletter",
+        "title": "pages.newsletter",
         "link": "/marketing/newsletter"
       },
       {
-        "title": "Kampagnen",
+        "title": "pages.campaigns",
         "link": "/marketing/campaigns"
       }
     ]
   },
   {
-    "title": "Operations",
+    "title": "pages.operations",
     "children": [
       {
-        "title": "Abläufe & Assistenten",
+        "title": "pages.processes_and_assistants",
         "link": "/operations/processes-and-assistants"
       },
       {
-        "title": "Workflows",
+        "title": "pages.workflows",
         "link": "/operations/workflows"
       },
       {
-        "title": "Cockpits",
+        "title": "pages.cockpits",
         "link": "/operations/cockpits"
       },
       {
-        "title": "Ressourcen-Verwaltung",
+        "title": "pages.ressource_management",
         "link": "/operations/ressource-management"
       },
       {
-        "title": "Lokale Geräte",
+        "title": "pages.local_devices",
         "link": "/operations/local-devices"
       },
       {
-        "title": "Sicherheit & Datenschutz",
+        "title": "pages.security_and_privacy",
         "link": "/operations/security-and-privacy"
       },
       {
-        "title": "Beauftragte",
+        "title": "pages.appointees",
         "link": "/operations/appointees"
       },
       {
-        "title": "Datenübermittlung",
+        "title": "pages.data_transmission",
         "link": "/operations/data-transmission"
       }
     ]
   },
   {
-    "title": "Marktplatz",
+    "title": "pages.marketplace",
     "children": [
       {
-        "title": "Apps",
+        "title": "pages.apps",
         "link": "/marketplace/apps"
       },
       {
-        "title": "Produkte",
+        "title": "pages.products",
         "link": "/marketplace/products"
       },
       {
-        "title": "Partner",
+        "title": "pages.partners",
         "link": "/marketplace/partners"
       },
       {
-        "title": "Entwickler",
+        "title": "pages.developers",
         "link": "/marketplace/developers"
       },
       {
-        "title": "Förderungen",
+        "title": "pages.promotions",
         "link": "/marketplace/promotions"
       }
     ]
   },
   {
-    "title": "Unternehmen",
+    "title": "pages.company",
     "children": [
       {
-        "title": "Über uns",
+        "title": "pages.about",
         "link": "/about"
       },
       {
-        "title": "Karriere",
+        "title": "pages.jobs",
         "link": "/jobs"
       },
       {
-        "title": "FAQ",
+        "title": "pages.faq",
         "link": "/faq"
       },
       {
-        "title": "Demo",
+        "title": "pages.demo",
         "link": "/demo"
       },
       {
-        "title": "Webinare",
+        "title": "pages.webinars",
         "link": "/webinars"
       },
       {
-        "title": "Roadmap",
+        "title": "pages.roadmap",
         "link": "/roadmap"
       },
       {
-        "title": "Presse",
+        "title": "pages.press",
         "link": "/press"
       }
     ]

@@ -56,6 +56,7 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
 
 /* Allocation to CSS variables */
 :root {
+  // color-scheme: light dark;
   /* Theme */
   --main-color: #{$main-color};
 
@@ -131,11 +132,11 @@ $light-7-dark: #444;
 $light-8-dark: #555;
 $light-9-dark: #777;
 
-$shadow-small-dark: 0 0 12px rgba(255, 255, 255, 0.075);
-$shadow-medium-dark: 0 0 24px rgba(255, 255, 255, 0.1);
-$shadow-large-dark: 0 0 64px rgba(255, 255, 255, 0.15);
+$shadow-small-dark: 0 0 12px rgba(80, 80, 80, 0.075);
+$shadow-medium-dark: 0 0 24px rgba(80, 80, 80, 0.1);
+$shadow-large-dark: 0 0 64px rgba(80, 80, 80, 0.15);
 
-[data-mode="dark"] {
+[data-theme="dark"] {
   /* Background */
   --background-color: #{$background-color-dark};
 

@@ -1,11 +1,11 @@
 <template>
   <nav :class="styles.navigation">
     <div v-for="(singleMenu, i) in footerMenu" :key="i" :class="styles.menu">
-      <h3 :class="styles.title">{{ singleMenu.title }}</h3>
+      <h3 :class="styles.title">{{ $t(singleMenu.title) }}</h3>
       <ul>
         <li v-for="(item, i) in singleMenu.children" :key="i">
-          <NuxtLink :to="item.link">
-            {{ item.title }}
+          <NuxtLink :to="localePath(item.link)">
+            {{ $t(item.title) }}
           </NuxtLink>
         </li>
       </ul>
@@ -32,8 +32,8 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      footerMenu: footerMenu as SingleMenu[],
+      footerMenu: footerMenu as SingleMenu[]
     };
-  },
+  }
 });
 </script>

@@ -3,8 +3,10 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
 import lottie from "lottie-web";
+
+export type RenderMode = "svg" | "canvas";
 
 export default Vue.extend({
   props: {
@@ -20,6 +22,10 @@ export default Vue.extend({
     autoplay: {
       type: Boolean,
       default: true
+    },
+    renderer: {
+      type: String as PropType<RenderMode>,
+      default: "svg"
     }
   },
   data() {
@@ -38,7 +44,7 @@ export default Vue.extend({
       .then(module => {
         (lottie as any).loadAnimation({
           container: this.$refs.illustration,
-          renderer: "svg",
+          renderer: this.renderer,
           loop: this.loop,
           autoplay: this.autoplay,
           animationData: module.default
@@ -50,7 +56,7 @@ export default Vue.extend({
         import(`@/assets/illustrations/404.json`).then(module => {
           (lottie as any).loadAnimation({
             container: this.$refs.illustration,
-            renderer: "svg",
+            renderer: this.renderer,
             loop: this.loop,
             autoplay: this.autoplay,
             animationData: module.default

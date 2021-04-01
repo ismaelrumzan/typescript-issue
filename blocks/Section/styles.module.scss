@@ -23,16 +23,18 @@ $skew-angle: 5deg;
     }
   }
 
+  &.noPadding {
+    .container {
+      padding: 0;
+    }
+  }
+
   .content {
     z-index: 1;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--horizontal-padding);
-  }
-
-  &.noPadding {
-    padding: 0;
   }
 
   &.fullWidth {
@@ -67,16 +69,40 @@ $skew-angle: 5deg;
   }
 }
 
-.light {
-  background-color: var(--main-color-light-8);
+[data-theme="dark"] .main {
+  background-color: var(--light-2);
   &.isSkewed {
     background-color: transparent;
     .skew {
-      background-color: var(--main-color-light-8);
+      background-color: var(--light-2);
+    }
+  }
+}
+
+.light {
+  background-color: var(--main-color-light-9);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--main-color-light-9);
     }
   }
   .content {
-    --main-color-light-8: #{$main-color-light-6};
+    --main-color-light-9: #{$main-color-light-8};
+    --main-color-light-8: #{$main-color-light-7};
+  }
+}
+
+[data-theme="dark"] .light {
+  background-color: var(--light-2);
+  &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--light-2);
+    }
+  }
+  .content {
+    --main-color-light-9: #{$main-color-light-7};
   }
 }
 
@@ -103,10 +129,18 @@ $skew-angle: 5deg;
   }
 }
 
+[data-theme="dark"] .dark {
+  background-color: var(--light-3);
+  &.isSkewed {
+    .skew {
+      background-color: var(--light-3);
+    }
+  }
+}
+
 .grey {
   background-color: var(--light-2);
   &.isSkewed {
-    background-color: transparent;
     .skew {
       background-color: var(--light-2);
     }

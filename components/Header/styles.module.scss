@@ -114,6 +114,10 @@ $bp-menu-tablet: 1150px;
   }
 }
 
+[data-theme="dark"] .logo {
+  filter: invert(1) saturate(0) brightness(99);
+}
+
 .buttons {
   flex: 0;
   display: grid;

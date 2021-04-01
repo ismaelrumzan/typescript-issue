@@ -1,6 +1,6 @@
 [
   {
-    "title": "solutions",
+    "title": "pages.solutions",
     "link": "/solutions",
     "isSubmenu": true,
     "submenuType": "col-2",
@@ -9,33 +9,33 @@
     "sidemenuPosition": "right",
     "children": [
       {
-        "title": "Front Office",
+        "title": "pages.frontoffice",
         "link": "/frontoffice",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "FrontOffice"
       },
       {
-        "title": "Back Office",
+        "title": "pages.backoffice",
         "link": "/backoffice",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "BackOffice"
       },
       {
-        "title": "Vermarktung",
+        "title": "pages.marketing",
         "link": "/marketing",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Marketing"
       },
       {
-        "title": "Operations",
+        "title": "pages.operations",
         "link": "/operations",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Operations"
       },
       {
         "type": "button",
-        "title": "Alle Lösungen",
-        "link": "/operations"
+        "title": "pages.all_solutions",
+        "link": "/solutions"
       }
     ],
     "sidemenu": [
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "title": "partners",
+    "title": "pages.partners",
     "link": "/partners",
     "isSubmenu": true,
     "submenuType": "col-2",
@@ -76,19 +76,19 @@
     "sidemenuPosition": "right",
     "children": [
       {
-        "title": "Technologie",
+        "title": "pages.technology",
         "link": "/partners/technology",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "PartnerTechnology"
       },
       {
-        "title": "Vertrieb",
+        "title": "pages.sales",
         "link": "/partners/sales",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "PartnerSales"
       },
       {
-        "title": "Service",
+        "title": "pages.service",
         "link": "/partners/service",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "PartnerService"
@@ -118,59 +118,59 @@
     ]
   },
   {
-    "title": "marketplace",
+    "title": "pages.marketplace",
     "link": "/marketplace",
     "isSubmenu": false
   },
   {
-    "title": "company",
+    "title": "pages.company",
     "link": "/about",
     "isSubmenu": false
   },
   {
-    "title": "ressources",
+    "title": "pages.ressources",
     "link": "/ressources",
     "isSubmenu": true,
     "submenuType": "col-3",
     "children": [
       {
-        "title": "Onboarding",
+        "title": "pages.onboarding",
         "link": "/onboarding",
         "description": "Lorem ipsum",
         "icon": "Shuttle"
       },
       {
-        "title": "Blog",
+        "title": "pages.blog",
         "link": "/blog",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Blog"
       },
       {
-        "title": "Videos",
+        "title": "pages.videos",
         "link": "/videos",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Video"
       },
       {
-        "title": "Dokumentation",
+        "title": "pages.documentation",
         "link": "/docs",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Document"
       },
       {
-        "title": "Consulting",
+        "title": "pages.consulting",
         "link": "/consulting",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Help"
       },
       {
-        "title": "Meeting",
+        "title": "pages.meeting",
         "externalLink": "https://calendly.com/digitalhotel",
         "description": "Direkt online buchen",
         "icon": "Calendar"
       },
       {
-        "title": "Hilfe",
+        "title": "pages.help",
         "link": "/help",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Question"

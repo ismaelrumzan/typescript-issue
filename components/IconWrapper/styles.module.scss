@@ -18,9 +18,19 @@
   }
 }
 
-[data-theme="main"],
+[data-section-theme="main"],
+[data-section-theme="dark"] {
+  .wrapper {
+    svg,
+    g {
+      fill: #fff;
+    }
+  }
+}
+
 [data-theme="dark"] {
   .wrapper {
+    background-color: var(--main-color-light);
     svg,
     g {
       fill: #fff;

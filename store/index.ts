@@ -50,7 +50,7 @@ export const mutations: MutationTree<RootState> = {
     state.menuOpen = payload
   },
   [MutationType.SET_THEME]: (state, payload: string) => {
-    document.documentElement.dataset.mode = payload
+    document.documentElement.dataset.theme = payload
     localStorage.setItem(StorageKeys.THEME, payload)
     state.theme = payload
   }

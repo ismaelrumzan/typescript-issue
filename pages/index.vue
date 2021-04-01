@@ -8,37 +8,41 @@
       illustration="example"
       :cta="ctasHero"
     />
-    <Section fullWidth>
-      <TextWithDescription
-        badge="Solutions"
-        title="Diese Lösungen bietet Dir Digital Hotel"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-      />
-      <FeatureSlider>
+    <Section color="grey" fullWidth>
+      <FeatureSlider
+        title="Warum Digital Hotel?"
+        description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+        badge="pages.solutions"
+      >
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
         <Slide
           title="Lorem ipsum dolor sit amet"
           description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          moreLink="/operations"
         />
       </FeatureSlider>
     </Section>
@@ -77,7 +81,7 @@
         />
       </Grid>
     </Section>
-    <Section color="dark">
+    <Section color="main">
       <Grid columns="2">
         <Feature
           title="This is a feature"
@@ -112,108 +116,30 @@
         />
       </Grid>
     </Section>
-    <Section color="main">
-      <Grid :columns="4">
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-          moreLink="/operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-      </Grid>
-    </Section>
-    <Section>
-      <TextWithDescription
-        badge="Front Office"
-        title="Vereinfache die Abläufe Deiner Rezeption"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-      />
-      <Tabs alignment="left">
-        <Tab
-          title="Zimmerplan"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="example" />
-        </Tab>
-        <Tab
-          title="Kampagnen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="example" />
-        </Tab>
-        <Tab
-          title="Zahlungen"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-      </Tabs>
-      <TextWithDescription
-        badge="Back Office"
-        title="Vereinfache das Management Deines Hotels"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-      />
-      <Tabs alignment="right">
-        <Tab
-          title="Zimmerplan"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="example" />
-        </Tab>
-        <Tab
-          title="Messenger"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-        <Tab
-          title="Analytics"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-        >
-          <Illustration name="404" />
-        </Tab>
-      </Tabs>
-      <TextWithDescription
-        badge="Operations"
-        title="Vereinfache das Management Deines Hotels"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="center"
-      />
-    </Section>
     <Section>
       <TextWithImage
         badge="Operations"
         title="Vereinfache das Management Deines Hotels"
         description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
         image="test.png"
+        padding="large"
+        alignment="right"
         :cta="ctaFirst"
+      />
+    </Section>
+    <Section color="light" noPadding>
+      <TextWithImage
+        badge="Bewirb dich"
+        title="Haben wir Dein Interesse geweckt?"
+        description="Dann bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil' Dich, die Plätze sind begrenzt!"
+        illustration="contact"
+        padding="none"
+        :cta="[
+          {
+            title: 'Jetzt bewerben',
+            href: localePath('/apply')
+          }
+        ]"
       />
     </Section>
     <Section>

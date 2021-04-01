@@ -116,3 +116,18 @@
     border-color: var(--main-color-light-7);
   }
 }
+
+[data-theme="dark"] {
+  .tertiary {
+    color: var(--main-color-light);
+    border-color: rgba(255, 255, 255, 0.035);
+    background-color: rgba(255, 255, 255, 0.035);
+    transition: opacity 0.2s;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

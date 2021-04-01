@@ -73,13 +73,13 @@
     </Grid>
 
     <!-- Honepot -->
-    <Grid columns="1" padding="small" :class="styles.password">
+    <Grid columns="1" padding="small" :class="styles.honeypot">
       <label>
         <span>Password</span>
         <input
           v-model="password"
           type="text"
-          name="password"
+          name="the_password"
           tabindex="-1"
           autocomplete="off"
         />

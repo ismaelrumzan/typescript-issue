@@ -2,16 +2,16 @@
   <div :class="styles.trustbarWrapper">
     <div :class="styles.trustbar">
       <div :class="styles.item">
+        <Icon name="Check" />
+        <span>99.99% Uptime</span>
+      </div>
+      <div :class="styles.item">
         <Icon name="Security" />
         <span>Fokus auf Sicherheit</span>
       </div>
       <div :class="styles.item">
-        <Icon name="Demo" />
-        <span>Kostenlose Testphase</span>
-      </div>
-      <div :class="styles.item">
-        <Icon name="Check" />
-        <span>99.99% Uptime</span>
+        <Icon name="Speed" />
+        <span>Hohe Geschwindigkeit</span>
       </div>
     </div>
   </div>
