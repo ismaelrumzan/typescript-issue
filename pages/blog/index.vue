@@ -3,7 +3,7 @@
     <h1>Blog</h1>
     <ul :class="styles.posts">
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+        <NuxtLink :to="article.path">
           <div>
             <h2 :class="styles.title">{{ article.title }}</h2>
             <span :class="styles.desc">{{ article.description }}</span>
@@ -19,12 +19,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-import styles from "./index.module.scss?module";
+import styles from "./styles.module.scss?module";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/de";
+import "dayjs/locale/en";
 dayjs.extend(relativeTime);
-dayjs.locale("de");
 
 export default Vue.extend({
   data() {
@@ -32,11 +32,20 @@ export default Vue.extend({
       styles
     };
   },
-  async asyncData({ $content, params }: any) {
-    const articles = await $content("articles")
+  async asyncData({ $content, app }: any) {
+    const articles = await $content(`${app.i18n.locale}/blog`)
       .only(["title", "description", "img", "slug", "author", "createdAt"])
       .sortBy("createdAt", "desc")
       .fetch();
+
+    if (app.i18n.locale === app.i18n.defaultLocale) {
+      return {
+        articles: articles.map((article: any) => ({
+          ...article,
+          path: article.path.replace(`/${app.i18n.locale}`, "")
+        }))
+      };
+    }
 
     return {
       articles
@@ -46,6 +55,9 @@ export default Vue.extend({
     formatDate(date: Date) {
       return dayjs(date).fromNow();
     }
+  },
+  created() {
+    dayjs.locale(this.$i18n.locale);
   }
 });
 </script>

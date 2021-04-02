@@ -9,7 +9,7 @@
   <NuxtLink
     v-else-if="href"
     :class="[styles.cta, styles[type], styles[variant]]"
-    :to="href"
+    :to="localePath(href)"
   >
     <span :class="styles.text">{{ title }}</span>
   </NuxtLink>

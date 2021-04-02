@@ -47,7 +47,7 @@ export default Vue.extend({
           renderer: this.renderer,
           loop: this.loop,
           autoplay: this.autoplay,
-          animationData: module.default
+          animationData: JSON.parse(JSON.stringify(module.default))
         });
       })
       .catch(error => {
@@ -59,10 +59,13 @@ export default Vue.extend({
             renderer: this.renderer,
             loop: this.loop,
             autoplay: this.autoplay,
-            animationData: module.default
+            animationData: JSON.parse(JSON.stringify(module.default))
           });
         });
       });
+  },
+  beforeDestroy() {
+    lottie.destroy();
   }
 });
 </script>

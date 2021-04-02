@@ -10,6 +10,7 @@
       { [styles.fullWidth]: fullWidth }
     ]"
     :data-section-theme="color"
+    :data-section-no-padding="noPadding"
   >
     <div :class="styles.container">
       <div :class="styles.content">

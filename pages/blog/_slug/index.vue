@@ -10,7 +10,7 @@
     <article>
       <div :class="styles.headerContainer">
         <div :class="styles.header">
-          <NuxtLink to="/blog" :class="styles.back">
+          <NuxtLink :to="localePath('/blog')" :class="styles.back">
             <Icon name="ChevDown" />
             Zurück zum Blog
           </NuxtLink>
@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import styles from "./_slug.module.scss?module";
+import styles from "./styles.module.scss?module";
 import Icon from "@/components/Icon";
 
 export default Vue.extend({
@@ -41,8 +41,11 @@ export default Vue.extend({
       styles
     };
   },
-  async asyncData({ $content, params }: any) {
-    const article = await $content("articles", params.slug).fetch();
+  async asyncData({ $content, params, app }: any) {
+    const article = await $content(
+      `${app.i18n.locale}/blog`,
+      params.slug
+    ).fetch();
     return { article };
   },
   methods: {
@@ -54,7 +57,7 @@ export default Vue.extend({
         day: "2-digit"
       };
 
-      return new Date(date).toLocaleDateString("de", options);
+      return new Date(date).toLocaleDateString(this.$i18n.locale, options);
     }
   }
 });

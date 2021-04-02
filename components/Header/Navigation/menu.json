@@ -165,9 +165,9 @@
       },
       {
         "title": "pages.meeting",
-        "externalLink": "https://calendly.com/digitalhotel",
         "description": "Direkt online buchen",
-        "icon": "Calendar"
+        "icon": "Calendar",
+        "onClick": "bookMeeting"
       },
       {
         "title": "pages.help",

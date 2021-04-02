@@ -86,7 +86,7 @@ export default Vue.extend({
     },
     handleRoute() {
       /* If index page, scroll to top instead of doing nothing */
-      if (this.$route.name === "index") {
+      if (this.$route.name === `index___${this.$i18n.locale}`) {
         window.scrollTo({
           top: 0,
           behavior: "smooth"
@@ -94,7 +94,7 @@ export default Vue.extend({
       }
     },
     closeMenu() {
-      this.$store.commit(MutationType.SET_OPEN_MENU, false);
+      this.$store.commit(MutationType.SET_MENU_OPEN, false);
     }
   },
   mounted() {

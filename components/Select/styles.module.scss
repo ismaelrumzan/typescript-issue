@@ -10,16 +10,13 @@
     appearance: none;
     outline: none;
     font-family: inherit;
-    font-size: 0.9rem;
 
     background-color: var(--light);
     padding: 0.5rem 2.75rem 0.5rem 1.025rem;
     border: 1px solid var(--light-5);
     border-radius: var(--border-radius-small);
-  }
-
-  @media (max-width: 600px) {
-    font-size: 1rem;
+    transform: scale(0.9) translate3d(0, 0, 0);
+    margin: -1% -5%;
   }
 
   .icon {

@@ -77,6 +77,7 @@ const config: NuxtConfig = {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/axios',
     '@nuxt/content',
     // '@nuxtjs/prismic',
     '@nuxtjs/gtm',
@@ -137,7 +138,9 @@ const config: NuxtConfig = {
     langDir: 'lang/',
     defaultLocale: 'en',
     vueI18n: {
-      fallbackLocale: 'de'
+      fallbackLocale: 'de',
+      silentFallbackWarn: true,
+      silentTranslationWarn: true
     }
   },
 

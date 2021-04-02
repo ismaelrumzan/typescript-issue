@@ -3,12 +3,14 @@ $bp-menu-tablet: 1150px;
 
 .header {
   z-index: 99;
+  pointer-events: none;
   position: sticky;
   top: 0;
   height: var(--header-height);
 }
 
 .outerContainer {
+  pointer-events: auto;
   position: relative;
   display: flex;
   justify-content: center;

@@ -24,14 +24,17 @@
           {{ $t(menuItem.title) }}
           <Icon name="ChevDown" :class="styles.chevDown" />
         </NuxtLink>
+
         <div v-if="menuItem.isSubmenu" :class="styles.submenuContainer">
           <div :class="styles.submenuWrapper">
+            <!-- Submenu -->
             <ul :class="[styles.submenu, styles[menuItem.submenuType]]">
               <li
                 v-for="(menuItemChild, i) in menuItem.children"
                 :key="i"
                 :class="styles[`${menuItemChild.type}Container`]"
               >
+                <!-- Button -->
                 <Button
                   v-if="menuItemChild.type === 'button'"
                   type="tertiary"
@@ -40,6 +43,8 @@
                   :class="styles.button"
                   @click.native="closeMenu"
                 />
+
+                <!-- External Link -->
                 <a
                   v-else-if="menuItemChild.externalLink"
                   :href="menuItemChild.externalLink"
@@ -61,6 +66,36 @@
                     }}</span>
                   </span>
                 </a>
+
+                <!-- Custom Behavior -->
+                <a
+                  v-else-if="menuItemChild.onClick"
+                  href="#"
+                  @click="
+                    [
+                      $event.preventDefault(),
+                      closeMenu,
+                      handleClick(menuItemChild.onClick)
+                    ]
+                  "
+                  :class="styles.link"
+                >
+                  <span :class="styles.linkIcon">
+                    <IconWrapper width="52" height="52">
+                      <Icon :name="menuItemChild.icon" viewBox="0 0 512 512" />
+                    </IconWrapper>
+                  </span>
+                  <span :class="styles.linkText">
+                    <span :class="styles.linkTitle">{{
+                      $t(menuItemChild.title)
+                    }}</span>
+                    <span :class="styles.linkDescription">{{
+                      menuItemChild.description
+                    }}</span>
+                  </span>
+                </a>
+
+                <!-- Default Behavior -->
                 <NuxtLink
                   v-else
                   :to="localePath(menuItemChild.link)"
@@ -83,6 +118,8 @@
                 </NuxtLink>
               </li>
             </ul>
+
+            <!-- Sidemenu -->
             <ul
               v-if="menuItem.hasSidemenu"
               :class="[styles.sidemenu, styles[menuItem.sidemenuPosition]]"
@@ -181,7 +218,12 @@ export default Vue.extend({
         .closest("#navigation > ul > li")
         .classList.remove(styles["hovered"]);
 
-      this.$store.commit(MutationType.SET_OPEN_MENU, false);
+      this.$store.commit(MutationType.SET_MENU_OPEN, false);
+    },
+    handleClick(functionRef: string) {
+      if (functionRef === "bookMeeting") {
+        this.$store.commit(MutationType.SET_MEETING_WIDGET_OPEN, true);
+      }
     }
   }
 });

@@ -1,4 +1,5 @@
 $bp-1: 1023px;
+$horizontal-padding: 3rem;
 
 .container {
   display: grid;
@@ -9,32 +10,7 @@ $bp-1: 1023px;
   @media (max-width: $bp-1) {
     grid-template-columns: 1fr !important;
     gap: 3rem 0;
-    padding: 3rem 0;
-  }
-
-  &.pad-small {
-    padding: 1rem 0;
-    @media (max-width: $bp-1) {
-      padding: 1rem 0;
-    }
-  }
-  &.pad-medium {
-    padding: 3rem 0;
-    @media (max-width: $bp-1) {
-      padding: 3rem 0;
-    }
-  }
-  &.pad-large {
-    padding: 5rem 0;
-    @media (max-width: $bp-1) {
-      padding: 5rem 0;
-    }
-  }
-  &.pad-none {
-    padding: 0;
-    @media (max-width: $bp-1) {
-      padding: 0;
-    }
+    padding: $horizontal-padding 0;
   }
 
   /* Content (Text + CTAs) */
@@ -288,6 +264,37 @@ $bp-1: 1023px;
       .description {
         max-width: 50rem;
       }
+    }
+  }
+}
+
+/* Padding Options */
+.pad-small {
+  padding: 1rem 0;
+}
+.pad-medium {
+  padding: 3rem 0;
+}
+.pad-large {
+  padding: 5rem 0;
+}
+.pad-none {
+  padding: 0;
+}
+
+@media (max-width: $bp-1) {
+  .pad-large,
+  .pad-medium,
+  .pad-large,
+  .pad-none {
+    padding: $horizontal-padding 0;
+  }
+  [data-section-no-padding="true"] {
+    .pad-large,
+    .pad-medium,
+    .pad-large,
+    .pad-none {
+      padding: calc(#{$horizontal-padding} + var(--horizontal-padding)) 0;
     }
   }
 }

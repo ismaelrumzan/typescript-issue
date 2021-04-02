@@ -152,12 +152,19 @@ export default Vue.extend({
           result => {
             this.loading = false;
             this.sent = true;
-            console.log("SUCCESS!", result.status, result.text);
+            console.log(
+              "Content has been submitted successfully!",
+              result.status,
+              result.text
+            );
           },
           error => {
             this.loading = false;
             this.sendingError = true;
-            console.log("FAILED...", error);
+            console.error(
+              "An error has occured while trying to submit the content!",
+              error
+            );
           }
         );
     },

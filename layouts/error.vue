@@ -46,6 +46,10 @@ export default Vue.extend({
         this.$store.commit(MutationType.SET_THEME, "dark");
       }
     }
+
+    window.scrollTo({
+      top: 0
+    });
   }
 });
 </script>

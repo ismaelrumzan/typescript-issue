@@ -15,8 +15,8 @@
         badge="pages.solutions"
       >
         <Slide
-          title="Lorem ipsum dolor sit amet"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          title="Smarte Tools für die täglichen Aufgaben"
+          description="Unsere Assistenten helfen Dir von der Reservierung bis zur Fundsache, völlig selbsterklärend für jeden Mitarbeiter die Aufgaben zu erledigen und die Daten dort abzulegen, wo Sie hingehören."
           moreLink="/operations"
         />
         <Slide
@@ -137,7 +137,7 @@
         :cta="[
           {
             title: 'Jetzt bewerben',
-            href: localePath('/apply')
+            href: '/apply'
           }
         ]"
       />
