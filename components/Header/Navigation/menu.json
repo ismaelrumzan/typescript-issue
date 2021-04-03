@@ -40,28 +40,23 @@
     ],
     "sidemenu": [
       {
-        "title": "Marketing",
-        "link": "/teams/",
+        "title": "pages.team_frontoffice",
+        "link": "/teams/frontoffice",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Sales",
-        "link": "/teams/",
+        "title": "pages.team_marketing",
+        "link": "/teams/marketing",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Management",
-        "link": "/teams/",
+        "title": "pages.team_hotel_manager",
+        "link": "/teams/hotel-manager",
         "description": "Lorem ipsum dolor sit amet"
       },
       {
-        "title": "Finance",
-        "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet"
-      },
-      {
-        "title": "Operations",
-        "link": "/teams/",
+        "title": "pages.team_developer",
+        "link": "/teams/developer",
         "description": "Lorem ipsum dolor sit amet"
       }
     ]

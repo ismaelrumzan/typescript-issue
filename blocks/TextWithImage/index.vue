@@ -2,8 +2,8 @@
   <div :class="[styles.container, styles[alignment], styles[paddingClass]]">
     <div :class="styles.content">
       <Badge v-if="badge" :text="badge" />
-      <h2 :class="styles.title">{{ title }}</h2>
-      <span :class="styles.description">{{ description }}</span>
+      <h2 :class="styles.title">{{ $t(title) }}</h2>
+      <span :class="styles.description">{{ $t(description) }}</span>
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
@@ -22,6 +22,7 @@
       <nuxt-img
         :key="image"
         :src="`/images/${image}`"
+        loading="lazy"
         sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
       />
       <div :class="styles.background">

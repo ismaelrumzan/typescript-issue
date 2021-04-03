@@ -2,8 +2,8 @@
   <div :class="[styles.container, styles[alignment]]">
     <div :class="styles.content">
       <Badge v-if="badge" :text="badge" />
-      <h2 :class="styles.title">{{ title }}</h2>
-      <span :class="styles.description">{{ description }}</span>
+      <h2 :class="styles.title">{{ $t(title) }}</h2>
+      <span :class="styles.description">{{ $t(description) }}</span>
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
@@ -29,31 +29,31 @@ type Alignment = "left" | "right" | "center";
 export default Vue.extend({
   components: {
     Badge,
-    Button
+    Button,
   },
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left"
+      default: "left",
     },
     badge: {
-      type: String
+      type: String,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
-      type: String
+      type: String,
     },
     cta: {
-      type: Array
-    }
+      type: Array,
+    },
   },
   data() {
     return {
-      styles
+      styles,
     };
-  }
+  },
 });
 </script>

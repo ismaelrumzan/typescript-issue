@@ -4,20 +4,20 @@
       styles.hero,
       styles[alignment],
       styles[verticalAlign],
-      styles[illustrationWidth]
+      styles[illustrationWidth],
     ]"
   >
-    <div :class="styles.content">
+    <div :class="styles.content" :style="contentStyles">
       <Badge v-if="badge" :text="badge" />
-      <h1 :class="styles.title">
-        {{ title }}
+      <h1 :class="styles.title" :style="titleStyles">
+        {{ $t(title) }}
         <TypeWriter
           v-if="typewriter"
-          :words="typewriter"
+          :words="$t(typewriter)"
           :class="styles.typewriter"
         />
       </h1>
-      <span :class="styles.description">{{ description }}</span>
+      <span :class="styles.description">{{ $t(description) }}</span>
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
@@ -53,48 +53,54 @@ export default Vue.extend({
     Badge,
     Button,
     Illustration,
-    TypeWriter
+    TypeWriter,
   },
   props: {
     alignment: {
       type: String as PropType<HorizontalAlignment>,
-      default: "left"
+      default: "left",
     },
     verticalAlign: {
       type: String as PropType<VerticalAlignment>,
-      default: "middle"
+      default: "middle",
     },
     badge: {
-      type: String
+      type: String,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
-      type: String
+      type: String,
     },
     illustration: {
-      type: String
+      type: String,
     },
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
-      default: "normal"
+      default: "normal",
     },
     renderer: {
-      type: String as PropType<RenderMode>
+      type: String as PropType<RenderMode>,
     },
     cta: {
-      type: Array
+      type: Array,
     },
     typewriter: {
-      type: String
-    }
+      type: String,
+    },
+    contentStyles: {
+      type: Object,
+    },
+    titleStyles: {
+      type: Object,
+    },
   },
   data() {
     return {
-      styles
+      styles,
     };
-  }
+  },
 });
 </script>

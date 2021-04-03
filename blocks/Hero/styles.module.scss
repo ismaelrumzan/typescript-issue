@@ -30,16 +30,18 @@ $bp-1: 1086px;
       padding: 0;
       align-items: center;
       text-align: center;
+      max-width: inherit !important;
     }
 
     .title {
       @media (max-width: $bp-1) {
-        max-width: 55rem;
+        max-width: 55rem !important;
       }
     }
 
     .typewriter {
       color: var(--main-color);
+      display: block;
     }
 
     .description {

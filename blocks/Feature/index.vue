@@ -5,10 +5,10 @@
         <Icon :name="icon" />
       </IconWrapper>
     </div>
-    <h3 :class="styles.title">{{ title }}</h3>
-    <p :class="styles.description">{{ description }}</p>
+    <h3 :class="styles.title">{{ $t(title) }}</h3>
+    <p :class="styles.description">{{ $t(description) }}</p>
     <div v-if="moreLink" :class="styles.link">
-      <NuxtLink :to="moreLink">
+      <NuxtLink :to="localePath(moreLink)">
         {{ moreText }}
       </NuxtLink>
       <Icon name="ArrowRight" />
@@ -27,29 +27,29 @@ type Alignment = "left" | "right" | "center";
 export default Vue.extend({
   components: {
     IconWrapper,
-    Icon
+    Icon,
   },
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: String,
     icon: String,
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left"
+      default: "left",
     },
     moreText: {
       type: String,
-      default: "Mehr erfahren"
+      default: "Mehr erfahren",
     },
-    moreLink: String
+    moreLink: String,
   },
   data() {
     return {
-      styles
+      styles,
     };
-  }
+  },
 });
 </script>

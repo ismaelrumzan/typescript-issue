@@ -4,9 +4,9 @@
       <div :class="styles.header">
         <Badge v-if="badge" :text="badge" />
         <div v-if="title" :class="styles.headerText">
-          <h2 :class="styles.title">{{ title }}</h2>
+          <h2 :class="styles.title">{{ $t(title) }}</h2>
           <p v-if="description" :class="styles.description">
-            {{ description }}
+            {{ $t(description) }}
           </p>
         </div>
         <div :class="styles.navigation">
@@ -41,18 +41,18 @@ type Alignment = "left" | "right" | "center";
 export default Vue.extend({
   props: {
     badge: {
-      type: String
+      type: String,
     },
     title: {
-      type: String
+      type: String,
     },
     description: {
-      type: String
+      type: String,
     },
     alignment: {
       type: String as PropType<Alignment>,
-      default: "center"
-    }
+      default: "center",
+    },
   },
   components: {
     Badge,
@@ -61,11 +61,11 @@ export default Vue.extend({
     SwiperSlide,
     VNode: {
       functional: true,
-      render: (h: any, ctx: any) => ctx.props.node
-    }
+      render: (h: any, ctx: any) => ctx.props.node,
+    },
   },
   directives: {
-    swiper: directive
+    swiper: directive,
   },
   data() {
     return {
@@ -76,7 +76,7 @@ export default Vue.extend({
         loop: true,
         slidesPerView: 1.35,
         mousewheel: {
-          forceToAxis: true
+          forceToAxis: true,
         },
         centeredSlides: true,
         slideToClickedSlide: true,
@@ -86,16 +86,16 @@ export default Vue.extend({
         breakpoints: {
           768: {
             slidesPerView: 2.5,
-            spaceBetween: 30
+            spaceBetween: 30,
           },
           1024: {
-            slidesPerView: 3.25
+            slidesPerView: 3.25,
           },
           1500: {
-            slidesPerView: 4.5
-          }
-        }
-      } as SwiperOptions
+            slidesPerView: 4.5,
+          },
+        },
+      } as SwiperOptions,
     };
   },
   created() {
@@ -116,7 +116,7 @@ export default Vue.extend({
     },
     goToPrevSlide() {
       (this as any).$refs.slider.$swiper.slidePrev();
-    }
-  }
+    },
+  },
 });
 </script>

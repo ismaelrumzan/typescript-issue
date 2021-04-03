@@ -3,7 +3,7 @@
     <h3 :class="styles.title">{{ title }}</h3>
     <div :class="styles.hidden">
       <p v-if="description" :class="styles.description">
-        {{ description }}
+        {{ $t(description) }}
       </p>
       <NuxtLink v-if="moreLink" :to="localePath(moreLink)" :class="styles.link">
         {{ $t(moreText) }}
@@ -23,26 +23,26 @@ export default Vue.extend({
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
-      type: String
+      type: String,
     },
     moreText: {
       type: String,
-      default: "phrases.more"
+      default: "phrases.more",
     },
     moreLink: {
-      type: String
-    }
+      type: String,
+    },
   },
   components: {
-    Icon
+    Icon,
   },
   data() {
     return {
-      styles
+      styles,
     };
-  }
+  },
 });
 </script>

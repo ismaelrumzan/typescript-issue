@@ -1,9 +1,16 @@
 <template>
   <div id="content">
     <Hero
-      title="Lorem Ipsum et cetera"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-      alignment="center"
+      badge="pages.assistants"
+      title="Einfache Abläufe mit unseren Assistenten"
+      description="Vereinfache die täglichen Prozesse, vom Check-In bis zu XYZ mithilfe unserer Assistenten."
+      illustration="example"
+      :cta="[
+        {
+          title: 'Jetzt starten',
+          href: '/apply',
+        },
+      ]"
     />
     <Section noPadding>
       <HelpBanner />
@@ -23,7 +30,7 @@ export default Vue.extend({
     Section,
     Hero,
     TextWithDescription,
-    HelpBanner
-  }
+    HelpBanner,
+  },
 });
 </script>

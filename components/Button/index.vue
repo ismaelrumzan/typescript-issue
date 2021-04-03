@@ -4,14 +4,14 @@
     :class="[styles.cta, styles[type], styles[variant]]"
     :href="externalHref"
   >
-    <span :class="styles.text">{{ title }}</span>
+    <span :class="styles.text">{{ $t(title) }}</span>
   </a>
   <NuxtLink
     v-else-if="href"
     :class="[styles.cta, styles[type], styles[variant]]"
     :to="localePath(href)"
   >
-    <span :class="styles.text">{{ title }}</span>
+    <span :class="styles.text">{{ $t(title) }}</span>
   </NuxtLink>
   <button
     v-else
@@ -21,11 +21,11 @@
       styles.cta,
       styles[type],
       styles[variant],
-      loading && styles.loading
+      loading && styles.loading,
     ]"
     @click="onClick"
   >
-    <span :class="styles.text">{{ title }}</span>
+    <span :class="styles.text">{{ $t(title) }}</span>
     <div v-if="loading" :class="styles.loader">
       <Loader />
     </div>
@@ -49,51 +49,51 @@ type Variant = "none" | "shadow";
 
 export default Vue.extend({
   components: {
-    Loader
+    Loader,
   },
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     href: {
-      type: String
+      type: String,
     },
     externalHref: {
-      type: String
+      type: String,
     },
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     type: {
       type: String as PropType<Type>,
-      default: "primary"
+      default: "primary",
     },
     variant: {
       type: String as PropType<Variant>,
-      default: "none"
+      default: "none",
     },
     prefix: {
-      default: null
+      default: null,
     },
     suffix: {
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      styles
+      styles,
     };
   },
   methods: {
     onClick() {
       this.$emit("click");
-    }
-  }
+    },
+  },
 });
 </script>

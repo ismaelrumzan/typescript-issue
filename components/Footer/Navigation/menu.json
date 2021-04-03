@@ -126,8 +126,8 @@
     "title": "pages.operations",
     "children": [
       {
-        "title": "pages.processes_and_assistants",
-        "link": "/operations/processes-and-assistants"
+        "title": "pages.assistants",
+        "link": "/operations/assistants"
       },
       {
         "title": "pages.workflows",
