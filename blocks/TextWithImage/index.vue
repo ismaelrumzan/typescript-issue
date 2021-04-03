@@ -19,7 +19,11 @@
       <Illustration :name="illustration" :renderer="renderer" />
     </div>
     <div v-if="image" :class="styles.image">
-      <NuxtImg :key="image" :src="`/images/${image}`" />
+      <nuxt-img
+        :key="image"
+        :src="`/images/${image}`"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+      />
       <div :class="styles.background">
         <div :class="styles.fancy">
           <span :class="styles.inner"></span>
@@ -50,49 +54,49 @@ export default Vue.extend({
   components: {
     Badge,
     Button,
-    Illustration
+    Illustration,
   },
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left"
+      default: "left",
     },
     padding: {
       type: String as PropType<PaddingOption>,
-      default: "medium"
+      default: "medium",
     },
     badge: {
-      type: String
+      type: String,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
-      type: String
+      type: String,
     },
     illustration: {
-      type: String
+      type: String,
     },
     renderer: {
-      type: String as PropType<RenderMode>
+      type: String as PropType<RenderMode>,
     },
     image: {
-      type: String
+      type: String,
     },
     cta: {
-      type: Array
-    }
+      type: Array,
+    },
   },
   data() {
     return {
-      styles
+      styles,
     };
   },
   computed: {
     paddingClass(): string {
       return `pad-${this.padding}`;
-    }
-  }
+    },
+  },
 });
 </script>

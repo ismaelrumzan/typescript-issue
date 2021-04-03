@@ -18,6 +18,7 @@
       flex-direction: column;
       padding: 1.5rem 2rem;
       border-radius: var(--border-radius-medium);
+      background-color: var(--light);
       box-shadow: var(--shadow-small);
 
       .title {
@@ -30,6 +31,16 @@
         display: block;
         opacity: 0.5;
         font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .posts {
+    li {
+      a {
+        background-color: var(--light-2);
       }
     }
   }

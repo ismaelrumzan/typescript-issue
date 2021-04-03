@@ -34,11 +34,11 @@ import Icon from "@/components/Icon";
 
 export default Vue.extend({
   components: {
-    Icon
+    Icon,
   },
   data() {
     return {
-      styles
+      styles,
     };
   },
   async asyncData({ $content, params, app }: any) {
@@ -50,16 +50,16 @@ export default Vue.extend({
   },
   methods: {
     formatDate(date: Date) {
-      const options = {
+      const options: any = {
         weekday: "long",
         year: "numeric",
         month: "long",
-        day: "2-digit"
+        day: "2-digit",
       };
 
       return new Date(date).toLocaleDateString(this.$i18n.locale, options);
-    }
-  }
+    },
+  },
 });
 </script>
 

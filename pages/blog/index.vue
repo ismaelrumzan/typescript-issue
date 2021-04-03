@@ -29,12 +29,20 @@ dayjs.extend(relativeTime);
 export default Vue.extend({
   data() {
     return {
-      styles
+      styles,
     };
   },
   async asyncData({ $content, app }: any) {
     const articles = await $content(`${app.i18n.locale}/blog`)
-      .only(["title", "description", "img", "slug", "author", "createdAt"])
+      .only([
+        "title",
+        "description",
+        "img",
+        "slug",
+        "path",
+        "author",
+        "createdAt",
+      ])
       .sortBy("createdAt", "desc")
       .fetch();
 
@@ -42,22 +50,22 @@ export default Vue.extend({
       return {
         articles: articles.map((article: any) => ({
           ...article,
-          path: article.path.replace(`/${app.i18n.locale}`, "")
-        }))
+          path: article.path.replace(`/${app.i18n.locale}`, ""),
+        })),
       };
     }
 
     return {
-      articles
+      articles,
     };
   },
   methods: {
     formatDate(date: Date) {
       return dayjs(date).fromNow();
-    }
+    },
   },
   created() {
     dayjs.locale(this.$i18n.locale);
-  }
+  },
 });
 </script>

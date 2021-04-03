@@ -80,7 +80,7 @@ const config: NuxtConfig = {
     '@nuxtjs/axios',
     '@nuxt/content',
     // '@nuxtjs/prismic',
-    '@nuxtjs/gtm',
+    // '@nuxtjs/gtm',
     [
       'nuxt-facebook-pixel-module',
       {
@@ -105,20 +105,20 @@ const config: NuxtConfig = {
     ],
     '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
-    'nuxt-imagemin',
-    [
-      'nuxt-imagemin',
-      {
-        optipng: { optimizationLevel: 5 },
-        gifsicle: { optimizationLevel: 2 }
-      }
-    ],
+    // 'nuxt-imagemin',
+    // [
+    //   'nuxt-imagemin',
+    //   {
+    //     optipng: { optimizationLevel: 5 },
+    //     gifsicle: { optimizationLevel: 2 }
+    //   }
+    // ],
     'nuxt-maintenance-mode',
     '@nuxtjs/robots',
     'nuxt-i18n',
-    'vue-scrollto/nuxt',
-    'vue-social-sharing/nuxt',
-    '@nuxtjs/style-resources',
+    // 'vue-scrollto/nuxt',
+    // 'vue-social-sharing/nuxt',
+    // '@nuxtjs/style-resources',
   ],
 
   i18n: {
