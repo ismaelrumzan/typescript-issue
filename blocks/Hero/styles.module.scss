@@ -1,7 +1,9 @@
 $bp: 1440px;
 $bp-1: 1086px;
+$bp-2: 767px;
 
 .hero {
+  position: relative;
   padding: 1.5rem var(--horizontal-padding) calc(var(--vertical-padding) + 4rem);
   max-width: var(--max-width);
   margin: 0 auto;
@@ -21,6 +23,7 @@ $bp-1: 1086px;
 
   /* Content (Text + CTAs) */
   .content {
+    z-index: 1;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
@@ -36,6 +39,9 @@ $bp-1: 1086px;
     .title {
       @media (max-width: $bp-1) {
         max-width: 55rem !important;
+      }
+      @media (max-width: $bp-2) {
+        padding: 0 5%;
       }
     }
 
@@ -89,6 +95,7 @@ $bp-1: 1086px;
 
   /* Illustration */
   .illustration {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;

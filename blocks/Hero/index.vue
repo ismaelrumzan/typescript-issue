@@ -4,7 +4,7 @@
       styles.hero,
       styles[alignment],
       styles[verticalAlign],
-      styles[illustrationWidth],
+      styles[illustrationWidth]
     ]"
   >
     <div :class="styles.content" :style="contentStyles">
@@ -32,6 +32,7 @@
       <Illustration :name="illustration" />
     </div>
     <slot />
+    <Particles v-if="particles" />
   </section>
 </template>
 
@@ -41,6 +42,7 @@ import styles from "./styles.module.scss?module";
 import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
+import Particles from "@/components/Particles";
 import TypeWriter from "@/components/TypeWriter";
 
 type HorizontalAlignment = "left" | "right" | "center";
@@ -53,54 +55,58 @@ export default Vue.extend({
     Badge,
     Button,
     Illustration,
-    TypeWriter,
+    Particles,
+    TypeWriter
   },
   props: {
     alignment: {
       type: String as PropType<HorizontalAlignment>,
-      default: "left",
+      default: "left"
     },
     verticalAlign: {
       type: String as PropType<VerticalAlignment>,
-      default: "middle",
+      default: "middle"
     },
     badge: {
-      type: String,
+      type: String
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
-      type: String,
+      type: String
     },
     illustration: {
-      type: String,
+      type: String
     },
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
-      default: "normal",
+      default: "normal"
     },
     renderer: {
-      type: String as PropType<RenderMode>,
+      type: String as PropType<RenderMode>
+    },
+    particles: {
+      type: Boolean
     },
     cta: {
-      type: Array,
+      type: Array
     },
     typewriter: {
-      type: String,
+      type: String
     },
     contentStyles: {
-      type: Object,
+      type: Object
     },
     titleStyles: {
-      type: Object,
-    },
+      type: Object
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
-  },
+  }
 });
 </script>

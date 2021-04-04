@@ -2,14 +2,14 @@
   <div id="content">
     <Hero
       badge="pages.assistants"
-      title="Einfache Abläufe mit unseren Assistenten"
-      description="Vereinfache die täglichen Prozesse, vom Check-In bis zu XYZ mithilfe unserer Assistenten."
-      illustration="example"
+      title="Beschleunige Prozesse in Deinem Hotel"
+      description="Vereinfache die täglichen Abläufe im Hotel, vom Check-In bis zum Marketing. Mit Hilfe unserer Assistenten minimierst Du zeitaufwendige Aufgaben."
+      illustration="assistants"
       :cta="[
         {
           title: 'Jetzt starten',
-          href: '/apply',
-        },
+          href: '/apply'
+        }
       ]"
     />
     <Section noPadding>
@@ -30,7 +30,7 @@ export default Vue.extend({
     Section,
     Hero,
     TextWithDescription,
-    HelpBanner,
-  },
+    HelpBanner
+  }
 });
 </script>

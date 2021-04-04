@@ -44,7 +44,7 @@ export default async (context: any, locale: string) => {
           title: 'Activate your Hotel\'s personal',
           typewriter: 'Autopilot, Single Login',
           description: 'With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.',
-          concept: 'Our concept'
+          concept: 'Our Concept'
         },
         solutions: {
           title: 'Your way to digital transformation',
@@ -81,10 +81,10 @@ export default async (context: any, locale: string) => {
       staff: "Staff",
       suppliers: "Suppliers",
       surveys: "Surveys",
-      team_developer: "Team Developer",
-      team_frontoffice: "Team Front Office",
-      team_hotel_manager: "Team Hotel Manager",
-      team_marketing: "Team Marketing",
+      team_developer: "Developer",
+      team_frontoffice: "Front Office",
+      team_hotel_manager: "Hotel Manager",
+      team_marketing: "Marketing",
       technology: "Technology",
       videos: "Videos",
       webinars: "Webinars",

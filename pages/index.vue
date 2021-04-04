@@ -7,6 +7,7 @@
       alignment="left"
       :titleStyles="{ maxWidth: '33rem' }"
       illustration="example"
+      particles
       :cta="[
         {
           title: 'phrases.get_started',

@@ -33,6 +33,10 @@ body {
   flex-direction: column;
 }
 
+#content {
+  overflow-x: hidden;
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--light-5);
