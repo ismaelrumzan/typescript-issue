@@ -1,12 +1,47 @@
 <template>
   <div id="content">
     <Hero
-      title="Lorem Ipsum et cetera"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
+      badge="Alles im Überblick"
+      title="Frequently Asked Questions"
       alignment="center"
+      padding="none"
     />
-    <Section noPadding>
-      <HelpBanner />
+    <Section padding="bottomOnly">
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
     </Section>
   </div>
 </template>
@@ -15,15 +50,13 @@
 import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
-import TextWithDescription from "@/blocks/TextWithDescription";
-import HelpBanner from "@/blocks/HelpBanner";
+import Collapsible from "@/components/Collapsible";
 
 export default Vue.extend({
   components: {
     Section,
     Hero,
-    TextWithDescription,
-    HelpBanner
+    Collapsible
   }
 });
 </script>

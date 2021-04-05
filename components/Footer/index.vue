@@ -7,7 +7,7 @@
       <div :class="styles.additional">
         <NuxtLink to="/">
           <div :class="styles.logo">
-            <NuxtImg src="/images/logo-dark.png" />
+            <img src="/logos/digitalhotel.svg" />
           </div>
         </NuxtLink>
 

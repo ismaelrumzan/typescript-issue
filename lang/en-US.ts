@@ -13,7 +13,10 @@ export default async (context: any, locale: string) => {
       appointees: "Appointees",
       apps: "Apps",
       assistants: "Assistants",
-      backoffice: "Back Office",
+      backoffice: {
+        title: "Back Office",
+        description: "Lorem ipsum dolor"
+      },
       blog: "Blog",
       bonus_program: "Bonus Program",
       booking_page: "Booking Page",
@@ -33,7 +36,10 @@ export default async (context: any, locale: string) => {
       faq: "FAQ",
       feedback: "Feedback",
       finance: "Finance",
-      frontoffice: "Front Office",
+      frontoffice: {
+        title: "Front Office",
+        description: "Lorem ipsum dolor"
+      },
       gifts: "Gifts",
       guests: "Guests",
       help: "Help",
@@ -46,7 +52,7 @@ export default async (context: any, locale: string) => {
           description: 'With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.',
           concept: 'Our Concept'
         },
-        trusted: 'Trusted by hotels of all sizes',
+        trusted: 'Trusted by these hotels already',
         solutions: {
           title: 'Your way to digital transformation',
           description: 'As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes.'
@@ -56,13 +62,19 @@ export default async (context: any, locale: string) => {
       local_devices: "Local Devices",
       lost_property: "Lost Property",
       mail: "Mail",
-      marketing: "Marketing",
+      marketing: {
+        title: "Marketing",
+        description: "Lorem ipsum dolor"
+      },
       marketplace: "Marketplace",
       meeting: "Meeting",
       messenger: "Messenger",
       newsletter: "Newsletter",
       onboarding: "Onboarding",
-      operations: "Operations",
+      operations: {
+        title: "Operations",
+        description: "Lorem ipsum dolor"
+      },
       partners: "Partners",
       payments: "Payments",
       permissions: "Permissions",
@@ -75,9 +87,15 @@ export default async (context: any, locale: string) => {
       ressources: "Ressources",
       roadmap: "Roadmap",
       roomplan: "Roomplan",
-      sales: "Sales",
+      sales: {
+        title: "Sales",
+        description: "z.B. PMS- oder CMS-Hersteller"
+      },
       security_and_privacy: "Security and Privacy",
-      service: "Service",
+      service: {
+        title: "Service",
+        description: "z.B. PMS- oder CMS-Hersteller"
+      },
       solutions: "Solutions",
       staff: "Staff",
       suppliers: "Suppliers",
@@ -86,7 +104,10 @@ export default async (context: any, locale: string) => {
       team_frontoffice: "Front Office",
       team_hotel_manager: "Hotel Manager",
       team_marketing: "Marketing",
-      technology: "Technology",
+      technology: {
+        title: "Technology",
+        description: "z.B. PMS- oder CMS-Hersteller"
+      },
       videos: "Videos",
       webinars: "Webinars",
       website_analytics: "Website Analytics",

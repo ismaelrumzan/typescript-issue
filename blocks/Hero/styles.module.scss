@@ -11,20 +11,14 @@ $bp-2: 767px;
   gap: 0 3rem;
 
   &.pad-none {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
   &.pad-small {
-    padding-bottom: var(--vertical-padding);
+    padding-bottom: var(--vertical-padding) !important;
   }
 
   @media (max-width: $bp) {
     padding: 1rem var(--horizontal-padding) calc(var(--vertical-padding) + 4rem);
-    &.pad-none {
-      padding-bottom: 0;
-    }
-    &.pad-small {
-      padding-bottom: var(--vertical-padding);
-    }
   }
 
   @media (max-width: $bp-1) {
@@ -32,12 +26,6 @@ $bp-2: 767px;
     gap: 3rem 0;
     align-items: center;
     padding: 3rem var(--horizontal-padding) calc(var(--vertical-padding) + 2rem);
-    &.pad-none {
-      padding-bottom: 0;
-    }
-    &.pad-small {
-      padding-bottom: var(--vertical-padding);
-    }
   }
 
   /* Content (Text + CTAs) */

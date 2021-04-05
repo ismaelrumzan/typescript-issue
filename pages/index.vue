@@ -26,34 +26,24 @@
         title="pages.index.trusted"
         :logos="[
           {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
+            name: 'Romantikhotel Scheelehof',
+            link: 'https://www.scheelehof.de',
+            file: 'scheelehof.svg'
           },
           {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
+            name: 'Haffhus',
+            link: 'https://www.haffhus.de',
+            file: 'haffhus.svg'
           },
           {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
+            name: 'The Grand',
+            link: 'https://www.the-grand.de',
+            file: 'thegrand.svg'
           },
           {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
-          },
-          {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
-          },
-          {
-            name: 'Stripe',
-            link: 'https://www.stripe.com',
-            file: 'stripe.svg'
+            name: 'Kino Hotel Meyer',
+            link: 'https://www.hotel-meyer.de',
+            file: 'kinohotelmeyer.svg'
           }
         ]"
       />

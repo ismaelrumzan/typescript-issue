@@ -1,7 +1,7 @@
 $bp: 767px;
 
 .logos {
-  padding: 1rem 0 1.25rem;
+  padding: 0.5rem 0 0.75rem;
   ul {
     list-style: none;
     display: flex;
@@ -10,21 +10,25 @@ $bp: 767px;
 
     li {
       display: flex;
-      margin: 0.5rem 1.75rem;
+      margin: 1rem 3rem;
       @media (max-width: $bp) {
-        margin: 0.5rem 1rem;
+        margin: 1rem 2.25rem;
       }
 
       a {
         display: flex;
 
         img {
-          height: 3rem;
+          height: 4.25rem;
           width: auto;
           object-fit: contain;
           filter: brightness(0) saturate(0);
-          opacity: 0.8;
+          opacity: 0.65;
           transition: filter 0.35s, opacity 0.35s;
+
+          @media (max-width: $bp) {
+            height: 3.5rem;
+          }
         }
 
         @media (hover: hover) {
@@ -45,11 +49,11 @@ $bp: 767px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0.5rem auto 1rem;
+  margin: 0rem auto 1.5rem;
   max-width: 80%;
   opacity: 0.35;
   letter-spacing: 1px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 
   @media (max-width: $bp) {
     margin-bottom: 2rem;
@@ -65,8 +69,11 @@ $bp: 767px;
 
 [data-theme="dark"] {
   .logos {
-    img {
-      filter: brightness(7) saturate(0);
+    a {
+      img {
+        opacity: 0.55;
+        filter: brightness(0) saturate(0) invert(1);
+      }
     }
   }
 }

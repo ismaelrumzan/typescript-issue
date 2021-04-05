@@ -49,3 +49,12 @@ $bp-2: 550px;
     }
   }
 }
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+
+  a {
+    pointer-events: none;
+  }
+}

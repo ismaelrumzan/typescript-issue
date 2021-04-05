@@ -30,7 +30,13 @@ import styles from "./styles.module.scss?module";
 
 export type BackgroundColor = "default" | "main" | "light" | "dark" | "grey";
 export type BackgroundVariant = "default" | "gradient";
-export type PaddingOptions = "default" | "small" | "none";
+export type PaddingOptions =
+  | "default"
+  | "small"
+  | "none"
+  | "topOnly"
+  | "bottomOnly"
+  | "none";
 
 export type SkewOption =
   | "positive"

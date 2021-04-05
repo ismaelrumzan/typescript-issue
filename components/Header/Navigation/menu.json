@@ -9,27 +9,27 @@
     "sidemenuPosition": "right",
     "children": [
       {
-        "title": "pages.frontoffice",
+        "title": "pages.frontoffice.title",
         "link": "/frontoffice",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.frontoffice.description",
         "icon": "FrontOffice"
       },
       {
-        "title": "pages.backoffice",
+        "title": "pages.backoffice.title",
         "link": "/backoffice",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.backoffice.description",
         "icon": "BackOffice"
       },
       {
-        "title": "pages.marketing",
+        "title": "pages.marketing.title",
         "link": "/marketing",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.marketing.description",
         "icon": "Marketing"
       },
       {
-        "title": "pages.operations",
+        "title": "pages.operations.title",
         "link": "/operations",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.operations.description",
         "icon": "Operations"
       },
       {
@@ -42,22 +42,26 @@
       {
         "title": "pages.team_frontoffice",
         "link": "/teams/frontoffice",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
         "title": "pages.team_marketing",
         "link": "/teams/marketing",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
         "title": "pages.team_hotel_manager",
         "link": "/teams/hotel-manager",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
         "title": "pages.team_developer",
         "link": "/teams/developer",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       }
     ]
   },
@@ -71,51 +75,56 @@
     "sidemenuPosition": "right",
     "children": [
       {
-        "title": "pages.technology",
+        "title": "pages.technology.title",
         "link": "/partners/technology",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.technology.description",
         "icon": "PartnerTechnology"
       },
       {
-        "title": "pages.sales",
+        "title": "pages.sales.title",
         "link": "/partners/sales",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.sales.description",
         "icon": "PartnerSales"
       },
       {
-        "title": "pages.service",
+        "title": "pages.service.title",
         "link": "/partners/service",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.service.description",
         "icon": "PartnerService"
       }
     ],
     "sidemenu": [
       {
-        "title": "Marketing",
+        "title": "Software",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
-        "title": "Sales",
+        "title": "IT",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
-        "title": "Lorem",
+        "title": "Entwickler",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       },
       {
-        "title": "Ipsum",
+        "title": "Berater",
         "link": "/teams/",
-        "description": "Lorem ipsum dolor sit amet"
+        "description": "Lorem ipsum dolor sit amet",
+        "disabled": true
       }
     ]
   },
   {
     "title": "pages.marketplace",
     "link": "/marketplace",
-    "isSubmenu": false
+    "isSubmenu": false,
+    "disabled": true
   },
   {
     "title": "pages.company",

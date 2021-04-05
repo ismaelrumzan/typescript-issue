@@ -197,4 +197,9 @@
     // border: 2px solid var(--light-4);
     background-color: var(--light-2);
   }
+  [data-section-theme] {
+    .slide {
+      background-color: var(--light-4);
+    }
+  }
 }

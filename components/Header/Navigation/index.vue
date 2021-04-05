@@ -4,7 +4,10 @@
       <li
         v-for="(menuItem, i) in menuItems"
         :key="i"
-        :class="{ [styles.isSubmenu]: menuItem.isSubmenu }"
+        :class="[
+          { [styles.isSubmenu]: menuItem.isSubmenu },
+          { [styles.disabled]: menuItem.disabled }
+        ]"
         ref="submenuItem"
         @mouseenter="open(menuItem.isSubmenu, $event)"
         @mouseleave="close"
@@ -13,6 +16,7 @@
           v-if="!menuItem.isSubmenu"
           :to="localePath(menuItem.link)"
           @click.native="closeMenu"
+          :class="{ [styles.disabled]: menuItem.disabled }"
         >
           {{ $t(menuItem.title) }}
         </NuxtLink>
@@ -20,6 +24,7 @@
           v-else
           to=""
           @click.native="toggleActive(menuItem.isSubmenu, $event)"
+          :class="{ [styles.disabled]: menuItem.disabled }"
         >
           {{ $t(menuItem.title) }}
           <Icon name="ChevDown" :class="styles.chevDown" />
@@ -32,7 +37,10 @@
               <li
                 v-for="(menuItemChild, i) in menuItem.children"
                 :key="i"
-                :class="styles[`${menuItemChild.type}Container`]"
+                :class="[
+                  styles[`${menuItemChild.type}Container`],
+                  { [styles.disabled]: menuItemChild.disabled }
+                ]"
               >
                 <!-- Button -->
                 <Button
@@ -62,7 +70,7 @@
                       $t(menuItemChild.title)
                     }}</span>
                     <span :class="styles.linkDescription">{{
-                      menuItemChild.description
+                      $t(menuItemChild.description)
                     }}</span>
                   </span>
                 </a>
@@ -90,7 +98,7 @@
                       $t(menuItemChild.title)
                     }}</span>
                     <span :class="styles.linkDescription">{{
-                      menuItemChild.description
+                      $t(menuItemChild.description)
                     }}</span>
                   </span>
                 </a>
@@ -112,7 +120,7 @@
                       $t(menuItemChild.title)
                     }}</span>
                     <span :class="styles.linkDescription">{{
-                      menuItemChild.description
+                      $t(menuItemChild.description)
                     }}</span>
                   </span>
                 </NuxtLink>
@@ -129,7 +137,11 @@
                   {{ $t(menuItem.sidemenuTitle) }}
                 </span>
               </li>
-              <li v-for="(sidemenuItemChild, i) in menuItem.sidemenu" :key="i">
+              <li
+                v-for="(sidemenuItemChild, i) in menuItem.sidemenu"
+                :key="i"
+                :class="{ [styles.disabled]: sidemenuItemChild.disabled }"
+              >
                 <NuxtLink
                   :to="localePath(sidemenuItemChild.link)"
                   @click.native="closeMenu"

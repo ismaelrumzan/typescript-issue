@@ -3,7 +3,11 @@
     <div v-for="(singleMenu, i) in footerMenu" :key="i" :class="styles.menu">
       <h3 :class="styles.title">{{ $t(singleMenu.title) }}</h3>
       <ul>
-        <li v-for="(item, i) in singleMenu.children" :key="i">
+        <li
+          v-for="(item, i) in singleMenu.children"
+          :key="i"
+          :class="{ [styles.disabled]: item.disabled }"
+        >
           <NuxtLink :to="localePath(item.link)">
             {{ $t(item.title) }}
           </NuxtLink>

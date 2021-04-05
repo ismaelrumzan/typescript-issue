@@ -34,6 +34,21 @@ $skew-angle: 5deg;
       padding: 2rem 0;
     }
   }
+  &.pad-topOnly {
+    .container {
+      padding-bottom: 0;
+    }
+  }
+  &.pad-bottomOnly {
+    .container {
+      padding-top: 0;
+    }
+  }
+  &.pad-none {
+    .container {
+      padding: 0;
+    }
+  }
 
   .content {
     z-index: 1;

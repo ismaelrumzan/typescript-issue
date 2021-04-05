@@ -1,129 +1,156 @@
 [
   {
-    "title": "pages.frontoffice",
+    "title": "pages.frontoffice.title",
     "children": [
       {
         "title": "pages.roomplan",
-        "link": "/frontoffice/roomplan"
+        "link": "/frontoffice/roomplan",
+        "disabled": true
       },
       {
         "title": "pages.reservations",
-        "link": "/frontoffice/reservations"
+        "link": "/frontoffice/reservations",
+        "disabled": true
       },
       {
         "title": "pages.guests",
-        "link": "/frontoffice/guests"
+        "link": "/frontoffice/guests",
+        "disabled": true
       },
       {
         "title": "pages.lost_property",
-        "link": "/frontoffice/lost-property"
+        "link": "/frontoffice/lost-property",
+        "disabled": true
       },
       {
         "title": "pages.feedback",
-        "link": "/frontoffice/feedback"
+        "link": "/frontoffice/feedback",
+        "disabled": true
       },
       {
         "title": "pages.emails",
-        "link": "/frontoffice/emails"
+        "link": "/frontoffice/emails",
+        "disabled": true
       },
       {
         "title": "pages.messenger",
-        "link": "/frontoffice/messenger"
+        "link": "/frontoffice/messenger",
+        "disabled": true
       },
       {
         "title": "pages.phone",
-        "link": "/frontoffice/phone"
+        "link": "/frontoffice/phone",
+        "disabled": true
       },
       {
         "title": "pages.permissions",
-        "link": "/frontoffice/permissions"
+        "link": "/frontoffice/permissions",
+        "disabled": true
       },
       {
         "title": "pages.payments",
-        "link": "/frontoffice/payments"
+        "link": "/frontoffice/payments",
+        "disabled": true
       }
     ]
   },
   {
-    "title": "pages.backoffice",
+    "title": "pages.backoffice.title",
     "children": [
       {
         "title": "pages.finance",
-        "link": "/backoffice/finance"
+        "link": "/backoffice/finance",
+        "disabled": true
       },
       {
         "title": "pages.suppliers",
-        "link": "/backoffice/suppliers"
+        "link": "/backoffice/suppliers",
+        "disabled": true
       },
       {
         "title": "pages.erp",
-        "link": "/backoffice/erp"
+        "link": "/backoffice/erp",
+        "disabled": true
       },
       {
         "title": "pages.energy_management",
-        "link": "/backoffice/energy"
+        "link": "/backoffice/energy",
+        "disabled": true
       },
       {
         "title": "pages.housekeeping",
-        "link": "/backoffice/housekeeping"
+        "link": "/backoffice/housekeeping",
+        "disabled": true
       },
       {
         "title": "pages.staff",
-        "link": "/backoffice/staff"
+        "link": "/backoffice/staff",
+        "disabled": true
       },
       {
         "title": "pages.applications",
-        "link": "/backoffice/applications"
+        "link": "/backoffice/applications",
+        "disabled": true
       },
       {
         "title": "pages.mail",
-        "link": "/backoffice/mail"
+        "link": "/backoffice/mail",
+        "disabled": true
       }
     ]
   },
   {
-    "title": "pages.marketing",
+    "title": "pages.marketing.title",
     "children": [
       {
         "title": "pages.website_analytics",
-        "link": "/marketing/website-analytics"
+        "link": "/marketing/website-analytics",
+        "disabled": true
       },
       {
         "title": "pages.channel_analytics",
-        "link": "/marketing/channel-analytics"
+        "link": "/marketing/channel-analytics",
+        "disabled": true
       },
       {
         "title": "pages.booking_page",
-        "link": "/marketing/booking-page"
+        "link": "/marketing/booking-page",
+        "disabled": true
       },
       {
         "title": "pages.content_management",
-        "link": "/marketing/content-management"
+        "link": "/marketing/content-management",
+        "disabled": true
       },
       {
         "title": "pages.bonus_program",
-        "link": "/marketing/bonus-program"
+        "link": "/marketing/bonus-program",
+        "disabled": true
       },
       {
         "title": "pages.gifts",
-        "link": "/marketing/gifts"
+        "link": "/marketing/gifts",
+        "disabled": true
       },
       {
         "title": "pages.surveys",
-        "link": "/marketing/surveys"
+        "link": "/marketing/surveys",
+        "disabled": true
       },
       {
         "title": "pages.newsletter",
-        "link": "/marketing/newsletter"
+        "link": "/marketing/newsletter",
+        "disabled": true
       },
       {
         "title": "pages.campaigns",
-        "link": "/marketing/campaigns"
+        "link": "/marketing/campaigns",
+        "disabled": true
       }
     ]
   },
   {
-    "title": "pages.operations",
+    "title": "pages.operations.title",
     "children": [
       {
         "title": "pages.assistants",
@@ -135,27 +162,33 @@
       },
       {
         "title": "pages.cockpits",
-        "link": "/operations/cockpits"
+        "link": "/operations/cockpits",
+        "disabled": true
       },
       {
         "title": "pages.ressource_management",
-        "link": "/operations/ressource-management"
+        "link": "/operations/ressource-management",
+        "disabled": true
       },
       {
         "title": "pages.local_devices",
-        "link": "/operations/local-devices"
+        "link": "/operations/local-devices",
+        "disabled": true
       },
       {
         "title": "pages.security_and_privacy",
-        "link": "/operations/security-and-privacy"
+        "link": "/operations/security-and-privacy",
+        "disabled": true
       },
       {
         "title": "pages.appointees",
-        "link": "/operations/appointees"
+        "link": "/operations/appointees",
+        "disabled": true
       },
       {
         "title": "pages.data_transmission",
-        "link": "/operations/data-transmission"
+        "link": "/operations/data-transmission",
+        "disabled": true
       }
     ]
   },
@@ -164,23 +197,28 @@
     "children": [
       {
         "title": "pages.apps",
-        "link": "/marketplace/apps"
+        "link": "/marketplace/apps",
+        "disabled": true
       },
       {
         "title": "pages.products",
-        "link": "/marketplace/products"
+        "link": "/marketplace/products",
+        "disabled": true
       },
       {
         "title": "pages.partners",
-        "link": "/marketplace/partners"
+        "link": "/marketplace/partners",
+        "disabled": true
       },
       {
         "title": "pages.developers",
-        "link": "/marketplace/developers"
+        "link": "/marketplace/developers",
+        "disabled": true
       },
       {
         "title": "pages.promotions",
-        "link": "/marketplace/promotions"
+        "link": "/marketplace/promotions",
+        "disabled": true
       }
     ]
   },
@@ -193,7 +231,8 @@
       },
       {
         "title": "pages.jobs",
-        "link": "/jobs"
+        "link": "/jobs",
+        "disabled": true
       },
       {
         "title": "pages.faq",
@@ -201,15 +240,18 @@
       },
       {
         "title": "pages.demo",
-        "link": "/demo"
+        "link": "/demo",
+        "disabled": true
       },
       {
         "title": "pages.webinars",
-        "link": "/webinars"
+        "link": "/webinars",
+        "disabled": true
       },
       {
         "title": "pages.roadmap",
-        "link": "/roadmap"
+        "link": "/roadmap",
+        "disabled": true
       },
       {
         "title": "pages.press",

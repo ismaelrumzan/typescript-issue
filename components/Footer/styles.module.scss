@@ -37,11 +37,11 @@ $bp: 900px;
   }
 
   .logo {
-    width: 12rem;
     object-fit: contain;
 
     img {
-      width: 100%;
+      height: 2.75rem;
+      width: auto;
     }
   }
 

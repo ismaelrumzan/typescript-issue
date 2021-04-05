@@ -88,6 +88,23 @@ $bp: 812px;
   }
 }
 
-[data-theme="dark"] .help {
-  background-color: var(--light-2);
+[data-theme="dark"] {
+  .help {
+    background-color: var(--light-3);
+  }
+  .textContainer {
+    &::after {
+      background-color: var(--main-color);
+    }
+  }
+  .buttons {
+    .button {
+      background-color: var(--main-color-light-2);
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--main-color-light-3);
+        }
+      }
+    }
+  }
 }

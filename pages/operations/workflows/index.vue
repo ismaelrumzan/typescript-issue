@@ -12,7 +12,13 @@
         }
       ]"
     />
-    <Section color="grey">
+    <Section color="grey" padding="bottomOnly">
+      <TextWithDescription
+        badge="Triggers &amp; Actions"
+        title="Du legst fest, wann was passiert"
+        description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        alignment="center"
+      />
       <Tabs withBackground>
         <Tab
           title="Trigger"

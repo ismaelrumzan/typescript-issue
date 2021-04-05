@@ -106,11 +106,12 @@ $bp-menu-tablet: 1150px;
 
   .logo {
     display: flex;
-    width: 10rem;
+    align-items: center;
     height: 100%;
 
     img {
       max-width: 100%;
+      height: 2.35rem;
       object-fit: contain;
     }
   }

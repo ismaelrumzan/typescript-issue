@@ -12,7 +12,10 @@ export default async (context: any, locale: string) => {
       applications: "Bewerbungen",
       appointees: "Beauftragte",
       apps: "Apps",
-      backoffice: "Back Office",
+      backoffice: {
+        title: "Back Office",
+        description: "Management-Tools"
+      },
       blog: "Blog",
       bonus_program: "Bonusprogramm",
       booking_page: "Buchungsseite",
@@ -32,7 +35,10 @@ export default async (context: any, locale: string) => {
       faq: "FAQ",
       feedback: "Feedback",
       finance: "Finanzen",
-      frontoffice: "Front Office",
+      frontoffice: {
+        title: "Front Office",
+        description: "Rund um den Gast"
+      },
       gifts: "Geschenke",
       guests: "Gäste",
       help: "Hilfe",
@@ -45,7 +51,7 @@ export default async (context: any, locale: string) => {
           description: 'Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit.',
           concept: 'Unser Konzept'
         },
-        trusted: 'Hotels aller Größen vertrauen in uns',
+        trusted: 'Diese Hotels profitieren bereits von uns',
         solutions: {
           title: 'Dein Weg zur digitalen Transformation',
           description: 'Als Hotel solltest Du alle relevanten Informationen an einem zentralen Ort finden. Nur dann bist Du in der Lage effiziente und intelligente Prozesse zu integrieren und zu automatisieren.'
@@ -55,13 +61,19 @@ export default async (context: any, locale: string) => {
       local_devices: "Lokale Geräte",
       lost_property: "Fundsachen",
       mail: "Post",
-      marketing: "Marketing",
+      marketing: {
+        title: "Marketing",
+        description: "Reichweite generieren"
+      },
       marketplace: "Marktplatz",
       meeting: "Meeting",
       messenger: "Messenger",
       newsletter: "Newsletter",
       onboarding: "Onboarding",
-      operations: "Operations",
+      operations: {
+        title: "Operations",
+        description: "Prozessoptimierung"
+      },
       partners: "Partner",
       payments: "Zahlungen",
       permissions: "Zutritt",
@@ -75,9 +87,15 @@ export default async (context: any, locale: string) => {
       ressources: "Ressourcen",
       roadmap: "Roadmap",
       roomplan: "Zimmerplan",
-      sales: "Vertrieb",
+      sales: {
+        title: "Vertrieb",
+        description: "Software-Distributor & Co."
+      },
       security_and_privacy: "Sicherheit & Datenschutz",
-      service: "Service",
+      service: {
+        title: "Service",
+        description: "PMS- oder CMS-Hersteller"
+      },
       solutions: "Lösungen",
       staff: "Mitarbeiter",
       suppliers: "Lieferanten",
@@ -86,7 +104,10 @@ export default async (context: any, locale: string) => {
       team_frontoffice: "Front Office",
       team_hotel_manager: "Hoteldirektor",
       team_marketing: "Marketing",
-      technology: "Technologie",
+      technology: {
+        title: "Technologie",
+        description: "PMS-Hersteller & Co."
+      },
       videos: "Videos",
       webinars: "Webinare",
       website_analytics: "Website Analytics",
