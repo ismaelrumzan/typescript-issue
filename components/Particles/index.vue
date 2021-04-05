@@ -54,7 +54,7 @@ export default Vue.extend({
         { value: 1, easing: "easeInOutQuad", duration: 1500 }
       ],
       opacity: [
-        { value: 0.4, easing: "easeOutSine", duration: 1000 },
+        { value: 0.65, easing: "easeOutSine", duration: 1000 },
         { value: 0, easing: "easeInOutQuad", duration: 1500 }
       ],
       delay: anime.stagger(500, { grid: [8, 4], from: "center" }),

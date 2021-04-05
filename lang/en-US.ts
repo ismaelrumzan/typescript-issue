@@ -46,6 +46,7 @@ export default async (context: any, locale: string) => {
           description: 'With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.',
           concept: 'Our Concept'
         },
+        trusted: 'Trusted by hotels of all sizes',
         solutions: {
           title: 'Your way to digital transformation',
           description: 'As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes.'

@@ -4,9 +4,9 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue";
-import lottie from "lottie-web";
+import lottie, { AnimationItem } from "lottie-web";
 
-export type RenderMode = "svg" | "canvas";
+export type RenderMode = "svg" | "canvas" | "html";
 
 export default Vue.extend({
   props: {
@@ -36,36 +36,39 @@ export default Vue.extend({
         overflow: "hidden",
         margin: "0 auto",
         display: "flex"
-      }
+      },
+      animation: null
     };
   },
   mounted() {
     import(`@/assets/illustrations/${this.name}.json`)
       .then(module => {
-        (lottie as any).loadAnimation({
-          container: this.$refs.illustration,
-          renderer: this.renderer,
+        const animation = lottie.loadAnimation({
+          container: this.$refs.illustration as any,
+          renderer: this.renderer as RenderMode,
           loop: this.loop,
           autoplay: this.autoplay,
           animationData: JSON.parse(JSON.stringify(module.default))
         });
+        (this.animation as AnimationItem | null) = animation;
       })
       .catch(error => {
         console.error(error);
         console.warn("Loading fallback Illustration ...");
         import(`@/assets/illustrations/404.json`).then(module => {
-          (lottie as any).loadAnimation({
-            container: this.$refs.illustration,
-            renderer: this.renderer,
+          const animation = lottie.loadAnimation({
+            container: this.$refs.illustration as any,
+            renderer: this.renderer as RenderMode,
             loop: this.loop,
             autoplay: this.autoplay,
             animationData: JSON.parse(JSON.stringify(module.default))
           });
+          (this.animation as AnimationItem | null) = animation;
         });
       });
   },
   beforeDestroy() {
-    lottie.destroy();
+    (this.animation as AnimationItem | null)?.destroy();
   }
 });
 </script>

@@ -1,5 +1,13 @@
 <template>
-  <div :class="[styles.tabs, styles[alignment]]" :data-alignment="alignment">
+  <div
+    :class="[
+      styles.tabs,
+      styles[alignment],
+      { [styles.withBackground]: withBackground }
+    ]"
+    :data-tab-alignment="alignment"
+    :data-tab-background="withBackground"
+  >
     <div :class="styles.header">
       <ul :class="styles.items">
         <li
@@ -23,7 +31,7 @@
         </li>
       </ul>
     </div>
-    <div :class="styles.content">
+    <div :class="styles.content" :style="contentStyles">
       <slot />
       <div
         v-if="alignment === 'left' || alignment === 'right'"
@@ -62,6 +70,13 @@ export default Vue.extend({
     alignment: {
       type: String as PropType<Alignment>,
       default: "left"
+    },
+    contentStyles: {
+      type: Object
+    },
+    withBackground: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

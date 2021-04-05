@@ -5,6 +5,7 @@
       styles[color],
       styles[variant],
       styles[skew],
+      styles[paddingClass],
       { [styles.isSkewed]: skew },
       { [styles.noPadding]: noPadding },
       { [styles.fullWidth]: fullWidth }
@@ -28,8 +29,8 @@ import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 
 export type BackgroundColor = "default" | "main" | "light" | "dark" | "grey";
-
 export type BackgroundVariant = "default" | "gradient";
+export type PaddingOptions = "default" | "small" | "none";
 
 export type SkewOption =
   | "positive"
@@ -50,6 +51,10 @@ export default Vue.extend({
     skew: {
       type: String as PropType<SkewOption>
     },
+    padding: {
+      type: String as PropType<PaddingOptions>,
+      default: "default"
+    },
     noPadding: {
       type: Boolean
     },
@@ -61,6 +66,11 @@ export default Vue.extend({
     return {
       styles
     };
+  },
+  computed: {
+    paddingClass(): string {
+      return `pad-${this.padding}`;
+    }
   }
 });
 </script>

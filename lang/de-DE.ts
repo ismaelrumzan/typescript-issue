@@ -45,6 +45,7 @@ export default async (context: any, locale: string) => {
           description: 'Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit.',
           concept: 'Unser Konzept'
         },
+        trusted: 'Hotels aller Größen vertrauen in uns',
         solutions: {
           title: 'Dein Weg zur digitalen Transformation',
           description: 'Als Hotel solltest Du alle relevanten Informationen an einem zentralen Ort finden. Nur dann bist Du in der Lage effiziente und intelligente Prozesse zu integrieren und zu automatisieren.'

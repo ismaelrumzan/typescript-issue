@@ -90,6 +90,9 @@
 }
 
 .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   min-height: 100%;
@@ -148,6 +151,9 @@
       &:not(:last-child) {
         margin-bottom: 0;
       }
+      .title {
+        white-space: nowrap;
+      }
       .description {
         display: none !important;
       }
@@ -183,7 +189,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      border-left: none;
+      border-left: none !important;
       overflow-y: hidden;
       overflow-x: auto;
       border-bottom: 1px solid var(--light-5);
@@ -204,6 +210,9 @@
         }
         &:not(:last-child) {
           margin-bottom: 0;
+        }
+        .title {
+          white-space: nowrap;
         }
         .description {
           display: none !important;
@@ -244,6 +253,21 @@
   }
 }
 
+/* With Background */
+.withBackground {
+  .content {
+    border-radius: var(--border-radius-large);
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+}
+[data-theme="dark"] {
+  .withBackground {
+    .content {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+  }
+}
+
 /* Color Corrections */
 [data-section-theme="main"],
 [data-section-theme="dark"] {
@@ -267,6 +291,39 @@
 
     .indicator {
       background-color: #fff !important;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  [data-section-theme="light"],
+  [data-section-theme="grey"] {
+    .index {
+      color: var(--main-color) !important;
+    }
+
+    .active {
+      background-color: rgba(255, 255, 255, 0.035) !important;
+      box-shadow: none !important;
+
+      .indicator {
+        background-color: var(--main-color) !important;
+      }
+    }
+  }
+  [data-section-theme="main"],
+  [data-section-theme="dark"] {
+    .index {
+      color: var(--main-color) !important;
+    }
+
+    .active {
+      background-color: rgba(255, 255, 255, 0.05) !important;
+      box-shadow: none !important;
+
+      .indicator {
+        background-color: var(--main-color) !important;
+      }
     }
   }
 }

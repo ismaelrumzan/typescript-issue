@@ -8,19 +8,57 @@
       :titleStyles="{ maxWidth: '33rem' }"
       illustration="example"
       particles
+      padding="small"
       :cta="[
         {
           title: 'phrases.get_started',
-          href: '/apply',
+          href: '/apply'
         },
         {
           title: 'pages.index.hero.concept',
           href: '/about',
-          type: 'secondary',
-        },
+          type: 'secondary'
+        }
       ]"
     />
-    <Section color="grey" fullWidth>
+    <Section color="grey" padding="small">
+      <Logos
+        title="pages.index.trusted"
+        :logos="[
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          },
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          },
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          },
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          },
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          },
+          {
+            name: 'Stripe',
+            link: 'https://www.stripe.com',
+            file: 'stripe.svg'
+          }
+        ]"
+      />
+    </Section>
+    <Section fullWidth>
       <FeatureSlider
         title="pages.index.solutions.title"
         description="pages.index.solutions.description"
@@ -58,7 +96,7 @@
         />
       </FeatureSlider>
     </Section>
-    <Section>
+    <Section color="grey">
       <TextWithDescription
         badge="Hauptkategorien"
         title="Bereich für Hauptkategorien"
@@ -142,7 +180,12 @@
         image="test.png"
         padding="large"
         alignment="right"
-        :cta="ctaFirst"
+        :cta="[
+          {
+            title: 'Mehr erfahren',
+            href: '/about'
+          }
+        ]"
       />
     </Section>
     <Section color="light" noPadding>
@@ -155,8 +198,8 @@
         :cta="[
           {
             title: 'Jetzt bewerben',
-            href: '/apply',
-          },
+            href: '/apply'
+          }
         ]"
       />
     </Section>
@@ -175,10 +218,9 @@ import TextWithDescription from "@/blocks/TextWithDescription";
 import HelpBanner from "@/blocks/HelpBanner";
 import Tabs from "@/blocks/Tabs";
 import Tab from "@/blocks/Tabs/Tab";
-import Illustration from "@/components/Illustration";
+import Logos from "@/blocks/Logos";
 import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
-
 import FeatureSlider from "@/blocks/FeatureSlider";
 import Slide from "@/blocks/FeatureSlider/Slide";
 
@@ -189,34 +231,13 @@ export default Vue.extend({
     TextWithImage,
     TextWithDescription,
     HelpBanner,
+    Logos,
     Tabs,
     Tab,
-    Illustration,
     FeatureSlider,
     Slide,
     Grid,
-    Feature,
-  },
-  data() {
-    return {
-      ctasHero: [
-        {
-          title: "Jetzt starten",
-          href: "/about",
-        },
-        {
-          title: "Unser Konzept",
-          type: "secondary",
-          href: "/about",
-        },
-      ],
-      ctaFirst: [
-        {
-          title: "Mehr erfahren",
-          href: "/about",
-        },
-      ],
-    };
-  },
+    Feature
+  }
 });
 </script>

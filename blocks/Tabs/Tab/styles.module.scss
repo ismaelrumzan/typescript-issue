@@ -26,7 +26,7 @@
   }
 }
 
-[data-alignment="center"] {
+[data-tab-alignment="center"] {
   .tab {
     position: relative;
 
@@ -42,8 +42,8 @@
   }
 }
 
-[data-alignment="left"],
-[data-alignment="right"] {
+[data-tab-alignment="left"],
+[data-tab-alignment="right"] {
   @media (max-width: 900px) {
     .tab {
       position: relative;
@@ -58,5 +58,13 @@
         padding-bottom: 0;
       }
     }
+  }
+}
+
+/* With Background */
+[data-tab-background="true"] {
+  .tab {
+    width: 90%;
+    height: 90%;
   }
 }

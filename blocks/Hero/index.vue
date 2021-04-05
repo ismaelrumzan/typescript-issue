@@ -4,7 +4,8 @@
       styles.hero,
       styles[alignment],
       styles[verticalAlign],
-      styles[illustrationWidth]
+      styles[illustrationWidth],
+      styles[paddingClass]
     ]"
   >
     <div :class="styles.content" :style="contentStyles">
@@ -45,6 +46,7 @@ import Illustration from "@/components/Illustration";
 import Particles from "@/components/Particles";
 import TypeWriter from "@/components/TypeWriter";
 
+type PaddingOptions = "default" | "small" | "none";
 type HorizontalAlignment = "left" | "right" | "center";
 type VerticalAlignment = "top" | "bottom" | "middle";
 type IllustrationWidth = "narrow" | "normal" | "wide";
@@ -101,12 +103,21 @@ export default Vue.extend({
     },
     titleStyles: {
       type: Object
+    },
+    padding: {
+      type: String as PropType<PaddingOptions>,
+      default: "default"
     }
   },
   data() {
     return {
       styles
     };
+  },
+  computed: {
+    paddingClass(): string {
+      return `pad-${this.padding}`;
+    }
   }
 });
 </script>

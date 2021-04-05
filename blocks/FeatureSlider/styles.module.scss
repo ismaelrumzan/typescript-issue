@@ -190,3 +190,11 @@
     opacity: 1;
   }
 }
+
+[data-theme="dark"] {
+  .slide {
+    box-shadow: none;
+    // border: 2px solid var(--light-4);
+    background-color: var(--light-2);
+  }
+}

@@ -1,10 +1,39 @@
 <template>
   <div id="content">
     <Hero
-      title="Lorem Ipsum et cetera"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-      alignment="center"
+      badge="pages.workflows"
+      title="Beschleunige Prozesse in Deinem Hotel"
+      description="Vereinfache die täglichen Abläufe im Hotel, vom Check-In bis zum Marketing. Mit Hilfe von Workflows automatisierst Du zeitaufwendige Aufgaben."
+      illustration="assistants"
+      :cta="[
+        {
+          title: 'Jetzt starten',
+          href: '/apply'
+        }
+      ]"
     />
+    <Section color="grey">
+      <Tabs withBackground>
+        <Tab
+          title="Trigger"
+          description="Lege fest, bei welchem Ereignis eine Aktion ausgelöst werden soll."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Actions"
+          description="Wird Dein erstellter Trigger ausgelöst, werden die von Dir eingestellten Aktionen ausgeführt."
+        >
+          <Illustration name="example" />
+        </Tab>
+        <Tab
+          title="Zurücklehnen"
+          description="Zeitaufwendige und repetetive Aufgaben erledigen sich nun ganz von allein und sparen Dir eine Menge Zeit ein."
+        >
+          <Illustration name="example" />
+        </Tab>
+      </Tabs>
+    </Section>
     <Section noPadding>
       <HelpBanner />
     </Section>
@@ -14,16 +43,22 @@
 <script lang="ts">
 import Vue from "vue";
 import Section from "@/blocks/Section";
-import Hero from "@/blocks/Hero";
-import TextWithDescription from "@/blocks/TextWithDescription";
 import HelpBanner from "@/blocks/HelpBanner";
+import Hero from "@/blocks/Hero";
+import Illustration from "@/components/Illustration";
+import Tab from "@/blocks/Tabs/Tab";
+import Tabs from "@/blocks/Tabs";
+import TextWithDescription from "@/blocks/TextWithDescription";
 
 export default Vue.extend({
   components: {
     Section,
+    HelpBanner,
     Hero,
-    TextWithDescription,
-    HelpBanner
+    Illustration,
+    Tab,
+    Tabs,
+    TextWithDescription
   }
 });
 </script>

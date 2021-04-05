@@ -29,6 +29,12 @@ $skew-angle: 5deg;
     }
   }
 
+  &.pad-small {
+    .container {
+      padding: 2rem 0;
+    }
+  }
+
   .content {
     z-index: 1;
     width: 100%;
@@ -70,11 +76,11 @@ $skew-angle: 5deg;
 }
 
 [data-theme="dark"] .main {
-  background-color: var(--light-2);
+  background-color: var(--light-3);
   &.isSkewed {
     background-color: transparent;
     .skew {
-      background-color: var(--light-2);
+      background-color: var(--light-3);
     }
   }
 }
