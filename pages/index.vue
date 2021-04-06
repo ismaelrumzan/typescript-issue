@@ -8,7 +8,6 @@
       :titleStyles="{ maxWidth: '33rem' }"
       illustration="example"
       particles
-      padding="small"
       :cta="[
         {
           title: 'phrases.get_started',

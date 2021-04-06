@@ -3,52 +3,52 @@
     "title": "pages.frontoffice.title",
     "children": [
       {
-        "title": "pages.roomplan",
+        "title": "pages.roomplan.title",
         "link": "/frontoffice/roomplan",
         "disabled": true
       },
       {
-        "title": "pages.reservations",
+        "title": "pages.reservations.title",
         "link": "/frontoffice/reservations",
         "disabled": true
       },
       {
-        "title": "pages.guests",
+        "title": "pages.guests.title",
         "link": "/frontoffice/guests",
         "disabled": true
       },
       {
-        "title": "pages.lost_property",
+        "title": "pages.lost_property.title",
         "link": "/frontoffice/lost-property",
         "disabled": true
       },
       {
-        "title": "pages.feedback",
+        "title": "pages.feedback.title",
         "link": "/frontoffice/feedback",
         "disabled": true
       },
       {
-        "title": "pages.emails",
+        "title": "pages.emails.title",
         "link": "/frontoffice/emails",
         "disabled": true
       },
       {
-        "title": "pages.messenger",
+        "title": "pages.messenger.title",
         "link": "/frontoffice/messenger",
         "disabled": true
       },
       {
-        "title": "pages.phone",
+        "title": "pages.phone.title",
         "link": "/frontoffice/phone",
         "disabled": true
       },
       {
-        "title": "pages.permissions",
+        "title": "pages.permissions.title",
         "link": "/frontoffice/permissions",
         "disabled": true
       },
       {
-        "title": "pages.payments",
+        "title": "pages.payments.title",
         "link": "/frontoffice/payments",
         "disabled": true
       }

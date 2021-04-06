@@ -1,8 +1,15 @@
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
+    general: {
+      search: 'Search',
+      solution: 'Solution | Solutions',
+    },
+
     phrases: {
       get_started: "Get Started",
       more: 'Learn More',
+      search_for: 'Search for {0}',
+      search_for_2: 'Search for {0}',
       start_now: "Start Now",
     },
 
@@ -30,18 +37,24 @@ export default async (context: any, locale: string) => {
       demo: "Demo",
       developers: "Developers",
       documentation: "Documentation",
-      emails: "E-Mails",
+      emails: {
+        title: 'E-Mails'
+      },
       energy_management: "Energy Management",
       erp: "ERP",
       faq: "FAQ",
-      feedback: "Feedback",
+      feedback: {
+        title: "Feedback"
+      },
       finance: "Finance",
       frontoffice: {
         title: "Front Office",
         description: "Lorem ipsum dolor"
       },
       gifts: "Gifts",
-      guests: "Guests",
+      guests: {
+        title: "Guests"
+      },
       help: "Help",
       housekeeping: "Housekeeping",
       index: {
@@ -60,7 +73,9 @@ export default async (context: any, locale: string) => {
       },
       jobs: "Jobs",
       local_devices: "Local Devices",
-      lost_property: "Lost Property",
+      lost_property: {
+        title: "Lost Property"
+      },
       mail: "Mail",
       marketing: {
         title: "Marketing",
@@ -68,7 +83,9 @@ export default async (context: any, locale: string) => {
       },
       marketplace: "Marketplace",
       meeting: "Meeting",
-      messenger: "Messenger",
+      messenger: {
+        title: "Messenger"
+      },
       newsletter: "Newsletter",
       onboarding: "Onboarding",
       operations: {
@@ -76,17 +93,27 @@ export default async (context: any, locale: string) => {
         description: "Lorem ipsum dolor"
       },
       partners: "Partners",
-      payments: "Payments",
-      permissions: "Permissions",
-      phone: "Phone",
+      payments: {
+        title: "Payments"
+      },
+      permissions: {
+        title: "Permissions"
+      },
+      phone: {
+        title: "Phone"
+      },
       press: "Press",
       products: "Products",
       promotions: "Promotions",
-      reservations: "Reservations",
+      reservations: {
+        title: "Reservations"
+      },
       ressource_management: "Ressource Management",
       ressources: "Ressources",
       roadmap: "Roadmap",
-      roomplan: "Roomplan",
+      roomplan: {
+        title: 'Roomplan'
+      },
       sales: {
         title: "Sales",
         description: "z.B. PMS- oder CMS-Hersteller"

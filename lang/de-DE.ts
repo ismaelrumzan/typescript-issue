@@ -1,8 +1,15 @@
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
+    general: {
+      solution: 'Lösung | Lösungen',
+      search: 'Suchen'
+    },
+
     phrases: {
       get_started: "Jetzt starten",
       more: 'Mehr erfahren',
+      search_for: 'Suche nach {0}',
+      search_for_2: 'Nach {0} suchen',
       start_now: "Jetzt starten",
     },
 
@@ -29,18 +36,27 @@ export default async (context: any, locale: string) => {
       demo: "Demo",
       developers: "Entwickler",
       documentation: "Dokumentation",
-      emails: "E-Mails",
+      emails: {
+        title: 'E-Mails',
+        description: 'Ein großen Teil der Aufgaben des Frontoffice sind sich wiederholende Prozesse. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche.'
+      },
       energy_management: "Energiemanagement",
       erp: "Warenwirtschaft",
       faq: "FAQ",
-      feedback: "Feedback",
+      feedback: {
+        title: 'Feedback',
+        description: "Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration in den Check out Assistenten bis zum email-client. Hole Dir auch Feedback von Deinen Mitarbeitern."
+      },
       finance: "Finanzen",
       frontoffice: {
         title: "Front Office",
         description: "Rund um den Gast"
       },
       gifts: "Geschenke",
-      guests: "Gäste",
+      guests: {
+        title: 'Gäste',
+        description: 'Über unsere Benutzeroberfläche hast Du alle Gäste im Blick ohne Dich in Deinem PMS oder CRM anmelden zu müssen und kannst diese neu anlegen oder bearbeiten.'
+      },
       help: "Hilfe",
       housekeeping: "Housekeeping",
       index: {
@@ -59,7 +75,10 @@ export default async (context: any, locale: string) => {
       },
       jobs: "Jobs",
       local_devices: "Lokale Geräte",
-      lost_property: "Fundsachen",
+      lost_property: {
+        title: 'Fundsachen',
+        description: 'Unabhängig davon ob Dein PMS diesen Service bietet kann unsere Software die intelligente Verwaltung übernehmen und glänzt durch Funktionalität'
+      },
       mail: "Post",
       marketing: {
         title: "Marketing",
@@ -67,7 +86,10 @@ export default async (context: any, locale: string) => {
       },
       marketplace: "Marktplatz",
       meeting: "Meeting",
-      messenger: "Messenger",
+      messenger: {
+        title: 'Messenger',
+        description: 'Ein großen Teil der Aufgaben des Frontoffice sind sich wiederholende Prozesse. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche.'
+      },
       newsletter: "Newsletter",
       onboarding: "Onboarding",
       operations: {
@@ -75,18 +97,33 @@ export default async (context: any, locale: string) => {
         description: "Prozessoptimierung"
       },
       partners: "Partner",
-      payments: "Zahlungen",
-      permissions: "Zutritt",
-      phone: "Telefon",
+      payments: {
+        title: 'Zahlungen',
+        description: 'Ein großen Teil der Aufgaben des Frontoffice sind sich wiederholende Prozesse. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche.'
+      },
+      permissions: {
+        title: "Zutritt",
+        description: 'Über unsere Benutzeroberfläche hast Du alle Reservierungen im Blick ohne Dich in Deinem PMS anmelden zu müssen und kannst diese auch neu anlegen oder bearbeiten.'
+      },
+      phone: {
+        title: "Telefon",
+        description: 'Über unsere Benutzeroberfläche hast Du alle Reservierungen im Blick ohne Dich in Deinem PMS anmelden zu müssen und kannst diese auch neu anlegen oder bearbeiten.'
+      },
       press: "Presse",
       assistants: "Assistenten",
       products: "Produkte",
       promotions: "Förderungen",
-      reservations: "Reservierungen",
+      reservations: {
+        title: 'Reservierungen',
+        description: 'Über unsere Benutzeroberfläche hast Du alle Reservierungen im Blick ohne Dich in Deinem PMS anmelden zu müssen und kannst diese auch neu anlegen oder bearbeiten.'
+      },
       ressource_management: "Ressourcen-Verwaltung",
       ressources: "Ressourcen",
       roadmap: "Roadmap",
-      roomplan: "Zimmerplan",
+      roomplan: {
+        title: "Zimmerplan",
+        description: "Wir verleihen dem in mittleren Hotels immer noch geliebten Zimmerplan  einen höheren Nutzen durch mehr Individualisierung und Call-to-Action nach eigenen Wünschen."
+      },
       sales: {
         title: "Vertrieb",
         description: "Software-Distributor & Co."
