@@ -11,6 +11,7 @@ $bp: 812px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: var(--light);
   border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-medium);
   transform: translate3d(0, 0, 0);
@@ -105,6 +106,13 @@ $bp: 812px;
           background-color: var(--main-color-light-3);
         }
       }
+    }
+  }
+  [data-section-theme] {
+    .help {
+      background-color: var(--light-1);
+      box-shadow: none;
+      border: 1px solid var(--light-5);
     }
   }
 }

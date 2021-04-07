@@ -27,7 +27,7 @@
         v-model="search"
         :placeholder="
           searchText
-            ? `${$t('phrases.search_for_2', [$tc(searchText), 1])} ...`
+            ? `${$t('phrases.search_for_2', [$tc(searchText), 2])} ...`
             : `${$t('general.search')} ...`
         "
       />
@@ -39,6 +39,8 @@
       :description="item.description"
       :icon="item.icon"
       :moreLink="item.moreLink"
+      :disabled="item.disabled"
+      :alignment="item.alignment"
     />
   </div>
 </template>
@@ -47,6 +49,7 @@
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 import Feature from "@/blocks/Feature";
+import orderBy from "lodash/orderBy";
 
 type PaddingOption =
   | "none"
@@ -64,6 +67,7 @@ interface IFeature {
   icon: string;
   moreLink?: string;
   moreText?: string;
+  disabled?: boolean;
 }
 
 export default Vue.extend({
@@ -152,14 +156,24 @@ export default Vue.extend({
   },
   mounted() {
     if (this.searchable) {
-      (this as any).initialFeatures.forEach((item: any) =>
+      /* Move disabled features to the end */
+      const sortedList = orderBy(
+        (this as any).initialFeatures,
+        (item: any) => {
+          return item.componentOptions.propsData.disabled;
+        },
+        ["desc"]
+      );
+
+      sortedList.forEach((item: any) =>
         (this as any).features.push({
           title: item.componentOptions.propsData.title,
           description: item.componentOptions.propsData.description,
           alignment: item.componentOptions.propsData.alignment,
           icon: item.componentOptions.propsData.icon,
           moreLink: item.componentOptions.propsData.moreLink,
-          moreText: item.componentOptions.propsData.moreText
+          moreText: item.componentOptions.propsData.moreText,
+          disabled: item.componentOptions.propsData.disabled
         })
       );
       (this as any).doneReplacing = true;

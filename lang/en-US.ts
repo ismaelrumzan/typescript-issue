@@ -1,22 +1,27 @@
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
     general: {
-      search: 'Search',
-      solution: 'Solution | Solutions',
+      search: "Search",
+      solution: "Solution | Solutions",
     },
 
     phrases: {
+      coming_soon: "Coming soon",
       get_started: "Get Started",
-      more: 'Learn More',
-      search_for: 'Search for {0}',
-      search_for_2: 'Search for {0}',
+      more: "Learn More",
+      search_for: "Search for {0}",
+      search_for_2: "Search for {0}",
       start_now: "Start Now",
+      updated_at: "Updated at",
     },
 
     pages: {
       about: "About",
       all_solutions: "All Solutions",
-      applications: "Applications",
+      applications: {
+        title: "Applications",
+        description: ""
+      },
       appointees: "Appointees",
       apps: "Apps",
       assistants: "Assistants",
@@ -38,15 +43,24 @@ export default async (context: any, locale: string) => {
       developers: "Developers",
       documentation: "Documentation",
       emails: {
-        title: 'E-Mails'
+        title: "E-Mails"
       },
-      energy_management: "Energy Management",
-      erp: "ERP",
+      energy_management: {
+        title: "Energy Management",
+        description: ""
+      },
+      erp: {
+        title: "ERP",
+        description: ""
+      },
       faq: "FAQ",
       feedback: {
         title: "Feedback"
       },
-      finance: "Finance",
+      finance: {
+        title: "Finance",
+        description: ""
+      },
       frontoffice: {
         title: "Front Office",
         description: "Lorem ipsum dolor"
@@ -56,19 +70,22 @@ export default async (context: any, locale: string) => {
         title: "Guests"
       },
       help: "Help",
-      housekeeping: "Housekeeping",
+      housekeeping: {
+        title: "Housekeeping",
+        description: ""
+      },
       index: {
-        title: 'Digital Hotel',
+        title: "Digital Hotel",
         hero: {
-          title: 'Activate your Hotel\'s personal',
-          typewriter: 'Autopilot, Single Login',
-          description: 'With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.',
-          concept: 'Our Concept'
+          title: "Activate your Hotel\"s personal",
+          typewriter: "Autopilot, Single Login",
+          description: "With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.",
+          concept: "Our Concept"
         },
-        trusted: 'Trusted by these hotels already',
+        trusted: "Trusted by these hotels already",
         solutions: {
-          title: 'Your way to digital transformation',
-          description: 'As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes.'
+          title: "Your way to digital transformation",
+          description: "As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes."
         }
       },
       jobs: "Jobs",
@@ -76,7 +93,10 @@ export default async (context: any, locale: string) => {
       lost_property: {
         title: "Lost Property"
       },
-      mail: "Mail",
+      mail: {
+        title: "Mail",
+        description: ""
+      },
       marketing: {
         title: "Marketing",
         description: "Lorem ipsum dolor"
@@ -102,6 +122,10 @@ export default async (context: any, locale: string) => {
       phone: {
         title: "Phone"
       },
+      pos: {
+        title: "POS System",
+        description: ""
+      },
       press: "Press",
       products: "Products",
       promotions: "Promotions",
@@ -112,7 +136,11 @@ export default async (context: any, locale: string) => {
       ressources: "Ressources",
       roadmap: "Roadmap",
       roomplan: {
-        title: 'Roomplan'
+        title: "Roomplan"
+      },
+      safety: {
+        title: "Safety",
+        description: ""
       },
       sales: {
         title: "Sales",
@@ -124,8 +152,14 @@ export default async (context: any, locale: string) => {
         description: "z.B. PMS- oder CMS-Hersteller"
       },
       solutions: "Solutions",
-      staff: "Staff",
-      suppliers: "Suppliers",
+      staff: {
+        title: "Staff",
+        description: ""
+      },
+      suppliers: {
+        title: "Suppliers",
+        description: ""
+      },
       surveys: "Surveys",
       team_developer: "Developer",
       team_frontoffice: "Front Office",

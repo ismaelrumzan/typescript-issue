@@ -7,6 +7,15 @@
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
+            v-if="button.onClick"
+            @click="button.onClick"
+            :title="button.title"
+            :type="button.type"
+            :href="button.href"
+            :externalHref="button.externalHref"
+          />
+          <Button
+            v-else
             :title="button.title"
             :type="button.type"
             :href="button.href"
@@ -55,49 +64,49 @@ export default Vue.extend({
   components: {
     Badge,
     Button,
-    Illustration,
+    Illustration
   },
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left",
+      default: "left"
     },
     padding: {
       type: String as PropType<PaddingOption>,
-      default: "medium",
+      default: "medium"
     },
     badge: {
-      type: String,
+      type: String
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
-      type: String,
+      type: String
     },
     illustration: {
-      type: String,
+      type: String
     },
     renderer: {
-      type: String as PropType<RenderMode>,
+      type: String as PropType<RenderMode>
     },
     image: {
-      type: String,
+      type: String
     },
     cta: {
-      type: Array,
-    },
+      type: Array
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
   },
   computed: {
     paddingClass(): string {
       return `pad-${this.padding}`;
-    },
-  },
+    }
+  }
 });
 </script>

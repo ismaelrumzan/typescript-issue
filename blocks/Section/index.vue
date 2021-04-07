@@ -7,7 +7,7 @@
       styles[skew],
       styles[paddingClass],
       { [styles.isSkewed]: skew },
-      { [styles.noPadding]: noPadding },
+      { [styles.noPadding]: noPadding || padding === 'none' },
       { [styles.fullWidth]: fullWidth }
     ]"
     :data-section-theme="color"

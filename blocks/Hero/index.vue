@@ -22,9 +22,19 @@
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
+            v-if="button.onClick"
+            @click="button.onClick"
             :title="button.title"
             :type="button.type"
             :href="button.href"
+            :externalHref="button.externalHref"
+          />
+          <Button
+            v-else
+            :title="button.title"
+            :type="button.type"
+            :href="button.href"
+            :externalHref="button.externalHref"
           />
         </li>
       </ul>

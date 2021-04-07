@@ -169,9 +169,9 @@
       },
       {
         "title": "pages.meeting",
+        "link": "/meeting",
         "description": "Direkt online buchen",
-        "icon": "Calendar",
-        "onClick": "bookMeeting"
+        "icon": "Calendar"
       },
       {
         "title": "pages.help",

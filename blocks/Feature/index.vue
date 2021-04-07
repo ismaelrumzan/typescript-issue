@@ -1,5 +1,11 @@
 <template>
-  <div :class="[styles.feature, styles[alignment]]">
+  <div
+    :class="[
+      styles.feature,
+      styles[alignment],
+      { [styles.disabled]: disabled }
+    ]"
+  >
     <div v-if="icon" :class="styles.icon">
       <IconWrapper width="52" height="52">
         <Icon :name="icon" />
@@ -9,7 +15,7 @@
     <p :class="styles.description">{{ $t(description) }}</p>
     <div v-if="moreLink" :class="styles.link">
       <NuxtLink :to="localePath(moreLink)">
-        {{ moreText }}
+        {{ $t(moreText) }}
       </NuxtLink>
       <Icon name="ArrowRight" />
     </div>
@@ -27,29 +33,33 @@ type Alignment = "left" | "right" | "center";
 export default Vue.extend({
   components: {
     IconWrapper,
-    Icon,
+    Icon
   },
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: String,
     icon: String,
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left",
+      default: "left"
     },
     moreText: {
       type: String,
-      default: "Mehr erfahren",
+      default: "phrases.more"
     },
     moreLink: String,
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
-  },
+  }
 });
 </script>

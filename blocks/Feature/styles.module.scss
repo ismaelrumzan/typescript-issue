@@ -43,6 +43,18 @@
   }
 }
 
+.disabled {
+  cursor: default;
+  opacity: 0.4;
+
+  .link {
+    cursor: not-allowed;
+    a {
+      pointer-events: none;
+    }
+  }
+}
+
 .left {
   align-items: flex-start;
   text-align: left;

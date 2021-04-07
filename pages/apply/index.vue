@@ -9,7 +9,7 @@
     >
       <ApplicationForm />
     </Hero>
-    <Section noPadding>
+    <Section color="grey" padding="none">
       <HelpBanner />
     </Section>
   </div>

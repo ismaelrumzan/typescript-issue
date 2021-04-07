@@ -1,21 +1,9 @@
 <template>
   <div id="content">
-    <Hero
-      badge="pages.frontoffice.title"
-      title="Alles rund um Deinen Gast"
-      description="Ein großer Teil der Aufgaben besteht aus sich wiederholenden Prozessen. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche."
-      alignment="center"
-      :cta="[
-        {
-          title: 'phrases.get_started',
-          href: '/apply'
-        }
-      ]"
-    />
-    <Section color="grey">
+    <Section padding="none">
       <TextWithDescription
         badge="pages.all_solutions"
-        title="Lösungen im Bereich Frontoffice"
+        title="Alle Lösungen im Überblick"
         alignment="center"
         padding="medium"
         style="padding-bottom: 2rem"

@@ -58,42 +58,52 @@
     "title": "pages.backoffice.title",
     "children": [
       {
-        "title": "pages.finance",
+        "title": "pages.finance.title",
         "link": "/backoffice/finance",
         "disabled": true
       },
       {
-        "title": "pages.suppliers",
+        "title": "pages.suppliers.title",
         "link": "/backoffice/suppliers",
         "disabled": true
       },
       {
-        "title": "pages.erp",
+        "title": "pages.erp.title",
         "link": "/backoffice/erp",
         "disabled": true
       },
       {
-        "title": "pages.energy_management",
+        "title": "pages.energy_management.title",
         "link": "/backoffice/energy",
         "disabled": true
       },
       {
-        "title": "pages.housekeeping",
+        "title": "pages.housekeeping.title",
         "link": "/backoffice/housekeeping",
         "disabled": true
       },
       {
-        "title": "pages.staff",
+        "title": "pages.safety.title",
+        "link": "/backoffice/safety",
+        "disabled": true
+      },
+      {
+        "title": "pages.staff.title",
         "link": "/backoffice/staff",
         "disabled": true
       },
       {
-        "title": "pages.applications",
+        "title": "pages.applications.title",
         "link": "/backoffice/applications",
         "disabled": true
       },
       {
-        "title": "pages.mail",
+        "title": "pages.pos.title",
+        "link": "/backoffice/pos-system",
+        "disabled": true
+      },
+      {
+        "title": "pages.mail.title",
         "link": "/backoffice/mail",
         "disabled": true
       }

@@ -67,6 +67,21 @@ $bp: 767px;
   padding-top: var(--horizontal-padding);
 }
 
+[data-section-theme="main"],
+[data-section-theme="dark"] {
+  .logos {
+    a {
+      img {
+        opacity: 0.75;
+        filter: brightness(0) saturate(0) invert(1);
+      }
+    }
+  }
+  .title {
+    opacity: 0.75;
+  }
+}
+
 [data-theme="dark"] {
   .logos {
     a {
@@ -75,5 +90,8 @@ $bp: 767px;
         filter: brightness(0) saturate(0) invert(1);
       }
     }
+  }
+  .title {
+    opacity: 0.5;
   }
 }
