@@ -1,0 +1,55 @@
+.article {
+  font-family: var(--font-text);
+}
+
+.title {
+  font-size: 2.75rem;
+  hyphens: auto;
+}
+
+.desc {
+  display: block;
+}
+
+.footer {
+  margin-top: 5rem;
+  .date {
+    display: block;
+    text-align: right;
+    opacity: 0.5;
+  }
+}
+
+.content {
+  width: 100%;
+  line-height: 1.9;
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-text);
+    margin: 3rem 0 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+}

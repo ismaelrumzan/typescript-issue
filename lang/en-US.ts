@@ -77,7 +77,7 @@ export default async (context: any, locale: string) => {
       index: {
         title: "Digital Hotel",
         hero: {
-          title: "Activate your Hotel\"s personal",
+          title: "Activate your Hotel\'s personal",
           typewriter: "Autopilot, Single Login",
           description: "With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.",
           concept: "Our Concept"

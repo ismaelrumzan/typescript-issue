@@ -1,0 +1,30 @@
+$vertical-gap: 2rem;
+
+.sidebar {
+  position: sticky;
+  // max-height: calc(100vh - var(--header-height-scrolled) - (#{$vertical-gap} * 2));
+  // top: calc(var(--header-height-scrolled) + #{$vertical-gap});
+  // border-radius: var(--border-radius-medium);
+
+  max-height: calc(100vh - var(--header-height-scrolled));
+  top: var(--header-height-scrolled);
+  border-right: 1px solid var(--light-5);
+  padding: var(--docs-gap);
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.menu {
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-small);
+    color: inherit;
+  }
+}

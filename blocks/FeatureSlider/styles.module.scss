@@ -191,6 +191,17 @@
   }
 }
 
+[data-section-theme="main"],
+[data-section-theme="dark"] {
+  .slide {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--dark-5);
+    &.active {
+      color: #000;
+    }
+  }
+}
+
 [data-theme="dark"] {
   .slide {
     box-shadow: none;
@@ -200,6 +211,10 @@
   [data-section-theme] {
     .slide {
       background-color: var(--light-4);
+      color: var(--dark-6);
+      &.active {
+        color: var(--dark);
+      }
     }
   }
 }

@@ -1,5 +1,12 @@
 <template>
-  <div :class="[styles.container, styles[alignment], styles[paddingClass]]">
+  <div
+    :class="[
+      styles.container,
+      styles[alignment],
+      styles[paddingClass],
+      styles[illustrationWidth]
+    ]"
+  >
     <div :class="styles.content">
       <Badge v-if="badge" :text="badge" />
       <h2 :class="styles.title">{{ $t(title) }}</h2>
@@ -58,6 +65,7 @@ import Illustration from "@/components/Illustration";
 
 type Alignment = "left" | "right" | "center";
 type PaddingOption = "small" | "medium" | "large" | "none";
+type IllustrationWidth = "narrow" | "normal" | "wide";
 type RenderMode = "svg" | "canvas";
 
 export default Vue.extend({
@@ -87,6 +95,10 @@ export default Vue.extend({
     },
     illustration: {
       type: String
+    },
+    illustrationWidth: {
+      type: String as PropType<IllustrationWidth>,
+      default: "normal"
     },
     renderer: {
       type: String as PropType<RenderMode>

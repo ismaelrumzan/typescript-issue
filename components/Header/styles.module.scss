@@ -32,6 +32,12 @@ $bp-menu-tablet: 1150px;
   }
 }
 
+[data-layout="docs"] {
+  .outerContainer {
+    border-bottom-color: var(--light-5);
+  }
+}
+
 .open {
   .outerContainer {
     border-bottom-color: transparent;
