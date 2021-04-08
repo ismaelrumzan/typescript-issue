@@ -6,6 +6,14 @@
   >
     <span :class="styles.text">{{ $t(title) }}</span>
   </a>
+  <a
+    v-else-if="hasTarget"
+    :class="[styles.cta, styles[type], styles[variant]]"
+    :href="href"
+    @click="scrollToTarget(href, $event)"
+  >
+    <span :class="styles.text">{{ $t(title) }}</span>
+  </a>
   <NuxtLink
     v-else-if="href"
     :class="[styles.cta, styles[type], styles[variant]]"
@@ -21,7 +29,7 @@
       styles.cta,
       styles[type],
       styles[variant],
-      loading && styles.loading,
+      loading && styles.loading
     ]"
     @click="onClick"
   >
@@ -36,6 +44,7 @@
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
 import Loader from "@/components/Loader";
+import smoothscroll from "smoothscroll-polyfill";
 
 type Type =
   | "primary"
@@ -49,51 +58,67 @@ type Variant = "none" | "shadow";
 
 export default Vue.extend({
   components: {
-    Loader,
+    Loader
   },
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     href: {
-      type: String,
+      type: String
     },
     externalHref: {
-      type: String,
+      type: String
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     type: {
       type: String as PropType<Type>,
-      default: "primary",
+      default: "primary"
     },
     variant: {
       type: String as PropType<Variant>,
-      default: "none",
+      default: "none"
     },
     prefix: {
-      default: null,
+      default: null
     },
     suffix: {
-      default: null,
-    },
+      default: null
+    }
   },
   data() {
     return {
-      styles,
+      styles
     };
   },
   methods: {
     onClick() {
       this.$emit("click");
     },
+    scrollToTarget(target: string, e: any) {
+      e.preventDefault();
+      document.getElementById(target.substring(1))?.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
   },
+  computed: {
+    hasTarget() {
+      return this.href?.slice(0, 1) === "#";
+    }
+  },
+  mounted() {
+    if (this.hasTarget) {
+      smoothscroll.polyfill();
+    }
+  }
 });
 </script>

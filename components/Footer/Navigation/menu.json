@@ -236,13 +236,12 @@
     "title": "pages.company",
     "children": [
       {
-        "title": "pages.about",
+        "title": "pages.about.title",
         "link": "/about"
       },
       {
-        "title": "pages.jobs",
-        "link": "/jobs",
-        "disabled": true
+        "title": "pages.careers.title",
+        "link": "/careers"
       },
       {
         "title": "pages.faq",

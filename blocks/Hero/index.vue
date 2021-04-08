@@ -5,7 +5,9 @@
       styles[alignment],
       styles[verticalAlign],
       styles[illustrationWidth],
-      styles[paddingClass]
+      styles[paddingClass],
+      styles[gapClass],
+      { [styles.fullWidth]: fullWidth }
     ]"
   >
     <div :class="styles.content" :style="contentStyles">
@@ -39,8 +41,13 @@
         </li>
       </ul>
     </div>
-    <div v-if="illustration" :class="styles.illustration">
-      <Illustration :name="illustration" />
+    <div
+      v-if="illustration"
+      :class="styles.illustration"
+      :style="illustrationStyles"
+    >
+      <Illustration v-if="isDarkMode" :name="darkIllustration" />
+      <Illustration v-else :name="illustration" />
     </div>
     <slot />
     <Particles v-if="particles" />
@@ -55,11 +62,13 @@ import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
 import Particles from "@/components/Particles";
 import TypeWriter from "@/components/TypeWriter";
+import { RootState } from "~/store";
 
 type PaddingOptions = "default" | "small" | "none";
 type HorizontalAlignment = "left" | "right" | "center";
 type VerticalAlignment = "top" | "bottom" | "middle";
 type IllustrationWidth = "narrow" | "normal" | "wide";
+type GapOption = "default" | "medium" | "large" | "none";
 type RenderMode = "svg" | "canvas";
 
 export default Vue.extend({
@@ -92,6 +101,9 @@ export default Vue.extend({
     illustration: {
       type: String
     },
+    darkIllustration: {
+      type: String
+    },
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
       default: "normal"
@@ -111,12 +123,22 @@ export default Vue.extend({
     contentStyles: {
       type: Object
     },
+    illustrationStyles: {
+      type: Object
+    },
     titleStyles: {
       type: Object
     },
     padding: {
       type: String as PropType<PaddingOptions>,
       default: "default"
+    },
+    gap: {
+      type: String as PropType<GapOption>,
+      default: "default"
+    },
+    fullWidth: {
+      type: Boolean
     }
   },
   data() {
@@ -127,6 +149,12 @@ export default Vue.extend({
   computed: {
     paddingClass(): string {
       return `pad-${this.padding}`;
+    },
+    gapClass(): string {
+      return `gap-${this.gap}`;
+    },
+    isDarkMode(): boolean {
+      return (this.$store.state as RootState).theme === "dark";
     }
   }
 });

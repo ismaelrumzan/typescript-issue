@@ -7,6 +7,7 @@ export default async (context: any, locale: string) => {
     },
 
     phrases: {
+      apply_now: "Jetzt bewerben",
       coming_soon: "Bald verfügbar",
       get_started: "Jetzt starten",
       more: "Mehr erfahren",
@@ -23,7 +24,9 @@ export default async (context: any, locale: string) => {
     },
 
     pages: {
-      about: "Über uns",
+      about: {
+        title: "Über uns"
+      },
       all_solutions: "Alle Lösungen",
       applications: {
         title: "Bewerbungen",
@@ -39,6 +42,9 @@ export default async (context: any, locale: string) => {
       bonus_program: "Bonusprogramm",
       booking_page: "Buchungsseite",
       campaigns: "Kampagnen",
+      careers: {
+        title: "Karrieren"
+      },
       channel_analytics: "Kanal Analytics",
       cockpits: "Cockpits",
       company: "Unternehmen",
@@ -97,7 +103,6 @@ export default async (context: any, locale: string) => {
           description: "Als Hotel solltest Du alle relevanten Informationen an einem zentralen Ort finden. Nur dann bist Du in der Lage effiziente und intelligente Prozesse zu integrieren und zu automatisieren."
         }
       },
-      jobs: "Jobs",
       local_devices: "Lokale Geräte",
       lost_property: {
         title: "Fundsachen",

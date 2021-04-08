@@ -1,9 +1,10 @@
 <template>
-  <div :style="style" ref="illustration"></div>
+  <div :class="styles.illustration" ref="illustration"></div>
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from "vue";
+import styles from "./styles.module.scss?module";
 import lottie, { AnimationItem } from "lottie-web";
 
 export type RenderMode = "svg" | "canvas" | "html";
@@ -30,13 +31,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      style: {
-        width: "100%",
-        height: "100%",
-        overflow: "hidden",
-        margin: "0 auto",
-        display: "flex"
-      },
+      styles,
       animation: null
     };
   },
