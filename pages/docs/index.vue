@@ -1,14 +1,25 @@
 <template>
   <div id="content">
-    <Section padding="small">
+    <Section
+      padding="small"
+      v-for="(category, i) in categoriesWithPages"
+      :key="i"
+      :color="i % 2 !== 0 ? 'grey' : ''"
+    >
+      <TextWithDescription
+        padding="topOnly"
+        :title="category.name"
+        alignment="center"
+      />
       <Grid columns="3">
         <Feature
           alignment="center"
-          v-for="(page, i) in pages"
+          v-for="(page, i) in category.pages"
           :key="i"
           :title="page.title"
           :description="page.description"
           :moreLink="page.path"
+          moreText="general.view"
           :icon="page.icon"
         />
       </Grid>
@@ -22,12 +33,26 @@ import styles from "./styles.module.scss?module";
 import Section from "@/blocks/Section";
 import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
+import TextWithDescription from "@/blocks/TextWithDescription";
+
+interface Page {
+  title: string;
+  category: string;
+  path: string;
+  slug: string;
+}
+
+interface CategoryWithPages {
+  name: string;
+  pages: Page[];
+}
 
 export default Vue.extend({
   components: {
     Section,
     Grid,
-    Feature
+    Feature,
+    TextWithDescription
   },
   data() {
     return {
@@ -35,21 +60,36 @@ export default Vue.extend({
     };
   },
   async asyncData({ $content, app }: any) {
-    const pages = await $content(`${app.i18n.locale}/docs`)
-      .only(["title", "description", "path", "icon"])
+    let pages = await $content(`${app.i18n.locale}/docs`)
+      .sortBy("position")
+      .only(["title", "description", "category", "slug", "path", "icon"])
       .fetch();
 
+    const categories: string[] = pages.map((page: Page) => page.category);
+    const uniqueCategories = new Set(categories);
+
     if (app.i18n.locale === app.i18n.defaultLocale) {
-      return {
-        pages: pages.map((page: any) => ({
-          ...page,
-          path: page.path.replace(`/${app.i18n.locale}`, "")
-        }))
-      };
+      pages = pages.map((page: Page) => ({
+        ...page,
+        path: page.path.replace(`/${app.i18n.locale}`, "")
+      }));
+    }
+
+    let categoriesWithPages = [];
+    for (const category of [...uniqueCategories]) {
+      const categoryPages = pages.filter(
+        (page: Page) => page.category === category
+      );
+      categoriesWithPages.push({
+        name: category,
+        pages: categoryPages
+      });
     }
 
     return {
-      pages
+      pages,
+      categories,
+      categoriesWithPages
     };
   }
 });

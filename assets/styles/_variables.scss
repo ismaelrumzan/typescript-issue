@@ -18,6 +18,7 @@ $vertical-padding-small: 2rem;
 $vertical-padding-skew: 8%;
 $vertical-padding-skew-small: 15%;
 
+$docs-bp: 900px;
 $docs-gap: 2.5rem;
 
 $border-radius-tiny: 2px;
@@ -41,6 +42,7 @@ $border-radius-round: 50%;
   --vertical-padding: #{$vertical-padding};
   --vertical-padding-skew: #{$vertical-padding-skew};
 
+  --docs-bp: #{$docs-bp};
   --docs-gap: #{$docs-gap};
 
   --border-radius-tiny: #{$border-radius-tiny};

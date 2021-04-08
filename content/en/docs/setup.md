@@ -1,6 +1,9 @@
 ---
 title: Setup
+category: docs.getting_started
 description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+icon: Document
+position: 100
 ---
 
 ## Lorem Ipsum

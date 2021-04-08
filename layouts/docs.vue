@@ -46,12 +46,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// [data-layout="docs"] {
-//   --max-width: 90rem;
-// }
+@use "@/assets/styles/variables" as v;
+
 .docs {
   display: grid;
-  grid-template-columns: 20rem 1fr;
+  grid-template-columns: 17rem 1fr;
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -59,6 +58,14 @@ export default Vue.extend({
 
   .content {
     padding: var(--docs-gap);
+    padding-right: 0;
+  }
+
+  @media (max-width: v.$docs-bp) {
+    grid-template-columns: 1fr;
+    .content {
+      padding: var(--docs-gap) 0;
+    }
   }
 }
 </style>

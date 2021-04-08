@@ -1,9 +1,9 @@
 ---
-title: Nutzung
-category: docs.getting_started
+title: Example 5
+category: docs.examples
 description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
 icon: Document
-position: 120
+position: 540
 ---
 
 ## Lorem Ipsum

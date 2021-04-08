@@ -16,6 +16,7 @@ export const state = () => ({
   // appURL: isDev ? (config.publicRuntimeConfig as any).devAppURL : (config.publicRuntimeConfig as any).appURL,
   cookieAccepted: false,
   menuOpen: false,
+  docsMenuOpen: false,
   theme: 'light',
   meetingWidgetOpen: false
 })
@@ -31,6 +32,8 @@ export const MutationType = {
   ACCEPT_COOKIE: 'acceptCookie',
   TOGGLE_MENU: 'toggleMenu',
   SET_MENU_OPEN: 'setMenuOpen',
+  TOGGLE_DOCS_MENU: 'toggleDocsMenu',
+  SET_DOCS_MENU_OPEN: 'setDocsMenuOpen',
   SET_THEME: 'setTheme',
   SET_MEETING_WIDGET_OPEN: 'setMeetingWidgetOpen'
 }
@@ -56,6 +59,14 @@ export const mutations: MutationTree<RootState> = {
       document.body.classList.remove('blocked')
     }
     state.menuOpen = payload
+  },
+
+  [MutationType.TOGGLE_DOCS_MENU]: (state) => {
+    state.docsMenuOpen = !state.docsMenuOpen
+  },
+
+  [MutationType.SET_DOCS_MENU_OPEN]: (state, payload: boolean) => {
+    state.docsMenuOpen = payload
   },
 
   [MutationType.SET_THEME]: (state, payload: string) => {
@@ -128,6 +139,12 @@ export const actions: ActionTree<RootState, RootState> = {
     commit(MutationType.TOGGLE_MENU)
   },
   openMenu({ commit }) {
+    commit(MutationType.SET_MENU_OPEN)
+  },
+  toggleDocsMenu({ commit }) {
+    commit(MutationType.TOGGLE_MENU)
+  },
+  openDocsMenu({ commit }) {
     commit(MutationType.SET_MENU_OPEN)
   },
   setTheme({ commit }) {

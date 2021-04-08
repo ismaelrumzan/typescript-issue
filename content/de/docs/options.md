@@ -1,6 +1,9 @@
 ---
 title: Optionen
+category: docs.getting_started
 description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+icon: Document
+position: 110
 ---
 
 ## Lorem Ipsum

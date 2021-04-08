@@ -3,6 +3,7 @@ export default async (context: any, locale: string) => {
     general: {
       search: "Search",
       solution: "Solution | Solutions",
+      view: "View"
     },
 
     phrases: {
@@ -13,6 +14,12 @@ export default async (context: any, locale: string) => {
       search_for_2: "Search for {0}",
       start_now: "Start Now",
       updated_at: "Updated at",
+    },
+
+    docs: {
+      examples: 'Examples',
+      getting_started: 'Getting Started',
+      guide: 'Guide',
     },
 
     pages: {

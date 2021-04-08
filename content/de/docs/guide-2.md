@@ -1,9 +1,9 @@
 ---
-title: Nutzung
-category: docs.getting_started
+title: Guide 2
+category: docs.guide
 description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
 icon: Document
-position: 120
+position: 320
 ---
 
 ## Lorem Ipsum
