@@ -37,3 +37,69 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+/* Global fixes for non-module classes */
+
+/* Syntax Highlighter */
+.nuxt-content-highlight {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  background: var(--light-2);
+  border-radius: var(--border-radius-medium);
+  border: 1px solid var(--light-5);
+  // box-shadow: var(--shadow-small);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: var(--light);
+  }
+
+  pre[class*="language-"] {
+    padding: 1.25rem 1.35rem;
+    margin: 0;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    color: var(--dark);
+    text-shadow: none;
+  }
+
+  .filename {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.85rem;
+    padding: 0.425rem 1.35rem;
+    display: block;
+    border-bottom: 1px solid var(--light-5);
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    background: none;
+  }
+}
+
+[data-theme="dark"] {
+  .nuxt-content-highlight {
+    background: var(--light-3);
+
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background: var(--light-2);
+    }
+
+    .filename {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+</style>

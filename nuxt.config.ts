@@ -176,6 +176,14 @@ const config: NuxtConfig = {
     id: 'G-4CT5YQBZ0K'
   },
 
+  // content: {
+  //   markdown: {
+  //     prism: {
+  //       theme: 'prism-themes/themes/prism-vsc-dark-plus.css'
+  //     }
+  //   }
+  // },
+
   // This is where you configure your settings for the new plugin
   // prismic: {
   //   endpoint: 'https://xyz.cdn.prismic.io/api/v2',

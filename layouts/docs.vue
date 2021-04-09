@@ -63,8 +63,10 @@ export default Vue.extend({
 
   @media (max-width: v.$docs-bp) {
     grid-template-columns: 1fr;
+    padding: 0;
     .content {
-      padding: var(--docs-gap) 0;
+      padding: var(--docs-gap) var(--horizontal-padding);
+      max-width: 100vw;
     }
   }
 }

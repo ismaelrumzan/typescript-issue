@@ -2,7 +2,7 @@
   <div :class="styles.article">
     <!-- <nav>
       <ul>
-        <li v-for="link of article.toc" :key="link.id">
+        <li v-for="link of page.toc" :key="link.id">
           <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
         </li>
       </ul>
