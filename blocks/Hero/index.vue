@@ -46,8 +46,11 @@
       :class="styles.illustration"
       :style="illustrationStyles"
     >
-      <Illustration v-if="isDarkMode" :name="darkIllustration" />
-      <Illustration v-else :name="illustration" />
+      <Illustration
+        v-show="isDarkMode"
+        :name="darkIllustration || illustration"
+      />
+      <Illustration v-show="!isDarkMode" :name="illustration" />
     </div>
     <slot />
     <Particles v-if="particles" />
@@ -156,6 +159,14 @@ export default Vue.extend({
     isDarkMode(): boolean {
       return (this.$store.state as RootState).theme === "dark";
     }
+  },
+  watch: {
+    /* Currently both Illustration are being loaded. Needs to be optimized later on */
+    // isDarkMode(darkMode) {
+    //   if (darkMode) {
+    //     console.log(this.$refs.illustration);
+    //   }
+    // }
   }
 });
 </script>

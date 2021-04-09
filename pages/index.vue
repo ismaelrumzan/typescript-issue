@@ -6,7 +6,8 @@
       description="pages.index.hero.description"
       alignment="left"
       :titleStyles="{ maxWidth: '33rem' }"
-      illustration="example"
+      illustration="main_light"
+      darkIllustration="main_dark"
       particles
       :cta="[
         {
@@ -85,81 +86,26 @@
         />
       </FeatureSlider>
     </Section>
-    <Section color="grey">
-      <TextWithDescription
-        badge="Hauptkategorien"
-        title="Bereich für Hauptkategorien"
-        description="Hauptkategorien der Lösungen sind Frontoffice, Backoffice, Operations, Marketing"
+    <Section color="main" overflow="hidden">
+      <TextWithImage
+        badge="Einfache Integration"
+        title="Verbinde Dich mit Deinem System"
+        description="Wir besitzen Schnittstellen zu den beliebtesten Herstellern"
         alignment="center"
+        :cta="[{ title: 'phrases.get_started', href: '/apply' }]"
+        illustration="main_light"
+        darkIllustration="main_dark"
+        :illustrationStyles="{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: '-1',
+          opacity: isDarkMode ? 0.35 : 0.1,
+          transform: 'scale(1.75)'
+        }"
       />
-      <Grid columns="3">
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-          moreLink="/operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-      </Grid>
-    </Section>
-    <Section color="main">
-      <Grid columns="2">
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-          moreLink="/operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-        <Feature
-          title="This is a feature"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-          icon="Operations"
-        />
-      </Grid>
     </Section>
     <Section>
       <TextWithImage
@@ -212,6 +158,7 @@ import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
 import FeatureSlider from "@/blocks/FeatureSlider";
 import Slide from "@/blocks/FeatureSlider/Slide";
+import { RootState } from "~/store";
 
 export default Vue.extend({
   components: {
@@ -227,6 +174,11 @@ export default Vue.extend({
     Slide,
     Grid,
     Feature
+  },
+  computed: {
+    isDarkMode() {
+      return (this.$store.state as RootState).theme === "dark";
+    }
   }
 });
 </script>

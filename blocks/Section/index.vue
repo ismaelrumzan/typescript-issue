@@ -6,6 +6,7 @@
       styles[variant],
       styles[skew],
       styles[paddingClass],
+      styles[overflowClass],
       { [styles.isSkewed]: skew },
       { [styles.noPadding]: noPadding || padding === 'none' },
       { [styles.fullWidth]: fullWidth }
@@ -30,6 +31,7 @@ import styles from "./styles.module.scss?module";
 
 export type BackgroundColor = "default" | "main" | "light" | "dark" | "grey";
 export type BackgroundVariant = "default" | "gradient";
+export type OverflowOptions = "visible" | "hidden";
 export type PaddingOptions =
   | "default"
   | "small"
@@ -57,6 +59,10 @@ export default Vue.extend({
     skew: {
       type: String as PropType<SkewOption>
     },
+    overflow: {
+      type: String as PropType<OverflowOptions>,
+      default: "visible"
+    },
     padding: {
       type: String as PropType<PaddingOptions>,
       default: "default"
@@ -76,6 +82,9 @@ export default Vue.extend({
   computed: {
     paddingClass(): string {
       return `pad-${this.padding}`;
+    },
+    overflowClass(): string {
+      return `overflow-${this.overflow}`;
     }
   }
 });

@@ -66,6 +66,12 @@ $skew-angle: 5deg;
   }
 }
 
+.overflow-hidden {
+  .container {
+    overflow: hidden;
+  }
+}
+
 /* COLORS */
 .main {
   background-color: var(--main-color-light);

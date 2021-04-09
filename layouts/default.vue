@@ -90,11 +90,9 @@ export default Vue.extend({
 
 [data-theme="dark"] {
   .nuxt-content-highlight {
-    background: var(--light-3);
-
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
-      background: var(--light-2);
+      background: #080808;
     }
 
     .filename {

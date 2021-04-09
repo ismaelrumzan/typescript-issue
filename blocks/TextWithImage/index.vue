@@ -31,8 +31,16 @@
         </li>
       </ul>
     </div>
-    <div v-if="illustration" :class="styles.illustration">
-      <Illustration :name="illustration" :renderer="renderer" />
+    <div
+      v-if="illustration"
+      :class="styles.illustration"
+      :style="illustrationStyles"
+    >
+      <Illustration
+        v-show="isDarkMode"
+        :name="darkIllustration || illustration"
+      />
+      <Illustration v-show="!isDarkMode" :name="illustration" />
     </div>
     <div v-if="image" :class="styles.image">
       <nuxt-img
@@ -41,7 +49,7 @@
         loading="lazy"
         sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
       />
-      <div :class="styles.background">
+      <div :class="styles.background" v-if="bubbles">
         <div :class="styles.fancy">
           <span :class="styles.inner"></span>
         </div>
@@ -62,6 +70,7 @@ import styles from "./styles.module.scss?module";
 import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
+import { RootState } from "~/store";
 
 type Alignment = "left" | "right" | "center";
 type PaddingOption = "small" | "medium" | "large" | "none";
@@ -96,15 +105,24 @@ export default Vue.extend({
     illustration: {
       type: String
     },
+    darkIllustration: {
+      type: String
+    },
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
       default: "normal"
+    },
+    illustrationStyles: {
+      type: Object
     },
     renderer: {
       type: String as PropType<RenderMode>
     },
     image: {
       type: String
+    },
+    bubbles: {
+      type: Boolean
     },
     cta: {
       type: Array
@@ -118,6 +136,9 @@ export default Vue.extend({
   computed: {
     paddingClass(): string {
       return `pad-${this.padding}`;
+    },
+    isDarkMode(): boolean {
+      return (this.$store.state as RootState).theme === "dark";
     }
   }
 });
