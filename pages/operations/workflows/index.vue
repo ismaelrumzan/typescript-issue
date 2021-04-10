@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <Hero
-      badge="pages.workflows"
+      badge="pages.workflows.title"
       title="Beschleunige Prozesse in Deinem Hotel"
       description="Vereinfache die täglichen Abläufe im Hotel, vom Check-In bis zum Marketing. Mit Hilfe von Workflows automatisierst Du zeitaufwendige Aufgaben."
       illustration="assistants"

@@ -156,13 +156,21 @@ export default Vue.extend({
   },
   mounted() {
     if (this.searchable) {
-      /* Move disabled features to the end */
+      /* Move disabled features to the end -> sort by alignment -> sort in alphabetical order */
       const sortedList = orderBy(
         (this as any).initialFeatures,
-        (item: any) => {
-          return item.componentOptions.propsData.disabled;
-        },
-        ["desc"]
+        [
+          (item: any) => {
+            return item.componentOptions.propsData.disabled;
+          },
+          (item: any) => {
+            return item.componentOptions.propsData.alignment;
+          },
+          (item: any) => {
+            return this.$i18n.t(item.componentOptions.propsData.title);
+          }
+        ],
+        ["desc", "desc", "asc"]
       );
 
       sortedList.forEach((item: any) =>

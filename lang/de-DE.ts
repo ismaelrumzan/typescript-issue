@@ -9,6 +9,8 @@ export default async (context: any, locale: string) => {
     phrases: {
       apply_now: "Jetzt bewerben",
       coming_soon: "Bald verfügbar",
+      connect_your_system: "Verbinde Dich mit Deinem System",
+      easy_integration: "Einfache Integration",
       get_started: "Jetzt starten",
       more: "Mehr erfahren",
       search_for: "Suche nach {0}",
@@ -30,7 +32,7 @@ export default async (context: any, locale: string) => {
       all_solutions: "Alle Lösungen",
       applications: {
         title: "Bewerbungen",
-        description: ""
+        description: "Automatisierte Antworten, Online-Terminplaner für Bewerbungsgespräch, automatisiertes Onboarding und viele weitere Funktionen."
       },
       appointees: "Beauftragte",
       apps: "Apps",
@@ -46,7 +48,10 @@ export default async (context: any, locale: string) => {
         title: "Karrieren"
       },
       channel_analytics: "Kanal Analytics",
-      cockpits: "Cockpits",
+      cockpits: {
+        title: "Cockpits",
+        description: "Nichts mehr verpassen und immer up to date sein mit den Individuellen Dashboards für jedes Deiner Teams oder sogar für jeden Deiner Mitarbeiter."
+      },
       company: "Unternehmen",
       consulting: "Consulting",
       content_management: "Content Management",
@@ -56,11 +61,11 @@ export default async (context: any, locale: string) => {
       documentation: "Dokumentation",
       emails: {
         title: "E-Mails",
-        description: "Da E-Mails noch immer einen großen Teil der Kommunikation in der Hotellerie ausmachen gehören Sie als smarter client mit in unsere Benutzeroberfläche"
+        description: "Da E-Mails noch immer einen großen Teil der Kommunikation in der Hotellerie ausmachen gehören Sie als Smart-Client mit in unsere Benutzeroberfläche."
       },
       energy_management: {
         title: "Energiemanagement",
-        description: ""
+        description: "Du hast ein Monitoring für Energie in Deinem Hotel? Dann kannst Du dich mit unserem System verbinden und wir halten Dich über Veränderungen auf dem Laufenden."
       },
       erp: {
         title: "Warenwirtschaft",
@@ -69,7 +74,7 @@ export default async (context: any, locale: string) => {
       faq: "FAQ",
       feedback: {
         title: "Feedback",
-        description: "Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration in den Check out Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern."
+        description: "Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration des Check-Out-Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern."
       },
       finance: {
         title: "Finanzen",
@@ -87,7 +92,7 @@ export default async (context: any, locale: string) => {
       help: "Hilfe",
       housekeeping: {
         title: "Housekeeping",
-        description: ""
+        description: "Versorge Dein Housekeeping-Team auf eine einzigartige Weise mit wichtigen Informationen von Gästen oder auch anderen Teams mit unseren individuellen Workflows."
       },
       index: {
         title: "Digital Hotel",
@@ -106,7 +111,7 @@ export default async (context: any, locale: string) => {
       local_devices: "Lokale Geräte",
       lost_property: {
         title: "Fundsachen",
-        description: "Unabhängig davon ob Dein PMS diesen Service bietet kann unsere Software die intelligente Verwaltung übernehmen und glänzt durch Funktionalität"
+        description: "Unabhängig davon ob Dein PMS diesen Service bietet kann unsere Software die intelligente Verwaltung übernehmen und glänzt durch Funktionalität."
       },
       mail: {
         title: "Post",
@@ -120,7 +125,7 @@ export default async (context: any, locale: string) => {
       meeting: "Meeting",
       messenger: {
         title: "Messenger",
-        description: "Auf Nachrichten unterschiedlichster Messengerdienste müssen Deine Frontoffice Mitarbeiter heutzutage reagieren. Dieses aus einem zentralen System zu erledigen ist ein großer Vorteil."
+        description: "Nowadays, your front office employees have to react to messages from a wide variety of messenger services. Doing this from a central system is a great advantage."
       },
       newsletter: "Newsletter",
       onboarding: "Onboarding",
@@ -146,7 +151,10 @@ export default async (context: any, locale: string) => {
         description: ""
       },
       press: "Presse",
-      assistants: "Assistenten",
+      assistants: {
+        title: "Assistenten",
+        description: "Stell Dir vor wenn Du ein Programm kennst, kennst Du alle. So und noch einfacher fühlt es sich an mit unseren Assistenten zu arbeiten."
+      },
       products: "Produkte",
       promotions: "Förderungen",
       reservations: {
@@ -176,7 +184,7 @@ export default async (context: any, locale: string) => {
       solutions: "Lösungen",
       staff: {
         title: "Mitarbeiter",
-        description: ""
+        description: "Du hast die Möglichkeit Deine Mitarbeiter smart zu verwalten. Manage die Zugriffe, Rechte und sonstige Einstellungen mit unserem Service."
       },
       suppliers: {
         title: "Lieferanten",
@@ -194,7 +202,10 @@ export default async (context: any, locale: string) => {
       videos: "Videos",
       webinars: "Webinare",
       website_analytics: "Website Analytics",
-      workflows: "Workflows"
+      workflows: {
+        title: "Workflows",
+        description: "Aus individuell gewählten Live-Daten und Informationen aus dem Deinem Hotel automatisch Prozesse zu starten, so geht Hotellerie heute."
+      }
     }
   })
 }

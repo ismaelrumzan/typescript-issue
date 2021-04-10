@@ -163,15 +163,15 @@
     "title": "pages.operations.title",
     "children": [
       {
-        "title": "pages.assistants",
+        "title": "pages.assistants.title",
         "link": "/operations/assistants"
       },
       {
-        "title": "pages.workflows",
+        "title": "pages.workflows.title",
         "link": "/operations/workflows"
       },
       {
-        "title": "pages.cockpits",
+        "title": "pages.cockpits.title",
         "link": "/operations/cockpits",
         "disabled": true
       },

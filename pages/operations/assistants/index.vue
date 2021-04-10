@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <Hero
-      badge="pages.assistants"
+      badge="pages.assistants.title"
       title="Beschleunige Prozesse in Deinem Hotel"
       description="Vereinfache die täglichen Abläufe im Hotel, vom Check-In bis zum Marketing. Mit Hilfe unserer Assistenten minimierst Du zeitaufwendige Aufgaben."
       illustration="assistants"

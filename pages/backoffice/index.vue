@@ -27,84 +27,14 @@
         padding="bottomOnly"
       >
         <Feature
-          disabled
-          alignment="center"
-          title="pages.finance.title"
-          description="phrases.coming_soon"
-          icon="Roomplan"
-          moreLink="/backoffice/finance"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.suppliers.title"
-          description="phrases.coming_soon"
-          icon="Calendar"
-          moreLink="/backoffice/suppliers"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.erp.title"
-          description="phrases.coming_soon"
-          icon="People"
-          moreLink="/backoffice/erp"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.energy_management.title"
-          description="phrases.coming_soon"
-          icon="LostItem"
-          moreLink="/backoffice/energy-management"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.housekeeping.title"
-          description="phrases.coming_soon"
-          icon="Feedback"
-          moreLink="/backoffice/housekeeping"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.safety.title"
-          description="phrases.coming_soon"
-          icon="Mail"
-          moreLink="/backoffice/safety"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.staff.title"
-          description="phrases.coming_soon"
-          icon="Conversation"
-          moreLink="/backoffice/staff"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.applications.title"
-          description="phrases.coming_soon"
-          icon="Phone"
-          moreLink="/backoffice/applications"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.pos.title"
-          description="phrases.coming_soon"
-          icon="Permissions"
-          moreLink="/backoffice/pos"
-        />
-        <Feature
-          disabled
-          alignment="center"
-          title="pages.mail.title"
-          description="phrases.coming_soon"
-          icon="CreditCards"
-          moreLink="/backoffice/mail"
+          v-for="solution in backofficeSolutions"
+          :key="solution.link"
+          :alignment="solution.alignment"
+          :disabled="solution.disabled"
+          :title="solution.title"
+          :description="solution.description"
+          :icon="solution.icon"
+          :moreLink="solution.link"
         />
       </Grid>
     </Section>
@@ -115,13 +45,15 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
 import TextWithDescription from "@/blocks/TextWithDescription";
 import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
 import HelpBanner from "@/blocks/HelpBanner";
+
+import solutions from "@/data/solutions";
 
 export default Vue.extend({
   components: {
@@ -131,6 +63,13 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  computed: {
+    backofficeSolutions() {
+      return solutions.filter(
+        (solution: any) => solution.category === "backoffice"
+      );
+    }
   }
 });
 </script>

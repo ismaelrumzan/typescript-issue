@@ -9,6 +9,8 @@ export default async (context: any, locale: string) => {
     phrases: {
       apply_now: "Apply now",
       coming_soon: "Coming soon",
+      connect_your_system: "Connect to your system",
+      easy_integration: "Easy intergration",
       get_started: "Get Started",
       more: "Learn More",
       search_for: "Search for {0}",
@@ -30,11 +32,14 @@ export default async (context: any, locale: string) => {
       all_solutions: "All Solutions",
       applications: {
         title: "Applications",
-        description: ""
+        description: "Automated responses, online scheduler for job interviews, automated onboarding and many other functions."
       },
       appointees: "Appointees",
       apps: "Apps",
-      assistants: "Assistants",
+      assistants: {
+        title: "Assistants",
+        description: "Imagine if you know one program, you know them all. This is how it feels, and it is even easier to work with our assistants."
+      },
       backoffice: {
         title: "Back Office",
         description: "Lorem ipsum dolor"
@@ -47,7 +52,10 @@ export default async (context: any, locale: string) => {
         title: "Careers"
       },
       channel_analytics: "Channel Analytics",
-      cockpits: "Cockpits",
+      cockpits: {
+        title: "Cockpits",
+        description: "Don't miss anything and always be up to date with the individual dashboards for each of your teams or even for each of your employees."
+      },
       company: "Company",
       consulting: "Consulting",
       content_management: "Content Management",
@@ -56,11 +64,12 @@ export default async (context: any, locale: string) => {
       developers: "Developers",
       documentation: "Documentation",
       emails: {
-        title: "E-Mails"
+        title: "E-Mails",
+        description: "Since e-mails still make up a large part of communication in the hotel industry, they are a part belong in our user interface inside of a smart client."
       },
       energy_management: {
         title: "Energy Management",
-        description: ""
+        description: "Do you have energy monitoring in your hotel? Then you can connect it to our system and we will keep you up to date on changes."
       },
       erp: {
         title: "ERP",
@@ -68,7 +77,8 @@ export default async (context: any, locale: string) => {
       },
       faq: "FAQ",
       feedback: {
-        title: "Feedback"
+        title: "Feedback",
+        description: "Extend your feedback through various workflows, from the integration of the check-out assistant to the e-mail client. Get feedback from your employees as well."
       },
       finance: {
         title: "Finance",
@@ -80,12 +90,13 @@ export default async (context: any, locale: string) => {
       },
       gifts: "Gifts",
       guests: {
-        title: "Guests"
+        title: "Guests",
+        description: "Via our user interface you have an overview of all guests without having to log into your PMS or CRM. You can even create or edit them."
       },
       help: "Help",
       housekeeping: {
         title: "Housekeeping",
-        description: ""
+        description: "Provide your housekeeping team in a unique way with important information from guests or other teams with our individual workflows."
       },
       index: {
         title: "Digital Hotel",
@@ -103,7 +114,8 @@ export default async (context: any, locale: string) => {
       },
       local_devices: "Local Devices",
       lost_property: {
-        title: "Lost Property"
+        title: "Lost Property",
+        description: "Regardless of whether your PMS offers this service, our software can take over the intelligent management and shines with its functionality."
       },
       mail: {
         title: "Mail",
@@ -126,13 +138,16 @@ export default async (context: any, locale: string) => {
       },
       partners: "Partners",
       payments: {
-        title: "Payments"
+        title: "Payments",
+        description: "A payment in the PMS or in the POS is posted quickly, correcting errors before the night run saves a lot of rework. We'll keep you up to date on every payment."
       },
       permissions: {
-        title: "Permissions"
+        title: "Permissions",
+        description: "With this functionality, you can quickly and easily create access permissions independently of the integration in our reception assistant."
       },
       phone: {
-        title: "Phone"
+        title: "Phone",
+        description: "With our solution, no more information from your callers is lost and you can even integrate this very easily into your marketing."
       },
       pos: {
         title: "POS System",
@@ -142,13 +157,15 @@ export default async (context: any, locale: string) => {
       products: "Products",
       promotions: "Promotions",
       reservations: {
-        title: "Reservations"
+        title: "Reservations",
+        description: "Via our user interface you have an overview of all reservations without having to log into your PMS or CRM. You can even create or edit them."
       },
       ressource_management: "Ressource Management",
       ressources: "Ressources",
       roadmap: "Roadmap",
       roomplan: {
-        title: "Roomplan"
+        title: "Roomplan",
+        description: "We give the room plan, which is still popular in medium-sized hotels, greater use through more individualization and call-to-action according to your own wishes."
       },
       safety: {
         title: "Safety",
@@ -166,7 +183,7 @@ export default async (context: any, locale: string) => {
       solutions: "Solutions",
       staff: {
         title: "Staff",
-        description: ""
+        description: "You have the possibility to manage your employees in a smart way. Manage access, rights and other settings with our service."
       },
       suppliers: {
         title: "Suppliers",
@@ -184,7 +201,10 @@ export default async (context: any, locale: string) => {
       videos: "Videos",
       webinars: "Webinars",
       website_analytics: "Website Analytics",
-      workflows: "Workflows"
+      workflows: {
+        title: "Workflows",
+        description: "Starting processes automatically from individually selected live data and information from your hotel is how the hotel industry works today."
+      }
     }
   })
 }

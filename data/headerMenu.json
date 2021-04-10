@@ -24,7 +24,8 @@
         "title": "pages.marketing.title",
         "link": "/marketing",
         "description": "pages.marketing.description",
-        "icon": "Marketing"
+        "icon": "Marketing",
+        "disabled": true
       },
       {
         "title": "pages.operations.title",

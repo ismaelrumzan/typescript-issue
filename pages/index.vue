@@ -87,25 +87,7 @@
       </FeatureSlider>
     </Section>
     <Section color="main" overflow="hidden">
-      <TextWithImage
-        badge="Einfache Integration"
-        title="Verbinde Dich mit Deinem System"
-        description="Wir besitzen Schnittstellen zu den beliebtesten Herstellern"
-        alignment="center"
-        :cta="[{ title: 'phrases.get_started', href: '/apply' }]"
-        illustration="main_light"
-        darkIllustration="main_dark"
-        :illustrationStyles="{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: '-1',
-          opacity: isDarkMode ? 0.35 : 0.1,
-          transform: 'scale(1.75)'
-        }"
-      />
+      <IntegrationBanner />
     </Section>
     <Section>
       <TextWithImage
@@ -158,7 +140,7 @@ import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
 import FeatureSlider from "@/blocks/FeatureSlider";
 import Slide from "@/blocks/FeatureSlider/Slide";
-import { RootState } from "~/store";
+import IntegrationBanner from "@/blocks/IntegrationBanner";
 
 export default Vue.extend({
   components: {
@@ -173,12 +155,8 @@ export default Vue.extend({
     FeatureSlider,
     Slide,
     Grid,
-    Feature
-  },
-  computed: {
-    isDarkMode() {
-      return (this.$store.state as RootState).theme === "dark";
-    }
+    Feature,
+    IntegrationBanner
   }
 });
 </script>

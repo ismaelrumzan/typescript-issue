@@ -163,7 +163,7 @@
 <script lang="ts">
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
-import menuItems from "./menu.json";
+import menuItems from "@/data/headerMenu.json";
 import { MutationType } from "@/store";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";

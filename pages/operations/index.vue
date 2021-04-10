@@ -1,29 +1,42 @@
 <template>
   <div id="content">
     <Hero
-      title="Hero-Text zu dem Bereich Operations"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-      alignment="left"
-      illustration="example"
-      :cta="ctasHero"
+      badge="pages.operations.title"
+      title="Automatisiere Deine Prozesse"
+      description="Wir erleichtern Deinen Mitarbeitern Informationen sicher und effizient abzulegen und Prozesse sinnvoll zu automatisieren. Damit sorgen wir für eine hohe Datenqualität und individuelles Reporting für wichtige  Bereiche im Hotelbetrieb."
+      alignment="center"
+      :cta="[
+        {
+          title: 'phrases.get_started',
+          href: '/apply'
+        }
+      ]"
     />
-    <Section color="main" skew="positive">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+    <Section color="grey">
+      <TextWithDescription
+        badge="pages.all_solutions"
+        title="Lösungen im Bereich Operations"
         alignment="center"
-        :cta="ctaFirst"
+        padding="medium"
+        style="padding-bottom: 2rem"
       />
-    </Section>
-    <Section>
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="left"
-        :cta="ctaFirst"
-      />
+      <Grid
+        columns="3"
+        searchable
+        searchText="general.solution"
+        padding="bottomOnly"
+      >
+        <Feature
+          v-for="solution in operationsSolutions"
+          :key="solution.link"
+          :alignment="solution.alignment"
+          :disabled="solution.disabled"
+          :title="solution.title"
+          :description="solution.description"
+          :icon="solution.icon"
+          :moreLink="solution.link"
+        />
+      </Grid>
     </Section>
     <Section noPadding>
       <HelpBanner />
@@ -35,36 +48,27 @@
 import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
-import TextWithImage from "@/blocks/TextWithImage";
+import TextWithDescription from "@/blocks/TextWithDescription";
+import Grid from "@/blocks/Grid";
+import Feature from "@/blocks/Feature";
 import HelpBanner from "@/blocks/HelpBanner";
+import solutions from "@/data/solutions";
 
 export default Vue.extend({
   components: {
     Section,
     Hero,
-    TextWithImage,
+    TextWithDescription,
+    Grid,
+    Feature,
     HelpBanner
   },
-  data() {
-    return {
-      ctasHero: [
-        {
-          title: "Jetzt starten",
-          href: "/about"
-        },
-        {
-          title: "Unser Konzept",
-          type: "secondary",
-          href: "/about"
-        }
-      ],
-      ctaFirst: [
-        {
-          title: "Mehr erfahren",
-          href: "/about"
-        }
-      ]
-    };
+  computed: {
+    operationsSolutions() {
+      return solutions.filter(
+        (solution: any) => solution.category === "operations"
+      );
+    }
   }
 });
 </script>

@@ -4,7 +4,11 @@
     <ul>
       <li v-for="(logo, i) in logos" :key="i">
         <a :href="logo.link" :title="logo.name" target="_blank" rel="noopener">
-          <img :src="`/logos/${logo.file}`" :alt="`${logo.name} Logo`" />
+          <img
+            loading="lazy"
+            :src="`/logos/${logo.file}`"
+            :alt="`${logo.name} Logo`"
+          />
         </a>
       </li>
     </ul>

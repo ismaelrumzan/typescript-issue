@@ -1,6 +1,6 @@
 <template>
   <nav :class="styles.navigation">
-    <div v-for="(singleMenu, i) in footerMenu" :key="i" :class="styles.menu">
+    <div v-for="(singleMenu, i) in menuItems" :key="i" :class="styles.menu">
       <h3 :class="styles.title">{{ $t(singleMenu.title) }}</h3>
       <ul>
         <li
@@ -20,7 +20,7 @@
 <script lang="ts">
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
-import footerMenu from "./menu.json";
+import menuItems from "@/data/footerMenu.json";
 
 interface MenuItem {
   title: string;
@@ -36,7 +36,7 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      footerMenu: footerMenu as SingleMenu[]
+      menuItems: menuItems as SingleMenu[]
     };
   }
 });

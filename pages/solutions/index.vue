@@ -15,70 +15,14 @@
         padding="bottomOnly"
       >
         <Feature
-          title="pages.roomplan.title"
-          description="pages.roomplan.description"
-          icon="Roomplan"
-          moreLink="/frontoffice/roomplan"
-        />
-        <Feature
-          title="pages.reservations.title"
-          description="pages.reservations.description"
-          icon="Calendar"
-          moreLink="/frontoffice/reservations"
-        />
-        <Feature
-          title="pages.guests.title"
-          description="pages.guests.description"
-          icon="People"
-          moreLink="/frontoffice/guests"
-        />
-        <Feature
-          disabled
-          title="pages.lost_property.title"
-          description="pages.lost_property.description"
-          icon="LostItem"
-          moreLink="/frontoffice/lost-property"
-        />
-        <Feature
-          disabled
-          title="pages.feedback.title"
-          description="pages.feedback.description"
-          icon="Feedback"
-          moreLink="/frontoffice/feedback"
-        />
-        <Feature
-          title="pages.emails.title"
-          description="pages.emails.description"
-          icon="Mail"
-          moreLink="/frontoffice/emails"
-        />
-        <Feature
-          disabled
-          title="pages.messenger.title"
-          description="pages.messenger.description"
-          icon="Conversation"
-          moreLink="/frontoffice/messenger"
-        />
-        <Feature
-          disabled
-          title="pages.phone.title"
-          description="pages.phone.description"
-          icon="Phone"
-          moreLink="/frontoffice/phone"
-        />
-        <Feature
-          disabled
-          title="pages.permissions.title"
-          description="pages.permissions.description"
-          icon="Permissions"
-          moreLink="/frontoffice/permissions"
-        />
-        <Feature
-          disabled
-          title="pages.payments.title"
-          description="pages.payments.description"
-          icon="CreditCards"
-          moreLink="/frontoffice/payments"
+          v-for="solution in solutions"
+          :key="solution.link"
+          :alignment="solution.alignment"
+          :disabled="solution.disabled"
+          :title="solution.title"
+          :description="solution.description"
+          :icon="solution.icon"
+          :moreLink="solution.link"
         />
       </Grid>
     </Section>
@@ -89,13 +33,15 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
 import TextWithDescription from "@/blocks/TextWithDescription";
 import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
 import HelpBanner from "@/blocks/HelpBanner";
+
+import solutions from "@/data/solutions";
 
 export default Vue.extend({
   components: {
@@ -105,6 +51,11 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  data() {
+    return {
+      solutions
+    };
   }
 });
 </script>
