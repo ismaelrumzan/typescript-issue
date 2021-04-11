@@ -27,7 +27,7 @@ export default Vue.extend({
 <style lang="scss">
 .swagger-ui {
   /* Fonts & Colors */
-  color: var(--dark);
+  color: var(--dark) !important;
 
   & * {
     font-family: var(--font-text) !important;
@@ -41,8 +41,8 @@ export default Vue.extend({
   & code,
   .model,
   .model * {
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: 400 !important;
+    font-size: 0.9rem !important;
   }
 
   h1,
@@ -56,20 +56,20 @@ export default Vue.extend({
   .info .title,
   .info li,
   .info p {
-    color: var(--dark);
+    color: var(--dark) !important;
   }
 
   .opblock .opblock-summary-operation-id,
   .opblock .opblock-summary-path,
   .opblock .opblock-summary-path__deprecated,
   .opblock .opblock-summary-description {
-    color: var(--dark-3);
+    color: var(--dark-3) !important;
   }
 
   /* DOM elements */
   .wrapper {
-    max-height: inherit;
-    padding: 0;
+    max-height: inherit !important;
+    padding: 0 !important;
   }
 
   .information-container {
@@ -78,10 +78,10 @@ export default Vue.extend({
     .title {
       display: flex;
       flex-direction: column;
-      font-size: 3rem;
+      font-size: 3rem !important;
 
       @media (max-width: 767px) {
-        font-size: 2.5rem;
+        font-size: 2.5rem !important;
       }
 
       span {
@@ -93,7 +93,7 @@ export default Vue.extend({
 
       small {
         letter-spacing: 0;
-        padding: 0.3rem 0.75rem;
+        padding: 0.3rem 0.75rem !important;
       }
     }
 
@@ -107,15 +107,15 @@ export default Vue.extend({
   .scheme-container,
   .opblock-tag-section,
   section.models {
-    border-radius: var(--border-radius-medium);
-    background: var(--light);
-    border: 1px solid var(--light-5);
-    box-shadow: none;
-    transition: none;
+    border-radius: var(--border-radius-medium) !important;
+    background: var(--light) !important;
+    border: 1px solid var(--light-5) !important;
+    box-shadow: none !important;
+    transition: none !important;
 
     h4 {
       &:hover {
-        background: transparent;
+        background: transparent !important;
       }
     }
   }
@@ -148,34 +148,34 @@ export default Vue.extend({
   /* Models */
   section.models {
     h4 {
-      color: var(--dark-3);
-      font-size: 1.15rem;
-      padding: 1rem 1.5rem;
+      color: var(--dark-3) !important;
+      font-size: 1.15rem !important;
+      padding: 1rem 1.5rem !important;
       margin: 0 !important;
-      line-height: 1;
-      border: none;
-      transition: none;
+      line-height: 1 !important;
+      border: none !important;
+      transition: none !important;
     }
 
     &.is-open {
       padding: 0;
       h4 {
-        border-bottom: 1px solid var(--light-5);
+        border-bottom: 1px solid var(--light-5) !important;
       }
     }
 
     & > * {
-      padding: 1.5rem;
+      padding: 1.5rem !important;
     }
 
     .model-container {
       margin: 0 !important;
-      background: var(--light-2);
-      border: 1px solid var(--light-5);
-      transition: none;
+      background: var(--light-2) !important;
+      border: 1px solid var(--light-5) !important;
+      transition: none !important;
 
       &:hover {
-        background: var(--light-2);
+        background: var(--light-2) !important;
       }
 
       &:not(:last-child) {
@@ -184,7 +184,7 @@ export default Vue.extend({
     }
 
     .model-title {
-      color: var(--dark-3);
+      color: var(--dark-3) !important;
     }
   }
 }
@@ -201,23 +201,23 @@ export default Vue.extend({
     .opblock-tag-section,
     .scheme-container,
     section.models {
-      background-color: #080808;
-      box-shadow: none;
-      border: 1px solid var(--light-5);
+      background-color: #080808 !important;
+      box-shadow: none !important;
+      border: 1px solid var(--light-5) !important;
 
       h4 {
         &:hover {
-          background: transparent;
+          background: transparent !important;
         }
       }
     }
 
     section.models {
       .model-container {
-        background: var(--light);
+        background: var(--light) !important;
 
         &:hover {
-          background: var(--light);
+          background: var(--light) !important;
         }
       }
     }
