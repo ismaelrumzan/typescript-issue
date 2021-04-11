@@ -81,16 +81,16 @@ const config: NuxtConfig = {
     '@nuxt/content',
     // '@nuxtjs/prismic',
     // '@nuxtjs/gtm',
-    [
-      'nuxt-facebook-pixel-module',
-      {
-        /* module options */
-        track: 'PageView',
-        pixelId: 'pixelId',
-        autoPageView: true,
-        disabled: false
-      }
-    ],
+    // [
+    //   'nuxt-facebook-pixel-module',
+    //   {
+    //     /* module options */
+    //     track: 'PageView',
+    //     pixelId: 'pixelId',
+    //     autoPageView: true,
+    //     disabled: false
+    //   }
+    // ],
     [
       'nuxt-social-meta',
       {
@@ -103,7 +103,7 @@ const config: NuxtConfig = {
         themeColor: '#3367D6'
       }
     ],
-    '@nuxtjs/sentry',
+    // '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
     // 'nuxt-imagemin',
     // [
@@ -196,9 +196,9 @@ const config: NuxtConfig = {
    */
   plugins: [
     '~/plugins/isDev.client',
-    '~/plugins/isTouch.client',
-    '~/plugins/Userback.client',
-    '~/plugins/vue-fragment',
+    // '~/plugins/isTouch.client',
+    // '~/plugins/Userback.client',
+    // '~/plugins/vue-fragment',
     '~/plugins/swiper.client',
   ],
   /*
