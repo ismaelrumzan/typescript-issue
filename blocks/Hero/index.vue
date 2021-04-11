@@ -49,8 +49,15 @@
       <Illustration
         v-show="isDarkMode"
         :name="darkIllustration || illustration"
+        :withShadow="withShadow"
+        :renderer="renderer"
       />
-      <Illustration v-show="!isDarkMode" :name="illustration" />
+      <Illustration
+        v-show="!isDarkMode"
+        :name="illustration"
+        :withShadow="withShadow"
+        :renderer="renderer"
+      />
     </div>
     <slot />
     <Particles v-if="particles" />
@@ -72,7 +79,7 @@ type HorizontalAlignment = "left" | "right" | "center";
 type VerticalAlignment = "top" | "bottom" | "middle";
 type IllustrationWidth = "narrow" | "normal" | "wide";
 type GapOption = "default" | "medium" | "large" | "none";
-type RenderMode = "svg" | "canvas";
+type RenderMode = "svg" | "canvas" | "html";
 
 export default Vue.extend({
   components: {
@@ -110,6 +117,9 @@ export default Vue.extend({
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
       default: "normal"
+    },
+    withShadow: {
+      type: Boolean
     },
     renderer: {
       type: String as PropType<RenderMode>

@@ -125,7 +125,7 @@ export default async (context: any, locale: string) => {
       meeting: "Meeting",
       messenger: {
         title: "Messenger",
-        description: "Nowadays, your front office employees have to react to messages from a wide variety of messenger services. Doing this from a central system is a great advantage."
+        description: "Auf Nachrichten unterschiedlichster Messenger-Dienste müssen Deine Front Office Mitarbeiter heutzutage reagieren. Dieses aus einem zentralen System zu erledigen ist ein großer Vorteil."
       },
       newsletter: "Newsletter",
       onboarding: "Onboarding",

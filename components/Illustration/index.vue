@@ -27,6 +27,10 @@ export default Vue.extend({
     renderer: {
       type: String as PropType<RenderMode>,
       default: "svg"
+    },
+    withShadow: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -41,6 +45,16 @@ export default Vue.extend({
         const animation = lottie.loadAnimation({
           container: this.$refs.illustration as any,
           renderer: this.renderer as RenderMode,
+          rendererSettings: this.withShadow
+            ? {
+                filterSize: {
+                  width: "200%",
+                  height: "200%",
+                  x: "-50%",
+                  y: "-50%"
+                }
+              }
+            : {},
           loop: this.loop,
           autoplay: this.autoplay,
           animationData: JSON.parse(JSON.stringify(module.default))
