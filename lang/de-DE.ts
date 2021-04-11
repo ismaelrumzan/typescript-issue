@@ -30,6 +30,13 @@ export default async (context: any, locale: string) => {
         title: "Über uns"
       },
       all_solutions: "Alle Lösungen",
+      api: {
+        title: "API Dokumentation",
+        description: "",
+        hero: {
+          title: "API Dokumentation"
+        }
+      },
       applications: {
         title: "Bewerbungen",
         description: "Automatisierte Antworten, Online-Terminplaner für Bewerbungsgespräch, automatisiertes Onboarding und viele weitere Funktionen."

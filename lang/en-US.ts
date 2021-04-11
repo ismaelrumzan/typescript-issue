@@ -30,6 +30,13 @@ export default async (context: any, locale: string) => {
         title: "About"
       },
       all_solutions: "All Solutions",
+      api: {
+        title: "API Documentation",
+        description: "",
+        hero: {
+          title: "API Docs"
+        }
+      },
       applications: {
         title: "Applications",
         description: "Automated responses, online scheduler for job interviews, automated onboarding and many other functions."

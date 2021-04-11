@@ -1,0 +1,561 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Identities API",
+    "version": "1.0.0",
+    "description": "This is the identities api. Get the execution identities of the endpoints.",
+    "termsOfService": "http://digital-hotel.net/terms/",
+    "contact": {
+      "name": "Developer",
+      "url": "https://www.digital-hotel.net",
+      "email": "developer@digital-hotel.net"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://digitalhotel.azure-api.net/identities",
+      "variables": {
+        "scheme": {
+          "description": "The Data Set API is accessible via https and http",
+          "enum": [
+            "https"
+          ],
+          "default": "https"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "identities",
+      "description": "Get current identities of the endpoints"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "list-all-identities",
+        "summary": "List all identities",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "create-identities",
+        "summary": "Create new identitieses",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "delete-all-identities",
+        "summary": "Delete all identities",
+        "responses": {
+          "204": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "list-identities",
+        "summary": "Get identities",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema":{
+              "type": "string"
+            },
+            "required": true,
+            "description": "id of resource"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "update-identities",
+        "summary": "Update identities",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema":{
+              "type": "string"
+            },
+            "required": true,
+            "description": "id of resource"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Updated name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Updated url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "delete-identities",
+        "summary": "Delete identities",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema":{
+              "type": "string"
+            },
+            "required": true,
+            "description": "id of resource"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "register-identities",
+        "summary": "register new identitiy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "login-identities",
+        "summary": "login identitiy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/refreshToken": {
+      "post": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "refreshToken-identities",
+        "summary": "refreshToken for identitiy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/changePassword": {
+      "post": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "changepassword-identities",
+        "summary": "changePassword for identitiy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the identities"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "Url of the identities"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "identities"
+        ],
+        "operationId": "logout-identities",
+        "summary": "Logout identity",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/identities"
+                  }
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Invalid identities value",
+            "content": {}
+          },
+          "500": {
+            "description": "Server error",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "identities": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "tripID": {
+            "type": "string"
+          },
+          "email": {
+            "type": "object"
+          },
+          "from": {
+            "type": "object"
+          },
+          "to": {
+            "type": "object"
+          },
+          "feedback": {
+            "type": "object"
+          },
+          "share": {
+            "type": "object"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "lastExecution": {
+            "type": "string"
+          },          
+          "createdAt": {
+            "type": "string"
+          },
+          "lastUpdate": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
