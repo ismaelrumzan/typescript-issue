@@ -14,6 +14,9 @@
       right: 0,
       bottom: 0,
       zIndex: '-1',
+      filter: isDarkMode
+        ? 'grayscale(1) opacity(0.5)'
+        : 'grayscale(1) opacity(0.8)',
       opacity: isDarkMode ? 0.35 : 0.1,
       transform: 'scale(1.75)'
     }"
