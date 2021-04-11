@@ -6,12 +6,12 @@ $bp: 900px;
 }
 
 .content {
-  padding: 4rem var(--horizontal-padding) 2.75rem;
+  padding: 3.5rem var(--horizontal-padding) 2.75rem;
   max-width: var(--max-width);
   margin: 0 auto;
 
   @media (max-width: $bp) {
-    padding: 4rem var(--horizontal-padding) 3.25rem;
+    padding: 3rem var(--horizontal-padding) 3.25rem;
   }
 }
 
