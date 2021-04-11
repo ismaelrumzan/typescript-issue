@@ -204,20 +204,22 @@ export default Vue.extend({
   },
   methods: {
     toggleActive(isSubmenu: boolean, e: any) {
-      if (isSubmenu) {
+      const isMobileNav = window.matchMedia("(max-width: 1023px)").matches;
+      if (isSubmenu && isMobileNav) {
         e.preventDefault();
         e.target.parentNode.classList.toggle(styles["open"]);
 
         const content = e.target.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
+        if (content.style.height) {
+          content.style.height = null;
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.height = content.scrollHeight + "px";
         }
       }
     },
     open(isSubmenu: boolean, e: any) {
-      if (isSubmenu) {
+      const isMobileNav = window.matchMedia("(max-width: 1023px)").matches;
+      if (isSubmenu && !isMobileNav) {
         e.target.classList.add(styles["hovered"]);
       }
     },

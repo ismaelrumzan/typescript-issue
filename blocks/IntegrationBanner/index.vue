@@ -1,5 +1,6 @@
 <template>
   <TextWithImage
+    :class="styles.banner"
     badge="phrases.easy_integration"
     title="phrases.connect_your_system"
     description="Wir besitzen Schnittstellen zu den beliebtesten Herstellern"

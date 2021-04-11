@@ -72,6 +72,58 @@
       </label>
     </Grid>
 
+    <Grid columns="1" padding="small" gap="small">
+      <span>Social Media</span>
+
+      <label>
+        <div :class="styles.withPrefix">
+          <span :class="styles.prefix">github.com/</span>
+          <input
+            v-model="github"
+            id="github"
+            name="github"
+            placeholder="username"
+          />
+        </div>
+      </label>
+
+      <label>
+        <div :class="styles.withPrefix">
+          <span :class="styles.prefix">twitter.com/</span>
+          <input
+            v-model="twitter"
+            id="twitter"
+            name="twitter"
+            placeholder="username"
+          />
+        </div>
+      </label>
+
+      <label>
+        <div :class="styles.withPrefix">
+          <span :class="styles.prefix">facebook.com/</span>
+          <input
+            v-model="facebook"
+            id="facebook"
+            name="facebook"
+            placeholder="id"
+          />
+        </div>
+      </label>
+
+      <label>
+        <div :class="styles.withPrefix">
+          <span :class="styles.prefix">linkedin.com/in/</span>
+          <input
+            v-model="linkedin"
+            id="linkedin"
+            name="linkedin"
+            placeholder="id"
+          />
+        </div>
+      </label>
+    </Grid>
+
     <Grid columns="1" padding="small">
       <label>
         <span>Nachricht an uns</span>
@@ -150,6 +202,10 @@ export default Vue.extend({
       email: "",
       phone: "",
       experience: "",
+      github: "",
+      facebook: "",
+      twitter: "",
+      linkedin: "",
       message: "",
       password: null
     };

@@ -91,23 +91,7 @@
     <Section color="main" overflow="hidden">
       <IntegrationBanner />
     </Section>
-    <Section>
-      <TextWithImage
-        badge="Operations"
-        title="Vereinfache das Management Deines Hotels"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        image="test.png"
-        padding="large"
-        alignment="right"
-        :cta="[
-          {
-            title: 'Mehr erfahren',
-            href: '/about'
-          }
-        ]"
-      />
-    </Section>
-    <Section color="light" noPadding>
+    <Section padding="none">
       <TextWithImage
         badge="Bewirb dich"
         title="Haben wir Dein Interesse geweckt?"
@@ -122,7 +106,7 @@
         ]"
       />
     </Section>
-    <Section>
+    <Section color="light" padding="small">
       <HelpBanner />
     </Section>
   </div>

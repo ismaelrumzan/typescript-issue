@@ -73,7 +73,7 @@ $skew-angle: 5deg;
 }
 
 /* COLORS */
-.main {
+html:not([data-theme="dark"]) .main {
   background-color: var(--main-color-light);
   &.isSkewed {
     background-color: transparent;
@@ -83,6 +83,8 @@ $skew-angle: 5deg;
   }
   .content {
     --dark: #fff;
+    --badge-color: #fff;
+    color: var(--dark);
     --main-color: #{$main-color-light-3};
     --main-color-light: #{$main-color-light-2};
     --main-color-light-2: #{$main-color-light-4};
@@ -91,8 +93,6 @@ $skew-angle: 5deg;
     --main-color-light-5: #{$main-color};
     --main-color-light-7: #{$main-color-dark};
     --main-color-light-8: #{$main-color-light-3};
-    --badge-color: #fff;
-    color: var(--dark);
   }
 }
 
@@ -106,7 +106,7 @@ $skew-angle: 5deg;
   }
 }
 
-.light {
+html:not([data-theme="dark"]) .light {
   background-color: var(--main-color-light-9);
   &.isSkewed {
     background-color: transparent;
@@ -133,7 +133,7 @@ $skew-angle: 5deg;
   }
 }
 
-.dark {
+html:not([data-theme="dark"]) .dark {
   background-color: var(--main-color-dark-4);
   &.isSkewed {
     background-color: transparent;

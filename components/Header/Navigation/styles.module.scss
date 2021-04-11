@@ -130,7 +130,7 @@ $submenu-rotation-x: -30deg;
   transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0)
     rotateX(#{$submenu-rotation-x});
 
-  transition: opacity 0.25s, transform 0.25s ease, max-height 0.35s ease;
+  transition: opacity 0.25s, transform 0.25s ease, height 0.35s ease;
 
   @media (max-width: $bp) {
     position: relative;
@@ -140,7 +140,7 @@ $submenu-rotation-x: -30deg;
     transform: translate3d(0, 0, 0) rotateX(0deg);
     opacity: 1;
     pointer-events: auto;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
   }
 }
@@ -149,7 +149,7 @@ $submenu-rotation-x: -30deg;
   .submenuContainer {
     opacity: 1;
     pointer-events: auto;
-    transition: opacity 0.5s, transform 0.5s ease, max-height 0.35s ease;
+    transition: opacity 0.5s, transform 0.5s ease, height 0.35s ease;
     transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0) rotateX(0deg);
 
     @media (max-width: $bp) {

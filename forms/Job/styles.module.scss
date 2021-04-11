@@ -69,6 +69,29 @@
   }
 }
 
+.withPrefix {
+  display: flex;
+  align-items: stretch;
+
+  .prefix {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    padding: 0 0.9rem;
+    font-size: 0.85rem;
+    color: var(--dark-5);
+    background-color: var(--light-2);
+    border: 1px solid var(--light-6);
+    border-right: none;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+    margin-bottom: 0;
+  }
+
+  input {
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0 !important;
+  }
+}
+
 .honeypot {
   display: none !important;
 }
@@ -90,6 +113,11 @@
           box-shadow: 0 0 0 99px var(--light-4) inset !important;
         }
       }
+    }
+  }
+  .withPrefix {
+    .prefix {
+      background-color: var(--light-3);
     }
   }
 }
