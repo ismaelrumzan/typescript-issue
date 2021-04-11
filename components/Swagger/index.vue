@@ -121,7 +121,7 @@ export default Vue.extend({
   }
 
   .scheme-container {
-    padding: 1.5rem;
+    padding: 1.5rem !important;
   }
 
   /* Blocks */
