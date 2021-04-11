@@ -158,7 +158,7 @@ export default Vue.extend({
     }
 
     &.is-open {
-      padding: 0;
+      padding: 0 !important;
       h4 {
         border-bottom: 1px solid var(--light-5) !important;
       }

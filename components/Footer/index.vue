@@ -34,7 +34,8 @@
         </div>
 
         <span :class="styles.copyright">
-          &copy; {{ curYear }} Digital Hotel – Alle Rechte vorbehalten
+          &copy; {{ curYear }} Digital Hotel.
+          {{ $t("phrases.all_rights_reserved") }}.
         </span>
       </div>
     </div>

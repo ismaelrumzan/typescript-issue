@@ -3,14 +3,21 @@
     <div :class="styles.helpContainer">
       <div :class="styles.help">
         <div :class="styles.textContainer">
-          <h2>Noch Fragen?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
-          </p>
+          <h2>{{ $t("blocks.help.title") }}</h2>
+          <p>{{ $t("blocks.help.description") }}</p>
           <div :class="styles.buttons">
-            <Button title="Zum FAQ" href="/faq" :class="styles.button" />
+            <Button
+              :title="
+                $t('phrases.go_to_site', { page: $t('pages.help.title') })
+              "
+              href="/help"
+              :class="styles.button"
+            />
+            <Button
+              title="phrases.book_meeting"
+              @click="bookMeeting"
+              :class="styles.button"
+            />
           </div>
         </div>
         <div :class="styles.illustration">
@@ -26,6 +33,7 @@ import Vue from "vue";
 import styles from "./styles.module.scss?module";
 import Button from "@/components/Button";
 import Illustration from "@/components/Illustration";
+import { MutationType } from "~/store";
 
 export default Vue.extend({
   components: {
@@ -36,6 +44,11 @@ export default Vue.extend({
     return {
       styles
     };
+  },
+  methods: {
+    bookMeeting() {
+      this.$store.commit(MutationType.SET_MEETING_WIDGET_OPEN, true);
+    }
   }
 });
 </script>

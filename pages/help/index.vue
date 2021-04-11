@@ -1,32 +1,62 @@
 <template>
   <div id="content">
     <Hero
-      title="Hero-Text zu dem Bereich Help"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-      alignment="left"
-      illustration="example"
-      :cta="ctasHero"
+      badge="Alles im Überblick"
+      title="FAQ"
+      alignment="center"
+      padding="small"
+      style="padding-bottom: 1rem"
     />
-    <Section color="main" skew="positive">
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
+    <Section padding="bottomOnly" style="margin-bottom: 2rem">
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+      <Collapsible title="Hier könnte Deine Frage stehen?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </Collapsible>
+    </Section>
+    <Section color="light" padding="small">
+      <TextWithDescription
+        badge="Meeting buchen"
+        title="Du hast immer noch Fragen?"
+        description="Wir bieten Dir die Möglichkeit, ein persönliches Meeting mit uns zu vereinbaren. Dieses kannst Du hier direkt online buchen."
         alignment="center"
-        :cta="ctaFirst"
+        :cta="[
+          {
+            title: 'Meeting buchen',
+            onClick: bookMeeting
+          }
+        ]"
       />
-    </Section>
-    <Section>
-      <TextWithImage
-        badge="Digital Hub"
-        title="Schalte Dein Unternehmen auf Autopilot"
-        description="Mit dem Betriebssystem für Unternehmen: Vereinfachen, automatisieren und heben wir Deine Geschäftsprozesse in die Cloud"
-        alignment="left"
-        :cta="ctaFirst"
-      />
-    </Section>
-    <Section noPadding>
-      <HelpBanner />
     </Section>
   </div>
 </template>
@@ -35,36 +65,21 @@
 import Vue from "vue";
 import Section from "@/blocks/Section";
 import Hero from "@/blocks/Hero";
-import TextWithImage from "@/blocks/TextWithImage";
-import HelpBanner from "@/blocks/HelpBanner";
+import TextWithDescription from "@/blocks/TextWithDescription";
+import Collapsible from "@/components/Collapsible";
+import { MutationType } from "~/store";
 
 export default Vue.extend({
   components: {
     Section,
     Hero,
-    TextWithImage,
-    HelpBanner
+    Collapsible,
+    TextWithDescription
   },
-  data() {
-    return {
-      ctasHero: [
-        {
-          title: "Jetzt starten",
-          href: "/about"
-        },
-        {
-          title: "Unser Konzept",
-          type: "secondary",
-          href: "/about"
-        }
-      ],
-      ctaFirst: [
-        {
-          title: "Mehr erfahren",
-          href: "/about"
-        }
-      ]
-    };
+  methods: {
+    bookMeeting() {
+      this.$store.commit(MutationType.SET_MEETING_WIDGET_OPEN, true);
+    }
   }
 });
 </script>

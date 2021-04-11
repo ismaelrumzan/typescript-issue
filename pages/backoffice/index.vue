@@ -14,7 +14,7 @@
     />
     <Section color="grey">
       <TextWithDescription
-        badge="pages.all_solutions"
+        badge="phrases.all_solutions"
         title="Lösungen im Bereich Backoffice"
         alignment="center"
         padding="medium"

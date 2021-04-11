@@ -3,11 +3,10 @@
     :class="styles.banner"
     badge="phrases.easy_integration"
     title="phrases.connect_your_system"
-    description="Wir besitzen Schnittstellen zu den beliebtesten Herstellern"
+    description="blocks.integration.description"
     alignment="center"
     :cta="[{ title: 'phrases.get_started', href: '/apply' }]"
-    illustration="main_light"
-    darkIllustration="main_dark"
+    illustration="main_dark"
     :illustrationStyles="{
       position: 'absolute',
       top: 0,
@@ -17,7 +16,7 @@
       zIndex: '-1',
       filter: isDarkMode
         ? 'grayscale(1) opacity(0.5)'
-        : 'grayscale(1) opacity(0.8)',
+        : 'invert(1) grayscale(1) opacity(0.8)',
       opacity: isDarkMode ? 0.35 : 0.1,
       transform: 'scale(1.75)'
     }"

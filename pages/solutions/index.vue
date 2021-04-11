@@ -2,7 +2,7 @@
   <div id="content">
     <Section padding="none">
       <TextWithDescription
-        badge="pages.all_solutions"
+        badge="phrases.all_solutions"
         title="Alle Lösungen im Überblick"
         alignment="center"
         padding="medium"

@@ -1,25 +1,52 @@
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
     general: {
+      all: "All",
+      application: "Application | Applications",
+      legal: "Legal",
+      overview: "Overview",
       search: "Search",
       solution: "Solution | Solutions",
+      uptime: "Uptime",
       view: "View"
     },
 
     phrases: {
+      all_solutions: "All Solutions",
+      all_rights_reserved: "All rights reserved",
       apply_now: "Apply now",
+      book_meeting: "Book Meeting",
       coming_soon: "Coming soon",
       connect_your_system: "Connect to your system",
-      easy_integration: "Easy intergration",
+      easy_integration: "Easy integration",
+      focus_on_security: "Focus on Security",
       get_started: "Get Started",
+      go_to: "Go to {page}",
+      go_to_2: "Go to {page}",
+      go_to_site: "Go to {page} Page",
+      got_questions: "Got questions?",
+      high_speed: "High Speed",
       more: "Learn More",
+      need_help: "Need help?",
       search_for: "Search for {0}",
       search_for_2: "Search for {0}",
+      sparked_interest: "Have we sparked your interest?",
       start_now: "Start Now",
       updated_at: "Updated at",
     },
 
+    blocks: {
+      help: {
+        title: "Need help?",
+        description: "Are you not quite sure yet or do you still have unanswered questions? Check out our FAQ or alternatively book a meeting with us so that we are able to explain everything to you."
+      },
+      integration: {
+        description: "We have connections to the most popular manufacturers"
+      }
+    },
+
     docs: {
+      api: 'API',
       examples: 'Examples',
       getting_started: 'Getting Started',
       guide: 'Guide',
@@ -69,6 +96,9 @@ export default async (context: any, locale: string) => {
       data_transmission: "Data Transmission",
       demo: "Demo",
       developers: "Developers",
+      disclosure: {
+        title: "Disclosure"
+      },
       documentation: "Documentation",
       emails: {
         title: "E-Mails",
@@ -82,7 +112,6 @@ export default async (context: any, locale: string) => {
         title: "ERP",
         description: ""
       },
-      faq: "FAQ",
       feedback: {
         title: "Feedback",
         description: "Extend your feedback through various workflows, from the integration of the check-out assistant to the e-mail client. Get feedback from your employees as well."
@@ -100,7 +129,9 @@ export default async (context: any, locale: string) => {
         title: "Guests",
         description: "Via our user interface you have an overview of all guests without having to log into your PMS or CRM. You can even create or edit them."
       },
-      help: "Help",
+      help: {
+        title: "Help"
+      },
       housekeeping: {
         title: "Housekeeping",
         description: "Provide your housekeeping team in a unique way with important information from guests or other teams with our individual workflows."
@@ -117,6 +148,9 @@ export default async (context: any, locale: string) => {
         solutions: {
           title: "Your way to digital transformation",
           description: "As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes."
+        },
+        apply: {
+          description: "Then apply now and become one of the first hotels to activate the autopilot. But hurry up, our places are currently limited!"
         }
       },
       local_devices: "Local Devices",
@@ -161,6 +195,9 @@ export default async (context: any, locale: string) => {
         description: ""
       },
       press: "Press",
+      privacy_policy: {
+        title: "Privacy Policy"
+      },
       products: "Products",
       promotions: "Promotions",
       reservations: {
@@ -187,7 +224,9 @@ export default async (context: any, locale: string) => {
         title: "Service",
         description: "z.B. PMS- oder CMS-Hersteller"
       },
-      solutions: "Solutions",
+      solutions: {
+        title: "Solutions"
+      },
       staff: {
         title: "Staff",
         description: "You have the possibility to manage your employees in a smart way. Manage access, rights and other settings with our service."
@@ -204,6 +243,9 @@ export default async (context: any, locale: string) => {
       technology: {
         title: "Technology",
         description: "z.B. PMS- oder CMS-Hersteller"
+      },
+      terms: {
+        title: "Terms"
       },
       videos: "Videos",
       webinars: "Webinars",

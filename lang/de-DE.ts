@@ -1,25 +1,52 @@
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
     general: {
-      solution: "Lösung | Lösungen",
+      all: "Alle",
+      application: "Bewerbung | Bewerbungen",
+      legal: "Rechtliches",
+      overview: "Übersicht",
       search: "Suchen",
+      solution: "Lösung | Lösungen",
+      uptime: "Uptime",
       view: "Anschauen"
     },
 
     phrases: {
+      all_solutions: "Alle Lösungen",
+      all_rights_reserved: "Alle Rechte vorbehalten",
       apply_now: "Jetzt bewerben",
+      book_meeting: "Meeting buchen",
       coming_soon: "Bald verfügbar",
       connect_your_system: "Verbinde Dich mit Deinem System",
       easy_integration: "Einfache Integration",
+      focus_on_security: "Fokus auf Sicherheit",
       get_started: "Jetzt starten",
+      go_to: "Zu {page}",
+      go_to_2: "Zum {page}",
+      go_to_site: "Zur {page}-Seite",
+      got_questions: "Noch Fragen?",
+      high_speed: "Hohe Geschwindigkeit",
       more: "Mehr erfahren",
+      need_help: "Brauchst Du Hilfe?",
       search_for: "Suche nach {0}",
       search_for_2: "Nach {0} suchen",
+      sparked_interest: "Haben wir Dein Interesse geweckt?",
       start_now: "Jetzt starten",
       updated_at: "Aktualisiert am",
     },
 
+    blocks: {
+      help: {
+        title: "Noch Fragen?",
+        description: "Du bist Dir noch nicht ganz sicher oder hast noch offene Fragen? Dann klick dich durch unser FAQ oder buche alternativ ein Meeting mit uns, so können wir Dir alles in Ruhe erklären."
+      },
+      integration: {
+        description: "Wir besitzen Schnittstellen zu den beliebtesten Herstellern"
+      }
+    },
+
     docs: {
+      api: 'API',
       examples: 'Beispiele',
       getting_started: 'Erste Schritte',
       guide: 'Guide',
@@ -29,7 +56,6 @@ export default async (context: any, locale: string) => {
       about: {
         title: "Über uns"
       },
-      all_solutions: "Alle Lösungen",
       api: {
         title: "API Dokumentation",
         description: "",
@@ -43,6 +69,10 @@ export default async (context: any, locale: string) => {
       },
       appointees: "Beauftragte",
       apps: "Apps",
+      assistants: {
+        title: "Assistenten",
+        description: "Stell Dir vor wenn Du ein Programm kennst, kennst Du alle. So und noch einfacher fühlt es sich an mit unseren Assistenten zu arbeiten."
+      },
       backoffice: {
         title: "Back Office",
         description: "Management-Tools"
@@ -65,6 +95,9 @@ export default async (context: any, locale: string) => {
       data_transmission: "Datenübermittlung",
       demo: "Demo",
       developers: "Entwickler",
+      disclosure: {
+        title: "Impressum"
+      },
       documentation: "Dokumentation",
       emails: {
         title: "E-Mails",
@@ -78,7 +111,6 @@ export default async (context: any, locale: string) => {
         title: "Warenwirtschaft",
         description: ""
       },
-      faq: "FAQ",
       feedback: {
         title: "Feedback",
         description: "Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration des Check-Out-Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern."
@@ -96,7 +128,9 @@ export default async (context: any, locale: string) => {
         title: "Gäste",
         description: "Über unsere Benutzeroberfläche hast Du alle Gäste im Blick ohne Dich in Deinem PMS oder CRM anmelden zu müssen und kannst diese neu anlegen oder bearbeiten."
       },
-      help: "Hilfe",
+      help: {
+        title: "Hilfe"
+      },
       housekeeping: {
         title: "Housekeeping",
         description: "Versorge Dein Housekeeping-Team auf eine einzigartige Weise mit wichtigen Informationen von Gästen oder auch anderen Teams mit unseren individuellen Workflows."
@@ -113,6 +147,9 @@ export default async (context: any, locale: string) => {
         solutions: {
           title: "Dein Weg zur digitalen Transformation",
           description: "Als Hotel solltest Du alle relevanten Informationen an einem zentralen Ort finden. Nur dann bist Du in der Lage effiziente und intelligente Prozesse zu integrieren und zu automatisieren."
+        },
+        apply: {
+          description: "Dann bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil Dich, die Plätze sind derzeit begrenzt!"
         }
       },
       local_devices: "Lokale Geräte",
@@ -158,9 +195,8 @@ export default async (context: any, locale: string) => {
         description: ""
       },
       press: "Presse",
-      assistants: {
-        title: "Assistenten",
-        description: "Stell Dir vor wenn Du ein Programm kennst, kennst Du alle. So und noch einfacher fühlt es sich an mit unseren Assistenten zu arbeiten."
+      privacy_policy: {
+        title: "Datenschutz"
       },
       products: "Produkte",
       promotions: "Förderungen",
@@ -188,7 +224,9 @@ export default async (context: any, locale: string) => {
         title: "Service",
         description: "PMS- oder CMS-Hersteller"
       },
-      solutions: "Lösungen",
+      solutions: {
+        title: "Lösungen"
+      },
       staff: {
         title: "Mitarbeiter",
         description: "Du hast die Möglichkeit Deine Mitarbeiter smart zu verwalten. Manage die Zugriffe, Rechte und sonstige Einstellungen mit unserem Service."
@@ -205,6 +243,9 @@ export default async (context: any, locale: string) => {
       technology: {
         title: "Technologie",
         description: "PMS-Hersteller & Co."
+      },
+      terms: {
+        title: "AGB"
       },
       videos: "Videos",
       webinars: "Webinare",

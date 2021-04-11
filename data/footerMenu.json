@@ -1,204 +1,27 @@
 [
   {
-    "title": "pages.frontoffice.title",
+    "title": "pages.solutions.title",
     "children": [
       {
-        "title": "pages.roomplan.title",
-        "link": "/frontoffice/roomplan",
+        "title": "general.overview",
+        "link": "/solutions"
+      },
+      {
+        "title": "pages.frontoffice.title",
+        "link": "/frontoffice"
+      },
+      {
+        "title": "pages.backoffice.title",
+        "link": "/backoffice"
+      },
+      {
+        "title": "pages.marketing.title",
+        "link": "/marketing",
         "disabled": true
       },
       {
-        "title": "pages.reservations.title",
-        "link": "/frontoffice/reservations",
-        "disabled": true
-      },
-      {
-        "title": "pages.guests.title",
-        "link": "/frontoffice/guests",
-        "disabled": true
-      },
-      {
-        "title": "pages.lost_property.title",
-        "link": "/frontoffice/lost-property",
-        "disabled": true
-      },
-      {
-        "title": "pages.feedback.title",
-        "link": "/frontoffice/feedback",
-        "disabled": true
-      },
-      {
-        "title": "pages.emails.title",
-        "link": "/frontoffice/emails",
-        "disabled": true
-      },
-      {
-        "title": "pages.messenger.title",
-        "link": "/frontoffice/messenger",
-        "disabled": true
-      },
-      {
-        "title": "pages.phone.title",
-        "link": "/frontoffice/phone",
-        "disabled": true
-      },
-      {
-        "title": "pages.permissions.title",
-        "link": "/frontoffice/permissions",
-        "disabled": true
-      },
-      {
-        "title": "pages.payments.title",
-        "link": "/frontoffice/payments",
-        "disabled": true
-      }
-    ]
-  },
-  {
-    "title": "pages.backoffice.title",
-    "children": [
-      {
-        "title": "pages.finance.title",
-        "link": "/backoffice/finance",
-        "disabled": true
-      },
-      {
-        "title": "pages.suppliers.title",
-        "link": "/backoffice/suppliers",
-        "disabled": true
-      },
-      {
-        "title": "pages.erp.title",
-        "link": "/backoffice/erp",
-        "disabled": true
-      },
-      {
-        "title": "pages.energy_management.title",
-        "link": "/backoffice/energy",
-        "disabled": true
-      },
-      {
-        "title": "pages.housekeeping.title",
-        "link": "/backoffice/housekeeping",
-        "disabled": true
-      },
-      {
-        "title": "pages.safety.title",
-        "link": "/backoffice/safety",
-        "disabled": true
-      },
-      {
-        "title": "pages.staff.title",
-        "link": "/backoffice/staff",
-        "disabled": true
-      },
-      {
-        "title": "pages.applications.title",
-        "link": "/backoffice/applications",
-        "disabled": true
-      },
-      {
-        "title": "pages.pos.title",
-        "link": "/backoffice/pos-system",
-        "disabled": true
-      },
-      {
-        "title": "pages.mail.title",
-        "link": "/backoffice/mail",
-        "disabled": true
-      }
-    ]
-  },
-  {
-    "title": "pages.marketing.title",
-    "children": [
-      {
-        "title": "pages.website_analytics",
-        "link": "/marketing/website-analytics",
-        "disabled": true
-      },
-      {
-        "title": "pages.channel_analytics",
-        "link": "/marketing/channel-analytics",
-        "disabled": true
-      },
-      {
-        "title": "pages.booking_page",
-        "link": "/marketing/booking-page",
-        "disabled": true
-      },
-      {
-        "title": "pages.content_management",
-        "link": "/marketing/content-management",
-        "disabled": true
-      },
-      {
-        "title": "pages.bonus_program",
-        "link": "/marketing/bonus-program",
-        "disabled": true
-      },
-      {
-        "title": "pages.gifts",
-        "link": "/marketing/gifts",
-        "disabled": true
-      },
-      {
-        "title": "pages.surveys",
-        "link": "/marketing/surveys",
-        "disabled": true
-      },
-      {
-        "title": "pages.newsletter",
-        "link": "/marketing/newsletter",
-        "disabled": true
-      },
-      {
-        "title": "pages.campaigns",
-        "link": "/marketing/campaigns",
-        "disabled": true
-      }
-    ]
-  },
-  {
-    "title": "pages.operations.title",
-    "children": [
-      {
-        "title": "pages.assistants.title",
-        "link": "/operations/assistants"
-      },
-      {
-        "title": "pages.workflows.title",
-        "link": "/operations/workflows"
-      },
-      {
-        "title": "pages.cockpits.title",
-        "link": "/operations/cockpits",
-        "disabled": true
-      },
-      {
-        "title": "pages.ressource_management",
-        "link": "/operations/ressource-management",
-        "disabled": true
-      },
-      {
-        "title": "pages.local_devices",
-        "link": "/operations/local-devices",
-        "disabled": true
-      },
-      {
-        "title": "pages.security_and_privacy",
-        "link": "/operations/security-and-privacy",
-        "disabled": true
-      },
-      {
-        "title": "pages.appointees",
-        "link": "/operations/appointees",
-        "disabled": true
-      },
-      {
-        "title": "pages.data_transmission",
-        "link": "/operations/data-transmission",
-        "disabled": true
+        "title": "pages.operations.title",
+        "link": "/operations"
       }
     ]
   },
@@ -233,6 +56,32 @@
     ]
   },
   {
+    "title": "pages.ressources",
+    "children": [
+      {
+        "title": "pages.onboarding",
+        "link": "/onboarding",
+        "disabled": true
+      },
+      {
+        "title": "pages.blog",
+        "link": "/blog"
+      },
+      {
+        "title": "pages.documentation",
+        "link": "/docs"
+      },
+      {
+        "title": "pages.meeting",
+        "link": "/meeting"
+      },
+      {
+        "title": "pages.help.title",
+        "link": "/help"
+      }
+    ]
+  },
+  {
     "title": "pages.company",
     "children": [
       {
@@ -242,15 +91,6 @@
       {
         "title": "pages.careers.title",
         "link": "/careers"
-      },
-      {
-        "title": "pages.faq",
-        "link": "/faq"
-      },
-      {
-        "title": "pages.demo",
-        "link": "/demo",
-        "disabled": true
       },
       {
         "title": "pages.webinars",
@@ -265,6 +105,27 @@
       {
         "title": "pages.press",
         "link": "/press"
+      }
+    ]
+  },
+  {
+    "title": "general.legal",
+    "children": [
+      {
+        "title": "general.overview",
+        "link": "/legal"
+      },
+      {
+        "title": "pages.disclosure.title",
+        "link": "/legal/disclosure"
+      },
+      {
+        "title": "pages.privacy_policy.title",
+        "link": "/legal/privacy-policy"
+      },
+      {
+        "title": "pages.terms.title",
+        "link": "/legal/terms"
       }
     ]
   }

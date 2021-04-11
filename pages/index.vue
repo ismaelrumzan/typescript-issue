@@ -9,7 +9,6 @@
       :illustrationStyles="{ transform: 'scale(1.075)' }"
       illustration="main_light"
       darkIllustration="main_dark"
-      withShadow
       particles
       :cta="[
         {
@@ -54,7 +53,7 @@
       <FeatureSlider
         title="pages.index.solutions.title"
         description="pages.index.solutions.description"
-        badge="pages.solutions"
+        :badge="$tc('general.solution', 2)"
       >
         <Slide
           title="Smarte Tools für die täglichen Aufgaben"
@@ -93,14 +92,15 @@
     </Section>
     <Section padding="none">
       <TextWithImage
-        badge="Bewirb dich"
-        title="Haben wir Dein Interesse geweckt?"
-        description="Dann bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil' Dich, die Plätze sind begrenzt!"
+        :badge="$tc('general.application', 1)"
+        title="phrases.sparked_interest"
+        description="pages.index.apply.description"
         illustration="contact"
+        alignment="right"
         padding="none"
         :cta="[
           {
-            title: 'Jetzt bewerben',
+            title: 'phrases.apply_now',
             href: '/apply'
           }
         ]"

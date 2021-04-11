@@ -1,4 +1,4 @@
-$bp: 812px;
+$bp: 900px;
 
 .helpContainer {
   padding: 4rem 0;
@@ -27,11 +27,11 @@ $bp: 812px;
   justify-content: center;
   flex-direction: column;
   color: #fff;
-  padding: 4rem 8rem 4rem 4rem;
+  padding: 4.5rem 8rem 4rem 4rem;
 
   @media (max-width: $bp) {
     order: 1;
-    padding: 4.5rem 2.5rem 3.5rem 2.5rem;
+    padding: 4.5rem 10% 3.5rem 10%;
   }
 
   & > * {
@@ -58,16 +58,37 @@ $bp: 812px;
       transform: skew(0, -3deg);
     }
   }
+
+  p {
+    font-size: 1.1rem;
+  }
 }
 
 .buttons {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1.75rem 0;
 
+  @media (max-width: $bp) {
+    flex-direction: column;
+  }
+
   .button {
+    box-shadow: var(--shadow-small);
     background-color: var(--main-color-light-3);
     @media (hover: hover) {
       &:hover {
         background-color: var(--main-color-light-4);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+      margin-bottom: 0.75rem;
+
+      @media (max-width: $bp) {
+        margin-right: 0;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -83,6 +104,10 @@ $bp: 812px;
   & > div {
     transform-origin: center;
     transform: translate3d(0, 0, 0) scale(1.175);
+
+    @media (max-width: $bp) {
+      transform: translate3d(0, 0, 0) scale(1.05);
+    }
   }
 }
 

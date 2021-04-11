@@ -113,6 +113,11 @@ export default Vue.extend({
   computed: {
     hasTarget() {
       return this.href?.slice(0, 1) === "#";
+    },
+    localeTitle() {
+      if (typeof this.title === "string") {
+        return this.title;
+      }
     }
   },
   mounted() {

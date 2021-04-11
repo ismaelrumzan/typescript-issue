@@ -39,45 +39,53 @@ export default Vue.extend({
       animation: null
     };
   },
-  mounted() {
-    import(`@/assets/illustrations/${this.name}.json`)
-      .then(module => {
-        const animation = lottie.loadAnimation({
-          container: this.$refs.illustration as any,
-          renderer: this.renderer as RenderMode,
-          rendererSettings: this.withShadow
-            ? {
-                filterSize: {
-                  width: "200%",
-                  height: "200%",
-                  x: "-50%",
-                  y: "-50%"
-                }
-              }
-            : {},
-          loop: this.loop,
-          autoplay: this.autoplay,
-          animationData: JSON.parse(JSON.stringify(module.default))
-        });
-        (this.animation as AnimationItem | null) = animation;
-      })
-      .catch(error => {
-        console.error(error);
-        console.warn("Loading fallback Illustration ...");
-        import(`@/assets/illustrations/404.json`).then(module => {
+  methods: {
+    fetchIllustration() {
+      import(`@/assets/illustrations/${this.name}.json`)
+        .then(module => {
           const animation = lottie.loadAnimation({
             container: this.$refs.illustration as any,
             renderer: this.renderer as RenderMode,
+            rendererSettings: this.withShadow
+              ? {
+                  filterSize: {
+                    width: "200%",
+                    height: "200%",
+                    x: "-50%",
+                    y: "-50%"
+                  }
+                }
+              : {},
             loop: this.loop,
             autoplay: this.autoplay,
             animationData: JSON.parse(JSON.stringify(module.default))
           });
           (this.animation as AnimationItem | null) = animation;
+        })
+        .catch(error => {
+          console.error(error);
+          console.warn("Loading fallback Illustration ...");
+          import(`@/assets/illustrations/404.json`).then(module => {
+            const animation = lottie.loadAnimation({
+              container: this.$refs.illustration as any,
+              renderer: this.renderer as RenderMode,
+              loop: this.loop,
+              autoplay: this.autoplay,
+              animationData: JSON.parse(JSON.stringify(module.default))
+            });
+            (this.animation as AnimationItem | null) = animation;
+          });
         });
-      });
+    }
+  },
+  mounted() {
+    this.fetchIllustration();
   },
   beforeDestroy() {
     (this.animation as AnimationItem | null)?.destroy();
+  },
+  updated() {
+    console.log("updated");
   }
 });
 </script>

@@ -6,7 +6,7 @@ $bp: 900px;
 }
 
 .content {
-  padding: 4rem var(--horizontal-padding) 2.5rem;
+  padding: 4rem var(--horizontal-padding) 2.75rem;
   max-width: var(--max-width);
   margin: 0 auto;
 
@@ -37,6 +37,7 @@ $bp: 900px;
   }
 
   .logo {
+    display: flex;
     object-fit: contain;
 
     img {

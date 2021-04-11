@@ -1,9 +1,9 @@
-$bp-1: 1000px;
-$bp-2: 550px;
+$bp-1: 767px;
+$bp-2: 450px;
 
 .navigation {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
   justify-content: space-between;
   gap: 2.5rem;
 
@@ -11,7 +11,8 @@ $bp-2: 550px;
     grid-template-columns: repeat(3, auto);
   }
   @media (max-width: $bp-2) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
   }
 }
 
@@ -21,12 +22,12 @@ $bp-2: 550px;
     letter-spacing: 0;
     font-weight: 500;
     margin-bottom: 1.25rem;
-    font-size: 0.925rem;
+    font-size: 1rem;
   }
 
   ul {
     list-style: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.3;
 
     li {

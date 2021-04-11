@@ -1,6 +1,6 @@
 [
   {
-    "title": "pages.solutions",
+    "title": "pages.solutions.title",
     "link": "/solutions",
     "isSubmenu": true,
     "submenuType": "col-2",
@@ -35,7 +35,7 @@
       },
       {
         "type": "button",
-        "title": "pages.all_solutions",
+        "title": "phrases.all_solutions",
         "link": "/solutions"
       }
     ],
@@ -175,7 +175,7 @@
         "icon": "Calendar"
       },
       {
-        "title": "pages.help",
+        "title": "pages.help.title",
         "link": "/help",
         "description": "Lorem ipsum dolor sit amet",
         "icon": "Question"

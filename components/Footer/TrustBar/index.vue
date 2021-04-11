@@ -3,15 +3,15 @@
     <div :class="styles.trustbar">
       <div :class="styles.item">
         <Icon name="Check" />
-        <span>99.99% Uptime</span>
+        <span>99.99% {{ $t("general.uptime") }}</span>
       </div>
       <div :class="styles.item">
         <Icon name="Security" />
-        <span>Fokus auf Sicherheit</span>
+        <span>{{ $t("phrases.focus_on_security") }}</span>
       </div>
       <div :class="styles.item">
         <Icon name="Speed" />
-        <span>Hohe Geschwindigkeit</span>
+        <span>{{ $t("phrases.high_speed") }}</span>
       </div>
     </div>
   </div>
