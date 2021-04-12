@@ -105,7 +105,9 @@ $bp-2: 767px;
           }
         }
 
-        a {
+        a,
+        button {
+          display: inline-grid;
           @media (max-width: $button-bp) {
             width: 90%;
           }
@@ -155,10 +157,12 @@ $bp-2: 767px;
 
     .title {
       max-width: 63rem;
+      width: 100%;
     }
 
     .description {
       max-width: 50rem;
+      width: 100%;
     }
   }
 }

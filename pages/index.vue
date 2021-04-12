@@ -90,7 +90,7 @@
     <Section color="main" overflow="hidden">
       <IntegrationBanner />
     </Section>
-    <Section padding="none">
+    <Section padding="none" style="padding-top: 1.5rem">
       <TextWithImage
         :badge="$tc('general.application', 1)"
         title="phrases.sparked_interest"
@@ -143,6 +143,18 @@ export default Vue.extend({
     Grid,
     Feature,
     IntegrationBanner
+  },
+  head() {
+    return {
+      title: (this as any).$i18n.t("pages.index.seo.title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.index.seo.description")
+        }
+      ]
+    };
   }
 });
 </script>

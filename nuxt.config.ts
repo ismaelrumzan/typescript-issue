@@ -17,7 +17,7 @@ const config: NuxtConfig = {
    ** Headers of the page
    */
   head: {
-    title: 'Digital Hotel - digital überall',
+    title: 'Digital Hotel',
     meta: [
       {
         charset: 'utf-8'
@@ -27,28 +27,44 @@ const config: NuxtConfig = {
         content: 'width=device-width, initial-scale=1'
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Digital überall.'
+        name: 'msapplication-TileColor',
+        content: '#d13f3f'
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff'
       }
     ],
     link: [
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: 'favicon/apple-touch-icon.png'
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: 'favicon/favicon-16x16.png'
+        href: 'favicon/apple-touch-icon.png?v=2bAP0yXlkw'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: 'favicon/favicon-32x32.png'
+        href: 'favicon/favicon-32x32.png?v=2bAP0yXlkw'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: 'favicon/favicon-16x16.png?v=2bAP0yXlkw'
+      },
+      {
+        rel: 'manifest',
+        href: 'site.webmanifest?v=2bAP0yXlkw'
+      },
+      {
+        rel: 'mask-icon',
+        color: '#d92b2b',
+        href: 'favicon/safari-pinned-tab.svg?v=2bAP0yXlkw'
+      },
+      {
+        rel: 'shortcut icon',
+        href: 'favicon/favicon.ico?v=2bAP0yXlkw'
       },
       {
         rel: 'preconnect',
@@ -91,18 +107,6 @@ const config: NuxtConfig = {
     //     disabled: false
     //   }
     // ],
-    [
-      'nuxt-social-meta',
-      {
-        title: 'Digital Hotel - digital überall',
-        description: 'Digital Hotel',
-        url: 'https://www.digital-hotel.net',
-        img: '/link_to_image_in_static_folder.jpg',
-        locale: 'de-DE',
-        twitter: '@twitterHandle',
-        themeColor: '#3367D6'
-      }
-    ],
     // '@nuxtjs/sentry',
     '@nuxtjs/sitemap',
     // 'nuxt-imagemin',
@@ -122,14 +126,17 @@ const config: NuxtConfig = {
   ],
 
   i18n: {
+    seo: true,
     locales: [
       {
         code: 'en',
+        iso: 'en-US',
         name: 'English',
         file: 'en-US.ts'
       },
       {
         code: 'de',
+        iso: 'de-DE',
         name: 'Deutsch',
         file: 'de-DE.ts'
       }
@@ -163,11 +170,6 @@ const config: NuxtConfig = {
     config: {}
   },
   pwa: {
-    manifest: {
-      name: 'Digital Hotel',
-      lang: 'de',
-      theme_color: '#3367D6'
-    },
     workbox: {
       importScripts: ['pushSw.js']
     }

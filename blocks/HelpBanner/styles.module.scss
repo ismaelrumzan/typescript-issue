@@ -74,6 +74,7 @@ $bp: 900px;
   }
 
   .button {
+    display: inline-grid;
     box-shadow: var(--shadow-small);
     background-color: var(--main-color-light-3);
     @media (hover: hover) {

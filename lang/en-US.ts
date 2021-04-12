@@ -136,12 +136,17 @@ export default async (context: any, locale: string) => {
         title: "Housekeeping",
         description: "Provide your housekeeping team in a unique way with important information from guests or other teams with our individual workflows."
       },
+
       index: {
         title: "Digital Hotel",
+        seo: {
+          title: "Digital Hotel – Your hotel on autopilot",
+          description: "The operating system for companies: We give you more time, raise the quality of your processes and increase your productivity and profitability."
+        },
         hero: {
           title: "Activate your Hotel\'s personal",
           typewriter: "Autopilot, Single Login",
-          description: "With the operating system for companies: We give you more time, increase the quality of your processes and increase your productivity and profitability.",
+          description: "With the operating system for companies: We give you more time, raise the quality of your processes and increase your productivity and profitability.",
           concept: "Our Concept"
         },
         trusted: "Trusted by these hotels already",
@@ -153,6 +158,7 @@ export default async (context: any, locale: string) => {
           description: "Then apply now and become one of the first hotels to activate the autopilot. But hurry up, our places are currently limited!"
         }
       },
+
       local_devices: "Local Devices",
       lost_property: {
         title: "Lost Property",

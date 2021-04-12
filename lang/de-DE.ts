@@ -135,8 +135,13 @@ export default async (context: any, locale: string) => {
         title: "Housekeeping",
         description: "Versorge Dein Housekeeping-Team auf eine einzigartige Weise mit wichtigen Informationen von Gästen oder auch anderen Teams mit unseren individuellen Workflows."
       },
+
       index: {
         title: "Digital Hotel",
+        seo: {
+          title: "Digital Hotel – Dein Hotel auf Autopilot",
+          description: "Das Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
+        },
         hero: {
           title: "Schalte jetzt Dein Hotel auf",
           typewriter: "Autopilot, Single Login",
@@ -152,6 +157,7 @@ export default async (context: any, locale: string) => {
           description: "Dann bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil Dich, die Plätze sind derzeit begrenzt!"
         }
       },
+
       local_devices: "Lokale Geräte",
       lost_property: {
         title: "Fundsachen",

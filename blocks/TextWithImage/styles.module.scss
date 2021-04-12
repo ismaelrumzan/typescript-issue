@@ -67,7 +67,9 @@ $horizontal-padding: 3rem;
           }
         }
 
-        a {
+        a,
+        button {
+          display: inline-grid;
           @media (max-width: $button-bp) {
             width: 90%;
           }
