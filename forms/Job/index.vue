@@ -2,7 +2,7 @@
   <form :class="styles.form" @submit.prevent="checkForm" method="post">
     <Grid columns="2" padding="small" gap="medium">
       <label>
-        <span>Vorname</span>
+        <span>{{ $t("contact.first_name") }}</span>
         <input
           v-model="firstName"
           id="given-name"
@@ -15,7 +15,7 @@
       </label>
 
       <label>
-        <span>Nachname</span>
+        <span>{{ $t("contact.last_name") }}</span>
         <input
           v-model="lastName"
           id="family-name"
@@ -30,7 +30,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>E-Mail</span>
+        <span>{{ $t("contact.email") }}</span>
         <input
           v-model="email"
           type="email"
@@ -46,7 +46,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>Telefon</span>
+        <span>{{ $t("contact.phone") }}</span>
         <input
           v-model="phone"
           type="tel"
@@ -60,7 +60,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>Berufserfahrung</span>
+        <span>{{ $t("contact.work_experience") }}</span>
         <textarea
           v-model="experience"
           id="experience"
@@ -73,7 +73,7 @@
     </Grid>
 
     <Grid columns="1" padding="small" gap="small">
-      <span>Social Media</span>
+      <span>{{ $t("contact.social_media") }}</span>
 
       <label>
         <div :class="styles.withPrefix">
@@ -126,7 +126,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>Nachricht an uns</span>
+        <span>{{ $t("form.message_to_us") }}</span>
         <textarea
           v-model="message"
           id="message"
@@ -153,12 +153,16 @@
     </Grid>
 
     <Grid columns="1" padding="small">
-      <Button :loading="loading" type="submit" title="Bewerbung senden" />
+      <Button
+        :loading="loading"
+        type="submit"
+        :title="$t('phrases.now', { action: $t('form.send') })"
+      />
     </Grid>
 
     <Grid v-if="sent" columns="1" padding="small">
       <Box type="success">
-        Deine Bewerbung wurde erfolgreich gesendet
+        {{ $t("form.success") }}
       </Box>
     </Grid>
 
@@ -170,7 +174,7 @@
 
     <Grid v-if="sendingError" columns="1" padding="small">
       <Box type="error">
-        Deine Bewerbung konnte nicht versendet werden...
+        {{ $t("errors.general") }}
       </Box>
     </Grid>
   </form>
@@ -207,7 +211,7 @@ export default Vue.extend({
       twitter: "",
       linkedin: "",
       message: "",
-      password: null
+      password: "ionsoindosin"
     };
   },
   methods: {
@@ -247,9 +251,7 @@ export default Vue.extend({
       this.errors = [];
 
       if (this.password) {
-        (this as any).errors.push(
-          "You have filled out an invisible input field which makes us think that you are a bot. Please reload the site and and make sure to not use any third-party services to fill out the form for you."
-        );
+        (this as any).errors.push(this.$i18n.t("errors.bot"));
       }
 
       if (this.errors.length > 0) {

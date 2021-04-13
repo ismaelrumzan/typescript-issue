@@ -39,6 +39,7 @@ export default async (context: any, locale: string) => {
       high_speed: "Hohe Geschwindigkeit",
       more: "Mehr erfahren",
       need_help: "Brauchst Du Hilfe?",
+      now: "Jetzt {action}",
       search_for: "Suche nach {0}",
       search_for_2: "Nach {0} suchen",
       solutions_in: "Lösungen im Bereich {area}",
@@ -68,6 +69,34 @@ export default async (context: any, locale: string) => {
       examples: 'Beispiele',
       getting_started: 'Erste Schritte',
       guide: 'Guide',
+    },
+
+    contact: {
+      address: "Adresse",
+      company: "Unternehmen",
+      country: "Land",
+      email: "E-Mail",
+      first_name: "Vorname",
+      last_name: "Nachname",
+      organization: "Organisation",
+      phone: "Telefon",
+      region: "Region",
+      social_media: "Social Media",
+      street: "Straße",
+      work_experience: "Berufserfahrung",
+      zip: "PLZ",
+    },
+
+    form: {
+      message: "Nachricht",
+      message_to_us: "Nachricht an uns",
+      send: "Senden",
+      success: "Erfolgreich gesendet",
+    },
+
+    errors: {
+      general: "Ein Fehler ist aufgetreten",
+      bot: "Du hast ein unsichtbares Feld ausgefüllt. Somit konnte dein Formular nicht versendet werden. Sollte dieser Fehler erneut auftreten, deaktiviere bitte Services von Drittanbietern (z.B. Passwort-Manager) für diese Seite."
     },
 
     pages: {
@@ -130,9 +159,19 @@ export default async (context: any, locale: string) => {
       bonus_program: "Bonusprogramm",
       booking_page: "Buchungsseite",
       campaigns: "Kampagnen",
+
       careers: {
-        title: "Karrieren"
+        title: "Karrieren",
+        seo: {
+          title: "Karrieren",
+          description: "Werde Teil unserer Vision und hilf uns unsere Vorhaben zu verwirklichen"
+        },
+        hero: {
+          title: "Mach mit. Von überall.",
+          description: "Werde Teil unserer Vision und hilf uns unsere Vorhaben zu verwirklichen"
+        }
       },
+
       channel_analytics: "Kanal Analytics",
       cockpits: {
         title: "Cockpits",

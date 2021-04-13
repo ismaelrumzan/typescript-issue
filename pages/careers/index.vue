@@ -1,8 +1,8 @@
 <template>
   <div id="content">
     <Hero
-      title="Mach mit. Von überall."
-      description="Werde Teil unserer Vision und hilf uns unsere Vorhaben zu verwirklichen"
+      title="pages.careers.hero.title"
+      description="pages.careers.hero.description"
       alignment="center"
       illustration="world_light"
       darkIllustration="world_dark"
@@ -46,6 +46,21 @@ export default Vue.extend({
     TextWithDescription,
     HelpBanner,
     JobForm
+  },
+  head() {
+    return {
+      title:
+        (this as any).$i18n.t("pages.careers.seo.title") +
+        (this as any).$i18n.t("seo.seperator") +
+        (this as any).$i18n.t("seo.site_title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.careers.seo.description")
+        }
+      ]
+    };
   }
 });
 </script>

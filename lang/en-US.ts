@@ -8,10 +8,6 @@ export default async (context: any, locale: string) => {
       seperator: " | "
     },
 
-    company: {
-      name: "Digital Hotel"
-    },
-
     general: {
       all: "All",
       application: "Application | Applications",
@@ -43,6 +39,7 @@ export default async (context: any, locale: string) => {
       high_speed: "High Speed",
       more: "Learn More",
       need_help: "Need help?",
+      now: "{action} now",
       search_for: "Search for {0}",
       search_for_2: "Search for {0}",
       solutions_in: "{area} solutions",
@@ -72,6 +69,34 @@ export default async (context: any, locale: string) => {
       examples: 'Examples',
       getting_started: 'Getting Started',
       guide: 'Guide',
+    },
+
+    contact: {
+      address: "Adress",
+      company: "Company",
+      country: "Country",
+      email: "E-Mail",
+      first_name: "First Name",
+      last_name: "Last Name",
+      organization: "Organization",
+      phone: "Phone",
+      region: "Region",
+      social_media: "Social Media",
+      street: "Street",
+      work_experience: "Work Experience",
+      zip: "Zip Code",
+    },
+
+    form: {
+      message: "Message",
+      message_to_us: "Message to us",
+      send: "Send",
+      success: "Sent successfully",
+    },
+
+    errors: {
+      general: "An error has occured",
+      bot: "You have filled out an invisible input field. Please reload the site and make sure to not use any third-party services (like password managers) to fill out the form for you."
     },
 
     pages: {
@@ -134,9 +159,19 @@ export default async (context: any, locale: string) => {
       bonus_program: "Bonus Program",
       booking_page: "Booking Page",
       campaigns: "Campaigns",
+
       careers: {
-        title: "Careers"
+        title: "Careers",
+        seo: {
+          title: "Careers",
+          description: "Become part of our vision and help us to realize our plans"
+        },
+        hero: {
+          title: "Join Us. From Anywhere.",
+          description: "Become part of our vision and help us to realize our plans"
+        }
       },
+
       channel_analytics: "Channel Analytics",
       cockpits: {
         title: "Cockpits",
