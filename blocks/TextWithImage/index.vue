@@ -31,8 +31,9 @@
         </li>
       </ul>
     </div>
+
     <div
-      v-if="illustration"
+      v-if="illustration && darkIllustration"
       :class="styles.illustration"
       :style="illustrationStyles"
     >
@@ -42,6 +43,14 @@
       />
       <Illustration v-show="!isDarkMode" :name="illustration" />
     </div>
+    <div
+      v-else-if="illustration"
+      :class="styles.illustration"
+      :style="illustrationStyles"
+    >
+      <Illustration :name="illustration" />
+    </div>
+
     <div v-if="image" :class="styles.image">
       <nuxt-img
         :key="image"

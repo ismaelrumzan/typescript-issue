@@ -1,5 +1,5 @@
 <template>
-  <div :class="styles.illustration" ref="illustration"></div>
+  <div :class="styles.illustration" :id="name" ref="illustration"></div>
 </template>
 
 <script lang="ts">
@@ -83,9 +83,79 @@ export default Vue.extend({
   },
   beforeDestroy() {
     (this.animation as AnimationItem | null)?.destroy();
-  },
-  updated() {
-    console.log("updated");
   }
 });
 </script>
+
+<style lang="scss">
+/**
+  * Illustration: main.json
+  */
+#main {
+  #elem1logo,
+  #elem2logo,
+  #elem3logo,
+  #elem4logo,
+  #elem5logo,
+  #elem6logo,
+  #elem7logo,
+  #elem8logo,
+  #elem9logo,
+  #elem10logo {
+    display: none !important;
+  }
+}
+[data-theme="dark"] {
+  #main {
+    #middlebg,
+    #elem1bg,
+    #elem2bg,
+    #elem3bg,
+    #elem4bg,
+    #elem5bg,
+    #elem6bg,
+    #elem7bg,
+    #elem8bg,
+    #elem9bg,
+    #elem10bg {
+      display: none !important;
+    }
+
+    #elem1,
+    #elem2,
+    #elem3,
+    #elem4,
+    #elem5,
+    #elem6,
+    #elem7,
+    #elem8,
+    #elem9,
+    #elem10 {
+      path {
+        fill: #202020;
+      }
+    }
+
+    #middle {
+      g:first-child {
+        path {
+          fill: #e8353c;
+        }
+      }
+      g:last-child {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    #elem3logo,
+    #elem4logo,
+    #elem5logo {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+</style>

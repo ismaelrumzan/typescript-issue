@@ -7,8 +7,7 @@
       alignment="left"
       :titleStyles="{ maxWidth: '33rem' }"
       :illustrationStyles="{ transform: 'scale(1.075)' }"
-      illustration="main_light"
-      darkIllustration="main_dark"
+      illustration="main"
       particles
       :cta="[
         {

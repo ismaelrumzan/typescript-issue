@@ -41,8 +41,9 @@
         </li>
       </ul>
     </div>
+
     <div
-      v-if="illustration"
+      v-if="illustration && darkIllustration"
       :class="styles.illustration"
       :style="illustrationStyles"
     >
@@ -59,6 +60,18 @@
         :renderer="renderer"
       />
     </div>
+    <div
+      v-else-if="illustration"
+      :class="styles.illustration"
+      :style="illustrationStyles"
+    >
+      <Illustration
+        :name="illustration"
+        :withShadow="withShadow"
+        :renderer="renderer"
+      />
+    </div>
+
     <slot />
     <Particles v-if="particles" />
   </section>
