@@ -54,7 +54,6 @@ $bp-1: 1023px;
       }
 
       .button {
-        display: inline-grid;
         &:not(:last-child) {
           margin-right: 1.25rem;
         }

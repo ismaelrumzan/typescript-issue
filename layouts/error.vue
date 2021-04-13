@@ -1,11 +1,16 @@
 <template>
   <div>
     <Hero
-      title="404"
-      description="Oops... die Seite scheint nicht zu existieren"
+      title="pages.404.title"
+      description="pages.404.description"
       alignment="center"
       illustration="404"
-      :cta="ctas"
+      :cta="[
+        {
+          title: $t('phrases.go_to_3', { page: $t('general.homepage') }),
+          href: '/'
+        }
+      ]"
     />
   </div>
 </template>
@@ -18,16 +23,6 @@ import { MutationType, StorageKeys } from "@/store";
 export default Vue.extend({
   components: {
     Hero
-  },
-  data() {
-    return {
-      ctas: [
-        {
-          title: "Zur Startseite",
-          href: "/"
-        }
-      ]
-    };
   },
   mounted() {
     /* Set Color Theme */

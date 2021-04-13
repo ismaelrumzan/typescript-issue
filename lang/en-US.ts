@@ -1,8 +1,21 @@
+import about from "./en/pages/about"
+import homepage from "./en/pages/homepage"
+
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
+    seo: {
+      site_title: "Digital Hotel",
+      seperator: " | "
+    },
+
+    company: {
+      name: "Digital Hotel"
+    },
+
     general: {
       all: "All",
       application: "Application | Applications",
+      homepage: "Homepage",
       legal: "Legal",
       overview: "Overview",
       search: "Search",
@@ -15,7 +28,8 @@ export default async (context: any, locale: string) => {
       all_solutions: "All Solutions",
       all_rights_reserved: "All rights reserved",
       apply_now: "Apply now",
-      book_meeting: "Book Meeting",
+      book_meeting: "Book a Meeting",
+      bookable_online: "Bookable online",
       coming_soon: "Coming soon",
       connect_your_system: "Connect to your system",
       easy_integration: "Easy integration",
@@ -23,6 +37,7 @@ export default async (context: any, locale: string) => {
       get_started: "Get Started",
       go_to: "Go to {page}",
       go_to_2: "Go to {page}",
+      go_to_3: "Go to {page}",
       go_to_site: "Go to {page} Page",
       got_questions: "Got questions?",
       high_speed: "High Speed",
@@ -30,12 +45,19 @@ export default async (context: any, locale: string) => {
       need_help: "Need help?",
       search_for: "Search for {0}",
       search_for_2: "Search for {0}",
+      solutions_in: "{area} solutions",
       sparked_interest: "Have we sparked your interest?",
       start_now: "Start Now",
       updated_at: "Updated at",
     },
 
     blocks: {
+      apply: {
+        title: "Would you like to be part of the process?",
+        description: "Then apply now, either as a partner or as an employee, and become part of our process.",
+        as_partner: "As a Partner",
+        as_developer: "As a Developer"
+      },
       help: {
         title: "Need help?",
         description: "Are you not quite sure yet or do you still have unanswered questions? Check out our FAQ or alternatively book a meeting with us so that we are able to explain everything to you."
@@ -53,10 +75,13 @@ export default async (context: any, locale: string) => {
     },
 
     pages: {
-      about: {
-        title: "About"
+      '404': {
+        title: "404",
+        description: "Oops... this page does not seem to exist"
       },
-      all_solutions: "All Solutions",
+
+      about,
+
       api: {
         title: "API Documentation",
         description: "",
@@ -68,17 +93,44 @@ export default async (context: any, locale: string) => {
         title: "Applications",
         description: "Automated responses, online scheduler for job interviews, automated onboarding and many other functions."
       },
+
+      apply: {
+        title: "Apply now",
+        seo: {
+          title: "Apply now",
+          description: "Apply now and become one of the first hotels to activate the autopilot. But hurry up, our places are currently limited!"
+        },
+        hero: {
+          title: "Start your way to the last login",
+          description: "Apply now and become one of the first hotels to activate the autopilot. But hurry up, our places are currently limited!"
+        }
+      },
+
       appointees: "Appointees",
       apps: "Apps",
       assistants: {
         title: "Assistants",
         description: "Imagine if you know one program, you know them all. This is how it feels, and it is even easier to work with our assistants."
       },
+
       backoffice: {
         title: "Back Office",
-        description: "Lorem ipsum dolor"
+        description: "Management tools",
+        seo: {
+          title: "Back Office – Management tools for your hotel",
+          description: "There are many individual tasks to deal with in the back office of a hotel. We help you to improve communication, to work more efficiently and to create security and trust."
+        },
+        hero: {
+          title: "Management tools for your hotel",
+          description: "There are many individual tasks to deal with in the back office of a hotel. We help you to improve communication, to work more efficiently and to create security and trust."
+        }
       },
-      blog: "Blog",
+
+      blog: {
+        title: "Blog",
+        description: "Latest News"
+      },
+
       bonus_program: "Bonus Program",
       booking_page: "Booking Page",
       campaigns: "Campaigns",
@@ -91,7 +143,12 @@ export default async (context: any, locale: string) => {
         description: "Don't miss anything and always be up to date with the individual dashboards for each of your teams or even for each of your employees."
       },
       company: "Company",
-      consulting: "Consulting",
+
+      consulting: {
+        title: "Consulting",
+        description: ""
+      },
+
       content_management: "Content Management",
       data_transmission: "Data Transmission",
       demo: "Demo",
@@ -99,7 +156,12 @@ export default async (context: any, locale: string) => {
       disclosure: {
         title: "Disclosure"
       },
-      documentation: "Documentation",
+
+      documentation: {
+        title: "Documentation",
+        description: "Integration and Guides"
+      },
+
       emails: {
         title: "E-Mails",
         description: "Since e-mails still make up a large part of communication in the hotel industry, they are a part belong in our user interface inside of a smart client."
@@ -120,44 +182,37 @@ export default async (context: any, locale: string) => {
         title: "Finance",
         description: ""
       },
+
       frontoffice: {
         title: "Front Office",
-        description: "Lorem ipsum dolor"
+        description: "All about the guest",
+        seo: {
+          title: "Front Office – All about the guest",
+          description: "A large part of the tasks consists of repetitive processes. We optimize and automate these processes and enable access via just one user interface."
+        },
+        hero: {
+          title: "All about your guest",
+          description: "A large part of the tasks consists of repetitive processes. We optimize and automate these processes and enable access via just one user interface."
+        }
       },
+
       gifts: "Gifts",
       guests: {
         title: "Guests",
         description: "Via our user interface you have an overview of all guests without having to log into your PMS or CRM. You can even create or edit them."
       },
+
       help: {
-        title: "Help"
+        title: "Help",
+        description: "FAQ and Support"
       },
+
       housekeeping: {
         title: "Housekeeping",
         description: "Provide your housekeeping team in a unique way with important information from guests or other teams with our individual workflows."
       },
 
-      index: {
-        title: "Digital Hotel",
-        seo: {
-          title: "Digital Hotel – Your hotel on autopilot",
-          description: "The operating system for companies: We give you more time, raise the quality of your processes and increase your productivity and profitability."
-        },
-        hero: {
-          title: "Activate your Hotel\'s personal",
-          typewriter: "Autopilot, Single Login",
-          description: "With the operating system for companies: We give you more time, raise the quality of your processes and increase your productivity and profitability.",
-          concept: "Our Concept"
-        },
-        trusted: "Trusted by these hotels already",
-        solutions: {
-          title: "Your way to digital transformation",
-          description: "As a hotel, you should find all relevant information in one place. Only then will you be able to integrate and automate efficient and intelligent processes."
-        },
-        apply: {
-          description: "Then apply now and become one of the first hotels to activate the autopilot. But hurry up, our places are currently limited!"
-        }
-      },
+      index: homepage,
 
       local_devices: "Local Devices",
       lost_property: {
@@ -168,21 +223,46 @@ export default async (context: any, locale: string) => {
         title: "Mail",
         description: ""
       },
+
       marketing: {
         title: "Marketing",
-        description: "Lorem ipsum dolor"
+        description: "Generate range"
       },
+
       marketplace: "Marketplace",
-      meeting: "Meeting",
+
+      meeting: {
+        title: "Meeting",
+        description: "Book online",
+        hero: {
+          title: "Get to know Digital Hotel",
+          description: "Do you still have any questions? Or do you want to get to know us better? We offer you the opportunity to arrange a personal meeting with us. You can book this directly online here."
+        }
+      },
+
       messenger: {
         title: "Messenger"
       },
       newsletter: "Newsletter",
-      onboarding: "Onboarding",
+
+      onboarding: {
+        title: "Onboarding",
+        description: "Get started"
+      },
+
       operations: {
         title: "Operations",
-        description: "Lorem ipsum dolor"
+        description: "Process optimization",
+        seo: {
+          title: "Operations – Automate your processes",
+          description: "We make it easier for your employees to store information securely and efficiently and to automate processes in a meaningful way. We thus ensure high data quality and individual reporting for key areas of the hotel operation."
+        },
+        hero: {
+          title: "Automate your processes",
+          description: "We make it easier for your employees to store information securely and efficiently and to automate processes in a meaningful way. We thus ensure high data quality and individual reporting for key areas of the hotel operation."
+        }
       },
+
       partners: "Partners",
       payments: {
         title: "Payments",
@@ -221,18 +301,30 @@ export default async (context: any, locale: string) => {
         title: "Safety",
         description: ""
       },
+
       sales: {
         title: "Sales",
-        description: "z.B. PMS- oder CMS-Hersteller"
+        description: "Software distributors"
       },
+
       security_and_privacy: "Security and Privacy",
+
       service: {
         title: "Service",
-        description: "z.B. PMS- oder CMS-Hersteller"
+        description: "Become a partner"
       },
+
       solutions: {
-        title: "Solutions"
+        title: "Solutions",
+        seo: {
+          title: "Solutions by Digital Hotel",
+          description: "All solutions in our Front Office, Back Office, Operations and Marketing divisions at a glance."
+        },
+        hero: {
+          title: "All solutions at a glance"
+        }
       },
+
       staff: {
         title: "Staff",
         description: "You have the possibility to manage your employees in a smart way. Manage access, rights and other settings with our service."
@@ -248,12 +340,17 @@ export default async (context: any, locale: string) => {
       team_marketing: "Marketing",
       technology: {
         title: "Technology",
-        description: "z.B. PMS- oder CMS-Hersteller"
+        description: "PMS/CMS companies"
       },
       terms: {
         title: "Terms"
       },
-      videos: "Videos",
+
+      videos: {
+        title: "Videos",
+        description: "Video tutorials"
+      },
+
       webinars: "Webinars",
       website_analytics: "Website Analytics",
       workflows: {

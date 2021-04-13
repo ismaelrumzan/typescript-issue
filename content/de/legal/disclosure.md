@@ -1,12 +1,11 @@
 ---
 title: Impressum
-description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
 icon: Document
 ---
 
 ## Angaben gemäß § 5 TMG
 
-Gerhard Weiß  
+Gerhard Weiß
 Fohlenäckerweg 20  
 34130 Kassel
 
@@ -23,7 +22,7 @@ Gerhard Weiß
 Telefon: [Telefonnummer]  
 E-Mail: legal@digital-hotel.net
 
-## Wirtschaftsidentifikationsnummer
+## Wirtschafts-IdNr.
 
 DE-XXXXX-XXXXX
 
@@ -32,7 +31,7 @@ DE-XXXXX-XXXXX
 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).  
 Unsere E-Mail-Adresse finden Sie oben im Impressum.
 
-## Verbraucher­streit­beilegung/Universal­schlichtungs­stelle
+## Verbraucher­streit­beilegung / Universal­schlichtungs­stelle
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
 

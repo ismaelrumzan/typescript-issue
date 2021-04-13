@@ -24,23 +24,49 @@ export default Vue.extend({
     Footer,
     Sidebar
   },
-  mounted() {
-    /* Set Color Theme */
-    const theme = localStorage.getItem(StorageKeys.THEME);
-    if (theme) {
-      this.$store.commit(MutationType.SET_THEME, theme);
-      document.documentElement.dataset.mode = theme;
+  methods: {
+    setTheme() {
+      /* Set Color Theme */
+      const theme = localStorage.getItem(StorageKeys.THEME);
+      if (theme) {
+        this.$store.commit(MutationType.SET_THEME, theme);
+        document.documentElement.dataset.mode = theme;
 
-      /* Use System Config initially */
-    } else {
-      const userPrefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
+        /* Use System Config initially */
+      } else {
+        const userPrefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-      if (userPrefersDark) {
-        this.$store.commit(MutationType.SET_THEME, "dark");
+        if (userPrefersDark) {
+          this.$store.commit(MutationType.SET_THEME, "dark");
+        }
+      }
+    },
+    scrollToTarget() {
+      const target = window.location.hash;
+      const headerHeight = getComputedStyle(document.documentElement)
+        .getPropertyValue("--header-height-scrolled")
+        .slice(0, -2);
+
+      const offset = -headerHeight - 25;
+
+      if (target) {
+        const id = decodeURIComponent(target.substring(1));
+        const elem = document.getElementById(id);
+
+        if (elem) {
+          window.scrollTo({
+            top: elem.getBoundingClientRect().top + offset + window.pageYOffset,
+            behavior: "smooth"
+          });
+        }
       }
     }
+  },
+  mounted() {
+    this.setTheme();
+    this.scrollToTarget();
   }
 });
 </script>

@@ -39,32 +39,32 @@ const config: NuxtConfig = {
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: 'favicon/apple-touch-icon.png?v=2bAP0yXlkw'
+        href: '/favicon/apple-touch-icon.png?v=2bAP0yXlkw'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: 'favicon/favicon-32x32.png?v=2bAP0yXlkw'
+        href: '/favicon/favicon-32x32.png?v=2bAP0yXlkw'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: 'favicon/favicon-16x16.png?v=2bAP0yXlkw'
+        href: '/favicon/favicon-16x16.png?v=2bAP0yXlkw'
       },
       {
         rel: 'manifest',
-        href: 'site.webmanifest?v=2bAP0yXlkw'
+        href: '/site.webmanifest?v=2bAP0yXlkw'
       },
       {
         rel: 'mask-icon',
         color: '#d92b2b',
-        href: 'favicon/safari-pinned-tab.svg?v=2bAP0yXlkw'
+        href: '/favicon/safari-pinned-tab.svg?v=2bAP0yXlkw'
       },
       {
         rel: 'shortcut icon',
-        href: 'favicon/favicon.ico?v=2bAP0yXlkw'
+        href: '/favicon/favicon.ico?v=2bAP0yXlkw'
       },
       {
         rel: 'preconnect',

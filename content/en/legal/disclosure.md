@@ -1,59 +1,58 @@
 ---
 title: Disclosure
-description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
 icon: Document
 ---
 
-## Angaben gemäß § 5 TMG
+## According to § 5 TMG
 
-Gerhard Weiß  
-Fohlenäckerweg 20  
+Gerhard Weiß
+Fohlenäckerweg 20
 34130 Kassel
 
-Handelsregister: XXXX-XXXX-XXXX  
-Registergericht: XXXXXXXXXXXXX
+Commercial register: XXXX-XXXX-XXXX
+Register court: XXXXXXXXXXXXX
 
 <br>
 
-**Vertreten durch:**  
+**Represented by:**
 Gerhard Weiß
 
-## Kontakt
+## Contact
 
-Telefon: [Telefonnummer]  
-E-Mail: legal@digital-hotel.net
+Telephone: [telephone number]
+Email: legal@digital-hotel.net
 
-## Wirtschaftsidentifikationsnummer
+## Business ID no.
 
 DE-XXXXX-XXXXX
 
-## EU-Streitschlichtung
+## EU dispute settlement
 
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).  
-Unsere E-Mail-Adresse finden Sie oben im Impressum.
+The European Commission provides a platform for online dispute resolution (OS): [https://ec.europa.eu/consumers/odr/](https://ec.europa.eu/consumers/odr/).
+You can find our email address in the legal notice above.
 
-## Verbraucher­streit­beilegung/Universal­schlichtungs­stelle
+## Consumer dispute settlement / universal arbitration board
 
-Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+We are neither willing nor obliged to participate in dispute settlement proceedings before a consumer arbitration board.
 
-### Haftung für Inhalte
+### Liability for content
 
-Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+As a service provider, we are responsible for our own content on these pages in accordance with general law in accordance with Section 7, Paragraph 1 of the German Telemedia Act. According to §§ 8 to 10 TMG, as a service provider, we are not obliged to monitor transmitted or stored third-party information or to research circumstances that indicate illegal activity.
 
-Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+Obligations to remove or block the use of information according to general laws remain unaffected. Liability in this regard is only possible from the point in time at which we become aware of a specific legal violation. As soon as we become aware of such legal violations, we will remove this content immediately.
 
-### Haftung für Links
+### Liability for links
 
-Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time they were linked. No illegal content was found at the time the link was created.
 
-Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+However, permanent monitoring of the content of the linked pages is unreasonable without concrete evidence of a violation of the law. As soon as we become aware of legal violations, we will remove such links immediately.
 
-### Urheberrecht
+### Copyright
 
-Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+The content and works on these pages created by the website operator are subject to German copyright law. The duplication, processing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this website are only permitted for private, non-commercial use.
 
-Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+Insofar as the content on this site was not created by the operator, the copyrights of third parties are observed. In particular contents of third parties are marked as such. Should you nevertheless become aware of a copyright infringement, we request that you notify us accordingly. If we become aware of legal violations, we will remove such content immediately.
 
 <br>
 
-Quelle: [e-recht24.de](https://www.e-recht24.de)
+Source: [e-recht24.de](https://www.e-recht24.de)

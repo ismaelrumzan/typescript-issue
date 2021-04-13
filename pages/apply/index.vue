@@ -1,9 +1,9 @@
 <template>
   <div id="content">
     <Hero
-      badge="Bewerbung"
-      title="Starte jetzt Deinen Weg zum letzten Login"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
+      :badge="$tc('general.application', 1)"
+      title="pages.apply.hero.title"
+      description="pages.apply.hero.description"
       verticalAlign="top"
       illustrationWidth="wide"
     >
@@ -30,6 +30,21 @@ export default Vue.extend({
     TextWithDescription,
     HelpBanner,
     ApplicationForm
+  },
+  head() {
+    return {
+      title:
+        (this as any).$i18n.t("pages.apply.seo.title") +
+        (this as any).$i18n.t("seo.seperator") +
+        (this as any).$i18n.t("seo.site_title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.apply.seo.description")
+        }
+      ]
+    };
   }
 });
 </script>

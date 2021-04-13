@@ -79,19 +79,22 @@
         "title": "pages.technology.title",
         "link": "/partners/technology",
         "description": "pages.technology.description",
-        "icon": "PartnerTechnology"
+        "icon": "PartnerTechnology",
+        "disabled": true
       },
       {
         "title": "pages.sales.title",
         "link": "/partners/sales",
         "description": "pages.sales.description",
-        "icon": "PartnerSales"
+        "icon": "PartnerSales",
+        "disabled": true
       },
       {
         "title": "pages.service.title",
         "link": "/partners/service",
         "description": "pages.service.description",
-        "icon": "PartnerService"
+        "icon": "PartnerService",
+        "disabled": true
       }
     ],
     "sidemenu": [
@@ -139,45 +142,49 @@
     "submenuType": "col-3",
     "children": [
       {
-        "title": "pages.onboarding",
+        "title": "pages.onboarding.title",
         "link": "/onboarding",
-        "description": "Lorem ipsum",
-        "icon": "Shuttle"
+        "description": "pages.onboarding.description",
+        "icon": "Shuttle",
+        "disabled": true
       },
       {
-        "title": "pages.blog",
+        "title": "pages.blog.title",
         "link": "/blog",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "Blog"
+        "description": "pages.blog.description",
+        "icon": "Blog",
+        "disabled": true
       },
       {
-        "title": "pages.videos",
+        "title": "pages.videos.title",
         "link": "/videos",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "Video"
+        "description": "pages.videos.description",
+        "icon": "Video",
+        "disabled": true
       },
       {
-        "title": "pages.documentation",
+        "title": "pages.documentation.title",
         "link": "/docs",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.documentation.description",
         "icon": "Document"
       },
       {
-        "title": "pages.consulting",
+        "title": "pages.consulting.title",
         "link": "/consulting",
-        "description": "Lorem ipsum dolor sit amet",
-        "icon": "Help"
+        "description": "pages.consulting.description",
+        "icon": "Help",
+        "disabled": true
       },
       {
-        "title": "pages.meeting",
+        "title": "pages.meeting.title",
         "link": "/meeting",
-        "description": "Direkt online buchen",
+        "description": "pages.meeting.description",
         "icon": "Calendar"
       },
       {
         "title": "pages.help.title",
         "link": "/help",
-        "description": "Lorem ipsum dolor sit amet",
+        "description": "pages.help.description",
         "icon": "Question"
       }
     ]

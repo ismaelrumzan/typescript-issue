@@ -1,8 +1,17 @@
+import about from "./de/pages/about"
+import homepage from "./de/pages/homepage"
+
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
+    seo: {
+      site_title: "Digital Hotel",
+      seperator: " | "
+    },
+
     general: {
       all: "Alle",
       application: "Bewerbung | Bewerbungen",
+      homepage: "Startseite",
       legal: "Rechtliches",
       overview: "Übersicht",
       search: "Suchen",
@@ -16,6 +25,7 @@ export default async (context: any, locale: string) => {
       all_rights_reserved: "Alle Rechte vorbehalten",
       apply_now: "Jetzt bewerben",
       book_meeting: "Meeting buchen",
+      bookable_online: "Online buchbar",
       coming_soon: "Bald verfügbar",
       connect_your_system: "Verbinde Dich mit Deinem System",
       easy_integration: "Einfache Integration",
@@ -23,6 +33,7 @@ export default async (context: any, locale: string) => {
       get_started: "Jetzt starten",
       go_to: "Zu {page}",
       go_to_2: "Zum {page}",
+      go_to_3: "Zur {page}",
       go_to_site: "Zur {page}-Seite",
       got_questions: "Noch Fragen?",
       high_speed: "Hohe Geschwindigkeit",
@@ -30,12 +41,19 @@ export default async (context: any, locale: string) => {
       need_help: "Brauchst Du Hilfe?",
       search_for: "Suche nach {0}",
       search_for_2: "Nach {0} suchen",
+      solutions_in: "Lösungen im Bereich {area}",
       sparked_interest: "Haben wir Dein Interesse geweckt?",
       start_now: "Jetzt starten",
       updated_at: "Aktualisiert am",
     },
 
     blocks: {
+      apply: {
+        title: "Du möchtest ein Teil des Prozesses werden?",
+        description: "Bewirb dich jetzt bei uns, entweder als Partner oder als Mitarbeiter und werde Teil unseres Prozesses.",
+        as_partner: "Als Partner",
+        as_developer: "Als Entwickler"
+      },
       help: {
         title: "Noch Fragen?",
         description: "Du bist Dir noch nicht ganz sicher oder hast noch offene Fragen? Dann klick dich durch unser FAQ oder buche alternativ ein Meeting mit uns, so können wir Dir alles in Ruhe erklären."
@@ -53,9 +71,13 @@ export default async (context: any, locale: string) => {
     },
 
     pages: {
-      about: {
-        title: "Über uns"
+      '404': {
+        title: "404",
+        description: "Oops... die Seite scheint nicht zu existieren"
       },
+
+      about,
+
       api: {
         title: "API Dokumentation",
         description: "",
@@ -67,17 +89,44 @@ export default async (context: any, locale: string) => {
         title: "Bewerbungen",
         description: "Automatisierte Antworten, Online-Terminplaner für Bewerbungsgespräch, automatisiertes Onboarding und viele weitere Funktionen."
       },
+
+      apply: {
+        title: "Jetzt bewerben",
+        seo: {
+          title: "Jetzt bewerben",
+          description: "Bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil Dich, die Plätze sind derzeit begrenzt!"
+        },
+        hero: {
+          title: "Starte jetzt Deinen Weg zum letzten Login",
+          description: "Bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil Dich, die Plätze sind derzeit begrenzt!"
+        }
+      },
+
       appointees: "Beauftragte",
       apps: "Apps",
       assistants: {
         title: "Assistenten",
         description: "Stell Dir vor wenn Du ein Programm kennst, kennst Du alle. So und noch einfacher fühlt es sich an mit unseren Assistenten zu arbeiten."
       },
+
       backoffice: {
         title: "Back Office",
-        description: "Management-Tools"
+        description: "Management-Tools",
+        seo: {
+          title: "Back Office – Management-Tools für Dein Hotel",
+          description: "Im Backoffice eines Hotelbetriebes gibt es viele individuelle Aufgaben zu bewältigen. Wir helfen Dir die Kommunikation zu verbessern, die Arbeiten effizienter zu erledigen und damit Sicherheit und Vertrauen zu schaffen."
+        },
+        hero: {
+          title: "Management-Tools für Dein Hotel",
+          description: "Im Backoffice eines Hotelbetriebes gibt es viele individuelle Aufgaben zu bewältigen. Wir helfen Dir die Kommunikation zu verbessern, die Arbeiten effizienter zu erledigen und damit Sicherheit und Vertrauen zu schaffen."
+        }
       },
-      blog: "Blog",
+
+      blog: {
+        title: "Blog",
+        description: "Neueste Updates"
+      },
+
       bonus_program: "Bonusprogramm",
       booking_page: "Buchungsseite",
       campaigns: "Kampagnen",
@@ -90,7 +139,12 @@ export default async (context: any, locale: string) => {
         description: "Nichts mehr verpassen und immer up to date sein mit den Individuellen Dashboards für jedes Deiner Teams oder sogar für jeden Deiner Mitarbeiter."
       },
       company: "Unternehmen",
-      consulting: "Consulting",
+
+      consulting: {
+        title: "Consulting",
+        description: ""
+      },
+
       content_management: "Content Management",
       data_transmission: "Datenübermittlung",
       demo: "Demo",
@@ -98,7 +152,12 @@ export default async (context: any, locale: string) => {
       disclosure: {
         title: "Impressum"
       },
-      documentation: "Dokumentation",
+
+      documentation: {
+        title: "Dokumentation",
+        description: "Integration und Guides"
+      },
+
       emails: {
         title: "E-Mails",
         description: "Da E-Mails noch immer einen großen Teil der Kommunikation in der Hotellerie ausmachen gehören Sie als Smart-Client mit in unsere Benutzeroberfläche."
@@ -119,44 +178,37 @@ export default async (context: any, locale: string) => {
         title: "Finanzen",
         description: ""
       },
+
       frontoffice: {
         title: "Front Office",
-        description: "Rund um den Gast"
+        description: "Rund um den Gast",
+        seo: {
+          title: "Front Office – Rund um den Gast",
+          description: "Ein großer Teil der Aufgaben besteht aus sich wiederholenden Prozessen. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche."
+        },
+        hero: {
+          title: "Alles rund um Deinen Gast",
+          description: "Ein großer Teil der Aufgaben besteht aus sich wiederholenden Prozessen. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche."
+        }
       },
+
       gifts: "Geschenke",
       guests: {
         title: "Gäste",
         description: "Über unsere Benutzeroberfläche hast Du alle Gäste im Blick ohne Dich in Deinem PMS oder CRM anmelden zu müssen und kannst diese neu anlegen oder bearbeiten."
       },
+
       help: {
-        title: "Hilfe"
+        title: "Hilfe",
+        description: "FAQ und Support"
       },
+
       housekeeping: {
         title: "Housekeeping",
         description: "Versorge Dein Housekeeping-Team auf eine einzigartige Weise mit wichtigen Informationen von Gästen oder auch anderen Teams mit unseren individuellen Workflows."
       },
 
-      index: {
-        title: "Digital Hotel",
-        seo: {
-          title: "Digital Hotel – Dein Hotel auf Autopilot",
-          description: "Das Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
-        },
-        hero: {
-          title: "Schalte jetzt Dein Hotel auf",
-          typewriter: "Autopilot, Single Login",
-          description: "Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit.",
-          concept: "Unser Konzept"
-        },
-        trusted: "Diese Hotels profitieren bereits von uns",
-        solutions: {
-          title: "Dein Weg zur digitalen Transformation",
-          description: "Als Hotel solltest Du alle relevanten Informationen an einem zentralen Ort finden. Nur dann bist Du in der Lage effiziente und intelligente Prozesse zu integrieren und zu automatisieren."
-        },
-        apply: {
-          description: "Dann bewirb Dich jetzt und werde eines der ersten Hotels, das den Autopilot aktiviert. Aber beeil Dich, die Plätze sind derzeit begrenzt!"
-        }
-      },
+      index: homepage,
 
       local_devices: "Lokale Geräte",
       lost_property: {
@@ -172,17 +224,40 @@ export default async (context: any, locale: string) => {
         description: "Reichweite generieren"
       },
       marketplace: "Marktplatz",
-      meeting: "Meeting",
+
+      meeting: {
+        title: "Meeting",
+        description: "Direkt online buchen",
+        hero: {
+          title: "Digital Hotel kennenlernen?",
+          description: "Du hast noch Fragen? Oder willst Du uns besser kennenlernen? Wir bieten Dir die Möglichkeit, ein persönliches Meeting mit uns zu vereinbaren. Dieses kannst Du hier direkt online buchen."
+        }
+      },
+
       messenger: {
         title: "Messenger",
         description: "Auf Nachrichten unterschiedlichster Messenger-Dienste müssen Deine Front Office Mitarbeiter heutzutage reagieren. Dieses aus einem zentralen System zu erledigen ist ein großer Vorteil."
       },
       newsletter: "Newsletter",
-      onboarding: "Onboarding",
+
+      onboarding: {
+        title: "Onboarding",
+        description: "Jetzt starten"
+      },
+
       operations: {
         title: "Operations",
-        description: "Prozessoptimierung"
+        description: "Prozessoptimierung",
+        seo: {
+          title: "Operations – Automatisiere Deine Prozesse",
+          description: "Wir erleichtern Deinen Mitarbeitern Informationen sicher und effizient abzulegen und Prozesse sinnvoll zu automatisieren. Damit sorgen wir für eine hohe Datenqualität und individuelles Reporting für wichtige Bereiche im Hotelbetrieb."
+        },
+        hero: {
+          title: "Automatisiere Deine Prozesse",
+          description: "Wir erleichtern Deinen Mitarbeitern Informationen sicher und effizient abzulegen und Prozesse sinnvoll zu automatisieren. Damit sorgen wir für eine hohe Datenqualität und individuelles Reporting für wichtige Bereiche im Hotelbetrieb."
+        }
       },
+
       partners: "Partner",
       payments: {
         title: "Zahlungen",
@@ -221,18 +296,30 @@ export default async (context: any, locale: string) => {
         title: "Betriebssicherheit",
         description: ""
       },
+
       sales: {
         title: "Vertrieb",
-        description: "Software-Distributor & Co."
+        description: "Software-Distributoren"
       },
+
       security_and_privacy: "Sicherheit & Datenschutz",
+
       service: {
         title: "Service",
-        description: "PMS- oder CMS-Hersteller"
+        description: "Partner werden"
       },
+
       solutions: {
-        title: "Lösungen"
+        title: "Lösungen",
+        seo: {
+          title: "Lösungen von Digital Hotel",
+          description: "Alle Lösungen unserer Bereiche Front Office, Back Office, Operations und Marketing im Überblick."
+        },
+        hero: {
+          title: "Alle Lösungen im Überblick"
+        }
       },
+
       staff: {
         title: "Mitarbeiter",
         description: "Du hast die Möglichkeit Deine Mitarbeiter smart zu verwalten. Manage die Zugriffe, Rechte und sonstige Einstellungen mit unserem Service."
@@ -253,7 +340,12 @@ export default async (context: any, locale: string) => {
       terms: {
         title: "AGB"
       },
-      videos: "Videos",
+
+      videos: {
+        title: "Videos",
+        description: "Video-Tutorials"
+      },
+
       webinars: "Webinare",
       website_analytics: "Website Analytics",
       workflows: {

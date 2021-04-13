@@ -54,7 +54,30 @@ export default Vue.extend({
       };
 
       return new Date(date).toLocaleDateString(this.$i18n.locale, options);
+    },
+    scrollToTarget() {
+      const target = window.location.hash;
+      const headerHeight = getComputedStyle(document.documentElement)
+        .getPropertyValue("--header-height-scrolled")
+        .slice(0, -2);
+
+      const offset = -headerHeight - 25;
+
+      if (target) {
+        const id = decodeURIComponent(target.substring(1));
+        const elem = document.getElementById(id);
+
+        if (elem) {
+          window.scrollTo({
+            top: elem.getBoundingClientRect().top + offset + window.pageYOffset,
+            behavior: "smooth"
+          });
+        }
+      }
     }
+  },
+  mounted() {
+    this.scrollToTarget();
   }
 });
 </script>

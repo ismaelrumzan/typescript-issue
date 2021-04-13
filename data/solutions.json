@@ -4,190 +4,190 @@
     "description": "pages.roomplan.description",
     "icon": "Roomplan",
     "link": "/frontoffice/roomplan",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
     "title": "pages.reservations.title",
     "description": "pages.reservations.description",
     "icon": "Calendar",
     "link": "/frontoffice/reservations",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
     "title": "pages.guests.title",
     "description": "pages.guests.description",
     "icon": "People",
     "link": "/frontoffice/guests",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.lost_property.title",
     "description": "pages.lost_property.description",
     "icon": "LostItem",
     "link": "/frontoffice/lost-property",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.feedback.title",
     "description": "pages.feedback.description",
     "icon": "Feedback",
     "link": "/frontoffice/feedback",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
     "title": "pages.emails.title",
     "description": "pages.emails.description",
     "icon": "Mail",
     "link": "/frontoffice/emails",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.messenger.title",
     "description": "pages.messenger.description",
     "icon": "Conversation",
     "link": "/frontoffice/messenger",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.phone.title",
     "description": "pages.phone.description",
     "icon": "Phone",
     "link": "/frontoffice/phone",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.permissions.title",
     "description": "pages.permissions.description",
     "icon": "Permissions",
     "link": "/frontoffice/permissions",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.payments.title",
     "description": "pages.payments.description",
-    "icon": "CreditCards",
+    "icon": "Invoice",
     "link": "/frontoffice/payments",
-    "category": "frontoffice"
+    "category": "frontoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.finance.title",
     "description": "phrases.coming_soon",
-    "icon": "Roomplan",
+    "icon": "Finance",
     "link": "/backoffice/finance",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.suppliers.title",
     "description": "phrases.coming_soon",
-    "icon": "Calendar",
+    "icon": "Supplies",
     "link": "/backoffice/suppliers",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.erp.title",
     "description": "phrases.coming_soon",
-    "icon": "People",
+    "icon": "ERP",
     "link": "/backoffice/erp",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.energy_management.title",
     "description": "pages.energy_management.description",
-    "icon": "LostItem",
+    "icon": "EnergyManagement",
     "link": "/backoffice/energy-management",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.housekeeping.title",
     "description": "pages.housekeeping.description",
-    "icon": "Feedback",
+    "icon": "Housekeeping",
     "link": "/backoffice/housekeeping",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.safety.title",
     "description": "phrases.coming_soon",
-    "icon": "Mail",
+    "icon": "Safety",
     "link": "/backoffice/safety",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "title": "pages.staff.title",
     "description": "pages.staff.description",
-    "icon": "Conversation",
+    "icon": "UserManagement",
     "link": "/backoffice/staff",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.applications.title",
     "description": "phrases.coming_soon",
-    "icon": "Phone",
+    "icon": "JobSearch",
     "link": "/backoffice/applications",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.pos.title",
     "description": "phrases.coming_soon",
-    "icon": "Permissions",
+    "icon": "POS",
     "link": "/backoffice/pos",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
-    "title": "pages.applications.title",
-    "description": "pages.applications.description",
-    "icon": "Permissions",
-    "link": "/backoffice/applications",
-    "category": "backoffice"
-  },
-  {
-    "disabled": true,
     "alignment": "center",
     "title": "pages.mail.title",
     "description": "phrases.coming_soon",
-    "icon": "CreditCards",
+    "icon": "Mailbox",
     "link": "/backoffice/mail",
-    "category": "backoffice"
+    "category": "backoffice",
+    "disabled": true
   },
   {
     "title": "pages.assistants.title",
     "description": "pages.assistants.description",
-    "icon": "CreditCards",
+    "icon": "Assistant",
     "link": "/operations/assistants",
-    "category": "operations"
+    "category": "operations",
+    "disabled": true
   },
   {
     "title": "pages.workflows.title",
     "description": "pages.workflows.description",
-    "icon": "CreditCards",
+    "icon": "Workflow",
     "link": "/operations/workflows",
-    "category": "operations"
+    "category": "operations",
+    "disabled": true
   },
   {
     "title": "pages.cockpits.title",
     "description": "pages.cockpits.description",
-    "icon": "CreditCards",
+    "icon": "Target",
     "link": "/operations/cockpits",
-    "category": "operations"
+    "category": "operations",
+    "disabled": true
   }
 ]

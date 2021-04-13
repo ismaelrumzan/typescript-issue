@@ -2,8 +2,8 @@
   <div id="content">
     <Hero
       badge="pages.backoffice.title"
-      title="Vereinfache das Management"
-      description="Im Backoffice eines Hotelbetriebes gibt es viele individuelle Aufgaben zu bewältigen. Wir helfen Dir die Kommunikation zu verbessern, die Arbeiten effizienter zu erledigen und damit Sicherheit und Vertrauen zu schaffen."
+      title="pages.backoffice.hero.title"
+      description="pages.backoffice.hero.description"
       alignment="center"
       :cta="[
         {
@@ -15,7 +15,9 @@
     <Section color="grey">
       <TextWithDescription
         badge="phrases.all_solutions"
-        title="Lösungen im Bereich Backoffice"
+        :title="
+          $t('phrases.solutions_in', { area: $t('pages.backoffice.title') })
+        "
         alignment="center"
         padding="medium"
         style="padding-bottom: 2rem"
@@ -52,7 +54,6 @@ import TextWithDescription from "@/blocks/TextWithDescription";
 import Grid from "@/blocks/Grid";
 import Feature from "@/blocks/Feature";
 import HelpBanner from "@/blocks/HelpBanner";
-
 import solutions from "@/data/solutions";
 
 export default Vue.extend({
@@ -63,6 +64,21 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  head() {
+    return {
+      title:
+        (this as any).$i18n.t("pages.backoffice.seo.title") +
+        (this as any).$i18n.t("seo.seperator") +
+        (this as any).$i18n.t("seo.site_title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.backoffice.seo.description")
+        }
+      ]
+    };
   },
   computed: {
     backofficeSolutions() {

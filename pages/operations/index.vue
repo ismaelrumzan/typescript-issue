@@ -2,8 +2,8 @@
   <div id="content">
     <Hero
       badge="pages.operations.title"
-      title="Automatisiere Deine Prozesse"
-      description="Wir erleichtern Deinen Mitarbeitern Informationen sicher und effizient abzulegen und Prozesse sinnvoll zu automatisieren. Damit sorgen wir für eine hohe Datenqualität und individuelles Reporting für wichtige  Bereiche im Hotelbetrieb."
+      title="pages.operations.hero.title"
+      description="pages.operations.hero.description"
       alignment="center"
       :cta="[
         {
@@ -15,7 +15,9 @@
     <Section color="grey">
       <TextWithDescription
         badge="phrases.all_solutions"
-        title="Lösungen im Bereich Operations"
+        :title="
+          $t('phrases.solutions_in', { area: $t('pages.operations.title') })
+        "
         alignment="center"
         padding="medium"
         style="padding-bottom: 2rem"
@@ -62,6 +64,21 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  head() {
+    return {
+      title:
+        (this as any).$i18n.t("pages.operations.seo.title") +
+        (this as any).$i18n.t("seo.seperator") +
+        (this as any).$i18n.t("seo.site_title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.operations.seo.description")
+        }
+      ]
+    };
   },
   computed: {
     operationsSolutions() {

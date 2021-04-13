@@ -2,8 +2,8 @@
   <div id="content">
     <Hero
       badge="pages.frontoffice.title"
-      title="Alles rund um Deinen Gast"
-      description="Ein großer Teil der Aufgaben besteht aus sich wiederholenden Prozessen. Wir optimieren und automatisieren diese Prozesse und ermöglichen den Zugriff über nur eine Benutzeroberfläche."
+      title="pages.frontoffice.hero.title"
+      description="pages.frontoffice.hero.description"
       alignment="center"
       :cta="[
         {
@@ -15,7 +15,9 @@
     <Section color="grey">
       <TextWithDescription
         badge="phrases.all_solutions"
-        title="Lösungen im Bereich Frontoffice"
+        :title="
+          $t('phrases.solutions_in', { area: $t('pages.frontoffice.title') })
+        "
         alignment="center"
         padding="medium"
         style="padding-bottom: 2rem"
@@ -62,6 +64,21 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  head() {
+    return {
+      title:
+        (this as any).$i18n.t("pages.frontoffice.seo.title") +
+        (this as any).$i18n.t("seo.seperator") +
+        (this as any).$i18n.t("seo.site_title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.frontoffice.seo.description")
+        }
+      ]
+    };
   },
   computed: {
     frontofficeSolutions() {

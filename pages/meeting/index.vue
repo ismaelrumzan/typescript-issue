@@ -1,13 +1,13 @@
 <template>
   <div id="content">
     <Hero
-      badge="Online buchbar"
-      title="Digital Hotel kennenlernen?"
-      description="Du hast noch Fragen? Oder willst Du uns besser kennenlernen? Wir bieten Dir die Möglichkeit, ein persönliches Meeting mit uns zu vereinbaren. Dieses kannst Du hier direkt online buchen."
+      badge="phrases.bookable_online"
+      title="pages.meeting.hero.title"
+      description="pages.meeting.hero.description"
       alignment="center"
       :cta="[
         {
-          title: 'Meeting buchen',
+          title: 'phrases.book_meeting',
           onClick: bookMeeting
         }
       ]"

@@ -3,7 +3,7 @@
     <Section padding="none">
       <TextWithDescription
         badge="phrases.all_solutions"
-        title="Alle Lösungen im Überblick"
+        title="pages.solutions.hero.title"
         alignment="center"
         padding="medium"
         style="padding-bottom: 2rem"
@@ -51,6 +51,18 @@ export default Vue.extend({
     Grid,
     Feature,
     HelpBanner
+  },
+  head() {
+    return {
+      title: (this as any).$i18n.t("pages.solutions.seo.title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).$i18n.t("pages.solutions.seo.description")
+        }
+      ]
+    };
   },
   data() {
     return {
