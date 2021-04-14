@@ -65,21 +65,6 @@ export default Vue.extend({
     Feature,
     HelpBanner
   },
-  head() {
-    return {
-      title:
-        (this as any).$i18n.t("pages.backoffice.seo.title") +
-        (this as any).$i18n.t("seo.seperator") +
-        (this as any).$i18n.t("seo.site_title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: (this as any).$i18n.t("pages.backoffice.seo.description")
-        }
-      ]
-    };
-  },
   computed: {
     backofficeSolutions() {
       return solutions.filter(

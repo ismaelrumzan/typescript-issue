@@ -46,21 +46,6 @@ export default Vue.extend({
     TextWithDescription,
     HelpBanner,
     JobForm
-  },
-  head() {
-    return {
-      title:
-        (this as any).$i18n.t("pages.careers.seo.title") +
-        (this as any).$i18n.t("seo.seperator") +
-        (this as any).$i18n.t("seo.site_title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: (this as any).$i18n.t("pages.careers.seo.description")
-        }
-      ]
-    };
   }
 });
 </script>

@@ -103,6 +103,7 @@ import Feature from "@/blocks/Feature";
 import FeatureSlider from "@/blocks/FeatureSlider";
 import Slide from "@/blocks/FeatureSlider/Slide";
 import IntegrationBanner from "@/blocks/IntegrationBanner";
+import { SEO } from "@/services";
 
 export default Vue.extend({
   components: {
@@ -121,16 +122,10 @@ export default Vue.extend({
     IntegrationBanner
   },
   head() {
-    return {
-      title: (this as any).$i18n.t("pages.index.seo.title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: (this as any).$i18n.t("pages.index.seo.description")
-        }
-      ]
-    };
+    return SEO.generate({
+      title: this.$i18n.t("pages.index.seo.title").toString(),
+      description: this.$i18n.t("pages.index.seo.description").toString()
+    });
   }
 });
 </script>

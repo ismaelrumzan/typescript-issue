@@ -67,21 +67,6 @@ export default Vue.extend({
     FeatureSlider,
     Slide,
     Application
-  },
-  head() {
-    return {
-      title:
-        (this as any).$i18n.t("pages.about.seo.title") +
-        (this as any).$i18n.t("seo.seperator") +
-        (this as any).$i18n.t("seo.site_title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: (this as any).$i18n.t("pages.about.seo.description")
-        }
-      ]
-    };
   }
 });
 </script>

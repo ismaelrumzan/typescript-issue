@@ -30,21 +30,6 @@ export default Vue.extend({
     TextWithDescription,
     HelpBanner,
     ApplicationForm
-  },
-  head() {
-    return {
-      title:
-        (this as any).$i18n.t("pages.apply.seo.title") +
-        (this as any).$i18n.t("seo.seperator") +
-        (this as any).$i18n.t("seo.site_title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: (this as any).$i18n.t("pages.apply.seo.description")
-        }
-      ]
-    };
   }
 });
 </script>

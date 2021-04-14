@@ -17,7 +17,6 @@ const config: NuxtConfig = {
    ** Headers of the page
    */
   head: {
-    title: 'Digital Hotel',
     meta: [
       {
         charset: 'utf-8'
@@ -120,9 +119,6 @@ const config: NuxtConfig = {
     'nuxt-maintenance-mode',
     '@nuxtjs/robots',
     'nuxt-i18n',
-    // 'vue-scrollto/nuxt',
-    // 'vue-social-sharing/nuxt',
-    // '@nuxtjs/style-resources',
   ],
 
   i18n: {
@@ -178,29 +174,11 @@ const config: NuxtConfig = {
     id: 'G-4CT5YQBZ0K'
   },
 
-  // content: {
-  //   markdown: {
-  //     prism: {
-  //       theme: 'prism-themes/themes/prism-vsc-dark-plus.css'
-  //     }
-  //   }
-  // },
-
-  // This is where you configure your settings for the new plugin
-  // prismic: {
-  //   endpoint: 'https://xyz.cdn.prismic.io/api/v2',
-  //   linkResolver: '@/plugins/link-resolver',
-  //   htmlSerializer: '@/plugins/html-serializer'
-  // },
-
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/isDev.client',
-    // '~/plugins/isTouch.client',
-    // '~/plugins/Userback.client',
-    // '~/plugins/vue-fragment',
     '~/plugins/swiper.client',
   ],
   /*

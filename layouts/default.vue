@@ -11,29 +11,108 @@ import Vue from "vue";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MutationType, StorageKeys } from "@/store";
+import { SEO } from "@/services";
 
 export default Vue.extend({
   components: {
     Header,
     Footer
   },
-  mounted() {
-    /* Set Color Theme */
-    const theme = localStorage.getItem(StorageKeys.THEME);
-    if (theme) {
-      this.$store.commit(MutationType.SET_THEME, theme);
-      document.documentElement.dataset.mode = theme;
+  head() {
+    return SEO.generate({
+      title: (this as any).title,
+      description: (this as any).description
+    });
+  },
+  computed: {
+    title(): string {
+      const curPage = this.$route.path
+        .split("/")
+        .pop()
+        ?.replace("-", "_");
 
-      /* Use System Config initially */
-    } else {
-      const userPrefersDark =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      /* If current page has SEO title set in translations */
+      if (
+        `${this.$i18n.t(`pages.${curPage}.seo.title`)}` !==
+        `pages.${curPage}.seo.title`
+      ) {
+        return (
+          this.$i18n.t(`pages.${curPage}.seo.title`).toString() +
+          this.$i18n.t("seo.seperator").toString() +
+          this.$i18n.t("seo.site_title").toString()
+        );
+      }
 
-      if (userPrefersDark) {
-        this.$store.commit(MutationType.SET_THEME, "dark");
+      /* If current page has title set in translations */
+      if (
+        `${this.$i18n.t(`pages.${curPage}.title`)}` !== `pages.${curPage}.title`
+      ) {
+        return (
+          this.$i18n.t(`pages.${curPage}.title`).toString() +
+          this.$i18n.t("seo.seperator").toString() +
+          this.$i18n.t("seo.site_title").toString()
+        );
+      }
+
+      if (curPage) {
+        const capitilizedRoute =
+          curPage.charAt(0).toUpperCase() + curPage.replace("_", " ").slice(1);
+        return (
+          capitilizedRoute +
+          this.$i18n.t("seo.seperator").toString() +
+          this.$i18n.t("seo.site_title").toString()
+        );
+      }
+
+      return this.$i18n.t("seo.site_title").toString();
+    },
+    description() {
+      const curPage = this.$route.path
+        .split("/")
+        .pop()
+        ?.replace("-", "_");
+
+      /* If current page has SEO description set in translations */
+      if (
+        `${this.$i18n.t(`pages.${curPage}.seo.description`)}` !==
+        `pages.${curPage}.seo.description`
+      ) {
+        return this.$i18n.t(`pages.${curPage}.seo.description`).toString();
+      }
+
+      /* If current page has description set in translations */
+      if (
+        `${this.$i18n.t(`pages.${curPage}.description`)}` !==
+        `pages.${curPage}.description`
+      ) {
+        return this.$i18n.t(`pages.${curPage}.description`).toString();
+      }
+
+      return "";
+    }
+  },
+  methods: {
+    setTheme() {
+      /* Set Color Theme */
+      const theme = localStorage.getItem(StorageKeys.THEME);
+      if (theme) {
+        this.$store.commit(MutationType.SET_THEME, theme);
+        document.documentElement.dataset.mode = theme;
+
+        /* Use System Config initially */
+      } else {
+        const userPrefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (userPrefersDark) {
+          this.$store.commit(MutationType.SET_THEME, "dark");
+        }
       }
     }
+  },
+  mounted() {
+    this.setTheme();
   }
 });
 </script>
