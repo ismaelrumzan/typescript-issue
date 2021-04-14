@@ -118,6 +118,10 @@
         "link": "/legal"
       },
       {
+        "title": "pages.dpa.title",
+        "link": "/legal/dpa"
+      },
+      {
         "title": "pages.disclosure.title",
         "link": "/legal/disclosure"
       },

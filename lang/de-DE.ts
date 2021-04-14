@@ -11,6 +11,7 @@ export default async (context: any, locale: string) => {
     general: {
       all: "Alle",
       application: "Bewerbung | Bewerbungen",
+      contract: "Vertrag | Verträge",
       homepage: "Startseite",
       legal: "Rechtliches",
       overview: "Übersicht",
@@ -30,6 +31,7 @@ export default async (context: any, locale: string) => {
       connect_your_system: "Verbinde Dich mit Deinem System",
       easy_integration: "Einfache Integration",
       focus_on_security: "Fokus auf Sicherheit",
+      generate: "{object} generieren",
       get_started: "Jetzt starten",
       go_to: "Zu {page}",
       go_to_2: "Zum {page}",
@@ -74,6 +76,8 @@ export default async (context: any, locale: string) => {
     contact: {
       address: "Adresse",
       company: "Unternehmen",
+      company_name: "Unternehmensname",
+      company_name_2: "Name des Unternehmens",
       country: "Land",
       email: "E-Mail",
       first_name: "Vorname",
@@ -195,6 +199,11 @@ export default async (context: any, locale: string) => {
       documentation: {
         title: "Dokumentation",
         description: "Integration und Guides"
+      },
+
+      dpa: {
+        title: "AV-Vertrag",
+        description: "Generiere jetzt Deinen AV-Vertrag"
       },
 
       emails: {

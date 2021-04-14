@@ -211,7 +211,7 @@ export default Vue.extend({
       twitter: "",
       linkedin: "",
       message: "",
-      password: "ionsoindosin"
+      password: null
     };
   },
   methods: {

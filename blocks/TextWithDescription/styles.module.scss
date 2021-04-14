@@ -113,8 +113,14 @@ $bp-1: 1023px;
   padding: 5rem 0;
 }
 .pad-topOnly {
-  padding: 3rem 0 0;
+  padding: 5rem 0 0;
+  @media (max-width: $bp-1) {
+    padding: 3rem 0 0;
+  }
 }
 .pad-bottomOnly {
-  padding: 0 0 3rem;
+  padding: 0 0 5rem;
+  @media (max-width: $bp-1) {
+    padding: 0 0 3rem;
+  }
 }

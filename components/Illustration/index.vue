@@ -104,6 +104,34 @@ export default Vue.extend({
   #elem10logo {
     display: none !important;
   }
+
+  #elem1bg,
+  #elem2bg,
+  #elem3bg,
+  #elem4bg,
+  #elem5bg,
+  #elem6bg,
+  #elem7bg,
+  #elem8bg,
+  #elem9bg,
+  #elem10bg {
+    display: none !important;
+  }
+
+  #elem1,
+  #elem2,
+  #elem3,
+  #elem4,
+  #elem5,
+  #elem6,
+  #elem7,
+  #elem8,
+  #elem9,
+  #elem10 {
+    path {
+      fill: var(--main-color-light-8);
+    }
+  }
 }
 [data-theme="dark"] {
   #main {

@@ -11,6 +11,12 @@
           :moreLink="page.path"
           :icon="page.icon"
         />
+        <Feature
+          alignment="center"
+          title="pages.dpa.title"
+          moreLink="/legal/dpa"
+          icon="Document"
+        />
       </Grid>
     </Section>
   </div>

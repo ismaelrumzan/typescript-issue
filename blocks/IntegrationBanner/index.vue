@@ -6,7 +6,7 @@
     description="blocks.integration.description"
     alignment="center"
     :cta="[{ title: 'phrases.get_started', href: '/apply' }]"
-    illustration="main_dark"
+    illustration="main"
     :illustrationStyles="{
       position: 'absolute',
       top: 0,
@@ -14,10 +14,8 @@
       right: 0,
       bottom: 0,
       zIndex: '-1',
-      filter: isDarkMode
-        ? 'grayscale(1) opacity(0.5)'
-        : 'invert(1) grayscale(1) opacity(0.8)',
-      opacity: isDarkMode ? 0.35 : 0.1,
+      filter: isDarkMode ? 'grayscale(1)' : 'opacity(1)',
+      opacity: isDarkMode ? 0.15 : 0.2,
       transform: 'scale(1.75)'
     }"
   />
