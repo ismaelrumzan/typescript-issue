@@ -20,6 +20,11 @@ export module SEO {
           content: "website"
         },
         {
+          hid: "og:site_name",
+          name: "og:site_name",
+          content: "Digital Hotel"
+        },
+        {
           hid: "og:title",
           name: "og:title",
           content: meta.title
