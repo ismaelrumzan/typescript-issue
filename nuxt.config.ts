@@ -186,7 +186,22 @@ const config: NuxtConfig = {
    */
   build: {
     transpile: ['truncate'],
-    babel: { compact: true }
+    babel: { compact: true },
+    extractCSS: {
+      ignoreOrder: true
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(scss|css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    }
   },
 
   /**
