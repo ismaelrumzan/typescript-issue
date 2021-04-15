@@ -1,4 +1,5 @@
 import about from "./de/pages/about"
+import help from "./de/pages/help"
 import homepage from "./de/pages/homepage"
 
 export default async (context: any, locale: string) => {
@@ -38,6 +39,7 @@ export default async (context: any, locale: string) => {
       go_to_3: "Zur {page}",
       go_to_site: "Zur {page}-Seite",
       got_questions: "Noch Fragen?",
+      got_more_questions: "Noch mehr Fragen?",
       high_speed: "Hohe Geschwindigkeit",
       more: "Mehr erfahren",
       need_help: "Brauchst Du Hilfe?",
@@ -246,10 +248,7 @@ export default async (context: any, locale: string) => {
         description: "Über unsere Benutzeroberfläche hast Du alle Gäste im Blick ohne Dich in Deinem PMS oder CRM anmelden zu müssen und kannst diese neu anlegen oder bearbeiten."
       },
 
-      help: {
-        title: "Hilfe",
-        description: "FAQ und Support"
-      },
+      help,
 
       housekeeping: {
         title: "Housekeeping",

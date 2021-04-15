@@ -1,58 +1,30 @@
 <template>
   <div id="content">
     <Hero
-      badge="Alles im Überblick"
-      title="FAQ"
+      badge="pages.help.hero.badge"
+      title="pages.help.hero.title"
       alignment="center"
       padding="small"
       style="padding-bottom: 1rem"
     />
     <Section padding="bottomOnly" style="margin-bottom: 2rem">
-      <Collapsible title="Hier könnte Deine Frage stehen?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
-      </Collapsible>
-      <Collapsible title="Hier könnte Deine Frage stehen?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
-      </Collapsible>
-      <Collapsible title="Hier könnte Deine Frage stehen?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
-      </Collapsible>
-      <Collapsible title="Hier könnte Deine Frage stehen?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
-      </Collapsible>
-      <Collapsible title="Hier könnte Deine Frage stehen?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet.
+      <Collapsible
+        v-for="(question, i) in $t('pages.help.faq')"
+        :key="i"
+        :title="question.question"
+      >
+        {{ question.answer }}
       </Collapsible>
     </Section>
     <Section color="light" padding="small">
       <TextWithDescription
-        badge="Meeting buchen"
-        title="Du hast immer noch Fragen?"
-        description="Wir bieten Dir die Möglichkeit, ein persönliches Meeting mit uns zu vereinbaren. Dieses kannst Du hier direkt online buchen."
+        badge="phrases.book_meeting"
+        title="phrases.got_more_questions"
+        description="pages.help.meeting.text"
         alignment="center"
         :cta="[
           {
-            title: 'Meeting buchen',
+            title: 'phrases.book_meeting',
             onClick: bookMeeting
           }
         ]"

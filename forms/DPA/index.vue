@@ -95,14 +95,17 @@
     <div v-show="showSignatureField" ref="step2" style="margin: 1rem auto">
       <Grid columns="1" padding="small" gap="small">
         <p style="margin-bottom: 1.5rem">
-          Bitte überprüfe alle Angaben innerhalb des generierten Vertrags und
-          fahre erst dann mit der Signatur fort. Du hast entweder die
-          Möglichkeit den generierten Vertrag selbst zu unterzeichnen und uns
-          anschließend per Mail zukommen zu lassen oder du nutzt die folgende
-          Signatur-Funktion. Du kannst den signierten Vertrag vor dem Abschluss
-          noch einmal herunterladen und ansehen. Sobald Du auf "Vertrag
-          abschließen" klickst, wird der Vertrag automatisch an uns
-          weitergeleitet.
+          Du kannst
+          <a href="#" @click="download">
+            Deinen generierten Vertrag herunterladen
+          </a>
+          . Bitte überprüfe alle Angaben und fahre erst dann mit der Signatur
+          fort. Du hast entweder die Möglichkeit den generierten Vertrag selbst
+          zu unterzeichnen und uns anschließend per Mail zukommen zu lassen oder
+          du nutzt die folgende Signatur-Funktion. Du kannst den signierten
+          Vertrag vor dem Abschluss noch einmal herunterladen und ansehen.
+          Sobald Du auf "Vertrag abschließen" klickst, wird der Vertrag
+          automatisch an uns weitergeleitet.
         </p>
         <div :class="styles.signature">
           <canvas ref="signature"></canvas>
@@ -120,7 +123,7 @@
         <Button
           type="tertiary"
           :loading="loading"
-          @click="injectSignature"
+          @click="download(null, true)"
           title="Signierten Vertrag herunterladen"
         />
       </Grid>
@@ -192,27 +195,20 @@ export default Vue.extend({
     };
   },
   methods: {
-    generateContract() {
+    checkForm: function(e: any) {
+      this.sent = false;
+      this.sendingError = false;
       this.loading = true;
-      const doc = new jsPDF();
 
-      if (this.signature) {
-        Generator.generate({
-          doc,
-          organization: this.organization,
-          firstName: this.firstName,
-          lastName: this.lastName,
-          signature: this.signature
-        });
-        doc.save("AV-Vertrag-signed.pdf");
-      } else {
-        Generator.generate({
-          doc,
-          organization: this.organization,
-          firstName: this.firstName,
-          lastName: this.lastName
-        });
-        doc.save("AV-Vertrag.pdf");
+      this.errors = [];
+
+      if (this.password) {
+        (this as any).errors.push(this.$i18n.t("errors.bot"));
+      }
+
+      if (this.errors.length > 0) {
+        this.loading = false;
+        return;
       }
 
       this.showSignatureField = true;
@@ -235,33 +231,47 @@ export default Vue.extend({
       }, 200);
     },
 
-    checkForm: function(e: any) {
-      this.sent = false;
-      this.sendingError = false;
-      this.loading = true;
+    download(e?: any, withSignature = false) {
+      e?.preventDefault();
 
-      this.errors = [];
+      if (withSignature) {
+        this.injectSignature();
 
-      if (this.password) {
-        (this as any).errors.push(this.$i18n.t("errors.bot"));
+        if (this.signature) {
+          const doc = new jsPDF();
+          Generator.generate({
+            doc,
+            organization: this.organization,
+            firstName: this.firstName,
+            lastName: this.lastName,
+            signature: this.signature
+          });
+
+          doc.save("AV-Vertrag-signed.pdf");
+        }
+      } else {
+        const doc = new jsPDF();
+        Generator.generate({
+          doc,
+          organization: this.organization,
+          firstName: this.firstName,
+          lastName: this.lastName
+        });
+        doc.save("AV-Vertrag.pdf");
       }
-
-      if (this.errors.length > 0) {
-        this.loading = false;
-        return false;
-      }
-
-      this.generateContract();
     },
 
     injectSignature() {
       this.errors = [];
       if ((this as any).signaturePad.isEmpty()) {
         (this as any).errors.push("Keine Signatur gefunden");
+        this.signature = undefined;
         return;
       }
-      this.signature = (this as any).signaturePad.toDataURL("image/jpeg", 0.2);
-      this.generateContract();
+      this.signature = (this as any).signaturePad.toDataURL(
+        "image/jpeg",
+        0.125
+      );
     },
 
     clearSignature() {
@@ -273,52 +283,56 @@ export default Vue.extend({
       this.loading = true;
 
       const doc = new jsPDF();
-      const signature = (this as any).signaturePad.toDataURL("image/jpeg", 0.2);
+      this.injectSignature();
 
-      Generator.generate({
-        doc,
-        organization: this.organization,
-        firstName: this.firstName,
-        lastName: this.lastName,
-        signature: signature
-      });
+      if (this.signature) {
+        Generator.generate({
+          doc,
+          organization: this.organization,
+          firstName: this.firstName,
+          lastName: this.lastName,
+          signature: this.signature
+        });
 
-      const pdf = doc.output("datauristring");
+        const pdf = doc.output("datauristring");
 
-      const params = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        organization: this.organization,
-        email: this.email,
-        content: pdf
-      };
+        const params = {
+          firstName: this.firstName,
+          lastName: this.lastName,
+          organization: this.organization,
+          email: this.email,
+          content: pdf
+        };
 
-      emailjs
-        .send(
-          "default_service",
-          "template_z2h7xj9",
-          params,
-          "user_dD3sqT5ZcegDVQThVlwr2"
-        )
-        .then(
-          result => {
-            this.loading = false;
-            this.sent = true;
-            console.log(
-              "Content has been submitted successfully!",
-              result.status,
-              result.text
-            );
-          },
-          error => {
-            this.loading = false;
-            this.sendingError = true;
-            console.error(
-              "An error has occured while trying to submit the content!",
-              error
-            );
-          }
-        );
+        emailjs
+          .send(
+            "default_service",
+            "template_z2h7xj9",
+            params,
+            "user_dD3sqT5ZcegDVQThVlwr2"
+          )
+          .then(
+            result => {
+              this.loading = false;
+              this.sent = true;
+              console.log(
+                "Content has been submitted successfully!",
+                result.status,
+                result.text
+              );
+            },
+            error => {
+              this.loading = false;
+              this.sendingError = true;
+              console.error(
+                "An error has occured while trying to submit the content!",
+                error
+              );
+            }
+          );
+      }
+
+      this.loading = false;
     },
 
     resizeCanvas(e?: any, force = false) {
