@@ -85,6 +85,7 @@ export default Vue.extend({
       }
     },
     handleRoute() {
+      this.closeMenu();
       /* If index page, scroll to top instead of doing nothing */
       if (this.$route.name === `index___${this.$i18n.locale}`) {
         window.scrollTo({

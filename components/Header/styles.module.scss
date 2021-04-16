@@ -64,11 +64,11 @@ $bp-menu-tablet: 1150px;
   @media (max-width: $bp) {
     z-index: -1;
     overflow-y: scroll;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--header-height));
     padding-bottom: 10rem;
     background-color: var(--light);
 
@@ -89,6 +89,7 @@ $bp-menu-tablet: 1150px;
   .navigation {
     @media (max-width: $bp) {
       margin-top: var(--header-height-scrolled);
+      height: calc(100vh - var(--header-height-scrolled));
     }
   }
 }

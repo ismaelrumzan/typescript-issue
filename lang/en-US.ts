@@ -10,6 +10,7 @@ export default async (context: any, locale: string) => {
     },
 
     general: {
+      accept: "Accept",
       all: "All",
       application: "Application | Applications",
       contract: "Contract | Contracts",
@@ -17,7 +18,9 @@ export default async (context: any, locale: string) => {
       homepage: "Homepage",
       legal: "Legal",
       login: "Login",
+      manage: "Manage",
       overview: "Overview",
+      reject: "Reject",
       search: "Search",
       sign_up: "Sign up",
       solution: "Solution | Solutions",
@@ -71,6 +74,10 @@ export default async (context: any, locale: string) => {
       integration: {
         description: "We have connections to the most popular manufacturers"
       }
+    },
+
+    cookies: {
+      text: "We use cookies 🍪 to personalize your experience on Digital Hotel"
     },
 
     docs: {

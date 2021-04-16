@@ -1,5 +1,6 @@
 <template>
   <main id="wrapper">
+    <CookieBanner />
     <Header />
     <Nuxt />
     <Footer />
@@ -10,13 +11,15 @@
 import Vue from "vue";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import { MutationType, StorageKeys } from "@/store";
 import { SEO } from "@/services";
 
 export default Vue.extend({
   components: {
     Header,
-    Footer
+    Footer,
+    CookieBanner
   },
   head() {
     return SEO.generate({

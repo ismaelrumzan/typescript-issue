@@ -10,6 +10,7 @@ export default async (context: any, locale: string) => {
     },
 
     general: {
+      accept: "Akzeptieren",
       all: "Alle",
       application: "Bewerbung | Bewerbungen",
       contract: "Vertrag | Verträge",
@@ -17,7 +18,9 @@ export default async (context: any, locale: string) => {
       homepage: "Startseite",
       legal: "Rechtliches",
       login: "Login",
+      manage: "Verwalten",
       overview: "Übersicht",
+      reject: "Ablehnen",
       search: "Suchen",
       sign_up: "Anmelden",
       solution: "Lösung | Lösungen",
@@ -55,6 +58,10 @@ export default async (context: any, locale: string) => {
       start_now: "Jetzt starten",
       subscribe_newsletter: "Abboniere unseren Newsletter",
       updated_at: "Aktualisiert am",
+    },
+
+    cookies: {
+      text: "Wir verwenden Cookies 🍪, um Dein Erlebnis bei Digital Hotel zu personalisieren."
     },
 
     blocks: {

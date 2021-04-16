@@ -1,5 +1,6 @@
 <template>
   <main id="wrapper" data-layout="docs">
+    <CookieBanner />
     <Header />
     <div class="docs">
       <Sidebar />
@@ -15,6 +16,7 @@
 import Vue from "vue";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import Sidebar from "@/components/Sidebar";
 import { MutationType, StorageKeys } from "@/store";
 
@@ -22,6 +24,7 @@ export default Vue.extend({
   components: {
     Header,
     Footer,
+    CookieBanner,
     Sidebar
   },
   methods: {

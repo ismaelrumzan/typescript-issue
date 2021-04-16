@@ -31,7 +31,7 @@ export default Vue.extend({
 </script>
 ```
 
-Please wrap all your content (except Hero block) inside the [Section](#section) block
+Please wrap each of your blocks (except Hero) in a [Section](#section) block
 
 ## Blocks
 
