@@ -6,6 +6,7 @@ $bp: 900px;
 }
 
 .content {
+  border-top: 1px solid var(--light-5);
   padding: 3.5rem var(--horizontal-padding) 2.75rem;
   max-width: var(--max-width);
   margin: 0 auto;

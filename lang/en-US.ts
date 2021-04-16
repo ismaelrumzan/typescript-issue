@@ -13,11 +13,15 @@ export default async (context: any, locale: string) => {
       all: "All",
       application: "Application | Applications",
       contract: "Contract | Contracts",
+      email_address: "E-Mail address",
       homepage: "Homepage",
       legal: "Legal",
+      login: "Login",
       overview: "Overview",
       search: "Search",
+      sign_up: "Sign up",
       solution: "Solution | Solutions",
+      subscribe: "Subscribe",
       uptime: "Uptime",
       view: "View"
     },
@@ -49,6 +53,7 @@ export default async (context: any, locale: string) => {
       solutions_in: "{area} solutions",
       sparked_interest: "Have we sparked your interest?",
       start_now: "Start Now",
+      subscribe_newsletter: "Subscribe to our newsletter",
       updated_at: "Updated at",
     },
 

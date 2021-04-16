@@ -1,6 +1,7 @@
 <template>
   <footer :class="styles.footer">
     <TrustBar />
+    <Newsletter />
     <div :class="styles.content">
       <Navigation />
       <hr />
@@ -45,6 +46,7 @@
 <script lang="ts">
 import Vue from "vue";
 import styles from "./styles.module.scss?module";
+import Newsletter from "@/forms/Newsletter";
 import TrustBar from "@/components/Footer/TrustBar";
 import Navigation from "@/components/Footer/Navigation";
 import Select from "@/components/Select";
@@ -52,6 +54,7 @@ import { MutationType, RootState } from "@/store";
 
 export default Vue.extend({
   components: {
+    Newsletter,
     TrustBar,
     Navigation,
     Select

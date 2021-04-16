@@ -13,11 +13,15 @@ export default async (context: any, locale: string) => {
       all: "Alle",
       application: "Bewerbung | Bewerbungen",
       contract: "Vertrag | Verträge",
+      email_address: "E-Mail-Adresse",
       homepage: "Startseite",
       legal: "Rechtliches",
+      login: "Login",
       overview: "Übersicht",
       search: "Suchen",
+      sign_up: "Anmelden",
       solution: "Lösung | Lösungen",
+      subscribe: "Abbonieren",
       uptime: "Uptime",
       view: "Anschauen"
     },
@@ -49,6 +53,7 @@ export default async (context: any, locale: string) => {
       solutions_in: "Lösungen im Bereich {area}",
       sparked_interest: "Haben wir Dein Interesse geweckt?",
       start_now: "Jetzt starten",
+      subscribe_newsletter: "Abboniere unseren Newsletter",
       updated_at: "Aktualisiert am",
     },
 

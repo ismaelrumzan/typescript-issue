@@ -182,14 +182,6 @@ export default Vue.extend({
     isDarkMode(): boolean {
       return (this.$store.state as RootState).theme === "dark";
     }
-  },
-  watch: {
-    /* Currently both Illustration are being loaded. Needs to be optimized later on */
-    // isDarkMode(darkMode) {
-    //   if (darkMode) {
-    //     console.log(this.$refs.illustration);
-    //   }
-    // }
   }
 });
 </script>

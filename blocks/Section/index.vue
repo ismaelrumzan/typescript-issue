@@ -35,7 +35,6 @@ export type OverflowOptions = "visible" | "hidden";
 export type PaddingOptions =
   | "default"
   | "small"
-  | "none"
   | "topOnly"
   | "bottomOnly"
   | "none";

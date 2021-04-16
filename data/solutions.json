@@ -36,8 +36,7 @@
     "description": "pages.feedback.description",
     "icon": "Feedback",
     "link": "/frontoffice/feedback",
-    "category": "frontoffice",
-    "disabled": true
+    "category": "frontoffice"
   },
   {
     "title": "pages.emails.title",
