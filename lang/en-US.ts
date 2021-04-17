@@ -77,7 +77,7 @@ export default async (context: any, locale: string) => {
     },
 
     cookies: {
-      text: "We use cookies 🍪 to personalize your experience on Digital Hotel"
+      text: "We use cookies 🍪 to personalize your experience on Digital Hotel."
     },
 
     docs: {

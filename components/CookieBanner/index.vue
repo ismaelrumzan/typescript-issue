@@ -3,7 +3,7 @@
     <div :class="styles.content">
       <span>
         {{ $t("cookies.text") }}
-        <NuxtLink to="/legal/privacy-policy">
+        <NuxtLink :to="localePath('/legal/privacy-policy#cookies')">
           {{ $t("phrases.more") }}
         </NuxtLink>
       </span>

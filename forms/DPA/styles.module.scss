@@ -1,7 +1,7 @@
-@use "@/assets/styles/colors" as v;
+@use "@/assets/styles/colors" as c;
 
 .form {
-  --main-color: #{v.$main-color};
+  --main-color: #{c.$main-color};
   --dark: #000;
   color: var(--dark);
   background-color: var(--light);

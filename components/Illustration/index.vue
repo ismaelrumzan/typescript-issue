@@ -36,7 +36,12 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      animation: null
+      animation: null as AnimationItem | null,
+      observer: null as IntersectionObserver | null,
+      options: {
+        root: null,
+        threshold: 0
+      } as IntersectionObserverInit
     };
   },
   methods: {
@@ -60,7 +65,7 @@ export default Vue.extend({
             autoplay: this.autoplay,
             animationData: JSON.parse(JSON.stringify(module.default))
           });
-          (this.animation as AnimationItem | null) = animation;
+          this.animation = animation;
         })
         .catch(error => {
           console.error(error);
@@ -73,16 +78,38 @@ export default Vue.extend({
               autoplay: this.autoplay,
               animationData: JSON.parse(JSON.stringify(module.default))
             });
-            (this.animation as AnimationItem | null) = animation;
+            this.animation = animation;
           });
         });
+    },
+    handleIntersect(entry: any) {
+      if (entry.isIntersecting > 0) {
+        this.animation?.play();
+      } else {
+        this.animation?.pause();
+      }
     }
   },
   mounted() {
     this.fetchIllustration();
+
+    if (
+      !("IntersectionObserver" in window) ||
+      !("IntersectionObserverEntry" in window) ||
+      !("intersectionRatio" in window.IntersectionObserverEntry.prototype)
+    ) {
+      /* will load polyfill later on, just keep playing at the moment */
+    } else {
+      this.observer = new IntersectionObserver(entries => {
+        this.handleIntersect(entries[0]);
+      }, this.options);
+
+      this.observer.observe((this as any).$refs.illustration);
+    }
   },
   beforeDestroy() {
-    (this.animation as AnimationItem | null)?.destroy();
+    this.observer?.disconnect();
+    this.animation?.destroy();
   }
 });
 </script>

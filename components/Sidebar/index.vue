@@ -114,7 +114,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @use "sass:color";
-@use "@/assets/styles/colors" as v;
+@use "@/assets/styles/colors" as c;
 
 .nuxt-link-exact-active {
   background-color: var(--main-color-light-8);
@@ -123,7 +123,7 @@ export default Vue.extend({
 }
 [data-theme="dark"] {
   .nuxt-link-exact-active {
-    background-color: color.adjust(v.$main-color, $alpha: -0.8);
+    background-color: color.adjust(c.$main-color, $alpha: -0.8);
   }
 }
 </style>
