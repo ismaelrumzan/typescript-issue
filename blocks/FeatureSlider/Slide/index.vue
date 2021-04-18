@@ -5,7 +5,11 @@
       <p v-if="description" :class="styles.description">
         {{ $t(description) }}
       </p>
-      <NuxtLink v-if="moreLink" :to="localePath(moreLink)" :class="styles.link">
+      <NuxtLink
+        v-if="moreLink && !disabled"
+        :to="localePath(moreLink)"
+        :class="styles.link"
+      >
         {{ $t(moreText) }}
         <Icon name="ArrowRight" />
       </NuxtLink>
@@ -23,26 +27,29 @@ export default Vue.extend({
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
-      type: String,
+      type: String
     },
     moreText: {
       type: String,
-      default: "phrases.more",
+      default: "phrases.more"
     },
     moreLink: {
-      type: String,
+      type: String
     },
+    disabled: {
+      type: Boolean
+    }
   },
   components: {
-    Icon,
+    Icon
   },
   data() {
     return {
-      styles,
+      styles
     };
-  },
+  }
 });
 </script>

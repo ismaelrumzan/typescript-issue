@@ -16,11 +16,8 @@
           alignment="center"
           v-for="(page, i) in category.pages"
           :key="i"
-          :title="page.title"
-          :description="page.description"
-          :moreLink="page.path"
+          v-bind="{ ...page, moreLink: page.path }"
           moreText="general.view"
-          :icon="page.icon"
         />
       </Grid>
     </Section>

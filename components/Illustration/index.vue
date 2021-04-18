@@ -5,7 +5,7 @@
 <script lang="ts">
 import Vue, { PropType } from "vue";
 import styles from "./styles.module.scss?module";
-import lottie, { AnimationItem } from "lottie-web";
+import lottie, { AnimationDirection, AnimationItem } from "lottie-web";
 
 export type RenderMode = "svg" | "canvas" | "html";
 
@@ -23,6 +23,18 @@ export default Vue.extend({
     autoplay: {
       type: Boolean,
       default: true
+    },
+    reversed: {
+      type: Boolean,
+      default: false
+    },
+    alternate: {
+      type: Boolean,
+      default: false
+    },
+    speed: {
+      type: [Number, String],
+      default: 1
     },
     renderer: {
       type: String as PropType<RenderMode>,
@@ -65,6 +77,24 @@ export default Vue.extend({
             autoplay: this.autoplay,
             animationData: JSON.parse(JSON.stringify(module.default))
           });
+
+          animation.setSpeed(Number(this.speed));
+
+          if (this.reversed) {
+            animation.setDirection(-1);
+          }
+
+          if (this.alternate) {
+            animation.loop = false;
+            animation.addEventListener("complete", () => {
+              animation.pause();
+              animation.setDirection(
+                (animation.playDirection * -1) as AnimationDirection
+              );
+              animation.play();
+            });
+          }
+
           this.animation = animation;
         })
         .catch(error => {

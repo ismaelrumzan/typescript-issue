@@ -24,7 +24,7 @@
         title="Sammle dein Feedback strukturiert ein"
         description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
         image="test.png"
-        :cta="[{ title: 'Moin', href: '/' }]"
+        :cta="[{ title: 'Button', href: '/' }]"
       />
     </Section>
     <Section color="main">

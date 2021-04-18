@@ -14,8 +14,7 @@
         <Slide
           v-for="(slide, i) in $t('pages.about.slider.slides')"
           :key="i"
-          :title="slide.title"
-          :description="slide.description"
+          v-bind="{ ...slide }"
         />
       </FeatureSlider>
     </Section>
@@ -32,9 +31,7 @@
           v-for="(value, i) in $t('pages.about.values.values')"
           :key="i"
           alignment="center"
-          :title="value.title"
-          :description="value.description"
-          :icon="value.icon"
+          v-bind="{ ...value }"
         />
       </Grid>
     </Section>

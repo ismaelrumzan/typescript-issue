@@ -25,19 +25,10 @@
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
             v-if="button.onClick"
+            v-bind="{ ...button }"
             @click="button.onClick"
-            :title="button.title"
-            :type="button.type"
-            :href="button.href"
-            :externalHref="button.externalHref"
           />
-          <Button
-            v-else
-            :title="button.title"
-            :type="button.type"
-            :href="button.href"
-            :externalHref="button.externalHref"
-          />
+          <Button v-else v-bind="{ ...button }" />
         </li>
       </ul>
     </div>

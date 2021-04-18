@@ -32,16 +32,7 @@
         "
       />
     </div>
-    <Feature
-      v-for="(item, i) in filteredList"
-      :key="i"
-      :title="item.title"
-      :description="item.description"
-      :icon="item.icon"
-      :moreLink="item.moreLink"
-      :disabled="item.disabled"
-      :alignment="item.alignment"
-    />
+    <Feature v-for="(item, i) in filteredList" :key="i" v-bind="{ ...item }" />
   </div>
 </template>
 

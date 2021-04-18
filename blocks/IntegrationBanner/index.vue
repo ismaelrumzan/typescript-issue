@@ -1,6 +1,6 @@
 <template>
   <TextWithImage
-    :class="styles.banner"
+    :class="[styles.banner, 'integration-banner']"
     badge="phrases.easy_integration"
     title="phrases.connect_your_system"
     description="blocks.integration.description"
@@ -43,3 +43,54 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+.integration-banner {
+  #elem1,
+  #elem2,
+  #elem3,
+  #elem4,
+  #elem5,
+  #elem6,
+  #elem7,
+  #elem8,
+  #elem9,
+  #elem10 {
+    path {
+      fill: #ff9f9f !important;
+    }
+  }
+
+  #elem1ball,
+  #elem2ball,
+  #elem3ball,
+  #elem4ball,
+  #elem5ball,
+  #elem6ball,
+  #elem7ball,
+  #elem8ball,
+  #elem9ball,
+  #elem10ball {
+    display: none !important;
+  }
+}
+
+[data-theme="dark"] {
+  .integration-banner {
+    #elem1,
+    #elem2,
+    #elem3,
+    #elem4,
+    #elem5,
+    #elem6,
+    #elem7,
+    #elem8,
+    #elem9,
+    #elem10 {
+      path {
+        fill: var(--main-color-dark-3) !important;
+      }
+    }
+  }
+}
+</style>

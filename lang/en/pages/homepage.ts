@@ -18,32 +18,38 @@ export default {
       {
         title: "Smart tools for everyday tasks",
         description: "Our assistants help you from the reservation to the lost and found thing, to complete the tasks completely self-explanatory for each employee and to store the data where they belong.",
-        moreLink: "/operations/assistants"
+        moreLink: "/operations/assistants",
+        disabled: true
       },
       {
         title: "More freedom with an individual room plan",
         description: "The room plan is still an important information tool at many reception desks. We add value to this with the possibilities of the PMS and create space for more individual information.",
-        moreLink: "/frontoffice/roomplan"
+        moreLink: "/frontoffice/roomplan",
+        disabled: true
       },
       {
         title: "E-mails made easy with call-to-actions",
         description: "The constant changing of programs is over. You can find your email client with the most important data from your PMS in the same user interface. And the simple call-to-action applications save you additional time.",
-        moreLink: "/frontoffice/emails"
+        moreLink: "/frontoffice/emails",
+        disabled: true
       },
       {
         title: "Quick access to guests and reservations",
         description: "Query and store guest information, check and edit reservations from anywhere without having to switch to your PMS - this works quickly and easily via your new user interface.",
-        moreLink: "/frontoffice/guests"
+        moreLink: "/frontoffice/guests",
+        disabled: true
       },
       {
         title: "Always keep an eye on your employees",
         description: "Let your teams create the rosters themselves and then approve them. Always be informed about who is on duty and who is in the house. Always stay up to date and receive news when something changes.",
-        moreLink: "/backoffice/staff"
+        moreLink: "/backoffice/staff",
+        disabled: true
       },
       {
         title: "Easy onboarding for your new employees",
         description: "Build trust from the first minute. We make it easy for every new team member in your company, from the application and all the necessary instructions to quick and safe familiarization.",
-        moreLink: "/backoffice/applications"
+        moreLink: "/backoffice/applications",
+        disabled: true
       }
     ]
   },

@@ -21,7 +21,7 @@
           </div>
         </div>
         <div :class="styles.illustration">
-          <Illustration name="question" />
+          <Illustration name="question" speed="1.35" alternate />
         </div>
       </div>
     </div>

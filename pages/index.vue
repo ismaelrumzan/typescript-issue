@@ -57,9 +57,7 @@
         <Slide
           v-for="(slide, i) in $t('pages.index.solutions.slides')"
           :key="i"
-          :title="slide.title"
-          :description="slide.description"
-          :moreLink="slide.moreLink"
+          v-bind="{ ...slide }"
         />
       </FeatureSlider>
     </Section>
@@ -122,6 +120,7 @@ export default Vue.extend({
     IntegrationBanner
   },
   head() {
+    /* Override default behavior to get rid of seperator and site title */
     return SEO.generate({
       title: this.$i18n.t("pages.index.seo.title").toString(),
       description: this.$i18n.t("pages.index.seo.description").toString()

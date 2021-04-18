@@ -6,10 +6,7 @@
           alignment="center"
           v-for="(page, i) in pages"
           :key="i"
-          :title="page.title"
-          :description="page.description"
-          :moreLink="page.path"
-          :icon="page.icon"
+          v-bind="{ ...page, moreLink: page.path }"
         />
         <Feature
           alignment="center"

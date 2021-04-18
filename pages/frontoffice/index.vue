@@ -31,12 +31,7 @@
         <Feature
           v-for="solution in frontofficeSolutions"
           :key="solution.link"
-          :alignment="solution.alignment"
-          :disabled="solution.disabled"
-          :title="solution.title"
-          :description="solution.description"
-          :icon="solution.icon"
-          :moreLink="solution.link"
+          v-bind="{ ...solution, moreLink: solution.link }"
         />
       </Grid>
     </Section>
