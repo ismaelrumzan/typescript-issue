@@ -3,6 +3,7 @@
     :class="[
       styles.container,
       styles[alignment],
+      styles[textAlignmentClass],
       styles[paddingClass],
       styles[illustrationWidth]
     ]"
@@ -10,15 +11,18 @@
     <div :class="styles.content">
       <Badge v-if="badge" :text="badge" />
       <h2 :class="styles.title">{{ $t(title) }}</h2>
-      <span :class="styles.description">{{ $t(description) }}</span>
+      <span v-if="description" :class="styles.description">{{
+        $t(description)
+      }}</span>
+      <slot />
       <ul v-if="cta" :class="styles.buttons">
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
             v-if="button.onClick"
-            v-bind="{ ...button }"
+            v-bind="button"
             @click="button.onClick"
           />
-          <Button v-else v-bind="{ ...button }" />
+          <Button v-else v-bind="button" />
         </li>
       </ul>
     </div>
@@ -65,17 +69,18 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
-import styles from "./styles.module.scss?module";
-import Badge from "@/components/Badge";
-import Button from "@/components/Button";
-import Illustration from "@/components/Illustration";
-import { RootState } from "~/store";
+import Vue, { PropType } from 'vue';
+import styles from './styles.module.scss?module';
+import Badge from '@/components/Badge';
+import Button from '@/components/Button';
+import Illustration from '@/components/Illustration';
+import { RootState } from '~/store';
 
-type Alignment = "left" | "right" | "center";
-type PaddingOption = "small" | "medium" | "large" | "none";
-type IllustrationWidth = "narrow" | "normal" | "wide";
-type RenderMode = "svg" | "canvas";
+type Alignment = 'left' | 'right' | 'center';
+type TextAlignment = 'left' | 'right' | 'center';
+type PaddingOption = 'small' | 'medium' | 'large' | 'none';
+type IllustrationWidth = 'narrow' | 'normal' | 'wide';
+type RenderMode = 'svg' | 'canvas';
 
 export default Vue.extend({
   components: {
@@ -86,11 +91,15 @@ export default Vue.extend({
   props: {
     alignment: {
       type: String as PropType<Alignment>,
-      default: "left"
+      default: 'left'
+    },
+    textAlignment: {
+      type: String as PropType<TextAlignment>,
+      default: 'center'
     },
     padding: {
       type: String as PropType<PaddingOption>,
-      default: "medium"
+      default: 'medium'
     },
     badge: {
       type: String
@@ -110,7 +119,7 @@ export default Vue.extend({
     },
     illustrationWidth: {
       type: String as PropType<IllustrationWidth>,
-      default: "normal"
+      default: 'normal'
     },
     illustrationStyles: {
       type: Object
@@ -134,11 +143,14 @@ export default Vue.extend({
     };
   },
   computed: {
+    textAlignmentClass(): string {
+      return `text-${this.textAlignment}`;
+    },
     paddingClass(): string {
       return `pad-${this.padding}`;
     },
     isDarkMode(): boolean {
-      return (this.$store.state as RootState).theme === "dark";
+      return (this.$store.state as RootState).theme === 'dark';
     }
   }
 });

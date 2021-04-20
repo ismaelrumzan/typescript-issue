@@ -20,6 +20,7 @@ export default async (context: any, locale: string) => {
       login: "Login",
       manage: "Verwalten",
       overview: "Übersicht",
+      popular: "Beliebt",
       reject: "Ablehnen",
       search: "Suchen",
       sign_up: "Anmelden",

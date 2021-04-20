@@ -4,7 +4,7 @@ $horizontal-padding: 3rem;
 .container {
   display: grid;
   align-items: center;
-  gap: 0 3rem;
+  gap: 0 5rem;
 
   @media (max-width: $bp-1) {
     grid-template-columns: 1fr !important;
@@ -25,7 +25,12 @@ $horizontal-padding: 3rem;
       text-align: center;
     }
 
+    & > * {
+      width: 100%;
+    }
+
     .title {
+      line-height: 1.2;
       @media (max-width: $bp-1) {
         max-width: 55rem;
       }
@@ -34,6 +39,7 @@ $horizontal-padding: 3rem;
     .description {
       font-size: 1.25rem;
       line-height: 1.7;
+      margin-bottom: 1.75rem;
 
       @media (max-width: $bp-1) {
         max-width: 40rem;
@@ -48,7 +54,6 @@ $horizontal-padding: 3rem;
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      margin-top: 2rem;
 
       @media (max-width: $bp-1) {
         justify-content: center;
@@ -110,15 +115,19 @@ $horizontal-padding: 3rem;
     height: 100%;
 
     @media (max-width: $bp-1) {
-      margin-top: 2.5rem;
+      margin-top: 0.5rem;
     }
 
     img {
       z-index: 1;
-      width: 90%;
+      width: 100%;
       object-fit: contain;
       object-position: center;
       box-shadow: var(--shadow-medium);
+
+      @media (max-width: $bp-1) {
+        width: 93%;
+      }
     }
 
     .background {
@@ -269,6 +278,33 @@ $horizontal-padding: 3rem;
   }
 }
 
+/* TextAlignment: LEFT */
+.text-left {
+  .content {
+    @media (max-width: $bp-1) {
+      text-align: left;
+    }
+  }
+}
+
+/* TextAlignment: RIGHT */
+.text-right {
+  .content {
+    @media (max-width: $bp-1) {
+      text-align: right;
+    }
+  }
+}
+
+/* TextAlignment: CENTER */
+.text-center {
+  .content {
+    @media (max-width: $bp-1) {
+      text-align: center;
+    }
+  }
+}
+
 /* Padding Options */
 .pad-small {
   padding: 1rem 0;
@@ -290,7 +326,7 @@ $horizontal-padding: 3rem;
   .pad-none {
     padding: $horizontal-padding 0;
   }
-  [data-section-no-padding="true"] {
+  [data-section-no-padding='true'] {
     .pad-large,
     .pad-medium,
     .pad-large,

@@ -10,10 +10,10 @@
         <li v-for="(button, i) in cta" :key="i" :class="styles.button">
           <Button
             v-if="button.onClick"
-            v-bind="{ ...button }"
+            v-bind="button"
             @click="button.onClick"
           />
-          <Button v-else v-bind="{ ...button }" />
+          <Button v-else v-bind="button" />
         </li>
       </ul>
     </div>

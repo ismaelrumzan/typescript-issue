@@ -1,0 +1,122 @@
+$bp: 899px;
+
+.container {
+  padding: 3rem var(--horizontal-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.center {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .navigation {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.carousel {
+  --swiper-theme-color: var(--main-color);
+  width: 100%;
+  padding: 2rem 0 !important;
+  overflow: visible;
+
+  & > div {
+    will-change: transform;
+  }
+}
+
+.slide {
+  /* default */
+  flex-shrink: 0;
+  padding: 3rem 2.5rem 1.75rem;
+  position: relative;
+  /* default end */
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-small);
+  border: 1px solid var(--light-5);
+  will-change: transform;
+  transform-origin: center;
+  transform: translate3d(0, 0, 0) scale(0.9);
+  transition: transform 0.5s ease;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @media (min-width: $bp + 1px) {
+    @media (hover: hover) {
+      &:hover {
+        transform: translate3d(0, 0, 0) scale(0.92);
+      }
+    }
+  }
+
+  @media (max-width: $bp) {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.popular {
+  transform: translate3d(0, 0, 0) scale(1);
+  z-index: 1;
+  border-color: var(--main-color-light);
+  border-width: 2px;
+
+  @media (min-width: $bp + 1px) {
+    @media (hover: hover) {
+      &:hover {
+        transform: translate3d(0, 0, 0) scale(1.02);
+      }
+    }
+  }
+}
+
+.pagination {
+  // bottom: 0;
+  .bullet {
+    opacity: 0.1;
+  }
+  .bulletActive {
+    opacity: 1;
+  }
+}
+
+[data-section-theme='main'],
+[data-section-theme='dark'] {
+  .slide {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: var(--light-5);
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  .slide {
+    box-shadow: none;
+    // border: 2px solid var(--light-4);
+    background-color: var(--light-2);
+  }
+  [data-section-theme] {
+    .slide {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: var(--dark-6);
+      &.active {
+        color: var(--dark);
+      }
+    }
+  }
+}

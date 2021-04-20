@@ -1,0 +1,90 @@
+.badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.6rem 1.75rem;
+  font-size: 0.925rem;
+  line-height: 1;
+  background-color: var(--main-color-light);
+  color: #fff;
+  font-weight: 500;
+  border-radius: var(--border-radius-small);
+}
+
+.category {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  text-align: center;
+  opacity: 0.5;
+}
+
+.price {
+  position: relative;
+  text-align: center;
+  margin: 2rem auto 3rem;
+
+  .value {
+    font-size: 2.75rem;
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--main-color);
+    line-height: 1;
+  }
+
+  .currency {
+    opacity: 0.75;
+    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--main-color);
+    position: absolute;
+    left: -1.25rem;
+    top: -0.5rem;
+  }
+
+  .period {
+    white-space: nowrap;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    position: absolute;
+    left: calc(100% + 0.375rem);
+    bottom: 0.1rem;
+  }
+}
+
+.features {
+  list-style: none;
+
+  li {
+    display: flex;
+    line-height: 1.35;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.check {
+  flex-shrink: 0;
+  height: 1.05em;
+  margin-right: 0.5rem;
+  margin-top: 1px;
+  fill: var(--main-color);
+}
+
+.button {
+  margin-top: auto;
+
+  a,
+  button {
+    margin-top: 3rem;
+    width: 100%;
+  }
+}

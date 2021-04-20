@@ -12,15 +12,15 @@
       {
         title: 'blocks.apply.as_developer',
         type: 'tertiary',
-        href: '/apply'
+        href: '/careers'
       }
     ]"
   />
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import TextWithImage from "@/blocks/TextWithImage";
+<script lang="ts">
+import Vue from 'vue';
+import TextWithImage from '@/blocks/TextWithImage';
 
 export default Vue.extend({
   components: {

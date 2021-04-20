@@ -1,0 +1,53 @@
+.testimonial {
+  text-align: center;
+  max-width: 43rem;
+  padding: 2rem 0;
+  margin: 0 auto;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.quote {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.025em;
+
+  svg {
+    display: inline-block;
+    height: 0.55em;
+    opacity: 0.25;
+    margin: auto 0.3rem 0.1rem;
+    fill: var(--dark);
+
+    &:last-child {
+      position: absolute;
+      margin-top: 0.35em;
+      margin-left: 0.575rem;
+      transform-origin: center;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+[data-theme='dark'] {
+  .quote {
+    svg {
+      opacity: 0.4;
+    }
+  }
+}
+
+.author {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+.authorDetails {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}

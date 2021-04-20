@@ -32,7 +32,7 @@
         "
       />
     </div>
-    <Feature v-for="(item, i) in filteredList" :key="i" v-bind="{ ...item }" />
+    <Feature v-for="(item, i) in filteredList" :key="i" v-bind="item" />
   </div>
 </template>
 

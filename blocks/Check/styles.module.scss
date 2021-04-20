@@ -1,0 +1,14 @@
+.check {
+  display: flex;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  padding: 0.5rem 0;
+}
+
+.icon {
+  flex-shrink: 0;
+  height: 1.15em;
+  margin-right: 0.825em;
+  margin-top: 4px;
+  fill: var(--main-color);
+}

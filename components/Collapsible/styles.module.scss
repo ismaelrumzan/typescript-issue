@@ -14,17 +14,14 @@ $bp: 600px;
   justify-content: space-between;
   cursor: pointer;
   padding: 1.25rem 0.5rem;
-  opacity: 1;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 
-  @media (hover: hover) {
-    &:hover {
-      opacity: 0.75;
-    }
+  &:hover {
+    color: var(--main-color);
   }
 
   @media (max-width: $bp) {
-    padding: 1rem 0.35rem;
+    padding: 1.35rem 0.35rem;
   }
 
   .title {
@@ -37,7 +34,7 @@ $bp: 600px;
     margin-right: 2rem;
 
     @media (max-width: $bp) {
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
   }
 
@@ -51,8 +48,8 @@ $bp: 600px;
     height: 1rem;
 
     @media (max-width: $bp) {
-      width: 0.7rem;
-      height: 0.7rem;
+      width: 0.85rem;
+      height: 0.85rem;
     }
 
     span {
@@ -79,10 +76,11 @@ $bp: 600px;
   .container {
     padding: 0rem 1.5rem 2rem;
     font-size: 1.15rem;
-    opacity: 0.75;
+    opacity: 0.85;
 
     @media (max-width: $bp) {
       font-size: 1rem;
+      padding: 0rem 0.5rem 2rem;
     }
   }
 }

@@ -159,15 +159,27 @@ html:not([data-theme="dark"]) .dark {
 [data-theme="dark"] .dark {
   background-color: var(--light-3);
   &.isSkewed {
+    background-color: transparent;
     .skew {
       background-color: var(--light-3);
     }
   }
 }
 
-.grey {
+html:not([data-theme="dark"]) .grey {
   background-color: var(--light-2);
   &.isSkewed {
+    background-color: transparent;
+    .skew {
+      background-color: var(--light-2);
+    }
+  }
+}
+
+[data-theme="dark"] .grey {
+  background-color: var(--light-2);
+  &.isSkewed {
+    background-color: transparent;
     .skew {
       background-color: var(--light-2);
     }

@@ -57,7 +57,7 @@
         <Slide
           v-for="(slide, i) in $t('pages.index.solutions.slides')"
           :key="i"
-          v-bind="{ ...slide }"
+          v-bind="slide"
         />
       </FeatureSlider>
     </Section>
