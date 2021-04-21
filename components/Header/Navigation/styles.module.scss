@@ -127,7 +127,11 @@ $submenu-rotation-x: -30deg;
   left: 50%;
   transform-origin: center;
   will-change: transform;
-  transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0)
+  transform: translate3d(
+      calc(-50% + #{$submenu-translation-x}),
+      #{$submenu-translation-y},
+      0
+    )
     rotateX(#{$submenu-rotation-x});
 
   transition: opacity 0.25s, transform 0.25s ease, height 0.35s ease;
@@ -150,7 +154,12 @@ $submenu-rotation-x: -30deg;
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.5s, transform 0.5s ease, height 0.35s ease;
-    transform: translate3d(calc(-50% + #{$submenu-translation-x}), #{$submenu-translation-y}, 0) rotateX(0deg);
+    transform: translate3d(
+        calc(-50% + #{$submenu-translation-x}),
+        #{$submenu-translation-y},
+        0
+      )
+      rotateX(0deg);
 
     @media (max-width: $bp) {
       left: inherit;
@@ -166,7 +175,11 @@ $submenu-rotation-x: -30deg;
     .submenuContainer {
       left: inherit;
       right: 0;
-      transform: translate3d(#{$submenu-translation-x-last}, #{$submenu-translation-y}, 0)
+      transform: translate3d(
+          #{$submenu-translation-x-last},
+          #{$submenu-translation-y},
+          0
+        )
         rotateX(#{$submenu-rotation-x});
 
       @media (max-width: $bp) {
@@ -178,13 +191,22 @@ $submenu-rotation-x: -30deg;
       &::before {
         left: inherit;
         right: 0;
-        transform: translate3d(calc(-#{$submenu-translation-x-last} - 3.5rem), 0, 0);
+        transform: translate3d(
+          calc(-#{$submenu-translation-x-last} - 3.5rem),
+          0,
+          0
+        );
       }
     }
 
     &.isSubmenu.hovered {
       .submenuContainer {
-        transform: translate3d(#{$submenu-translation-x-last}, #{$submenu-translation-y}, 0) rotateX(0);
+        transform: translate3d(
+            #{$submenu-translation-x-last},
+            #{$submenu-translation-y},
+            0
+          )
+          rotateX(0);
 
         @media (max-width: $bp) {
           transform: translate3d(0, 0, 0) rotateX(0);
@@ -213,11 +235,15 @@ $submenu-rotation-x: -30deg;
 
   &::before {
     z-index: 1;
-    content: "";
+    content: '';
     position: absolute;
     bottom: 100%;
     left: 50%;
-    transform: translate3d(calc(-50% - #{$submenu-translation-x} - 0.5rem), 0, 0);
+    transform: translate3d(
+      calc(-50% - #{$submenu-translation-x} - 0.5rem),
+      0,
+      0
+    );
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -250,7 +276,7 @@ $submenu-rotation-x: -30deg;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    align-items: center;
+    // align-items: center;
     & > li {
       min-width: 15rem;
     }
@@ -264,7 +290,7 @@ $submenu-rotation-x: -30deg;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
-    align-items: center;
+    // align-items: center;
     & > li {
       min-width: 15rem;
     }
@@ -299,7 +325,7 @@ $submenu-rotation-x: -30deg;
     }
 
     &::after {
-      content: "\00BB";
+      content: '\00BB';
       display: inline-block;
       margin-left: 0.35rem;
       margin-bottom: 1px;
@@ -426,7 +452,7 @@ $submenu-rotation-x: -30deg;
 }
 
 /* Submenu Color Corrections */
-[data-theme="dark"] .submenuWrapper {
+[data-theme='dark'] .submenuWrapper {
   --light: var(--light-2);
   @media (max-width: $bp) {
     --light: var(--light);

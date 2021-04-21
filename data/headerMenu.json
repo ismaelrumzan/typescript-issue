@@ -88,13 +88,6 @@
         "description": "pages.sales.description",
         "icon": "PartnerSales",
         "disabled": true
-      },
-      {
-        "title": "pages.service.title",
-        "link": "/partners/service",
-        "description": "pages.service.description",
-        "icon": "PartnerService",
-        "disabled": true
       }
     ],
     "sidemenu": [

@@ -8,12 +8,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CookieBanner from "@/components/CookieBanner";
-import { MutationType, StorageKeys } from "@/store";
-import { SEO } from "@/services";
+import Vue from 'vue';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
+import { MutationType, StorageKeys } from '@/store';
+import { SEO } from '@/services';
 
 export default Vue.extend({
   components: {
@@ -30,9 +30,9 @@ export default Vue.extend({
   computed: {
     title(): string {
       const curPage = this.$route.path
-        .split("/")
+        .split('/')
         .pop()
-        ?.replace("-", "_");
+        ?.replace('-', '_');
 
       /* If current page has SEO title set in translations */
       if (
@@ -41,8 +41,8 @@ export default Vue.extend({
       ) {
         return (
           this.$i18n.t(`pages.${curPage}.seo.title`).toString() +
-          this.$i18n.t("seo.seperator").toString() +
-          this.$i18n.t("seo.site_title").toString()
+          this.$i18n.t('seo.seperator').toString() +
+          this.$i18n.t('seo.site_title').toString()
         );
       }
 
@@ -52,28 +52,28 @@ export default Vue.extend({
       ) {
         return (
           this.$i18n.t(`pages.${curPage}.title`).toString() +
-          this.$i18n.t("seo.seperator").toString() +
-          this.$i18n.t("seo.site_title").toString()
+          this.$i18n.t('seo.seperator').toString() +
+          this.$i18n.t('seo.site_title').toString()
         );
       }
 
       if (curPage) {
         const capitilizedRoute =
-          curPage.charAt(0).toUpperCase() + curPage.replace("_", " ").slice(1);
+          curPage.charAt(0).toUpperCase() + curPage.replace('_', ' ').slice(1);
         return (
           capitilizedRoute +
-          this.$i18n.t("seo.seperator").toString() +
-          this.$i18n.t("seo.site_title").toString()
+          this.$i18n.t('seo.seperator').toString() +
+          this.$i18n.t('seo.site_title').toString()
         );
       }
 
-      return this.$i18n.t("seo.site_title").toString();
+      return this.$i18n.t('seo.site_title').toString();
     },
     description() {
       const curPage = this.$route.path
-        .split("/")
+        .split('/')
         .pop()
-        ?.replace("-", "_");
+        ?.replace('-', '_');
 
       /* If current page has SEO description set in translations */
       if (
@@ -91,7 +91,7 @@ export default Vue.extend({
         return this.$i18n.t(`pages.${curPage}.description`).toString();
       }
 
-      return "";
+      return '';
     }
   },
   methods: {
@@ -106,10 +106,10 @@ export default Vue.extend({
       } else {
         const userPrefersDark =
           window.matchMedia &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches;
+          window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         if (userPrefersDark) {
-          this.$store.commit(MutationType.SET_THEME, "dark");
+          this.$store.commit(MutationType.SET_THEME, 'dark');
         }
       }
     }
@@ -117,6 +117,12 @@ export default Vue.extend({
   mounted() {
     this.setTheme();
   }
+  // watch: {
+  //   $route() {
+  //     (this as any).$vgo('update');
+  //     (this as any).$vgo('process');
+  //   }
+  // }
 });
 </script>
 
@@ -135,18 +141,18 @@ export default Vue.extend({
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 
-  :not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
     background: var(--light);
   }
 
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     padding: 1.25rem 1.35rem;
     margin: 0;
   }
 
-  code[class*="language-"],
-  pre[class*="language-"] {
+  code[class*='language-'],
+  pre[class*='language-'] {
     font-family: var(--font-code);
     font-size: 0.95rem;
     color: var(--dark);
@@ -170,10 +176,10 @@ export default Vue.extend({
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   .nuxt-content-highlight {
-    :not(pre) > code[class*="language-"],
-    pre[class*="language-"] {
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
       background: #080808;
     }
 

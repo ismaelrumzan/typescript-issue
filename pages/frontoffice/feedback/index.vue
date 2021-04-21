@@ -85,52 +85,6 @@
       </Grid>
     </Section>
 
-    <Section color="grey" padding="small" fullWidth>
-      <TextWithDescription
-        badge="Zitate"
-        title="Das sagen unsere Kunden"
-        alignment="center"
-        padding="topOnly"
-      />
-      <Slider autoplay="5000">
-        <Slide>
-          <Testimonial
-            quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-            author="Maurice Wegner"
-            authorDetails="Employee at Digital Hotel"
-          />
-        </Slide>
-        <Slide>
-          <Testimonial
-            quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-            author="Maurice Wegner"
-            authorDetails="Employee at Digital Hotel"
-          />
-        </Slide>
-        <Slide>
-          <Testimonial
-            quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-            author="Maurice Wegner"
-            authorDetails="Employee at Digital Hotel"
-          />
-        </Slide>
-        <Slide>
-          <Testimonial
-            quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-            author="Maurice Wegner"
-            authorDetails="Employee at Digital Hotel"
-          />
-        </Slide>
-        <Slide>
-          <Testimonial
-            quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-            author="Maurice Wegner"
-            authorDetails="Employee at Digital Hotel"
-          />
-        </Slide>
-      </Slider>
-    </Section>
-
     <Section color="main">
       <Testimonial
         quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
@@ -139,24 +93,12 @@
       />
     </Section>
 
-    <Section>
-      <TextWithDescription title="FAQ" alignment="center" padding="small" />
-      <Collapsible title="Was kostet diese App?">
-        In der Standard-Version ist diese App <strong>kostenlos</strong>.
-      </Collapsible>
-      <Collapsible title="Was benötige ich, um damit starten zu können?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
-      </Collapsible>
-    </Section>
-
-    <Section fullWidth>
+    <Section fullWidth padding="small">
       <TextWithDescription
         alignment="center"
         title="Preisgestaltung"
         description="Starte jetzt mit Deinem Paket"
-        padding="none"
+        padding="topOnly"
       />
       <PricingTable>
         <Table
@@ -224,7 +166,19 @@
       </PricingTable>
     </Section>
 
-    <Section color="light" padding="none">
+    <Section padding="bottomOnly" style="padding-bottom: 2rem">
+      <TextWithDescription title="FAQ" alignment="center" padding="small" />
+      <Collapsible title="Was kostet diese App?">
+        In der Standard-Version ist diese App <strong>kostenlos</strong>.
+      </Collapsible>
+      <Collapsible title="Was benötige ich, um damit starten zu können?">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua.
+      </Collapsible>
+    </Section>
+
+    <Section color="grey" padding="small">
       <HelpBanner />
     </Section>
   </div>

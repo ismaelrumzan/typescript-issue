@@ -180,6 +180,7 @@ const config: NuxtConfig = {
   plugins: [
     '~/plugins/isDev.client',
     '~/plugins/swiper.client',
+    '~/plugins/activeCampaign.client'
   ],
   /*
    ** Build configuration
