@@ -205,6 +205,7 @@ const config: NuxtConfig = {
    * Images
    */
   image: {
+    provider: 'static',
     screens: {
       xs: 320,
       sm: 640,
@@ -217,7 +218,7 @@ const config: NuxtConfig = {
   },
 
   buildModules: [
-    '@nuxt/image',
+    // '@nuxt/image',
     '@nuxt/typescript-build',
     '@nuxtjs/pwa',
   ],
