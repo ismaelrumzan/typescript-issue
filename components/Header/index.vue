@@ -25,9 +25,7 @@
           <Button
             title="Login"
             type="secondary"
-            :externalHref="
-              `${isDev ? $config.devAppURL : $config.appURL}/login`
-            "
+            :externalHref="`${$config.appURL}/login`"
             :class="[styles.button, styles.loginButton]"
           />
           <Button
@@ -43,13 +41,13 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import { MutationType, RootState } from "@/store";
-import Navigation from "@/components/Header/Navigation";
-import Button from "@/components/Button";
-import Toggle from "@/components/Header/Toggle";
-import _ from "lodash";
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import { MutationType, RootState } from '@/store';
+import Navigation from '@/components/Header/Navigation';
+import Button from '@/components/Button';
+import Toggle from '@/components/Header/Toggle';
+import _ from 'lodash';
 
 export default Vue.extend({
   components: {
@@ -90,7 +88,7 @@ export default Vue.extend({
       if (this.$route.name === `index___${this.$i18n.locale}`) {
         window.scrollTo({
           top: 0,
-          behavior: "smooth"
+          behavior: 'smooth'
         });
       }
     },
@@ -99,19 +97,17 @@ export default Vue.extend({
     }
   },
   mounted() {
-    this.isDev = (this as any).$isDev;
-
     /* Check scroll position at mount and add throttled listener */
     let scrollTop =
       window.scrollY ||
       document.body.scrollTop ||
       document.documentElement.scrollTop;
     this.scrolled = scrollTop > 20;
-    window.addEventListener("scroll", _.throttle(this.handleScroll, 120));
+    window.addEventListener('scroll', _.throttle(this.handleScroll, 120));
   },
   destroyed() {
     /* Remove listener */
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 });
 </script>

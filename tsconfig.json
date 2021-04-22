@@ -3,11 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "sourceMap": true,
@@ -17,26 +13,15 @@
     "importsNotUsedAsValues": "preserve",
     "resolveJsonModule": true,
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
     "plugins": [
       {
         "name": "typescript-plugin-css-modules"
       }
     ],
-    "types": [
-      "@types/node",
-      "@nuxt/types",
-      "@nuxtjs/axios",
-      "nuxt-i18n"
-    ]
+    "types": ["@types/node", "@nuxt/types", "@nuxtjs/axios", "nuxt-i18n"]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

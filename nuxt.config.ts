@@ -5,13 +5,11 @@ const config: NuxtConfig = {
   /**
    * Runtime Config
    * @description Injects env variables, falls back to production values.
-   * @implements isDev
    */
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'https://www.digital-hotel.net',
-    devBaseURL: process.env.DEV_BASE_URL || 'https://dev.digital-hotel.net',
-    appURL: process.env.APP_URL || 'https://app.digital-hotel.net',
-    devAppURL: process.env.DEV_APP_URL || 'https://dev.app.digital-hotel.net',
+    baseURL: process.env.BASE_URL,
+    appURL: process.env.APP_URL,
+    branch: process.env.VERCEL_GIT_COMMIT_REF,
   },
   /*
    ** Headers of the page
@@ -88,12 +86,12 @@ const config: NuxtConfig = {
     '@/assets/styles/main.scss',
   ],
 
-  serverMiddleware: [
-    {
-      path: '/newsletter',
-      handler: '~/server-middleware/newsletter.ts'
-    }
-  ],
+  // serverMiddleware: [
+  //   {
+  //     path: '/newsletter',
+  //     handler: '~/server-middleware/newsletter.ts'
+  //   }
+  // ],
   /*
    ** Nuxt.js modules
    */
@@ -221,7 +219,7 @@ const config: NuxtConfig = {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/pwa',
-    '@nuxt/image'
+    '@nuxtjs/image'
   ],
 
   // Netlify reads a 404.html, Nuxt will load as an SPA

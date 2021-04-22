@@ -11,9 +11,6 @@ export const StorageKeys = {
 }
 
 export const state = () => ({
-  // developmentMode: false,
-  // baseURL: isDev ? (config.publicRuntimeConfig as any).devBaseURL : (config.publicRuntimeConfig as any).baseURL,
-  // appURL: isDev ? (config.publicRuntimeConfig as any).devAppURL : (config.publicRuntimeConfig as any).appURL,
   cookieAccepted: false,
   menuOpen: false,
   docsMenuOpen: false,

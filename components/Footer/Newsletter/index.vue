@@ -44,7 +44,6 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      isDev: false,
       email: '',
       loading: false,
       success: false,
@@ -57,12 +56,6 @@ export default Vue.extend({
       this.errors = [];
       this.loading = true;
 
-      const BASE_URL = (this as any).$isLocalhost
-        ? ''
-        : (this as any).$isDev
-        ? this.$config.devBaseURL
-        : this.$config.baseURL;
-
       if (this.email) {
         const config: AxiosRequestConfig = {
           params: {
@@ -71,7 +64,10 @@ export default Vue.extend({
         };
 
         try {
-          await this.$axios.$get(`${BASE_URL}/newsletter/signup`, config);
+          await this.$axios.$get(
+            `${this.$config.baseURL}/newsletter/signup`,
+            config
+          );
           this.success = true;
         } catch (error) {
           this.errors = error.response.data.errors;
