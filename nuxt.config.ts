@@ -217,9 +217,9 @@ const config: NuxtConfig = {
   },
 
   buildModules: [
+    '@nuxt/image',
     '@nuxt/typescript-build',
     '@nuxtjs/pwa',
-    '@nuxtjs/image'
   ],
 
   // Netlify reads a 404.html, Nuxt will load as an SPA
