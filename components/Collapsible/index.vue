@@ -10,22 +10,22 @@
       </span>
     </div>
     <div :class="styles.content">
-      <div :class="styles.container">
+      <div v-html="html" :class="styles.container">
         <slot />
       </div>
     </div>
   </div>
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
+<script lang="ts">
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
 
 export default Vue.extend({
   props: {
     title: {
       type: String,
-      default: "Title"
+      default: 'Title'
     },
     expanded: {
       type: Boolean,
@@ -35,7 +35,8 @@ export default Vue.extend({
   data() {
     return {
       styles,
-      open: this.expanded
+      open: this.expanded,
+      html: {} as string | undefined
     };
   },
   methods: {
@@ -45,9 +46,12 @@ export default Vue.extend({
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
       } else {
-        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.maxHeight = content.scrollHeight + 'px';
       }
     }
+  },
+  created() {
+    this.html = this.$slots.default?.[0].text;
   }
 });
 </script>

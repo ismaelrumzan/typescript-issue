@@ -32,3 +32,10 @@ $bp: 900px;
     grid-template-columns: 1fr;
   }
 }
+
+.messages {
+  grid-column-start: 2;
+  @media (max-width: $bp) {
+    grid-column-start: 1;
+  }
+}

@@ -1,24 +1,24 @@
 <template>
   <div id="content">
     <Hero
-      badge="Feedback"
-      title="Alle Meinungen auf einem Blick"
-      description="Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit."
+      badge="pages.feedback.hero.badge"
+      title="pages.feedback.hero.title"
+      description="pages.feedback.hero.description"
       alignment="center"
     />
 
     <Section color="grey">
       <TextWithImage
         textAlignment="left"
-        title="Diese App bringt Licht ins Dunkel"
-        image="test.png"
+        title="pages.feedback.benefit.title"
+        image="pages.feedback.benefit.image"
       >
-        <Check>Erfahre, was Deine <strong>Kunden</strong> von Dir denken</Check>
-        <Check>
-          Erfahre, was Deine <strong>Mitarbeiter</strong> von Dir denken
+        <Check
+          v-for="(check, i) in $t('pages.feedback.benefit.checks')"
+          :key="i"
+        >
+          {{ check }}
         </Check>
-        <Check>Sammle Dein Feedback strukturiert ein</Check>
-        <Check>Alles auf einem Blick</Check>
       </TextWithImage>
     </Section>
 
@@ -54,127 +54,59 @@
       <TextWithImage
         alignment="right"
         textAlignment="left"
-        title="Einfach, unauffällig und sehr flexibel"
-        image="test.png"
+        title="pages.feedback.solution.title"
+        image="pages.feedback.solution.image"
         illustrationWidth="wide"
       >
-        <Check>
-          Wir sammeln über verschiedenste Wege das Feedback Deiner Kunden und
-          Mitarbeiter ein
-        </Check>
-        <Check>
-          Der Prozess geschieht völlig unsichtbar für den Benutzer
+        <Check
+          v-for="(check, i) in $t('pages.feedback.solution.checks')"
+          :key="i"
+        >
+          {{ check }}
         </Check>
       </TextWithImage>
       <Grid>
         <Feature
-          icon="Check"
-          title="Schnell"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-        />
-        <Feature
-          icon="Check"
-          title="Unsichtbar"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-        />
-        <Feature
-          icon="Check"
-          title="Flexibel"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+          v-for="(feature, i) in $t('pages.feedback.features')"
+          :key="i"
+          v-bind="feature"
         />
       </Grid>
     </Section>
 
     <Section color="main">
       <Testimonial
-        quote="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-        author="Maurice Wegner"
-        authorDetails="Employee at Digital Hotel"
+        v-for="(testimonial, i) in $t('pages.feedback.testimonials')"
+        :key="i"
+        :quote="testimonial.quote"
+        :author="testimonial.author"
       />
     </Section>
 
     <Section fullWidth padding="small">
       <TextWithDescription
         alignment="center"
-        title="Preisgestaltung"
-        description="Starte jetzt mit Deinem Paket"
+        title="pages.feedback.pricing.title"
+        description="pages.feedback.pricing.description"
         padding="topOnly"
       />
       <PricingTable>
         <Table
-          category="Standard"
-          description="For development purposes"
-          :price="{
-            monthly: 0,
-            annually: 0
-          }"
-          :features="[
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in'
-          ]"
-          :cta="{
-            title: 'Start for free',
-            href: '/apply',
-            type: 'secondary'
-          }"
-        />
-        <Table
-          popular
-          category="Premium"
-          description="For small and medium hotels"
-          :price="{
-            monthly: 32,
-            annually: 299
-          }"
-          :features="[
-            'Alle Features aus Standard',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in'
-          ]"
-          :cta="{
-            title: 'Get Premium',
-            href: '/apply'
-          }"
-        />
-        <Table
-          category="Enterprise"
-          description="For large hotels"
-          :price="{
-            monthly: 128,
-            annually: 999
-          }"
-          :features="[
-            'Alle Features aus Premium',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in',
-            'Lorem ipsum loret in'
-          ]"
-          :cta="{
-            title: 'Contact us',
-            href: '/meeting',
-            type: 'secondary'
-          }"
+          v-for="(table, i) in $t('pages.feedback.pricing.tables')"
+          :key="i"
+          v-bind="table"
         />
       </PricingTable>
     </Section>
 
     <Section padding="bottomOnly" style="padding-bottom: 2rem">
       <TextWithDescription title="FAQ" alignment="center" padding="small" />
-      <Collapsible title="Was kostet diese App?">
-        In der Standard-Version ist diese App <strong>kostenlos</strong>.
-      </Collapsible>
-      <Collapsible title="Was benötige ich, um damit starten zu können?">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
+      <Collapsible
+        v-for="(question, i) in $t('pages.feedback.faq')"
+        :key="i"
+        :title="question.question"
+      >
+        {{ question.answer }}
       </Collapsible>
     </Section>
 

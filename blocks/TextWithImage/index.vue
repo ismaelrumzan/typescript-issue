@@ -49,7 +49,7 @@
     <div v-if="image" :class="styles.image">
       <nuxt-img
         :key="image"
-        :src="`/images/${image}`"
+        :src="`/images/${$t(image)}`"
         loading="lazy"
         sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
       />

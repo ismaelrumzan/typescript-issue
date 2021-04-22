@@ -1,7 +1,7 @@
 <template>
   <div :class="styles.check">
     <Icon name="Check" :class="styles.icon" />
-    <span>
+    <span v-html="html">
       <slot />
     </span>
   </div>
@@ -18,8 +18,12 @@ export default Vue.extend({
   },
   data() {
     return {
-      styles
+      styles,
+      html: {} as string | undefined
     };
+  },
+  created() {
+    this.html = this.$slots.default?.[0].text;
   }
 });
 </script>

@@ -79,15 +79,13 @@
         "title": "pages.technology.title",
         "link": "/partners/technology",
         "description": "pages.technology.description",
-        "icon": "PartnerTechnology",
-        "disabled": true
+        "icon": "PartnerTechnology"
       },
       {
         "title": "pages.sales.title",
         "link": "/partners/sales",
         "description": "pages.sales.description",
-        "icon": "PartnerSales",
-        "disabled": true
+        "icon": "PartnerSales"
       }
     ],
     "sidemenu": [

@@ -87,7 +87,13 @@ const config: NuxtConfig = {
   css: [
     '@/assets/styles/main.scss',
   ],
-  // serverMiddleware: ['~/api/index.js'],
+
+  serverMiddleware: [
+    {
+      path: '/newsletter',
+      handler: '~/server-middleware/newsletter.ts'
+    }
+  ],
   /*
    ** Nuxt.js modules
    */
