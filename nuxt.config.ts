@@ -127,6 +127,10 @@ const config: NuxtConfig = {
     'nuxt-i18n',
   ],
 
+  axios: {
+    baseURL: 'http://localhost:3000' // fallback
+  },
+
   i18n: {
     seo: true,
     locales: [
