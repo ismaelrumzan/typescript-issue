@@ -117,6 +117,7 @@ export default async (context: any, locale: string) => {
     },
 
     form: {
+      application_success: 'Deine Bewerbung wurde erfolgreich gesendet',
       message: 'Nachricht',
       message_to_us: 'Nachricht an uns',
       send: 'Senden',

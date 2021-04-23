@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "~7.13.12",
-    "@nuxt/image": "^0.4.6",
+    "@nuxt/image": "^0.4.7",
     "@nuxt/types": "^2.15.4",
     "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/eslint-config-typescript": "6.0.0",
@@ -51,7 +51,6 @@
     "@nuxtjs/prismic": "^1.2.6",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
-    "@nuxtjs/sentry": "^5.0.3",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@types/animejs": "^3.1.3",

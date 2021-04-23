@@ -1,0 +1,123 @@
+@use "@/assets/styles/colors" as c;
+
+.form {
+  --main-color: #{c.$main-color};
+  --dark: #000;
+  color: var(--dark);
+  background-color: var(--light);
+  margin: 0.75rem auto;
+  width: 100%;
+  max-width: 45rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--border-radius-large);
+
+  @media (max-width: 500px) {
+    padding: 2.5rem 1.75rem;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  & > div {
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  label {
+    span {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    input,
+    textarea {
+      background-color: var(--light);
+      color: var(--dark);
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.75rem;
+      appearance: none;
+      box-shadow: none;
+      border: 1px solid var(--light-6);
+      border-radius: var(--border-radius-small);
+      width: 100%;
+      outline: none;
+
+      &:focus,
+      &:focus-within {
+        border: 1px solid var(--main-color);
+        box-shadow: inset 0 0 0 1px var(--main-color);
+      }
+
+      /* Change the white to any color */
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        box-shadow: 0 0 0 99px var(--main-color-light-6) inset !important;
+        color: var(--dark) !important;
+        -webkit-text-fill-color: var(--dark) !important;
+      }
+    }
+  }
+}
+
+.withPrefix {
+  display: flex;
+  align-items: stretch;
+
+  .prefix {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    padding: 0 0.9rem;
+    font-size: 0.85rem;
+    color: var(--dark-5);
+    background-color: var(--light-2);
+    border: 1px solid var(--light-6);
+    border-right: none;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+    margin-bottom: 0;
+  }
+
+  input {
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0 !important;
+  }
+}
+
+.honeypot {
+  display: none !important;
+}
+
+[data-theme="dark"] {
+  .form {
+    --dark: #fff;
+    background-color: var(--light-2);
+    box-shadow: none;
+    border: 1px solid var(--light-5);
+    label {
+      input,
+      textarea {
+        background-color: var(--light-2);
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          box-shadow: 0 0 0 99px var(--light-4) inset !important;
+        }
+      }
+    }
+  }
+  .withPrefix {
+    .prefix {
+      background-color: var(--light-3);
+    }
+  }
+}

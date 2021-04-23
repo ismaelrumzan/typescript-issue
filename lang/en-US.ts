@@ -115,6 +115,7 @@ export default async (context: any, locale: string) => {
     },
 
     form: {
+      application_success: 'Application has been submitted successfully',
       message: 'Message',
       message_to_us: 'Message to us',
       send: 'Send',

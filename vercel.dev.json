@@ -6,6 +6,10 @@
       "dest": "api/newsletter/$1.js"
     },
     {
+      "src": "/api/partners/(.*)",
+      "dest": "api/partners/$1.js"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "api/$1.js"
     },

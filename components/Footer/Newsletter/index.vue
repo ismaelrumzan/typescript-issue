@@ -9,7 +9,7 @@
         <input
           v-model="email"
           type="email"
-          id="email"
+          id="newsletter-email"
           name="email"
           autocomplete="email"
           :placeholder="$t('general.email_address')"
@@ -20,7 +20,7 @@
         <input
           v-show="email.length > 0"
           v-model="firstName"
-          id="given-name"
+          id="newsletter-given-name"
           name="given-name"
           autocomplete="given-name"
           :placeholder="$t('contact.first_name')"

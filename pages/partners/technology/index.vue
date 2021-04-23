@@ -107,7 +107,7 @@
         title="Bewirb dich jetzt mit Deinem Projekt"
         description="Unsere Integration und der Support sind zunächst auf wenige Plätze begrenzt. Du kannst mit Deinem Projekt bei uns bewerben, schreib uns einfach etwas über Dich und Dein Vorhaben!"
         illustration="team"
-        :cta="[{ title: 'Jetzt bewerben', href: '/apply' }]"
+        :cta="[{ title: 'phrases.apply_now', href: '#apply' }]"
       />
     </Section>
 
@@ -122,7 +122,17 @@
       </Collapsible>
     </Section>
 
-    <Section color="grey" padding="small">
+    <Section color="grey" id="apply">
+      <TextWithDescription
+        title="phrases.apply_now"
+        alignment="center"
+        padding="topOnly"
+        style="padding-bottom: 1.25rem"
+      />
+      <PartnerForm />
+    </Section>
+
+    <Section padding="small">
       <HelpBanner />
     </Section>
   </div>
@@ -145,6 +155,7 @@ import Collapsible from '@/components/Collapsible';
 import Check from '@/blocks/Check';
 import Grid from '@/blocks/Grid';
 import Feature from '@/blocks/Feature';
+import PartnerForm from '@/forms/Partner';
 
 export default Vue.extend({
   components: {
@@ -162,7 +173,8 @@ export default Vue.extend({
     Table,
     Check,
     Grid,
-    Feature
+    Feature,
+    PartnerForm
   }
 });
 </script>
