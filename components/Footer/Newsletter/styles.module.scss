@@ -1,4 +1,4 @@
-$bp: 900px;
+$bp: 1000px;
 
 .newsletter {
 }
@@ -25,11 +25,19 @@ $bp: 900px;
 
 .form {
   display: grid;
-  grid-template-columns: minmax(15rem, 25rem) auto;
+  grid-template-columns: minmax(12rem, 18rem) auto;
   gap: 1rem;
 
   @media (max-width: $bp) {
     grid-template-columns: 1fr;
+  }
+
+  &.withName {
+    grid-template-columns: minmax(12rem, 18rem) minmax(10rem, 15rem) auto;
+
+    @media (max-width: $bp) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 

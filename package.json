@@ -63,6 +63,7 @@
     "@vercel/node": "^1.10.0",
     "eslint": "7.23.0",
     "express": "^4.17.1",
+    "joi": "^17.4.0",
     "lodash": "^4.17.21",
     "typescript-plugin-css-modules": "^3.2.0"
   }

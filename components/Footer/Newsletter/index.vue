@@ -2,7 +2,10 @@
   <div :class="styles.newsletter">
     <div :class="styles.content">
       <span :class="styles.text">{{ $t('phrases.subscribe_newsletter') }}</span>
-      <form :class="styles.form" @submit.prevent="signUp">
+      <form
+        :class="[styles.form, { [styles.withName]: email.length > 0 }]"
+        @submit.prevent="signUp"
+      >
         <input
           v-model="email"
           type="email"
@@ -12,6 +15,16 @@
           :placeholder="$t('general.email_address')"
           maxlength="200"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+        />
+        <input
+          v-show="email.length > 0"
+          v-model="firstName"
+          id="given-name"
+          name="given-name"
+          autocomplete="given-name"
+          :placeholder="$t('contact.first_name')"
+          maxlength="200"
           required
         />
         <Button :loading="loading" title="general.subscribe" />
@@ -34,7 +47,6 @@ import Vue from 'vue';
 import styles from './styles.module.scss?module';
 import Button from '@/components/Button';
 import Box from '@/components/Box';
-import { AxiosRequestConfig } from 'axios';
 
 export default Vue.extend({
   components: {
@@ -44,6 +56,7 @@ export default Vue.extend({
   data() {
     return {
       styles,
+      firstName: '',
       email: '',
       loading: false,
       success: false,
@@ -56,17 +69,16 @@ export default Vue.extend({
       this.errors = [];
       this.loading = true;
 
-      if (this.email) {
-        const config: AxiosRequestConfig = {
-          params: {
-            email: this.email
-          }
+      if (this.email && this.firstName) {
+        const data = {
+          email: this.email,
+          firstName: this.firstName
         };
 
         try {
-          await this.$axios.$get(
+          await this.$axios.$post(
             `${this.$config.baseURL}/api/newsletter/signup`,
-            config
+            data
           );
           this.success = true;
         } catch (error) {
