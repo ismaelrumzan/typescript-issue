@@ -1,7 +1,7 @@
 import type { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
-  target: 'server',
+  target: 'static',
   /**
    * Runtime Config
    * @description Injects env variables, falls back to production values.
