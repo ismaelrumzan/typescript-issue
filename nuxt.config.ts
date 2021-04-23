@@ -205,6 +205,7 @@ const config: NuxtConfig = {
    * Images
    */
   image: {
+    provider: 'static',
     screens: {
       xs: 320,
       sm: 640,

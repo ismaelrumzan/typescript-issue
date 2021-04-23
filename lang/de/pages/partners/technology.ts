@@ -2,7 +2,7 @@ export default {
   title: 'Technologie',
   description: 'PMS-Hersteller & Co.',
   seo: {
-    title: 'Technologie',
+    title: 'Jetzt Technologie-Partner werden',
     description:
       'Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration des Check-Out-Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern.'
   },
