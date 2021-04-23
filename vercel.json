@@ -2,16 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "nuxt.config.ts",
-      "config": {
-        "serverFiles": [
-          "server-middleware/**",
-          ".nuxt/content/**",
-          "content/**"
-        ]
-      }
-    },
-    {
       "src": "api/**/*.js",
       "use": "@vercel/node"
     }
