@@ -9,7 +9,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "now-build": "nuxt generate",
     "lint": "eslint --max-warnings 0 --ext .ts,.vue ."
   },
   "dependencies": {
