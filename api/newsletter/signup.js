@@ -6,10 +6,6 @@ const NewsletterSignUp = async (req, res) => {
     '87eee55d4688a36a85ffb922ddf72c5bf8754ac917a18e821e749a25f52d38e5892a492a';
   const NEWSLETTER_ID = 3;
 
-  res.json({
-    message: 'Hello world'
-  });
-
   /**
    * Create AC Account
    */
