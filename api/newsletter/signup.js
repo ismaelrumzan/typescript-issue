@@ -1,6 +1,13 @@
 import axios from 'axios';
 
 const NewsletterSignUp = async (req, res) => {
+  if (!req.query.email) {
+    res.status(400).json({
+      status: 400,
+      message: 'Please provide a valid Email address.'
+    });
+  }
+
   const AC_BASE_URL = 'https://digital-hotel.api-us1.com/api/3';
   const AC_API_TOKEN =
     '87eee55d4688a36a85ffb922ddf72c5bf8754ac917a18e821e749a25f52d38e5892a492a';
