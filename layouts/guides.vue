@@ -3,7 +3,7 @@
     <CookieBanner />
     <Header />
     <div class="docs">
-      <Sidebar slug="docs" />
+      <Sidebar slug="guides" />
       <div class="content">
         <Nuxt />
       </div>

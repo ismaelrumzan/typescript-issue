@@ -2,53 +2,78 @@ export default {
   title: 'Technology',
   description: 'PMS/CMS companies',
   seo: {
-    title: 'Technology',
+    title: 'Become a technology partner',
     description:
-      'Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration des Check-Out-Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern.'
+      "Don't waste any more time with endless building and managing interfaces! Focus completely on your project and we will connect you with the most popular providers."
   },
 
   hero: {
-    badge: 'Feedback',
-    title: 'Alle Meinungen auf einem Blick',
+    badge: 'Technology Partner',
+    title: 'Become a partner of us',
     description:
-      'Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit.'
+      "Don't waste any more time with endless building and managing interfaces! Focus completely on your project and we will connect you with the most popular providers."
   },
 
   benefit: {
-    title: 'Diese App bringt Licht ins Dunkel',
+    title: 'Stop wasting time on integrations',
     checks: [
-      'Erfahre, was Deine <strong>Kunden</strong> von Dir denken',
-      'Erfahre, was Deine <strong>Mitarbeiter</strong> von Dir denken',
-      'Sammle Dein Feedback strukturiert ein',
-      'Alles auf einem Blick'
+      'Never again building endless interfaces to all sorts of systems',
+      'Never again putting a lot of effort into making small improvements',
+      'More focus on the core business'
     ],
     image: 'test.png'
   },
 
+  partners: {
+    title: 'Join our current customers',
+    logos: [
+      {
+        name: 'Romantikhotel Scheelehof',
+        link: 'https://www.scheelehof.de',
+        file: 'scheelehof.svg'
+      },
+      {
+        name: 'Haffhus',
+        link: 'https://www.haffhus.de',
+        file: 'haffhus.svg'
+      },
+      {
+        name: 'The Grand',
+        link: 'https://www.the-grand.de',
+        file: 'thegrand.svg'
+      },
+      {
+        name: 'Kino Hotel Meyer',
+        link: 'https://www.hotel-meyer.de',
+        file: 'kinohotelmeyer.svg'
+      }
+    ]
+  },
+
   solution: {
-    title: 'Einfach, unauffällig und sehr flexibel',
+    title: "The only interface you'll ever need",
     checks: [
-      'Wir sammeln über verschiedenste Wege das Feedback Deiner Kunden und Mitarbeiter ein',
-      'Der Prozess geschieht völlig unsichtbar für den Benutzer'
+      'We connect your business with all popular providers',
+      'Customers can play out their individuality through us by building different processes and assistants'
     ],
     image: 'test.png'
   },
 
   features: [
     {
-      title: 'Schnell',
+      title: 'Fast',
       icon: 'Check',
       description:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
     },
     {
-      title: 'Unsichtbar',
+      title: 'Invisible',
       icon: 'Check',
       description:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
     },
     {
-      title: 'Flexibel',
+      title: 'Flexible',
       icon: 'Check',
       description:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
@@ -67,86 +92,29 @@ export default {
     }
   ],
 
-  pricing: {
-    title: 'Preisgestaltung',
-    description: 'Starte jetzt mit Deinem Paket',
-    tables: [
-      {
-        category: 'Standard',
-        description: 'For development purposes',
-        price: {
-          currency: 'EUR',
-          monthly: 0,
-          anually: 0
-        },
-        features: [
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Start for free',
-          href: '/apply',
-          type: 'secondary'
-        }
-      },
-      {
-        popular: true,
-        category: 'Premium',
-        description: 'For small and medium hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 32,
-          anually: 299
-        },
-        features: [
-          'Alle Features aus Standard',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Get Premium',
-          href: '/apply'
-        }
-      },
-      {
-        category: 'Enterprise',
-        description: 'For large hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 128,
-          anually: 999
-        },
-        features: [
-          'Alle Features aus Premium',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Contact us',
-          href: '/meeting',
-          type: 'secondary'
-        }
-      }
-    ]
+  docs: {
+    badge: 'Documentation',
+    title: 'From developers for developers',
+    description:
+      'In our documentation you can find out how to get started quickly and easily. If you have any further questions, just contact us.',
+    image: 'docs.png'
+  },
+
+  application: {
+    badge: 'Application',
+    title: 'Apply now with your individual project',
+    description:
+      'Our integration and support are initially limited to a few places. You can apply to us with your project, just write us something about yourself and your project!',
+    illustration: 'team'
   },
 
   faq: [
     {
-      question: 'Was kostet diese App?',
-      answer:
-        'In der Standard-Version ist diese App <strong>kostenlos</strong>.'
+      question: 'Does it cost me anything to build an interface to you?',
+      answer: 'In the standard version, this app is <strong>free</strong>.'
     },
     {
-      question: 'Was benötige ich, um damit starten zu können?',
+      question: 'How do you support me?',
       answer:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
     }

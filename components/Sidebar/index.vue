@@ -11,7 +11,7 @@
           <ul :class="styles.pages">
             <li v-for="page in category.pages" :key="page.slug">
               <NuxtLink :to="page.path" @click.native="closeMenu">
-                {{ page.title }}
+                {{ $t(page.title) }}
               </NuxtLink>
             </li>
           </ul>
@@ -27,10 +27,10 @@
   </aside>
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import { MutationType, RootState } from "~/store";
-import styles from "./styles.module.scss?module";
+<script lang="ts">
+import Vue from 'vue';
+import { MutationType, RootState } from '~/store';
+import styles from './styles.module.scss?module';
 
 interface Page {
   title: string;
@@ -45,6 +45,12 @@ interface CategoryWithPages {
 }
 
 export default Vue.extend({
+  props: {
+    slug: {
+      type: String,
+      default: 'docs'
+    }
+  },
   data() {
     return {
       styles,
@@ -57,7 +63,7 @@ export default Vue.extend({
     this.getPages();
   },
   computed: {
-    currentLocale() {
+    currentLocale(): string {
       return this.$i18n.locale;
     },
     open(): boolean {
@@ -67,9 +73,9 @@ export default Vue.extend({
   methods: {
     async getPages() {
       let pages: Page[] = await (this as any)
-        .$content(`${this.$i18n.locale}/docs`)
-        .sortBy("position")
-        .only(["title", "category", "path", "slug"])
+        .$content(`${this.$i18n.locale}/${this.slug}`)
+        .sortBy('position')
+        .only(['title', 'category', 'path', 'slug'])
         .fetch();
 
       const categories: string[] = pages.map((page: Page) => page.category);
@@ -78,7 +84,7 @@ export default Vue.extend({
       if (this.$i18n.locale === this.$i18n.defaultLocale) {
         pages = pages.map((page: Page) => ({
           ...page,
-          path: page.path.replace(`/${this.$i18n.locale}`, "")
+          path: page.path.replace(`/${this.$i18n.locale}`, '')
         }));
       }
 
@@ -121,7 +127,7 @@ export default Vue.extend({
   color: var(--main-color);
   font-weight: 500;
 }
-[data-theme="dark"] {
+[data-theme='dark'] {
   .nuxt-link-exact-active {
     background-color: color.adjust(c.$main-color, $alpha: -0.8);
   }

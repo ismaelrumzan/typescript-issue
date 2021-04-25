@@ -1,8 +1,8 @@
 <template>
-  <form :class="styles.form" @submit.prevent="checkForm" method="post">
+  <form :class="styles.form" @submit.prevent="signUp" method="post">
     <Grid columns="2" padding="small" gap="medium">
       <label>
-        <span>{{ $t("contact.first_name") }}</span>
+        <span>{{ $t('contact.first_name') }}</span>
         <input
           v-model="firstName"
           id="given-name"
@@ -15,7 +15,7 @@
       </label>
 
       <label>
-        <span>{{ $t("contact.last_name") }}</span>
+        <span>{{ $t('contact.last_name') }}</span>
         <input
           v-model="lastName"
           id="family-name"
@@ -30,7 +30,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>{{ $t("contact.email") }}</span>
+        <span>{{ $t('contact.email') }}</span>
         <input
           v-model="email"
           type="email"
@@ -46,7 +46,7 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>{{ $t("contact.company") }}</span>
+        <span>{{ $t('contact.company') }}</span>
         <input
           v-model="organization"
           id="organization"
@@ -60,7 +60,21 @@
 
     <Grid columns="1" padding="small">
       <label>
-        <span>{{ $t("form.message") }}</span>
+        <span>{{ $t('contact.phone') }}</span>
+        <input
+          v-model="phone"
+          type="tel"
+          id="phone"
+          name="phone"
+          autocomplete="tel"
+          required
+        />
+      </label>
+    </Grid>
+
+    <Grid columns="1" padding="small">
+      <label>
+        <span>{{ $t('form.message') }}</span>
         <textarea
           v-model="message"
           id="message"
@@ -94,33 +108,26 @@
       />
     </Grid>
 
-    <Grid v-if="sent" columns="1" padding="small">
+    <Grid v-if="success" columns="1" padding="small">
       <Box type="success">
-        {{ $t("form.success") }}
+        {{ $t('form.application_success') }}
       </Box>
     </Grid>
 
     <Grid v-if="errors.length > 0" columns="1" padding="small">
-      <Box type="error" v-for="(error, i) in errors" :key="i">
-        {{ error }}
-      </Box>
-    </Grid>
-
-    <Grid v-if="sendingError" columns="1" padding="small">
-      <Box type="error">
-        {{ $t("errors.general") }}
+      <Box v-for="error in errors" :key="error.code" type="error">
+        {{ error.title }}
       </Box>
     </Grid>
   </form>
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import Button from "@/components/Button";
-import Box from "@/components/Box";
-import Grid from "@/blocks/Grid";
-import emailjs from "emailjs-com";
+<script lang="ts">
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import Button from '@/components/Button';
+import Box from '@/components/Box';
+import Grid from '@/blocks/Grid';
 
 export default Vue.extend({
   components: {
@@ -130,65 +137,57 @@ export default Vue.extend({
   },
   data() {
     return {
-      loading: false,
-      sent: false,
-      sendingError: false,
       styles,
+      loading: false,
+      success: false,
       errors: [],
-      firstName: "",
-      lastName: "",
-      email: "",
-      organization: "",
-      message: "",
+      firstName: '',
+      lastName: '',
+      email: '',
+      organization: '',
+      phone: '',
+      message: '',
       password: null
     };
   },
   methods: {
-    sendEmail(e: any) {
-      emailjs
-        .sendForm(
-          "default_service",
-          "template_z2h7xj9",
-          e.target,
-          "user_dD3sqT5ZcegDVQThVlwr2"
-        )
-        .then(
-          result => {
-            this.loading = false;
-            this.sent = true;
-            console.log(
-              "Content has been submitted successfully!",
-              result.status,
-              result.text
-            );
-          },
-          error => {
-            this.loading = false;
-            this.sendingError = true;
-            console.error(
-              "An error has occured while trying to submit the content!",
-              error
-            );
-          }
-        );
-    },
-    checkForm: function(e: any) {
-      this.sent = false;
-      this.sendingError = false;
+    async signUp() {
+      this.success = false;
+      this.errors = [];
       this.loading = true;
 
-      this.errors = [];
-
       if (this.password) {
-        (this as any).errors.push(this.$i18n.t("errors.bot"));
-      }
-
-      if (this.errors.length > 0) {
+        (this as any).errors.push(this.$i18n.t('errors.bot'));
         this.loading = false;
-        return false;
+        return;
       }
 
-      this.sendEmail(e);
+      if (!this.email || !this.organization) {
+        (this as any).errors.push('Provide an Email address and company name');
+        this.loading = false;
+        return;
+      }
+
+      const data = {
+        email: this.email,
+        firstName: this.firstName,
+        lastName: this.lastName,
+        organization: this.organization,
+        phone: this.phone,
+        message: this.message
+      };
+
+      try {
+        await this.$axios.$post(
+          `${this.$config.baseURL}/api/leads/signup`,
+          data
+        );
+        this.success = true;
+      } catch (error) {
+        this.errors = error.response.data.errors;
+      }
+
+      this.loading = false;
     }
   }
 });

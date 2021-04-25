@@ -104,7 +104,7 @@
       <Button
         :loading="loading"
         type="submit"
-        :title="$t('phrases.now', { action: $t('form.send') })"
+        :title="$t('phrases.apply_now')"
       />
     </Grid>
 
@@ -158,29 +158,35 @@ export default Vue.extend({
 
       if (this.password) {
         (this as any).errors.push(this.$i18n.t('errors.bot'));
+        this.loading = false;
         return;
       }
 
-      if (this.email && this.firstName) {
-        const data = {
-          email: this.email,
-          firstName: this.firstName,
-          lastName: this.lastName,
-          organization: this.organization,
-          phone: this.phone,
-          message: this.message
-        };
-
-        try {
-          await this.$axios.$post(
-            `${this.$config.baseURL}/api/partners/signup`,
-            data
-          );
-          this.success = true;
-        } catch (error) {
-          this.errors = error.response.data.errors;
-        }
+      if (!this.email || !this.organization) {
+        (this as any).errors.push('Provide an Email address and company name');
+        this.loading = false;
+        return;
       }
+
+      const data = {
+        email: this.email,
+        firstName: this.firstName,
+        lastName: this.lastName,
+        organization: this.organization,
+        phone: this.phone,
+        message: this.message
+      };
+
+      try {
+        await this.$axios.$post(
+          `${this.$config.baseURL}/api/partners/signup`,
+          data
+        );
+        this.success = true;
+      } catch (error) {
+        this.errors = error.response.data.errors;
+      }
+
       this.loading = false;
     }
   }

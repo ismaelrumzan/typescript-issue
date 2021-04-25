@@ -8,6 +8,9 @@ import technology from './de/pages/partners/technology';
 /* Frontoffice */
 import feedback from './de/pages/frontoffice/feedback';
 
+/* Guides */
+import guides from './de/pages/guides';
+
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
     seo: {
@@ -51,6 +54,7 @@ export default async (context: any, locale: string) => {
       go_to: 'Zu {page}',
       go_to_2: 'Zum {page}',
       go_to_3: 'Zur {page}',
+      go_to_4: 'Zu den {page}',
       go_to_site: 'Zur {page}-Seite',
       got_questions: 'Noch Fragen?',
       got_more_questions: 'Noch mehr Fragen?',
@@ -92,6 +96,13 @@ export default async (context: any, locale: string) => {
     },
 
     docs: {
+      api: 'API',
+      examples: 'Beispiele',
+      getting_started: 'Erste Schritte',
+      guide: 'Guide'
+    },
+
+    guides: {
       api: 'API',
       examples: 'Beispiele',
       getting_started: 'Erste Schritte',
@@ -285,6 +296,8 @@ export default async (context: any, locale: string) => {
         description:
           'Über unsere Benutzeroberfläche hast Du alle Gäste im Blick ohne Dich in Deinem PMS oder CRM anmelden zu müssen und kannst diese neu anlegen oder bearbeiten.'
       },
+
+      guides,
 
       help,
 

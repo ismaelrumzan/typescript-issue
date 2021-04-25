@@ -1,17 +1,17 @@
 export default {
   title: 'Technologie',
-  description: 'PMS-Hersteller & Co.',
+  description: 'PMS/CMS companies',
   seo: {
     title: 'Jetzt Technologie-Partner werden',
     description:
-      'Erweitere Dein Feedback durch verschiedenste Workflows, von der Integration des Check-Out-Assistenten bis zum E-Mail-Client. Hole Dir auch Feedback von Deinen Mitarbeitern.'
+      'Verliere keine Zeit mehr beim endlosen Bauen und managen von Schnittstellen! Fokussier Dich komplett auf Dein Projekt und wir verbinden Dich mit den beliebtesten Anbietern.'
   },
 
   hero: {
     badge: 'Technologie Partner',
     title: 'Werde jetzt Partner von uns',
     description:
-      'Mit dem Betriebsystem für Unternehmen: Wir verschaffen Dir mehr Zeit, erhöhen die Qualität Deiner Abläufe und steigern Deine Produktivität und Wirtschaftlichkeit.'
+      'Verliere keine Zeit mehr beim endlosen Bauen und managen von Schnittstellen! Fokussier Dich komplett auf Dein Projekt und wir verbinden Dich mit den beliebtesten Anbietern.'
   },
 
   benefit: {
@@ -22,6 +22,32 @@ export default {
       'Mehr Konzentration auf das Core-Business'
     ],
     image: 'test.png'
+  },
+
+  partners: {
+    title: 'Schließe Dich unseren bisherigen Kunden an',
+    logos: [
+      {
+        name: 'Romantikhotel Scheelehof',
+        link: 'https://www.scheelehof.de',
+        file: 'scheelehof.svg'
+      },
+      {
+        name: 'Haffhus',
+        link: 'https://www.haffhus.de',
+        file: 'haffhus.svg'
+      },
+      {
+        name: 'The Grand',
+        link: 'https://www.the-grand.de',
+        file: 'thegrand.svg'
+      },
+      {
+        name: 'Kino Hotel Meyer',
+        link: 'https://www.hotel-meyer.de',
+        file: 'kinohotelmeyer.svg'
+      }
+    ]
   },
 
   solution: {
@@ -60,82 +86,26 @@ export default {
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
       author: {
         name: 'Maurice Wegner',
-        job: 'Employee',
+        job: 'Angestellter',
         company: 'Digital Hotel'
       }
     }
   ],
 
-  pricing: {
-    title: 'Preisgestaltung',
-    description: 'Starte jetzt mit Deinem Paket',
-    tables: [
-      {
-        category: 'Standard',
-        description: 'For development purposes',
-        price: {
-          currency: 'EUR',
-          monthly: 0,
-          anually: 0
-        },
-        features: [
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Start for free',
-          href: '/apply',
-          type: 'secondary'
-        }
-      },
-      {
-        popular: true,
-        category: 'Premium',
-        description: 'For small and medium hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 32,
-          anually: 299
-        },
-        features: [
-          'Alle Features aus Standard',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Get Premium',
-          href: '/apply'
-        }
-      },
-      {
-        category: 'Enterprise',
-        description: 'For large hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 128,
-          anually: 999
-        },
-        features: [
-          'Alle Features aus Premium',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in',
-          'Lorem ipsum loret in'
-        ],
-        cta: {
-          title: 'Contact us',
-          href: '/meeting',
-          type: 'secondary'
-        }
-      }
-    ]
+  docs: {
+    badge: 'Dokumentation',
+    title: 'Von Entwickler für Entwickler',
+    description:
+      'In unserer Dokumentation erfährst du schnell und einfach, wie Du am besten startest. Falls Du weiterhin Fragen hast, kontaktier uns doch ganz einfach.',
+    image: 'docs.png'
+  },
+
+  application: {
+    badge: 'Bewerbung',
+    title: 'Bewirb dich jetzt mit Deinem Projekt',
+    description:
+      'Unsere Integration und der Support sind zunächst auf wenige Plätze begrenzt. Du kannst mit Deinem Projekt bei uns bewerben, schreib uns einfach etwas über Dich und Dein Vorhaben!',
+    illustration: 'team'
   },
 
   faq: [

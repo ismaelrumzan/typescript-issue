@@ -160,6 +160,12 @@
         "icon": "Document"
       },
       {
+        "title": "pages.guides.title",
+        "link": "/guides",
+        "description": "pages.guides.description",
+        "icon": "Document"
+      },
+      {
         "title": "pages.consulting.title",
         "link": "/consulting",
         "description": "pages.consulting.description",

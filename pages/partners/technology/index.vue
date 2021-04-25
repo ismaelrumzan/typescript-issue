@@ -1,10 +1,9 @@
 <template>
   <div id="content">
     <Hero
-      badge="pages.technology.hero.badge"
-      title="pages.technology.hero.title"
-      description="pages.technology.hero.description"
+      v-bind="$t('pages.technology.hero')"
       alignment="center"
+      :cta="[{ title: 'phrases.apply_now', href: '#apply' }]"
     />
 
     <Section color="grey">
@@ -24,31 +23,7 @@
     </Section>
 
     <Section padding="topOnly">
-      <Logos
-        title="Schließe Dich unseren bisherigen Kunden an"
-        :logos="[
-          {
-            name: 'Romantikhotel Scheelehof',
-            link: 'https://www.scheelehof.de',
-            file: 'scheelehof.svg'
-          },
-          {
-            name: 'Haffhus',
-            link: 'https://www.haffhus.de',
-            file: 'haffhus.svg'
-          },
-          {
-            name: 'The Grand',
-            link: 'https://www.the-grand.de',
-            file: 'thegrand.svg'
-          },
-          {
-            name: 'Kino Hotel Meyer',
-            link: 'https://www.hotel-meyer.de',
-            file: 'kinohotelmeyer.svg'
-          }
-        ]"
-      />
+      <Logos v-bind="$t('pages.technology.partners')" />
     </Section>
 
     <Section>
@@ -79,34 +54,34 @@
       <Testimonial
         v-for="(testimonial, i) in $t('pages.technology.testimonials')"
         :key="i"
-        :quote="testimonial.quote"
-        :author="testimonial.author"
+        v-bind="testimonial"
       />
     </Section>
 
     <Section>
       <TextWithImage
+        v-bind="$t('pages.technology.docs')"
         bubbles
-        badge="Dokumentation"
-        title="Von Entwickler für Entwickler"
-        description="In unserer Dokumentation erfährst du schnell und einfach, wie Du am besten startest. Falls Du weiterhin Fragen hast, kontaktier uns doch ganz einfach."
-        image="docs.png"
         illustrationWidth="wide"
         :cta="[
-          { title: 'Dokumentation', href: '/docs' },
-          { title: 'Zum Support', href: '/help', type: 'secondary' }
+          {
+            title: $t('phrases.go_to_4', { page: 'Docs' }),
+            href: '/docs'
+          },
+          {
+            title: $t('phrases.go_to_2', { page: 'Support' }),
+            href: '/help',
+            type: 'secondary'
+          }
         ]"
       />
     </Section>
 
     <Section color="light" padding="none" style="padding-top: 1.25rem">
       <TextWithImage
+        v-bind="$t('pages.technology.application')"
         alignment="right"
         padding="none"
-        badge="Bewerbung"
-        title="Bewirb dich jetzt mit Deinem Projekt"
-        description="Unsere Integration und der Support sind zunächst auf wenige Plätze begrenzt. Du kannst mit Deinem Projekt bei uns bewerben, schreib uns einfach etwas über Dich und Dein Vorhaben!"
-        illustration="team"
         :cta="[{ title: 'phrases.apply_now', href: '#apply' }]"
       />
     </Section>
@@ -122,12 +97,12 @@
       </Collapsible>
     </Section>
 
-    <Section color="grey" id="apply">
+    <Section color="grey">
       <TextWithDescription
+        id="apply"
         title="phrases.apply_now"
         alignment="center"
-        padding="topOnly"
-        style="padding-bottom: 1.25rem"
+        padding="small"
       />
       <PartnerForm />
     </Section>

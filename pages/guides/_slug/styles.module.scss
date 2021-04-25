@@ -1,0 +1,107 @@
+.article {
+  font-family: var(--font-text);
+}
+
+.title {
+  font-size: 2.75rem;
+  margin-bottom: 2.25rem;
+  hyphens: auto;
+}
+
+.desc {
+  display: block;
+}
+
+.footer {
+  margin-top: 5rem;
+  .date {
+    display: block;
+    text-align: right;
+    opacity: 0.5;
+  }
+}
+
+.content {
+  width: 100%;
+  line-height: 1.9;
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-text);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 3rem 0 0.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 0.65rem;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 1.075rem;
+    margin: 2rem 0 0.5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a::before {
+      opacity: 0;
+      content: "#";
+      color: var(--main-color);
+      margin-left: -0.85em;
+      padding-right: 0.5rem;
+      position: absolute;
+      transition: opacity 0.2s;
+
+      @media (hover: none) {
+        position: relative;
+        margin-left: 0;
+        opacity: 1;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        a {
+          &::before {
+            opacity: 1;
+          }
+          &:hover {
+            &::before {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    margin: 1.75rem 1em;
+    padding: 0 1rem;
+
+    li:not(:last-child) {
+      margin-bottom: 0.35rem;
+    }
+  }
+}
