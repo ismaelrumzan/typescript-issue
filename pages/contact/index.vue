@@ -1,36 +1,29 @@
 <template>
-  <div>
-    <Hero
-      title="Wir sind da, um Ihnen zu helfen"
-      description="Du hast Fragen? Dann nehme jetzt Kontakt mit uns auf"
-      alignment="center"
-      :cta="ctasHero"
-    />
+  <div id="content">
+    <Hero v-bind="$t('pages.contact.hero')" alignment="center">
+      <ContactForm />
+    </Hero>
+    <Section color="grey" padding="none">
+      <HelpBanner />
+    </Section>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Hero from "@/blocks/Hero";
+import Vue from 'vue';
+import Section from '@/blocks/Section';
+import Hero from '@/blocks/Hero';
+import TextWithDescription from '@/blocks/TextWithDescription';
+import HelpBanner from '@/blocks/HelpBanner';
+import ContactForm from '@/forms/Contact';
 
 export default Vue.extend({
   components: {
-    Hero
-  },
-  data() {
-    return {
-      ctasHero: [
-        {
-          title: "Jetzt starten",
-          href: "/about"
-        },
-        {
-          title: "Unsere Pläne",
-          type: "secondary",
-          href: "/pricing"
-        }
-      ]
-    };
+    Section,
+    Hero,
+    TextWithDescription,
+    HelpBanner,
+    ContactForm
   }
 });
 </script>

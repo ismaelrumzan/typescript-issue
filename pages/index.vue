@@ -22,33 +22,9 @@
       ]"
     />
     <Section color="grey" padding="small">
-      <Logos
-        title="pages.index.trusted"
-        :logos="[
-          {
-            name: 'Romantikhotel Scheelehof',
-            link: 'https://www.scheelehof.de',
-            file: 'scheelehof.svg'
-          },
-          {
-            name: 'Haffhus',
-            link: 'https://www.haffhus.de',
-            file: 'haffhus.svg'
-          },
-          {
-            name: 'The Grand',
-            link: 'https://www.the-grand.de',
-            file: 'thegrand.svg'
-          },
-          {
-            name: 'Kino Hotel Meyer',
-            link: 'https://www.hotel-meyer.de',
-            file: 'kinohotelmeyer.svg'
-          }
-        ]"
-      />
+      <Logos v-bind="$t('pages.index.trusted')" />
     </Section>
-    <Section fullWidth>
+    <Section fullWidth padding="topOnly" style="padding-bottom: 1rem">
       <FeatureSlider
         title="pages.index.solutions.title"
         description="pages.index.solutions.description"
@@ -60,6 +36,9 @@
           v-bind="slide"
         />
       </FeatureSlider>
+    </Section>
+    <Section padding="bottomOnly">
+      <Logos v-bind="$t('pages.index.known_from')" />
     </Section>
     <Section color="main" overflow="hidden">
       <IntegrationBanner />
@@ -87,21 +66,21 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Section from "@/blocks/Section";
-import Hero from "@/blocks/Hero";
-import TextWithImage from "@/blocks/TextWithImage";
-import TextWithDescription from "@/blocks/TextWithDescription";
-import HelpBanner from "@/blocks/HelpBanner";
-import Tabs from "@/blocks/Tabs";
-import Tab from "@/blocks/Tabs/Tab";
-import Logos from "@/blocks/Logos";
-import Grid from "@/blocks/Grid";
-import Feature from "@/blocks/Feature";
-import FeatureSlider from "@/blocks/FeatureSlider";
-import Slide from "@/blocks/FeatureSlider/Slide";
-import IntegrationBanner from "@/blocks/IntegrationBanner";
-import { SEO } from "@/services";
+import Vue from 'vue';
+import Section from '@/blocks/Section';
+import Hero from '@/blocks/Hero';
+import TextWithImage from '@/blocks/TextWithImage';
+import TextWithDescription from '@/blocks/TextWithDescription';
+import HelpBanner from '@/blocks/HelpBanner';
+import Tabs from '@/blocks/Tabs';
+import Tab from '@/blocks/Tabs/Tab';
+import Logos from '@/blocks/Logos';
+import Grid from '@/blocks/Grid';
+import Feature from '@/blocks/Feature';
+import FeatureSlider from '@/blocks/FeatureSlider';
+import Slide from '@/blocks/FeatureSlider/Slide';
+import IntegrationBanner from '@/blocks/IntegrationBanner';
+import { SEO } from '@/services';
 
 export default Vue.extend({
   components: {
@@ -122,8 +101,8 @@ export default Vue.extend({
   head() {
     /* Override default behavior to get rid of seperator and site title */
     return SEO.generate({
-      title: this.$i18n.t("pages.index.seo.title").toString(),
-      description: this.$i18n.t("pages.index.seo.description").toString()
+      title: this.$i18n.t('pages.index.seo.title').toString(),
+      description: this.$i18n.t('pages.index.seo.description').toString()
     });
   }
 });

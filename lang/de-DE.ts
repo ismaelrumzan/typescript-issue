@@ -1,8 +1,10 @@
 import about from './de/pages/about';
+import contact from './de/pages/contact';
 import help from './de/pages/help';
 import homepage from './de/pages/homepage';
 
 /* Partners */
+import sales from './de/pages/partners/sales';
 import technology from './de/pages/partners/technology';
 
 /* Frontoffice */
@@ -47,6 +49,7 @@ export default async (context: any, locale: string) => {
       bookable_online: 'Online buchbar',
       coming_soon: 'Bald verfügbar',
       connect_your_system: 'Verbinde Dich mit Deinem System',
+      contact_us: 'Kontaktier uns',
       easy_integration: 'Einfache Integration',
       focus_on_security: 'Fokus auf Sicherheit',
       generate: '{object} generieren',
@@ -235,6 +238,8 @@ export default async (context: any, locale: string) => {
         description: ''
       },
 
+      contact,
+
       content_management: 'Content Management',
       data_transmission: 'Datenübermittlung',
       demo: 'Demo',
@@ -406,10 +411,7 @@ export default async (context: any, locale: string) => {
         description: ''
       },
 
-      sales: {
-        title: 'Vertrieb',
-        description: 'Software-Distributoren'
-      },
+      sales,
 
       security_and_privacy: 'Sicherheit & Datenschutz',
 

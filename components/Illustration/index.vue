@@ -3,18 +3,18 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
-import styles from "./styles.module.scss?module";
-import lottie, { AnimationDirection, AnimationItem } from "lottie-web";
+import Vue, { PropType } from 'vue';
+import styles from './styles.module.scss?module';
+import lottie, { AnimationDirection, AnimationItem } from 'lottie-web';
 
-export type RenderMode = "svg" | "canvas" | "html";
+export type RenderMode = 'svg' | 'canvas' | 'html';
 
 export default Vue.extend({
   props: {
     name: {
       type: String,
       required: true,
-      default: "example"
+      default: 'example'
     },
     loop: {
       type: Boolean,
@@ -38,7 +38,7 @@ export default Vue.extend({
     },
     renderer: {
       type: String as PropType<RenderMode>,
-      default: "svg"
+      default: 'svg'
     },
     withShadow: {
       type: Boolean,
@@ -66,10 +66,10 @@ export default Vue.extend({
             rendererSettings: this.withShadow
               ? {
                   filterSize: {
-                    width: "200%",
-                    height: "200%",
-                    x: "-50%",
-                    y: "-50%"
+                    width: '200%',
+                    height: '200%',
+                    x: '-50%',
+                    y: '-50%'
                   }
                 }
               : {},
@@ -86,7 +86,7 @@ export default Vue.extend({
 
           if (this.alternate) {
             animation.loop = false;
-            animation.addEventListener("complete", () => {
+            animation.addEventListener('complete', () => {
               animation.pause();
               animation.setDirection(
                 (animation.playDirection * -1) as AnimationDirection
@@ -99,7 +99,7 @@ export default Vue.extend({
         })
         .catch(error => {
           console.error(error);
-          console.warn("Loading fallback Illustration ...");
+          console.warn('Loading fallback Illustration ...');
           import(`@/assets/illustrations/404.json`).then(module => {
             const animation = lottie.loadAnimation({
               container: this.$refs.illustration as any,
@@ -124,9 +124,9 @@ export default Vue.extend({
     this.fetchIllustration();
 
     if (
-      !("IntersectionObserver" in window) ||
-      !("IntersectionObserverEntry" in window) ||
-      !("intersectionRatio" in window.IntersectionObserverEntry.prototype)
+      !('IntersectionObserver' in window) ||
+      !('IntersectionObserverEntry' in window) ||
+      !('intersectionRatio' in window.IntersectionObserverEntry.prototype)
     ) {
       /* will load polyfill later on, just keep playing at the moment */
     } else {
@@ -137,7 +137,7 @@ export default Vue.extend({
       this.observer.observe((this as any).$refs.illustration);
     }
   },
-  beforeDestroy() {
+  destroyed() {
     this.observer?.disconnect();
     this.animation?.destroy();
   }
@@ -190,7 +190,7 @@ export default Vue.extend({
     }
   }
 }
-[data-theme="dark"] {
+[data-theme='dark'] {
   #main {
     #middlebg,
     #elem1bg,

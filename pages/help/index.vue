@@ -24,8 +24,13 @@
         alignment="center"
         :cta="[
           {
+            title: 'phrases.contact_us',
+            href: '/contact'
+          },
+          {
             title: 'phrases.book_meeting',
-            onClick: bookMeeting
+            onClick: bookMeeting,
+            type: 'secondary'
           }
         ]"
       />
@@ -34,12 +39,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Section from "@/blocks/Section";
-import Hero from "@/blocks/Hero";
-import TextWithDescription from "@/blocks/TextWithDescription";
-import Collapsible from "@/components/Collapsible";
-import { MutationType } from "~/store";
+import Vue from 'vue';
+import Section from '@/blocks/Section';
+import Hero from '@/blocks/Hero';
+import TextWithDescription from '@/blocks/TextWithDescription';
+import Collapsible from '@/components/Collapsible';
+import { MutationType } from '~/store';
 
 export default Vue.extend({
   components: {
