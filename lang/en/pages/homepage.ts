@@ -1,7 +1,7 @@
 export default {
-  title: 'Digital Hotel',
+  title: 'oktus',
   seo: {
-    title: 'Digital Hotel – Your hotel on autopilot',
+    title: 'Oktus – Your hotel on autopilot',
     description:
       'The operating system for companies: We give you more time, raise the quality of your processes and increase your productivity and profitability.'
   },

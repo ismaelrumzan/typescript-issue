@@ -37,6 +37,7 @@
 }
 
 .text {
+  z-index: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -64,6 +65,42 @@
 }
 
 /* Types */
+.gradient {
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to right,
+      var(--main-gradient-start),
+      var(--main-gradient-end)
+    );
+    border-radius: var(--border-radius-small);
+
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:disabled {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
 .secondary {
   color: var(--dark-4);
   background-color: var(--light);

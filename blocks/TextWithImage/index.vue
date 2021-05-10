@@ -5,6 +5,7 @@
       styles[alignment],
       styles[textAlignmentClass],
       styles[paddingClass],
+      styles[gapClass],
       styles[illustrationWidth]
     ]"
   >
@@ -46,8 +47,14 @@
       <Illustration :name="illustration" />
     </div>
 
-    <div v-if="image" :class="styles.image">
+    <div
+      v-if="image"
+      :class="[styles.image, { [styles.isSVG]: isSVG }]"
+      :style="illustrationStyles"
+    >
+      <img v-if="isSVG" :src="`/images/${$t(image)}`" loading="lazy" />
       <nuxt-img
+        v-else
         :key="image"
         :src="`/images/${$t(image)}`"
         loading="lazy"
@@ -79,6 +86,7 @@ import { RootState } from '~/store';
 type Alignment = 'left' | 'right' | 'center';
 type TextAlignment = 'left' | 'right' | 'center';
 type PaddingOption = 'small' | 'medium' | 'large' | 'none';
+type GapOption = 'default' | 'medium' | 'large' | 'none';
 type IllustrationWidth = 'narrow' | 'normal' | 'wide';
 type RenderMode = 'svg' | 'canvas';
 
@@ -100,6 +108,10 @@ export default Vue.extend({
     padding: {
       type: String as PropType<PaddingOption>,
       default: 'medium'
+    },
+    gap: {
+      type: String as PropType<GapOption>,
+      default: 'large'
     },
     badge: {
       type: String
@@ -149,8 +161,15 @@ export default Vue.extend({
     paddingClass(): string {
       return `pad-${this.padding}`;
     },
+    gapClass(): string {
+      return `gap-${this.gap}`;
+    },
     isDarkMode(): boolean {
       return (this.$store.state as RootState).theme === 'dark';
+    },
+    isSVG(): boolean {
+      const image = this.$i18n.t(this.image) as string;
+      return image.split('.').pop() === 'svg';
     }
   }
 });

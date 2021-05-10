@@ -1,5 +1,6 @@
 import about from './en/pages/about';
 import contact from './en/pages/contact';
+import customers from './en/pages/customers';
 import help from './en/pages/help';
 import homepage from './en/pages/homepage';
 
@@ -16,7 +17,7 @@ import guides from './en/pages/guides';
 export default async (context: any, locale: string) => {
   return await Promise.resolve({
     seo: {
-      site_title: 'Digital Hotel',
+      site_title: 'oktus',
       seperator: ' | '
     },
 
@@ -93,7 +94,7 @@ export default async (context: any, locale: string) => {
     },
 
     cookies: {
-      text: 'We use cookies 🍪 to personalize your experience on Digital Hotel.'
+      text: 'We use cookies 🍪 to personalize your experience on oktus.'
     },
 
     docs: {
@@ -239,6 +240,7 @@ export default async (context: any, locale: string) => {
       contact,
 
       content_management: 'Content Management',
+      customers,
       data_transmission: 'Data Transmission',
       demo: 'Demo',
       developers: 'Developers',
@@ -334,7 +336,7 @@ export default async (context: any, locale: string) => {
         title: 'Meeting',
         description: 'Book online',
         hero: {
-          title: 'Get to know Digital Hotel',
+          title: 'Get to know oktus',
           description:
             'Do you still have any questions? Or do you want to get to know us better? We offer you the opportunity to arrange a personal meeting with us. You can book this directly online here.'
         }
@@ -421,7 +423,7 @@ export default async (context: any, locale: string) => {
       solutions: {
         title: 'Solutions',
         seo: {
-          title: 'Solutions by Digital Hotel',
+          title: 'Solutions by oktus',
           description:
             'All solutions in our Front Office, Back Office, Operations and Marketing divisions at a glance.'
         },

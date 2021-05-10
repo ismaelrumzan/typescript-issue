@@ -224,7 +224,7 @@ export default Vue.extend({
     #middle {
       g:first-child {
         path {
-          fill: #e8353c;
+          fill: var(--main-color);
         }
       }
       g:last-child {

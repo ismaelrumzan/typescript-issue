@@ -147,6 +147,12 @@
         "disabled": true
       },
       {
+        "title": "pages.customers.title",
+        "link": "/customers",
+        "description": "pages.customers.description",
+        "icon": "Reviews"
+      },
+      {
         "title": "pages.videos.title",
         "link": "/videos",
         "description": "pages.videos.description",

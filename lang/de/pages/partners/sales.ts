@@ -87,7 +87,7 @@ export default {
       author: {
         name: 'Maurice Wegner',
         job: 'Angestellter',
-        company: 'Digital Hotel'
+        company: 'oktus'
       }
     }
   ],

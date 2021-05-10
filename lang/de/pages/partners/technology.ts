@@ -1,6 +1,6 @@
 export default {
   title: 'Technologie',
-  description: 'PMS/CMS companies',
+  description: 'PMS-Hersteller & Co.',
   seo: {
     title: 'Jetzt Technologie-Partner werden',
     description:
@@ -21,7 +21,7 @@ export default {
       'Keinen großen Aufwand mehr in kleine Verbesserungen stecken',
       'Mehr Konzentration auf das Core-Business'
     ],
-    image: 'test.png'
+    image: 'distributed.svg'
   },
 
   partners: {
@@ -56,7 +56,7 @@ export default {
       'Wir vernetzen Dein Business mit allen beliebten Anbietern',
       'Kunden können über uns Ihre Individualität ausspielen, indem Sie verschiedene Abläufe und Assistenten bauen'
     ],
-    image: 'test.png'
+    illustration: 'main'
   },
 
   features: [
@@ -87,7 +87,7 @@ export default {
       author: {
         name: 'Maurice Wegner',
         job: 'Angestellter',
-        company: 'Digital Hotel'
+        company: 'oktus'
       }
     }
   ],

@@ -35,10 +35,10 @@
   </div>
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import anime from "animejs";
+<script lang="ts">
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import anime from 'animejs';
 
 export default Vue.extend({
   data() {
@@ -48,18 +48,18 @@ export default Vue.extend({
   },
   mounted() {
     anime({
-      targets: ".particles div",
+      targets: '.particles div',
       scale: [
-        { value: 0.75, easing: "easeOutSine", duration: 1000 },
-        { value: 1, easing: "easeInOutQuad", duration: 1500 }
+        { value: 0.75, easing: 'easeOutSine', duration: 1000 },
+        { value: 1, easing: 'easeInOutQuad', duration: 1500 }
       ],
       opacity: [
-        { value: 0.55, easing: "easeOutSine", duration: 1000 },
-        { value: 0, easing: "easeInOutQuad", duration: 1500 }
+        { value: 0.3, easing: 'easeOutSine', duration: 1000 },
+        { value: 0, easing: 'easeInOutQuad', duration: 1500 }
       ],
-      delay: anime.stagger(500, { grid: [8, 4], from: "center" }),
+      delay: anime.stagger(500, { grid: [8, 4], from: 'center' }),
       loop: true,
-      direction: "alternate"
+      direction: 'alternate'
     });
   }
 });

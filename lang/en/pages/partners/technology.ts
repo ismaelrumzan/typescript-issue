@@ -21,7 +21,7 @@ export default {
       'Never again putting a lot of effort into making small improvements',
       'More focus on the core business'
     ],
-    image: 'test.png'
+    image: 'distributed.svg'
   },
 
   partners: {
@@ -56,7 +56,7 @@ export default {
       'We connect your business with all popular providers',
       'Customers can play out their individuality through us by building different processes and assistants'
     ],
-    image: 'test.png'
+    illustration: 'main'
   },
 
   features: [
@@ -87,7 +87,7 @@ export default {
       author: {
         name: 'Maurice Wegner',
         job: 'Employee',
-        company: 'Digital Hotel'
+        company: 'oktus'
       }
     }
   ],

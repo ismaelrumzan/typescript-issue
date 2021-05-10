@@ -14,7 +14,7 @@
           @click.native="handleRoute"
         >
           <div :class="styles.logo">
-            <img src="/logos/digitalhotel.svg" />
+            <Logo />
           </div>
         </NuxtLink>
         <Toggle />
@@ -47,13 +47,15 @@ import { MutationType, RootState } from '@/store';
 import Navigation from '@/components/Header/Navigation';
 import Button from '@/components/Button';
 import Toggle from '@/components/Header/Toggle';
+import Logo from '@/components/Logo';
 import _ from 'lodash';
 
 export default Vue.extend({
   components: {
     Navigation,
     Button,
-    Toggle
+    Toggle,
+    Logo
   },
 
   data() {

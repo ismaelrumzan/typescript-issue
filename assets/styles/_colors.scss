@@ -1,7 +1,10 @@
 @use 'sass:color';
 
 /* Theme */
-$main-color: #e51b23;
+$main-color: #209ddb;
+
+$main-gradient-start: #438ccb;
+$main-gradient-end: #0bc2ed;
 
 $main-color-light: color.scale($main-color, $lightness: 10%);
 $main-color-light-2: color.scale($main-color, $lightness: 20%);
@@ -9,9 +12,9 @@ $main-color-light-3: color.scale($main-color, $lightness: 30%);
 $main-color-light-4: color.scale($main-color, $lightness: 40%);
 $main-color-light-5: color.scale($main-color, $lightness: 60%);
 $main-color-light-6: color.scale($main-color, $lightness: 80%);
-$main-color-light-7: color.scale($main-color, $lightness: 86%);
-$main-color-light-8: color.scale($main-color, $lightness: 92%);
-$main-color-light-9: color.scale($main-color, $lightness: 96%);
+$main-color-light-7: color.scale($main-color, $lightness: 85%);
+$main-color-light-8: color.scale($main-color, $lightness: 90%);
+$main-color-light-9: color.scale($main-color, $lightness: 95%);
 
 $main-color-dark: color.scale($main-color, $lightness: -5%);
 $main-color-dark-2: color.scale($main-color, $lightness: -10%);
@@ -59,6 +62,9 @@ $shadow-large: 0 0 64px rgba(0, 0, 0, 0.15);
   // color-scheme: light dark;
   /* Theme */
   --main-color: #{$main-color};
+
+  --main-gradient-start: #{$main-gradient-start};
+  --main-gradient-end: #{$main-gradient-end};
 
   --main-color-light: #{$main-color-light};
   --main-color-light-2: #{$main-color-light-2};
@@ -136,7 +142,7 @@ $shadow-small-dark: 0 0 12px rgba(80, 80, 80, 0.075);
 $shadow-medium-dark: 0 0 24px rgba(80, 80, 80, 0.1);
 $shadow-large-dark: 0 0 64px rgba(80, 80, 80, 0.15);
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   /* Background */
   --background-color: #{$background-color-dark};
 

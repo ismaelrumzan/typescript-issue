@@ -7,9 +7,9 @@
       <Navigation />
       <hr />
       <div :class="styles.additional">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <div :class="styles.logo">
-            <img src="/logos/digitalhotel.svg" />
+            <img src="/logos/oktus.svg" />
           </div>
         </NuxtLink>
 
@@ -36,8 +36,8 @@
         </div>
 
         <span :class="styles.copyright">
-          &copy; {{ curYear }} Digital Hotel.
-          {{ $t("phrases.all_rights_reserved") }}.
+          &copy; {{ curYear }} oktus GmbH.
+          {{ $t('phrases.all_rights_reserved') }}.
         </span>
       </div>
     </div>
@@ -45,13 +45,13 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import Newsletter from "@/components/Footer/Newsletter";
-import TrustBar from "@/components/Footer/TrustBar";
-import Navigation from "@/components/Footer/Navigation";
-import Select from "@/components/Select";
-import { MutationType, RootState } from "@/store";
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import Newsletter from '@/components/Footer/Newsletter';
+import TrustBar from '@/components/Footer/TrustBar';
+import Navigation from '@/components/Footer/Navigation';
+import Select from '@/components/Select';
+import { MutationType, RootState } from '@/store';
 
 export default Vue.extend({
   components: {
@@ -84,14 +84,14 @@ export default Vue.extend({
     options() {
       return [
         {
-          label: "Light",
-          value: "light",
-          selected: (this.$store.state as RootState).theme === "light"
+          label: 'Light',
+          value: 'light',
+          selected: (this.$store.state as RootState).theme === 'light'
         },
         {
-          label: "Dark",
-          value: "dark",
-          selected: (this.$store.state as RootState).theme === "dark"
+          label: 'Dark',
+          value: 'dark',
+          selected: (this.$store.state as RootState).theme === 'dark'
         }
       ];
     }

@@ -42,7 +42,7 @@ $bp: 900px;
     object-fit: contain;
 
     img {
-      height: 2.75rem;
+      height: 2.15rem;
       width: auto;
     }
   }
@@ -61,6 +61,6 @@ $bp: 900px;
   }
 }
 
-[data-theme="dark"] .logo {
+[data-theme='dark'] .logo {
   filter: invert(1) saturate(0) brightness(99);
 }

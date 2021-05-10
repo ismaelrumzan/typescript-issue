@@ -21,11 +21,11 @@
   />
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import TextWithImage from "@/blocks/TextWithImage";
-import { RootState } from "~/store";
+<script lang="ts">
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import TextWithImage from '@/blocks/TextWithImage';
+import { RootState } from '~/store';
 
 export default Vue.extend({
   components: {
@@ -38,7 +38,7 @@ export default Vue.extend({
   },
   computed: {
     isDarkMode() {
-      return (this.$store.state as RootState).theme === "dark";
+      return (this.$store.state as RootState).theme === 'dark';
     }
   }
 });
@@ -57,7 +57,7 @@ export default Vue.extend({
   #elem9,
   #elem10 {
     path {
-      fill: #ff9f9f !important;
+      fill: var(--main-color-light-8) !important;
     }
   }
 
@@ -75,7 +75,7 @@ export default Vue.extend({
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   .integration-banner {
     #elem1,
     #elem2,

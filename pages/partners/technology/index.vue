@@ -11,7 +11,8 @@
         textAlignment="left"
         title="pages.technology.benefit.title"
         image="pages.technology.benefit.image"
-        illustrationWidth="wide"
+        padding="none"
+        gap="none"
       >
         <Check
           v-for="(check, i) in $t('pages.technology.benefit.checks')"
@@ -30,8 +31,7 @@
       <TextWithImage
         alignment="right"
         textAlignment="left"
-        title="pages.technology.solution.title"
-        image="pages.technology.solution.image"
+        v-bind="$t('pages.technology.solution')"
         illustrationWidth="wide"
       >
         <Check

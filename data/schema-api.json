@@ -4,11 +4,11 @@
     "title": "Identities API",
     "version": "1.0.0",
     "description": "This is the identities api. Get the execution identities of the endpoints.",
-    "termsOfService": "http://digital-hotel.net/terms/",
+    "termsOfService": "http://oktus.io/terms/",
     "contact": {
       "name": "Developer",
-      "url": "https://www.digital-hotel.net",
-      "email": "developer@digital-hotel.net"
+      "url": "https://oktus.io",
+      "email": "developer@oktus.io"
     }
   },
   "servers": [
@@ -17,9 +17,7 @@
       "variables": {
         "scheme": {
           "description": "The Data Set API is accessible via https and http",
-          "enum": [
-            "https"
-          ],
+          "enum": ["https"],
           "default": "https"
         }
       }
@@ -34,9 +32,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "list-all-identities",
         "summary": "List all identities",
         "responses": {
@@ -64,9 +60,7 @@
         }
       },
       "post": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "create-identities",
         "summary": "Create new identitieses",
         "requestBody": {
@@ -113,9 +107,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "delete-all-identities",
         "summary": "Delete all identities",
         "responses": {
@@ -141,16 +133,14 @@
     },
     "/{id}": {
       "get": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "list-identities",
         "summary": "Get identities",
         "parameters": [
           {
             "in": "path",
             "name": "id",
-            "schema":{
+            "schema": {
               "type": "string"
             },
             "required": true,
@@ -182,16 +172,14 @@
         }
       },
       "patch": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "update-identities",
         "summary": "Update identities",
         "parameters": [
           {
             "in": "path",
             "name": "id",
-            "schema":{
+            "schema": {
               "type": "string"
             },
             "required": true,
@@ -242,16 +230,14 @@
         }
       },
       "delete": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "delete-identities",
         "summary": "Delete identities",
         "parameters": [
           {
             "in": "path",
             "name": "id",
-            "schema":{
+            "schema": {
               "type": "string"
             },
             "required": true,
@@ -281,9 +267,7 @@
     },
     "/register": {
       "post": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "register-identities",
         "summary": "register new identitiy",
         "requestBody": {
@@ -332,9 +316,7 @@
     },
     "/login": {
       "post": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "login-identities",
         "summary": "login identitiy",
         "requestBody": {
@@ -383,9 +365,7 @@
     },
     "/refreshToken": {
       "post": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "refreshToken-identities",
         "summary": "refreshToken for identitiy",
         "requestBody": {
@@ -434,9 +414,7 @@
     },
     "/changePassword": {
       "post": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "changepassword-identities",
         "summary": "changePassword for identitiy",
         "requestBody": {
@@ -485,9 +463,7 @@
     },
     "/logout": {
       "get": {
-        "tags": [
-          "identities"
-        ],
+        "tags": ["identities"],
         "operationId": "logout-identities",
         "summary": "Logout identity",
         "responses": {
@@ -547,7 +523,7 @@
           },
           "lastExecution": {
             "type": "string"
-          },          
+          },
           "createdAt": {
             "type": "string"
           },

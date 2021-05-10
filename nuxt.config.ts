@@ -3,6 +3,15 @@ import type { NuxtConfig } from '@nuxt/types'
 const config: NuxtConfig = {
   target: 'static',
   /**
+   * Enable global components
+   */
+  components: [
+    {
+      path: '~/components/global',
+      extensions: ['vue']
+    }
+  ],
+  /**
    * Runtime Config
    * @description Injects env variables, falls back to production values.
    */
@@ -25,7 +34,7 @@ const config: NuxtConfig = {
       },
       {
         name: 'msapplication-TileColor',
-        content: '#d13f3f'
+        content: '#35a9d5'
       },
       {
         name: 'theme-color',
@@ -36,32 +45,32 @@ const config: NuxtConfig = {
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: '/favicon/apple-touch-icon.png?v=2bAP0yXlkw'
+        href: '/favicon/apple-touch-icon.png?v=OTV2'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon/favicon-32x32.png?v=2bAP0yXlkw'
+        href: '/favicon/favicon-32x32.png?v=OTV2'
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/favicon/favicon-16x16.png?v=2bAP0yXlkw'
+        href: '/favicon/favicon-16x16.png?v=OTV2'
       },
       {
         rel: 'manifest',
-        href: '/site.webmanifest?v=2bAP0yXlkw'
+        href: '/site.webmanifest?v=OTV2'
       },
       {
         rel: 'mask-icon',
-        color: '#d92b2b',
-        href: '/favicon/safari-pinned-tab.svg?v=2bAP0yXlkw'
+        color: '#5bbad5',
+        href: '/favicon/safari-pinned-tab.svg?v=OTV2'
       },
       {
         rel: 'shortcut icon',
-        href: '/favicon/favicon.ico?v=2bAP0yXlkw'
+        href: '/favicon/favicon.ico?v=OTV2'
       },
       {
         rel: 'preconnect',
@@ -77,7 +86,9 @@ const config: NuxtConfig = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#e51b23' },
+  loading: { 
+    color: '#209ddb' 
+  },
 
   /*
    ** Global CSS
@@ -97,6 +108,10 @@ const config: NuxtConfig = {
    */
   modules: [
     '@nuxtjs/axios',
+    ['nuxt-content-git', {
+      createdAtName: 'gitCreatedAt',
+      updatedAtName: 'gitUpdatedAt',
+    }],
     '@nuxt/content',
     // '@nuxtjs/prismic',
     // '@nuxtjs/gtm',
@@ -111,18 +126,10 @@ const config: NuxtConfig = {
     //   }
     // ],
     // '@nuxtjs/sentry',
-    '@nuxtjs/sitemap',
-    // 'nuxt-imagemin',
-    // [
-    //   'nuxt-imagemin',
-    //   {
-    //     optipng: { optimizationLevel: 5 },
-    //     gifsicle: { optimizationLevel: 2 }
-    //   }
-    // ],
     'nuxt-maintenance-mode',
-    '@nuxtjs/robots',
     'nuxt-i18n',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
 
   axios: {
@@ -157,27 +164,33 @@ const config: NuxtConfig = {
 
   robots: {
     UserAgent: '*',
-    Disallow: '/'
+    Disallow: '/api',
+    Sitemap: 'https://oktus.io/sitemap.xml'
   },
+
   maintenance: {
     enabled: !!process.env.MAINTENANCE_MODE, // If given truthy value, activate maintenance mode on startup
     path: '/maintenance', // maintenance fallback content routing
     matcher: /^\/admin/ // Path to be in maintenance mode (regex)
   },
+
   sitemap: {
-    hostname: 'https://www.digital-hotel.net',
+    hostname: 'https://oktus.io',
     gzip: true,
     exclude: ['/secret', '/admin/**']
   },
+
   sentry: {
     dsn: '',
     config: {}
   },
+
   pwa: {
     workbox: {
       importScripts: ['pushSw.js']
     }
   },
+
   gtm: {
     id: 'G-4CT5YQBZ0K'
   },

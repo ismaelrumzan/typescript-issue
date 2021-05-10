@@ -5,11 +5,11 @@ icon: Document
 
 ## § 1. Material scope and subject matter of the contract
 
-The following conditions (the "General Terms and Conditions") apply to the use and operational support of standard software programs (the "Software"), which are manufactured by Digital Hotel GmbH, hereinafter referred to as Digital Hotel, and which are available as software-as-a-service Service can be provided via the medium of the Internet.
+The following conditions (the "General Terms and Conditions") apply to the use and operational support of standard software programs (the "Software"), which are manufactured by oktus GmbH, hereinafter referred to as oktus, and which are available as software-as-a-service Service can be provided via the medium of the Internet.
 The subject of the contract are:
 
-* the provision of software programs listed under www.digital-hotel.net for use via the Internet and
-* the storage of customer data on servers in the data center
+- the provision of software programs listed under oktus.io for use via the Internet and
+- the storage of customer data on servers in the data center
 
 Individually developed software programs are not part of this contract.
 
@@ -17,58 +17,58 @@ Individually developed software programs are not part of this contract.
 
 The type and scope of the mutual services are regulated by the contractual agreements. The scope of services defined in the contract is deemed to be the agreed quality. The following are decisive for this:
 
-* the defined scope of services of the software listed in the contract, which is included in the respective
-* User documentation is specified,
-* the suitability for the use stipulated in the contract,
-* the conditions stipulated in the contract,
-* the following conditions,
-* Generally applied technical guidelines and technical standards, especially the international standards and proposals of the Internet Engineering Task Force (IETF), as documented in the Request-for-Comments (RFC), and the W3C (World Wide Web Consortium).
+- the defined scope of services of the software listed in the contract, which is included in the respective
+- User documentation is specified,
+- the suitability for the use stipulated in the contract,
+- the conditions stipulated in the contract,
+- the following conditions,
+- Generally applied technical guidelines and technical standards, especially the international standards and proposals of the Internet Engineering Task Force (IETF), as documented in the Request-for-Comments (RFC), and the W3C (World Wide Web Consortium).
 
 In the event of discrepancies, the contractual agreements apply in the above order.
 
-Further conditions, in particular general terms and conditions of the contractual partner, do not apply, even if Digital Hotel does not expressly contradict them. The General Terms and Conditions of the Digital Hotel apply exclusively.
+Further conditions, in particular general terms and conditions of the contractual partner, do not apply, even if oktus does not expressly contradict them. The General Terms and Conditions of the oktus apply exclusively.
 
 ## § 3. Terms of Use
 
 ### 3.1. Customer's rights to the software
 
-Digital Hotel grants the customer a non-exclusive, non-transferable and non-sublicensable right to use the software named in the contract and the associated user documentation for the duration of the contract. The software is provided via the Internet. The customer undertakes to use the software exclusively in accordance with the contract and neither to pass it on to third parties nor to make it accessible to third parties in any other way. The customer is not entitled to "reverse engineer", decompile, disassemble, reproduce or use any part of the software to create a separate application.
+oktus grants the customer a non-exclusive, non-transferable and non-sublicensable right to use the software named in the contract and the associated user documentation for the duration of the contract. The software is provided via the Internet. The customer undertakes to use the software exclusively in accordance with the contract and neither to pass it on to third parties nor to make it accessible to third parties in any other way. The customer is not entitled to "reverse engineer", decompile, disassemble, reproduce or use any part of the software to create a separate application.
 
-The customer hereby recognizes Digital Hotel as the sole licensor of the software and the associated copyrights. Digital Hotel's rights as the sole licensor also apply to software enhancements made available to the customer by Digital Hotel, unless otherwise stipulated in writing.
+The customer hereby recognizes oktus as the sole licensor of the software and the associated copyrights. oktus's rights as the sole licensor also apply to software enhancements made available to the customer by oktus, unless otherwise stipulated in writing.
 
-The customer hereby acknowledges Digital Hotels brand, name and patent rights in relation to the software and the associated documentation. The customer may not remove, change or otherwise modify copyright information or other similar proprietary notices in the programs and the associated documentation.
+The customer hereby acknowledges oktuss brand, name and patent rights in relation to the software and the associated documentation. The customer may not remove, change or otherwise modify copyright information or other similar proprietary notices in the programs and the associated documentation.
 
 ### 3.2. Customer rights to the data
 
-The data recorded, processed and generated by the software is stored on the servers of the data center. In any case, the customer remains the sole owner of the data and can therefore demand that Digital Hotel surrender individual or all of the data at any time, especially after termination of the contract, without Digital Hotel having a right of retention. The data are released by electronic transmission via a data network or by handing over data carriers according to a separate agreement. The customer is not entitled to receive software that is suitable for using the data. The customer is responsible for the permissibility of the collection, processing and use of the data and for safeguarding the rights of those affected (information, use, correction, blocking, deletion).
+The data recorded, processed and generated by the software is stored on the servers of the data center. In any case, the customer remains the sole owner of the data and can therefore demand that oktus surrender individual or all of the data at any time, especially after termination of the contract, without oktus having a right of retention. The data are released by electronic transmission via a data network or by handing over data carriers according to a separate agreement. The customer is not entitled to receive software that is suitable for using the data. The customer is responsible for the permissibility of the collection, processing and use of the data and for safeguarding the rights of those affected (information, use, correction, blocking, deletion).
 
 ### 3.3. Violation of the Terms of Use
 
-In the event of violations of the terms of use mentioned, Digital Hotel is entitled to terminate the contract in whole or in part without notice. In this case, Digital Hotel also reserves the right to assert claims for damages against the customer resulting from the breach of contract.
+In the event of violations of the terms of use mentioned, oktus is entitled to terminate the contract in whole or in part without notice. In this case, oktus also reserves the right to assert claims for damages against the customer resulting from the breach of contract.
 
 ### 3.4. Contract duration and termination
 
 The minimum term for the provision of the SaaS service is 1 month. The contract period is automatically extended by a further month if there is no termination. The amounts will be collected from the last stored debit or credit card details.
 
-Digital Hotel is entitled to terminate for an important reason, in particular in the event of failed direct debits or credit card collections.
+oktus is entitled to terminate for an important reason, in particular in the event of failed direct debits or credit card collections.
 
 ## § 4. Maintenance conditions and service level
 
 ### 4.1. Further developments / changes in performance
 
-In the course of technical progress and a service optimization after the conclusion of the contract, Digital Hotel reserves the right to make further developments and changes to services (e.g. through the use of newer or different technologies, systems, procedures or standards). In the event of significant changes in services, Digital Hotel will inform the customer in good time. If the customer has significant disadvantages as a result of the changes in service, he has the right to extraordinary termination of the contract on the change date. The customer must terminate the contract within two weeks of receiving notification of the change in service.
+In the course of technical progress and a service optimization after the conclusion of the contract, oktus reserves the right to make further developments and changes to services (e.g. through the use of newer or different technologies, systems, procedures or standards). In the event of significant changes in services, oktus will inform the customer in good time. If the customer has significant disadvantages as a result of the changes in service, he has the right to extraordinary termination of the contract on the change date. The customer must terminate the contract within two weeks of receiving notification of the change in service.
 
-When providing new versions of the software, Digital Hotel grants the customer the rights listed in Section 3 for the respective new version.
+When providing new versions of the software, oktus grants the customer the rights listed in Section 3 for the respective new version.
 
 ### 4.2. System operation
 
-Digital Hotel ensures that the software provided is operated in an environment and form that is suitable for the customer's requirements and on hardware that is suitable for the customer's intended use. This includes the number and type of servers, regular backups, scalability, power supply, air conditioning, firewalling, virus checking, broadband internet connection.
+oktus ensures that the software provided is operated in an environment and form that is suitable for the customer's requirements and on hardware that is suitable for the customer's intended use. This includes the number and type of servers, regular backups, scalability, power supply, air conditioning, firewalling, virus checking, broadband internet connection.
 
-Digital Hotel carries out daily backups of the data. Digital Hotel can use a recovery procedure to restore customer data at the customer's express request.
+oktus carries out daily backups of the data. oktus can use a recovery procedure to restore customer data at the customer's express request.
 
 ### 4.3. System availability
 
-The availability of the data center network at the router exit on the Internet is 99% on an annual average. The client-side connection to the Internet is the responsibility of the customer. This is not part of the SaaS scope of services. The downtime is determined in full minutes and is calculated from the sum of the fault clearance times per year. Excluded from this are those periods that Digital Hotel identifies as so-called maintenance windows to optimize and improve performance, as well as loss of time in troubleshooting due to reasons for which Digital Hotel is not responsible and failures due to force majeure.
+The availability of the data center network at the router exit on the Internet is 99% on an annual average. The client-side connection to the Internet is the responsibility of the customer. This is not part of the SaaS scope of services. The downtime is determined in full minutes and is calculated from the sum of the fault clearance times per year. Excluded from this are those periods that oktus identifies as so-called maintenance windows to optimize and improve performance, as well as loss of time in troubleshooting due to reasons for which oktus is not responsible and failures due to force majeure.
 
 ### 4.4. System availability disruptions
 
@@ -76,21 +76,21 @@ Disruptions in system availability must be reported by the customer immediately 
 
 ## § 5. Warranty
 
-According to the state of the art, it is not possible to exclude errors in software under all application conditions. However, Digital Hotel guarantees that the software named at www.digital-hotel.net can be used in principle. The limitation period is one year.
+According to the state of the art, it is not possible to exclude errors in software under all application conditions. However, oktus guarantees that the software named at oktus.io can be used in principle. The limitation period is one year.
 
-Errors in the software and the associated documentation will be eliminated by Digital Hotel free of charge within a reasonable period of time. The prerequisite for this fault rectification claim is that the fault can be reproduced. In order to fulfill the warranty obligation, Digital Hotel can either improve or replace it at its own discretion. In particular, Digital Hotel can provide the customer with a new version of the software to meet the warranty obligation. It is equivalent to troubleshooting if Digital Hotel provides an alternative solution to the faulty function that allows the customer to use it in accordance with the contract.
+Errors in the software and the associated documentation will be eliminated by oktus free of charge within a reasonable period of time. The prerequisite for this fault rectification claim is that the fault can be reproduced. In order to fulfill the warranty obligation, oktus can either improve or replace it at its own discretion. In particular, oktus can provide the customer with a new version of the software to meet the warranty obligation. It is equivalent to troubleshooting if oktus provides an alternative solution to the faulty function that allows the customer to use it in accordance with the contract.
 
 The warranty claims are excluded if the software is not used in accordance with the contract. Furthermore, the warranty claims are excluded if the customer makes changes or extensions to the software named in the contract, unless the customer can prove that the errors are not causally related to the changes or extensions.
 
-If a major program error is not corrected by Digital Hotel in accordance with the stated conditions, the customer can request a reduction in the monthly SaaS fee. Digital Hotel has the same right if it is not possible to correct the error with reasonable effort. If, in the course of troubleshooting, it turns out that the problems are due to operating errors or improper use by the customer, Digital Hotel can demand reasonable compensation for the effort incurred.
+If a major program error is not corrected by oktus in accordance with the stated conditions, the customer can request a reduction in the monthly SaaS fee. oktus has the same right if it is not possible to correct the error with reasonable effort. If, in the course of troubleshooting, it turns out that the problems are due to operating errors or improper use by the customer, oktus can demand reasonable compensation for the effort incurred.
 
-Digital Hotel does not guarantee that the software specified in the contract will meet the customer's individual requirements. This applies in particular to failure to achieve the desired economic success. Warranty claims against Digital Hotel are only available to the direct customer and cannot be assigned.
+oktus does not guarantee that the software specified in the contract will meet the customer's individual requirements. This applies in particular to failure to achieve the desired economic success. Warranty claims against oktus are only available to the direct customer and cannot be assigned.
 
 ## § 6. Limitation of Liability
 
-In any case, the contractual and tortious liability of Digital Hotel is limited to EUR 500,000 for personal injury, to EUR 100,000 for financial, property and operational damage and to EUR 50,000 for loss of data, with the exception of intent and gross negligence. Liability for lost profit is excluded.
+In any case, the contractual and tortious liability of oktus is limited to EUR 500,000 for personal injury, to EUR 100,000 for financial, property and operational damage and to EUR 50,000 for loss of data, with the exception of intent and gross negligence. Liability for lost profit is excluded.
 
-Digital Hotel assumes no liability for disruptions to telecommunications connections, for disruptions on cable routes within the Internet, in the event of force majeure, if third parties or the customer himself are to blame. Digital Hotel assumes no liability for damage that occurs if the customer passes on passwords or user IDs to unauthorized persons.
+oktus assumes no liability for disruptions to telecommunications connections, for disruptions on cable routes within the Internet, in the event of force majeure, if third parties or the customer himself are to blame. oktus assumes no liability for damage that occurs if the customer passes on passwords or user IDs to unauthorized persons.
 
 ## § 7. Remuneration
 
@@ -100,7 +100,7 @@ A monthly fee agreed in the contract is charged for the SaaS services. The fees 
 
 Payments are made by direct debit or credit card clearing. If the payment deadline is exceeded, services can be restricted in the event of default.
 
-The customer is not entitled to offset claims against Digital Hotel, unless the claims are legally established or claims recognized in writing by Digital Hotel.
+The customer is not entitled to offset claims against oktus, unless the claims are legally established or claims recognized in writing by oktus.
 
 ## § 9. Confidentiality, data protection
 
@@ -108,9 +108,9 @@ The contracting parties undertake to keep secret the knowledge gained in the con
 
 This does not apply to information that is publicly accessible or that becomes publicly accessible without unauthorized action or omission on the part of the contracting parties or that has to be made accessible due to a judicial order or a law. In the case of support support for problems with the customer, it may be necessary to access the customer's data records. Access can take place via a web meeting with the customer or via database analysis. This access is limited to the period of the respective support measure.
 
-If personal data have to be processed within the scope of the subject matter of the contract, Digital Hotel and the customer will comply with the statutory data protection regulations.
+If personal data have to be processed within the scope of the subject matter of the contract, oktus and the customer will comply with the statutory data protection regulations.
 
-According to the Federal Data Protection Act (BDSG), Digital Hotel advises the customer that the customer's data will be saved.
+According to the Federal Data Protection Act (BDSG), oktus advises the customer that the customer's data will be saved.
 
 ## § 10. Final provisions
 

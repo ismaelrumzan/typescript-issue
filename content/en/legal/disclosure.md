@@ -20,7 +20,7 @@ Gerhard Weiß
 ## Contact
 
 Telephone: [telephone number]
-Email: legal@digital-hotel.net
+Email: legal@oktus.io
 
 ## Business ID no.
 

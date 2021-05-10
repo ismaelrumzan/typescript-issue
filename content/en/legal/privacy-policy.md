@@ -72,7 +72,7 @@ Fohlenäckerweg 20
 34130 Kassel
 
 Telephone: XXXX-XXXX-XXXX
-Email: legal@digital-hotel.net
+Email: legal@oktus.io
 
 The responsible body is the natural or legal person who, alone or jointly with others, decides on the purposes and means of processing personal data (e.g. names, email addresses, etc.).
 
@@ -116,10 +116,10 @@ Within the framework of the applicable legal provisions, you have the right to f
 
 You have the right to request that the processing of your personal data be restricted. You can contact us at any time for this purpose. The right to restriction of processing exists in the following cases:
 
-* If you dispute the accuracy of your personal data stored by us, we usually need time to check this. For the duration of the test, you have the right to request that the processing of your personal data be restricted.
-* If the processing of your personal data happened / happens unlawfully, you can request the restriction of the data processing instead of the deletion.
-* If we no longer need your personal data, but you need them to exercise, defend or assert legal claims, you have the right to request that the processing of your personal data be restricted instead of being deleted.
-* If you have lodged an objection in accordance with Art. 21 Paragraph 1 GDPR, your interests and ours must be weighed up. As long as it is not yet clear whose interests prevail, you have the right to request that the processing of your personal data be restricted.
+- If you dispute the accuracy of your personal data stored by us, we usually need time to check this. For the duration of the test, you have the right to request that the processing of your personal data be restricted.
+- If the processing of your personal data happened / happens unlawfully, you can request the restriction of the data processing instead of the deletion.
+- If we no longer need your personal data, but you need them to exercise, defend or assert legal claims, you have the right to request that the processing of your personal data be restricted instead of being deleted.
+- If you have lodged an objection in accordance with Art. 21 Paragraph 1 GDPR, your interests and ours must be weighed up. As long as it is not yet clear whose interests prevail, you have the right to request that the processing of your personal data be restricted.
 
 If you have restricted the processing of your personal data, this data - apart from its storage - may only be allowed with your consent or for the establishment, exercise or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of important public interest processed by the European Union or a member state.
 
@@ -143,12 +143,12 @@ Insofar as cookies are used by third-party companies or for analysis purposes, w
 
 The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:
 
-* Browser type and browser version
-* used operating system
-* Referrer URL
-* Host name of the accessing computer
-* Time of the server request
-*   IP address
+- Browser type and browser version
+- used operating system
+- Referrer URL
+- Host name of the accessing computer
+- Time of the server request
+- IP address
 
 This data will not be merged with other data sources.
 

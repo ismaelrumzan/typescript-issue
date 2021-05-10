@@ -41,20 +41,21 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
-import styles from "./styles.module.scss?module";
-import Loader from "@/components/Loader";
-import smoothscroll from "smoothscroll-polyfill";
+import Vue, { PropType } from 'vue';
+import styles from './styles.module.scss?module';
+import Loader from '@/components/Loader';
+import smoothscroll from 'smoothscroll-polyfill';
 
 type Type =
-  | "primary"
-  | "secondary"
-  | "tertiary"
-  | "success"
-  | "error"
-  | "warning"
-  | "alert";
-type Variant = "none" | "shadow";
+  | 'gradient'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'success'
+  | 'error'
+  | 'warning'
+  | 'alert';
+type Variant = 'none' | 'shadow';
 
 export default Vue.extend({
   components: {
@@ -81,11 +82,11 @@ export default Vue.extend({
     },
     type: {
       type: String as PropType<Type>,
-      default: "primary"
+      default: 'gradient'
     },
     variant: {
       type: String as PropType<Variant>,
-      default: "none"
+      default: 'none'
     },
     prefix: {
       default: null
@@ -101,18 +102,18 @@ export default Vue.extend({
   },
   methods: {
     onClick() {
-      this.$emit("click");
+      this.$emit('click');
     },
     scrollToTarget(target: string, e: any) {
       e.preventDefault();
       document.getElementById(target.substring(1))?.scrollIntoView({
-        behavior: "smooth"
+        behavior: 'smooth'
       });
     }
   },
   computed: {
     hasTarget() {
-      return this.href?.slice(0, 1) === "#";
+      return this.href?.slice(0, 1) === '#';
     }
   },
   mounted() {

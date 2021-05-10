@@ -195,7 +195,7 @@ String – applies gap between illustration/image and text content
 
 #### `typewriter`
 
-String – Comma seperated list of words, e.g. `Autopilot, Single Login, Digital Hotel`
+String – Comma seperated list of words, e.g. `Autopilot, Single Login, oktus`
 
 #### `renderer`
 

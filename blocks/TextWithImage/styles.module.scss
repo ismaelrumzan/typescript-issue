@@ -113,6 +113,8 @@ $horizontal-padding: 3rem;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
+    margin: 0 auto;
 
     @media (max-width: $bp-1) {
       margin-top: 0.5rem;
@@ -128,6 +130,14 @@ $horizontal-padding: 3rem;
 
       @media (max-width: $bp-1) {
         width: 93%;
+      }
+    }
+
+    &.isSVG {
+      img {
+        box-shadow: none;
+        border-radius: 0;
+        width: 90%;
       }
     }
 
@@ -338,6 +348,32 @@ $horizontal-padding: 3rem;
     .pad-none {
       padding: calc(#{$horizontal-padding} + var(--horizontal-padding)) 0;
     }
+  }
+}
+
+/* Gap */
+.gap-none {
+  gap: 0;
+  @media (max-width: $bp-1) {
+    gap: 3rem 0;
+  }
+}
+.gap-small {
+  gap: 1rem;
+  @media (max-width: $bp-1) {
+    gap: 3rem 0;
+  }
+}
+.gap-default {
+  gap: 3rem;
+  @media (max-width: $bp-1) {
+    gap: 3rem 0;
+  }
+}
+.gap-large {
+  gap: 5rem;
+  @media (max-width: $bp-1) {
+    gap: 3rem 0;
   }
 }
 
