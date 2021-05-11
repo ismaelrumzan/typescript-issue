@@ -62,32 +62,33 @@ export default {
   features: [
     {
       title: 'Schnell',
-      icon: 'Check',
+      icon: 'Speed',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Unser Service ist skalierend und leistungsstark für diverse Anforderungen ausgelegt und bietet somit eine blitzschnelle Schnittstelle.'
     },
     {
-      title: 'Unsichtbar',
+      title: 'Einfach',
       icon: 'Check',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Unsere Schnittstelle soll die Integration aller wichtigen Systeme vereinfachen und das Leben anderer Technologie-Anbieter somit erleichtern.'
     },
     {
-      title: 'Flexibel',
-      icon: 'Check',
+      title: 'Übersichtlich',
+      icon: 'Document',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Unsere Schnittstellen und sonstige Informationen werden ausführlich dokumentiert. Und zwar von Entwicklern für Entwickler.'
     }
   ],
 
   testimonials: [
     {
       quote:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        'Es ist einfach schön auch mal wieder in Ruhe einen Café trinken zu können und alles im Blick zu haben. Das beruhigt, entspannt und schafft Sicherheit für Mitarbeiter und Management.',
       author: {
-        name: 'Maurice Wegner',
-        job: 'Angestellter',
-        company: 'oktus'
+        name: 'Dirk Klein',
+        job: 'Head of Digitilization',
+        company: 'Haffhus',
+        picture: 'dirkklein.jpeg'
       }
     }
   ],

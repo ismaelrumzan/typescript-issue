@@ -1,0 +1,184 @@
+$bp: 767px;
+
+.slider {
+  position: relative;
+  padding: 0.5rem 0 0.75rem;
+  overflow: hidden;
+
+  // &::before,
+  // &::after {
+  //   z-index: 1;
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   width: 15rem;
+  // }
+
+  // &::before {
+  //   left: 0;
+  //   background-image: linear-gradient(
+  //     to right,
+  //     rgba(255, 255, 255, 1),
+  //     rgba(255, 255, 255, 0)
+  //   );
+  // }
+  // &::after {
+  //   right: 0;
+  //   background-image: linear-gradient(
+  //     to left,
+  //     rgba(255, 255, 255, 1),
+  //     rgba(255, 255, 255, 0)
+  //   );
+  // }
+
+  &.left {
+    ul {
+      animation: scrollToLeft 30s linear infinite;
+      @media (max-width: $bp) {
+        animation: scrollToLeftSmall 30s linear infinite;
+      }
+    }
+  }
+  &.right {
+    ul {
+      animation: scrollToRight 30s linear infinite;
+      @media (max-width: $bp) {
+        animation: scrollToRightSmall 30s linear infinite;
+      }
+    }
+  }
+
+  ul {
+    --small-width: calc(var(--width) / 1.5);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    width: calc(var(--width) * var(--amount) * var(--copies));
+    animation: scrollToLeft 30s linear infinite;
+    transform: translate3d(0, 0, 0);
+    animation-play-state: running;
+
+    @media (max-width: $bp) {
+      width: calc(var(--small-width) * var(--amount) * var(--copies));
+    }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    li {
+      display: inline-flex;
+      justify-content: center;
+      margin: 1.5rem auto;
+      width: var(--width);
+
+      @media (max-width: $bp) {
+        width: var(--small-width);
+      }
+
+      a {
+        display: flex;
+        width: 100%;
+
+        img {
+          height: 4.25rem;
+          max-width: 75%;
+          margin: 0 auto;
+          width: auto;
+          object-fit: contain;
+          filter: brightness(0) saturate(0);
+          opacity: 0.65;
+          transition: filter 0.35s, opacity 0.35s;
+
+          @media (max-width: $bp) {
+            height: 3.5rem;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            img {
+              filter: brightness(1) saturate(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0rem auto 1.5rem;
+  max-width: 80%;
+  opacity: 0.35;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+
+  @media (max-width: $bp) {
+    margin-bottom: 2rem;
+  }
+}
+
+.pad-bottomOnly {
+  padding-bottom: var(--horizontal-padding);
+}
+.pad-topOnly {
+  padding-top: var(--horizontal-padding);
+}
+
+[data-section-theme='main'],
+[data-section-theme='dark'] {
+  .logos {
+    a {
+      img {
+        opacity: 0.75;
+        filter: brightness(0) saturate(0) invert(1);
+      }
+    }
+  }
+  .title {
+    opacity: 0.75;
+  }
+}
+
+[data-theme='dark'] {
+  .logos {
+    a {
+      img {
+        opacity: 0.55;
+        filter: brightness(0) saturate(0) invert(1);
+      }
+    }
+  }
+  .title {
+    opacity: 0.5;
+  }
+}
+
+@keyframes scrollToLeft {
+  to {
+    transform: translate3d(calc(var(--width) * var(--amount) * -1), 0, 0);
+  }
+}
+@keyframes scrollToLeftSmall {
+  to {
+    transform: translate3d(calc(var(--small-width) * var(--amount) * -1), 0, 0);
+  }
+}
+@keyframes scrollToRight {
+  to {
+    transform: translate3d(calc(var(--width) * var(--amount)), 0, 0);
+  }
+}
+@keyframes scrollToRightSmall {
+  to {
+    transform: translate3d(calc(var(--small-width) * var(--amount)), 0, 0);
+  }
+}

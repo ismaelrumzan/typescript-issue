@@ -24,7 +24,7 @@ Wir sind langsam an einen Punkt gekommen, an dem die Dinge nur noch schwer zu be
 Das war auch der Grund, warum das Haffhus die Zeit der Pandemie genutzt hat seinen Tech-Stack neu zu durchdenken. Die Probleme der fehlenden Schnittstellen konnte man durch den Wechsel zu PMS und POS Systemen mit first API Ansatz beseitigen. Jetzt ist man in der Lage wenn nicht schon vorhanden, auch eigene Schnittstellen für die Integration von und in andere Systeme zu entwickeln. Und um Informationen an einem Platz zu finden und die vielen Systeme über eine Benutzeroberfläche zusammenführen zu können war der Schritt zu digital-hotel der logische Weg.
 
 <quote author="Dirk Klein" job="Head of Digitilization" company="Haffhus" picture="dirkklein.jpeg">
-Es ist einfach schön auch mal wieder in Ruhe eine Café trinken zu können und alles im Blick zu haben. Das beruhigt, entspannt und schafft Sicherheit für Mitarbeiter und Management
+Es ist einfach schön auch mal wieder in Ruhe einen Café trinken zu können und alles im Blick zu haben. Das beruhigt, entspannt und schafft Sicherheit für Mitarbeiter und Management.
 </quote>
 
 *"Ich wünsche mir, dass einiger meiner Kollegen auch diesen Schritt gehen, dann haben wir zukünftig wieder mehr Zeit für den Austausch untereinander bei einer Tasse Kaffee."*, fügte Dirk Klein noch hinzu.

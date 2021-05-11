@@ -62,32 +62,33 @@ export default {
   features: [
     {
       title: 'Fast',
-      icon: 'Check',
+      icon: 'Speed',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Our service is scalable and powerful for various requirements and thus offers a lightning-fast interface.'
     },
     {
-      title: 'Invisible',
+      title: 'Easy',
       icon: 'Check',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Our interface should simplify the integration of all important systems and thus make life easier for other technology providers.'
     },
     {
-      title: 'Flexible',
-      icon: 'Check',
+      title: 'Clear',
+      icon: 'Document',
       description:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Our interfaces and other information are documented in detail. From our developers for your developers.'
     }
   ],
 
   testimonials: [
     {
       quote:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+        "It's just nice to be able to have a quiet drink in a café and have everything in view. This calms down, relaxes and creates security for employees and management.",
       author: {
-        name: 'Maurice Wegner',
-        job: 'Employee',
-        company: 'oktus'
+        name: 'Dirk Klein',
+        job: 'Head of Digitilization',
+        company: 'Haffhus',
+        picture: 'dirkklein.jpeg'
       }
     }
   ],

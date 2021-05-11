@@ -22,7 +22,7 @@
       ]"
     />
     <Section color="grey" padding="small">
-      <Logos v-bind="$t('pages.index.trusted')" />
+      <InfiniteSlider v-bind="$t('pages.index.trusted')" />
     </Section>
     <Section fullWidth padding="topOnly" style="padding-bottom: 1rem">
       <FeatureSlider
@@ -75,6 +75,7 @@ import HelpBanner from '@/blocks/HelpBanner';
 import Tabs from '@/blocks/Tabs';
 import Tab from '@/blocks/Tabs/Tab';
 import Logos from '@/blocks/Logos';
+import InfiniteSlider from '@/blocks/InfiniteSlider';
 import Grid from '@/blocks/Grid';
 import Feature from '@/blocks/Feature';
 import FeatureSlider from '@/blocks/FeatureSlider';
@@ -96,7 +97,8 @@ export default Vue.extend({
     Slide,
     Grid,
     Feature,
-    IntegrationBanner
+    IntegrationBanner,
+    InfiniteSlider
   },
   head() {
     /* Override default behavior to get rid of seperator and site title */

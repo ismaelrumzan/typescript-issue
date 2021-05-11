@@ -24,7 +24,7 @@
     </Section>
 
     <Section padding="topOnly">
-      <Logos v-bind="$t('pages.technology.partners')" />
+      <InfiniteSlider v-bind="$t('pages.technology.partners')" />
     </Section>
 
     <Section>
@@ -121,7 +121,7 @@ import TextWithImage from '@/blocks/TextWithImage';
 import TextWithDescription from '@/blocks/TextWithDescription';
 import HelpBanner from '@/blocks/HelpBanner';
 import Testimonial from '@/blocks/Testimonial';
-import Logos from '@/blocks/Logos';
+import InfiniteSlider from '@/blocks/InfiniteSlider';
 import Slider from '@/blocks/Slider';
 import Slide from '@/blocks/Slider/Slide';
 import PricingTable from '@/blocks/PricingTable';
@@ -139,7 +139,7 @@ export default Vue.extend({
     TextWithImage,
     TextWithDescription,
     Collapsible,
-    Logos,
+    InfiniteSlider,
     HelpBanner,
     Testimonial,
     Slider,

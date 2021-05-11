@@ -12,8 +12,8 @@
 .quote {
   font-size: 1.75rem;
   font-weight: 500;
-  line-height: 1.35;
-  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 4rem;
   letter-spacing: -0.025em;
 
   svg {
@@ -42,12 +42,30 @@
 }
 
 .author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0rem;
 }
 
+.authorPicture {
+  margin-bottom: 0.75rem;
+  height: 5rem;
+  width: 5rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-round);
+    box-shadow: var(--shadow-small);
+  }
+}
+
 .authorDetails {
   font-size: 0.875rem;
-  opacity: 0.5;
+  opacity: 0.65;
 }

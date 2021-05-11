@@ -24,7 +24,7 @@ We have slowly come to a point where things are difficult to control and we are 
 That was also the reason why the Haffhus used the time of the pandemic to rethink its tech stack. The problems of the missing interfaces could be eliminated by switching to PMS and POS systems with a first API approach. Now you are able, if not already available, to develop your own interfaces for the integration of and into other systems. And in order to find information in one place and to be able to merge the many systems via one user interface, the step to digital-hotel was the logical way.
 
 <quote author = "Dirk Klein" job = "Head of Digitilization" company = "Haffhus" picture = "dirkklein.jpeg">
-It's just nice to be able to have a quiet drink in a café and have everything in view. This calms down, relaxes and creates security for employees and management
+It's just nice to be able to have a quiet drink in the café and have everything in view. This calms down, relaxes and creates security for employees and management
 </quote>
 
 "I would like some of my colleagues to take this step too, so in future we will have more time to talk to each other over a cup of coffee," added Dirk Klein.
