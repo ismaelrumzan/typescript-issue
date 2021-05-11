@@ -1,3 +1,5 @@
+$bp: 767px;
+
 .customers {
   list-style: none;
   display: grid;
@@ -6,26 +8,12 @@
   max-width: 60rem;
   margin: 0 auto;
 
+  @media (max-width: $bp) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   li {
-    &:first-child {
-      grid-column: -1 / 1;
-      margin-bottom: 2rem;
-      a {
-        display: flex;
-        flex-direction: row;
-        box-shadow: var(--shadow-medium);
-
-        .content {
-          padding: 3rem;
-        }
-
-        .thumbnail {
-          flex: 1 0 50%;
-          padding-bottom: 30%;
-        }
-      }
-    }
-
     a {
       color: inherit;
       display: flex;
@@ -49,15 +37,23 @@
         padding-bottom: 45%;
         background-color: var(--main-color);
 
+        @media (max-width: $bp) {
+          padding-bottom: 50%;
+        }
+
         img {
           position: absolute;
           height: 6rem;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          max-width: 90%;
+          max-width: 55%;
           margin: 0 auto;
           filter: invert(1) saturate(0) brightness(99);
+
+          @media (max-width: $bp) {
+            height: 5.5rem;
+          }
         }
       }
 
@@ -67,14 +63,70 @@
         flex-direction: column;
         justify-content: center;
 
+        @media (max-width: $bp) {
+          padding: 2rem;
+        }
+
         .title {
           font-family: var(--font-text);
           font-size: 1.75rem;
           margin-bottom: 1rem;
+
+          @media (max-width: $bp) {
+            margin-bottom: 0;
+            text-align: center;
+          }
         }
 
         .desc {
           line-height: 1.7;
+
+          @media (max-width: $bp) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      grid-column: -1 / 1;
+      margin-bottom: 2rem;
+
+      @media (max-width: $bp) {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: flex;
+        flex-direction: row;
+        box-shadow: var(--shadow-medium);
+
+        .content {
+          padding: 3rem;
+
+          @media (max-width: $bp) {
+            padding: 2.5rem;
+            .title {
+              text-align: left;
+              margin-bottom: 1rem;
+            }
+            .desc {
+              display: block;
+            }
+          }
+        }
+
+        .thumbnail {
+          flex: 1 0 50%;
+          padding-bottom: 30%;
+        }
+
+        @media (max-width: $bp) {
+          flex-direction: column;
+
+          .thumbnail {
+            padding-bottom: 50%;
+          }
         }
       }
     }

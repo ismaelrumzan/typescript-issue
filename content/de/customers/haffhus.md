@@ -27,4 +27,4 @@ Das war auch der Grund, warum das Haffhus die Zeit der Pandemie genutzt hat sein
 Es ist einfach schön auch mal wieder in Ruhe eine Café trinken zu können und alles im Blick zu haben. Das beruhigt, entspannt und schafft Sicherheit für Mitarbeiter und Management
 </quote>
 
-"Ich wünsche mir, dass einiger meiner Kollegen auch diesen Schritt gehen, dann haben wir zukünftig wieder mehr Zeit für den Austausch untereinander bei einer Tasse Kaffee.", fügte Dirk Klein noch hinzu.
+*"Ich wünsche mir, dass einiger meiner Kollegen auch diesen Schritt gehen, dann haben wir zukünftig wieder mehr Zeit für den Austausch untereinander bei einer Tasse Kaffee."*, fügte Dirk Klein noch hinzu.
