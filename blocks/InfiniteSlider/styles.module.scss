@@ -32,19 +32,21 @@ $bp: 767px;
   //   );
   // }
 
-  &.left {
-    ul {
-      animation: scrollToLeft 30s linear infinite;
-      @media (max-width: $bp) {
-        animation: scrollToLeftSmall 30s linear infinite;
+  &.animating {
+    &.left {
+      ul {
+        animation: scrollToLeft 30s linear infinite;
+        @media (max-width: $bp) {
+          animation: scrollToLeftSmall 30s linear infinite;
+        }
       }
     }
-  }
-  &.right {
-    ul {
-      animation: scrollToRight 30s linear infinite;
-      @media (max-width: $bp) {
-        animation: scrollToRightSmall 30s linear infinite;
+    &.right {
+      ul {
+        animation: scrollToRight 30s linear infinite;
+        @media (max-width: $bp) {
+          animation: scrollToRightSmall 30s linear infinite;
+        }
       }
     }
   }
@@ -56,9 +58,7 @@ $bp: 767px;
     justify-content: center;
     white-space: nowrap;
     width: calc(var(--width) * var(--amount) * var(--copies));
-    animation: scrollToLeft 30s linear infinite;
     transform: translate3d(0, 0, 0);
-    animation-play-state: running;
 
     @media (max-width: $bp) {
       width: calc(var(--small-width) * var(--amount) * var(--copies));

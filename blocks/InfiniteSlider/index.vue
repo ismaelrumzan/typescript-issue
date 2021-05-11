@@ -1,5 +1,12 @@
 <template>
-  <div :class="[styles.slider, styles[paddingClass], styles[direction]]">
+  <div
+    :class="[
+      styles.slider,
+      styles[paddingClass],
+      styles[direction],
+      { [styles.animating]: animate }
+    ]"
+  >
     <span v-if="title" :class="styles.title">{{ $t(title) }}</span>
     <ul :style="carouselStyles">
       <div>
@@ -79,7 +86,8 @@ export default Vue.extend({
   },
   data() {
     return {
-      styles
+      styles,
+      animate: false
     };
   },
   computed: {
@@ -94,6 +102,9 @@ export default Vue.extend({
         '--width-small': this.width
       };
     }
+  },
+  mounted() {
+    this.animate = true;
   }
 });
 </script>
