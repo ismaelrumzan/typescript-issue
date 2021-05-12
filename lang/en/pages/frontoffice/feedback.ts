@@ -69,8 +69,8 @@ export default {
   ],
 
   pricing: {
-    title: 'Preisgestaltung',
-    description: 'Starte jetzt mit Deinem Paket',
+    title: 'Pricing',
+    description: 'Start now with your package',
     tables: [
       {
         category: 'Standard',
@@ -95,7 +95,7 @@ export default {
       {
         popular: true,
         category: 'Premium',
-        description: 'For small and medium hotels',
+        description: 'Small and medium hotels',
         price: {
           currency: 'EUR',
           monthly: 32,
@@ -116,12 +116,7 @@ export default {
       },
       {
         category: 'Enterprise',
-        description: 'For large hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 128,
-          anually: 999
-        },
+        description: 'Large hotels and groups',
         features: [
           'Alle Features aus Premium',
           'Lorem ipsum loret in',

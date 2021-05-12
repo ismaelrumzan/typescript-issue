@@ -5,10 +5,13 @@
     }}</span>
     <span :class="styles.category">{{ $t(category) }}</span>
     <span :class="styles.description">{{ $t(description) }}</span>
-    <div :class="styles.price">
+    <div v-if="price" :class="styles.price">
       <span :class="styles.currency">€</span>
       <span :class="styles.value">{{ price.monthly }}</span>
       <span :class="styles.period">/ month</span>
+    </div>
+    <div v-else :class="styles.price">
+      <span :class="styles.value">{{ $t('general.custom') }}</span>
     </div>
     <ul :class="styles.features">
       <li v-for="(feature, i) in features" :key="i">

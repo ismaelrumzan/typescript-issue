@@ -1,0 +1,71 @@
+.wrapper {
+  position: relative;
+  background-color: var(--light-2);
+}
+
+.endpoints {
+  z-index: 1;
+  position: sticky;
+  top: var(--header-height-scrolled);
+  background-color: var(--light);
+  border-bottom: 1px solid var(--light-5);
+
+  ul {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.15rem var(--horizontal-padding);
+
+    li {
+      cursor: pointer;
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--border-radius-small);
+
+      &:not(:last-child) {
+        margin-right: 0.75rem;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--light-3);
+        }
+      }
+
+      &.active {
+        font-weight: 700;
+        color: #fff;
+        background-color: var(--main-color);
+        @media (hover: hover) {
+          &:hover {
+            cursor: default;
+            background-color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.swagger {
+  max-width: var(--max-width);
+  padding: 3rem var(--horizontal-padding);
+  margin: 0 auto;
+}
+
+.messages {
+  max-width: var(--max-width);
+  padding: 3rem var(--horizontal-padding);
+  margin: 0 auto;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}

@@ -1,25 +1,99 @@
 <template>
-  <div ref="swagger"></div>
+  <div :class="styles.wrapper" ref="wrapper">
+    <div :class="styles.endpoints">
+      <ul>
+        <li
+          v-for="endpoint in endpoints"
+          :key="endpoint.url"
+          @click="changedEndpoint(endpoint.url)"
+          :class="{ [styles.active]: endpoint.url === currentEndpoint }"
+        >
+          {{ endpoint.name }}
+        </li>
+      </ul>
+    </div>
+    <div v-if="errors.length > 0" :class="styles.messages">
+      <Box v-for="error in errors" :key="error.code" type="error">
+        {{ error }}
+      </Box>
+    </div>
+    <div v-if="loading" :class="styles.loader">
+      <Loader size="large" />
+    </div>
+    <div
+      v-show="!loading && !errors.length > 0"
+      ref="swagger"
+      :class="styles.swagger"
+    ></div>
+  </div>
 </template>
 
-<script lang='ts'>
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
-import SwaggerUI from "swagger-ui";
-import "swagger-ui/dist/swagger-ui.css";
-import schema from "@/data/schema-api";
+<script lang="ts">
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
+import Box from '@/components/Box';
+import Loader from '@/components/Loader';
+import SwaggerUI from 'swagger-ui';
+import 'swagger-ui/dist/swagger-ui.css';
 
 export default Vue.extend({
+  components: {
+    Box,
+    Loader
+  },
   data() {
     return {
-      styles
+      styles,
+      loading: false,
+      endpoints: [],
+      currentEndpoint: '',
+      errors: [] as string[]
     };
   },
   mounted() {
-    SwaggerUI({
-      domNode: this.$refs.swagger,
-      spec: schema
-    });
+    this.getEndpoints();
+  },
+  methods: {
+    async getEndpoints() {
+      this.loading = true;
+      const endpoints = await this.$axios.$get(
+        'https://api.oktus.io/docs/apis/apis.json'
+      );
+      this.endpoints = endpoints;
+      this.currentEndpoint = endpoints[0].url;
+      this.loading = false;
+    },
+    async loadSwaggerFile(endpoint: string) {
+      this.loading = true;
+      this.errors = [];
+      try {
+        const swaggerFile = await this.$axios.$get(endpoint);
+        SwaggerUI({
+          domNode: this.$refs.swagger,
+          spec: swaggerFile
+        });
+      } catch (error) {
+        if (error.response.status === 404) {
+          this.errors.push('Diese Endpoint-URL besitzt keine Definition');
+        }
+      }
+      this.loading = false;
+    },
+    changedEndpoint(endpoint: string) {
+      this.currentEndpoint = endpoint;
+      window.scrollTo({
+        top:
+          (this.$refs.wrapper as HTMLElement).getBoundingClientRect().top +
+          window.pageYOffset -
+          100,
+        behavior: 'smooth'
+      });
+    }
+  },
+  watch: {
+    currentEndpoint(endpoint) {
+      this.loadSwaggerFile(endpoint);
+    }
   }
 });
 </script>
@@ -189,7 +263,7 @@ export default Vue.extend({
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   .swagger-ui {
     .model-toggle:after,
     .expand-methods svg,

@@ -65,7 +65,7 @@ $bp: 767px;
     }
 
     &:hover {
-      animation-play-state: paused;
+      animation-play-state: paused !important;
     }
 
     li {

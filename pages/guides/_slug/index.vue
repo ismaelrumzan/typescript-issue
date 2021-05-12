@@ -14,7 +14,7 @@
       </div>
       <div :class="styles.footer">
         <span :class="styles.date">
-          {{ $t('phrases.updated_at') + ' ' + formatDate(page.updatedAt) }}
+          {{ $t('phrases.updated_at') + ' ' + formatDate(page.gitUpdatedAt) }}
         </span>
       </div>
     </article>

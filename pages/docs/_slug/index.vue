@@ -14,7 +14,7 @@
       </div>
       <div :class="styles.footer">
         <span :class="styles.date">
-          {{ $t("phrases.updated_at") + " " + formatDate(page.updatedAt) }}
+          {{ $t('phrases.updated_at') + ' ' + formatDate(page.gitUpdatedAt) }}
         </span>
       </div>
     </article>
@@ -22,11 +22,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import styles from "./styles.module.scss?module";
+import Vue from 'vue';
+import styles from './styles.module.scss?module';
 
 export default Vue.extend({
-  layout: "docs",
+  layout: 'docs',
   data() {
     return {
       styles
@@ -39,10 +39,10 @@ export default Vue.extend({
   methods: {
     formatDate(date: Date) {
       const options: any = {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "2-digit"
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit'
       };
 
       return new Date(date).toLocaleDateString(this.$i18n.locale, options);

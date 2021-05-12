@@ -74,7 +74,7 @@ export default {
     tables: [
       {
         category: 'Standard',
-        description: 'For development purposes',
+        description: 'Paket zum Schnuppern',
         price: {
           currency: 'EUR',
           monthly: 0,
@@ -87,7 +87,7 @@ export default {
           'Lorem ipsum loret in'
         ],
         cta: {
-          title: 'Start for free',
+          title: 'Kostenlos starten',
           href: '/apply',
           type: 'secondary'
         }
@@ -95,11 +95,11 @@ export default {
       {
         popular: true,
         category: 'Premium',
-        description: 'For small and medium hotels',
+        description: 'Kleinere und mittlere Hotels',
         price: {
           currency: 'EUR',
-          monthly: 32,
-          anually: 299
+          monthly: 50,
+          anually: 579
         },
         features: [
           'Alle Features aus Standard',
@@ -110,18 +110,13 @@ export default {
           'Lorem ipsum loret in'
         ],
         cta: {
-          title: 'Get Premium',
+          title: 'Jetzt Premium holen',
           href: '/apply'
         }
       },
       {
         category: 'Enterprise',
-        description: 'For large hotels',
-        price: {
-          currency: 'EUR',
-          monthly: 128,
-          anually: 999
-        },
+        description: 'Große Hotels oder Gruppen',
         features: [
           'Alle Features aus Premium',
           'Lorem ipsum loret in',
@@ -132,7 +127,7 @@ export default {
           'Lorem ipsum loret in'
         ],
         cta: {
-          title: 'Contact us',
+          title: 'Kontaktier uns',
           href: '/meeting',
           type: 'secondary'
         }
@@ -149,7 +144,12 @@ export default {
     {
       question: 'Was benötige ich, um damit starten zu können?',
       answer:
-        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        'Es sind gibt <strong>keine Voraussetzungen</strong> um mit der App zu starten. Also, worauf wartest Du?'
+    },
+    {
+      question: 'Wer sieht das Feedback?',
+      answer:
+        'Das Feedback kann von den Benutzern, die in Deinem Team sind eingesehen werden.'
     }
   ]
 };

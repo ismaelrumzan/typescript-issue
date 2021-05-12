@@ -26,6 +26,7 @@ export default async (context: any, locale: string) => {
       all: 'All',
       application: 'Application | Applications',
       contract: 'Contract | Contracts',
+      custom: 'Custom',
       email_address: 'E-Mail address',
       homepage: 'Homepage',
       legal: 'Legal',
@@ -155,7 +156,10 @@ export default async (context: any, locale: string) => {
         title: 'API Documentation',
         description: '',
         hero: {
-          title: 'API Docs'
+          badge: 'Swagger UI',
+          title: 'API Docs',
+          description:
+            'Select one of our endpoints and find out how it is structured'
         }
       },
       applications: {
