@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
     "esModuleInterop": true,
-    "experimentalDecorators": true,
+    "allowJs": true,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
@@ -16,7 +16,13 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "@nuxtjs/axios", "nuxt-i18n"]
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+      "@nuxtjs/axios",
+      "nuxt-i18n",
+      "@vercel/node"
+    ]
   },
   "exclude": ["node_modules"]
 }
