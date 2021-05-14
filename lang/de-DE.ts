@@ -161,7 +161,7 @@ export default async (context: any, locale: string) => {
           badge: 'Swagger UI',
           title: 'API Dokumentation',
           description:
-            'Wähle einen unserer Endpunkte aus und erfahre, wie dieser aufgebaut'
+            'Wähle einen unserer Endpunkte aus und erfahre, wie dieser aufgebaut ist'
         }
       },
       applications: {

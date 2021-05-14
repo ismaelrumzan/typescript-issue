@@ -77,7 +77,7 @@ export default Vue.extend({
 
         try {
           await this.$axios.$post(
-            `${this.$config.baseURL}/api/newsletter/signup`,
+            `${this.$config.baseURL}/api/v1/newsletter/signup`,
             data
           );
           this.success = true;
