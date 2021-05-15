@@ -1,5 +1,6 @@
 import about from './en/pages/about';
 import contact from './en/pages/contact';
+import consultants from './en/pages/consultants';
 import customers from './en/pages/customers';
 import help from './en/pages/help';
 import homepage from './en/pages/homepage';
@@ -25,6 +26,7 @@ export default async (context: any, locale: string) => {
       accept: 'Accept',
       all: 'All',
       application: 'Application | Applications',
+      back: 'Back',
       contract: 'Contract | Contracts',
       custom: 'Custom',
       email_address: 'E-Mail address',
@@ -51,6 +53,7 @@ export default async (context: any, locale: string) => {
       bookable_online: 'Bookable online',
       coming_soon: 'Coming soon',
       connect_your_system: 'Connect to your system',
+      contact_name: 'Contact {name}',
       contact_us: 'Contact us',
       easy_integration: 'Easy integration',
       focus_on_security: 'Focus on Security',
@@ -241,6 +244,7 @@ export default async (context: any, locale: string) => {
         description: ''
       },
 
+      consultants,
       contact,
 
       content_management: 'Content Management',

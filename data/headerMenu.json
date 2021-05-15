@@ -172,11 +172,10 @@
         "icon": "Document"
       },
       {
-        "title": "pages.consulting.title",
-        "link": "/consulting",
-        "description": "pages.consulting.description",
-        "icon": "Help",
-        "disabled": true
+        "title": "pages.consultants.title",
+        "link": "/consultants",
+        "description": "pages.consultants.description",
+        "icon": "Help"
       },
       {
         "title": "pages.meeting.title",

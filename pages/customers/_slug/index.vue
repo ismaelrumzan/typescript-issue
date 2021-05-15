@@ -1,22 +1,13 @@
 <template>
   <div :class="styles.article">
-    <!-- <nav>
-      <ul>
-        <li v-for="link of article.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav> -->
     <article>
       <div :class="styles.headerContainer">
         <div :class="styles.header">
           <NuxtLink :to="localePath('/customers')" :class="styles.back">
             <Icon name="ChevDown" />
-            Zurück zu den Fallstudien
+            {{ $t('general.back') }}
           </NuxtLink>
           <h1 :class="styles.title">{{ customer.title }}</h1>
-          <!-- <span :class="styles.desc">{{ article.description }}</span> -->
-          <!-- <img :src="article.img" :alt="article.alt" /> -->
         </div>
       </div>
       <div :class="styles.partnerImage">

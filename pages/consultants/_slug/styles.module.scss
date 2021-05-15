@@ -1,5 +1,6 @@
 @use '/assets/styles/variables' as v;
 $bp: 767px;
+$photoSize: 12rem;
 
 .headerContainer {
   text-align: center;
@@ -8,16 +9,19 @@ $bp: 767px;
 
 .header {
   position: relative;
-  max-width: var(--article-max-width);
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 6rem var(--horizontal-padding) 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .back {
     position: absolute;
     display: flex;
     align-items: center;
     top: 1.15rem;
-    left: 0;
+    left: var(--horizontal-padding);
     color: var(--main-color);
     font-size: 1.15rem;
     font-weight: 500;
@@ -27,10 +31,6 @@ $bp: 767px;
       &:hover {
         opacity: 0.5;
       }
-    }
-
-    @media (max-width: v.$article-max-width + 2rem) {
-      left: inherit;
     }
 
     svg {
@@ -45,80 +45,46 @@ $bp: 767px;
   }
 
   .title {
-    margin-top: 1rem;
+    margin-top: 3rem;
+    font-size: 3.5rem;
     hyphens: auto;
   }
 
-  .desc {
-    display: block;
-  }
-  .date {
-    display: block;
-    opacity: 0.5;
-  }
-}
-
-.partnerImage {
-  position: relative;
-  max-width: var(--article-max-width);
-  margin: 0 auto;
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--shadow-large);
-  height: 23rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background-color: var(--main-color);
-  background-image: linear-gradient(
-    to right,
-    var(--main-gradient-start),
-    var(--main-gradient-end)
-  );
-
-  @media (max-width: v.$article-max-width) {
-    border-radius: 0;
-  }
-
-  .imageWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
-
-    @media (max-width: $bp) {
-      flex-direction: column;
-      height: 4.5rem;
-    }
+  .picture {
+    height: $photoSize;
+    width: $photoSize;
 
     img {
+      width: 100%;
       height: 100%;
-      filter: invert(1) saturate(0) brightness(99);
-      &:first-child {
-        transform-origin: right;
-      }
-      &:last-child {
-        transform-origin: left;
-      }
+      object-fit: cover;
+      border-radius: var(--border-radius-round);
+      border: 6px solid var(--main-color);
+      // box-shadow: var(--shadow-large);
     }
+  }
 
-    span {
-      color: #fff;
-      font-size: 3rem;
-      font-family: var(--font-display);
-      margin: 0 3rem;
+  .company {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: -0.75rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.35;
+  }
 
-      @media (max-width: $bp) {
-        font-size: 2.75rem;
-        margin: 1rem auto;
-      }
-    }
+  .button {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 25rem;
   }
 }
 
 .content {
   max-width: var(--article-max-width);
   margin: 0 auto;
-  padding: 5rem var(--horizontal-padding) 8rem;
+  padding: 1.5rem var(--horizontal-padding) 8rem;
   width: 100%;
   font-size: 1.125rem;
   line-height: 2;

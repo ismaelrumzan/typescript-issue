@@ -1,5 +1,6 @@
 import about from './de/pages/about';
 import contact from './de/pages/contact';
+import consultants from './de/pages/consultants';
 import customers from './de/pages/customers';
 import help from './de/pages/help';
 import homepage from './de/pages/homepage';
@@ -25,6 +26,7 @@ export default async (context: any, locale: string) => {
       accept: 'Akzeptieren',
       all: 'Alle',
       application: 'Bewerbung | Bewerbungen',
+      back: 'Zurück',
       contract: 'Vertrag | Verträge',
       custom: 'Individuell',
       email_address: 'E-Mail-Adresse',
@@ -51,6 +53,7 @@ export default async (context: any, locale: string) => {
       bookable_online: 'Online buchbar',
       coming_soon: 'Bald verfügbar',
       connect_your_system: 'Verbinde Dich mit Deinem System',
+      contact_name: '{name} kontaktieren',
       contact_us: 'Kontaktier uns',
       easy_integration: 'Einfache Integration',
       focus_on_security: 'Fokus auf Sicherheit',
@@ -243,6 +246,7 @@ export default async (context: any, locale: string) => {
         description: ''
       },
 
+      consultants,
       contact,
 
       content_management: 'Content Management',
