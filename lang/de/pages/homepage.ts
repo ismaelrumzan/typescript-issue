@@ -94,8 +94,24 @@ export default {
         file: 'hotelvor9.svg'
       },
       {
+        name: 'Hotelverband Deutschland',
+        file: 'iha.svg'
+      },
+      {
         name: 'AHGZ',
         file: 'ahgz.png'
+      },
+      {
+        name: 'HoGa-Magazin',
+        file: 'hoga-magazin.svg'
+      },
+      {
+        name: 'PREGAS',
+        file: 'pregas.svg'
+      },
+      {
+        name: 'HoGa-Presse',
+        file: 'hoga-presse.svg'
       }
     ]
   },

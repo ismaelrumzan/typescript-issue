@@ -38,7 +38,7 @@
       </FeatureSlider>
     </Section>
     <Section padding="bottomOnly">
-      <Logos v-bind="$t('pages.index.known_from')" />
+      <InfiniteSlider v-bind="$t('pages.index.known_from')" />
     </Section>
     <Section color="main" overflow="hidden">
       <IntegrationBanner />
@@ -74,7 +74,6 @@ import TextWithDescription from '@/blocks/TextWithDescription';
 import HelpBanner from '@/blocks/HelpBanner';
 import Tabs from '@/blocks/Tabs';
 import Tab from '@/blocks/Tabs/Tab';
-import Logos from '@/blocks/Logos';
 import InfiniteSlider from '@/blocks/InfiniteSlider';
 import Grid from '@/blocks/Grid';
 import Feature from '@/blocks/Feature';
@@ -90,7 +89,6 @@ export default Vue.extend({
     TextWithImage,
     TextWithDescription,
     HelpBanner,
-    Logos,
     Tabs,
     Tab,
     FeatureSlider,
