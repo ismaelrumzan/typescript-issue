@@ -12,26 +12,26 @@
         "title": "pages.frontoffice.title",
         "link": "/frontoffice",
         "description": "pages.frontoffice.description",
-        "icon": "FrontOffice"
+        "icon": "pages.frontoffice.icon"
       },
       {
         "title": "pages.backoffice.title",
         "link": "/backoffice",
         "description": "pages.backoffice.description",
-        "icon": "BackOffice"
+        "icon": "pages.backoffice.icon"
       },
       {
         "title": "pages.marketing.title",
         "link": "/marketing",
         "description": "pages.marketing.description",
-        "icon": "Marketing",
+        "icon": "pages.marketing.icon",
         "disabled": true
       },
       {
         "title": "pages.operations.title",
         "link": "/operations",
         "description": "pages.operations.description",
-        "icon": "Operations"
+        "icon": "pages.operations.icon"
       },
       {
         "type": "button",
@@ -156,8 +156,7 @@
         "title": "pages.videos.title",
         "link": "/videos",
         "description": "pages.videos.description",
-        "icon": "Video",
-        "disabled": true
+        "icon": "Video"
       },
       {
         "title": "pages.documentation.title",

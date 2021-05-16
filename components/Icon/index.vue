@@ -2,7 +2,7 @@
   <svg
     xmlns="http://www.w3.org/2000/svg"
     :viewBox="viewBox"
-    :aria-labelledby="name"
+    :aria-labelledby="$t(name)"
     role="presentation"
   >
     <g :fill="color">
@@ -12,14 +12,14 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue';
 
 export default Vue.extend({
   props: {
     name: {
       type: String,
       required: true,
-      default: "Check"
+      default: 'Check'
     },
     width: {
       type: [Number, String],
@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   computed: {
     loadIcon() {
-      const component = import(`@/assets/icons/${this.name}`);
+      const component = import(`@/assets/icons/${this.$i18n.t(this.name)}`);
       return () => component;
     }
   },

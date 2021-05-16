@@ -4,6 +4,7 @@ import consultants from './de/pages/consultants';
 import customers from './de/pages/customers';
 import help from './de/pages/help';
 import homepage from './de/pages/homepage';
+import videos from './de/pages/videos';
 
 /* Partners */
 import sales from './de/pages/partners/sales';
@@ -198,6 +199,7 @@ export default async (context: any, locale: string) => {
       backoffice: {
         title: 'Back Office',
         description: 'Management-Tools',
+        icon: 'BackOffice',
         seo: {
           title: 'Back Office – Management-Tools für Dein Hotel',
           description:
@@ -293,6 +295,7 @@ export default async (context: any, locale: string) => {
       frontoffice: {
         title: 'Front Office',
         description: 'Rund um den Gast',
+        icon: 'FrontOffice',
         seo: {
           title: 'Front Office – Rund um den Gast',
           description:
@@ -336,7 +339,8 @@ export default async (context: any, locale: string) => {
       },
       marketing: {
         title: 'Marketing',
-        description: 'Reichweite generieren'
+        description: 'Reichweite generieren',
+        icon: 'Marketing'
       },
       marketplace: 'Marktplatz',
 
@@ -365,6 +369,7 @@ export default async (context: any, locale: string) => {
       operations: {
         title: 'Operations',
         description: 'Prozessoptimierung',
+        icon: 'Operations',
         seo: {
           title: 'Operations – Automatisiere Deine Prozesse',
           description:
@@ -463,10 +468,7 @@ export default async (context: any, locale: string) => {
         title: 'AGB'
       },
 
-      videos: {
-        title: 'Videos',
-        description: 'Video-Tutorials'
-      },
+      videos,
 
       webinars: 'Webinare',
       website_analytics: 'Website Analytics',
